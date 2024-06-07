@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  7 JUN 2024 15:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  7 JUN 2024 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -146,7 +146,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./section_1/se
 ction_1.tex [2]
-[3] [4] [5] [6] [7] [8]
+[3] [4] [5] [6]
+Overfull \hbox (18.74731pt too wide) detected at line 353
+[]\OT1/cmr/bx/n/12 0 \OT1/cmr/m/n/12 = [][] \OMS/cmsy/m/n/12 j\OT1/cmr/bx/n/12 
+^^F\OMS/cmsy/m/n/12 j[] [] [] [] \OML/cmm/m/it/12 :
+ []
+
+[7] [8]
 Overfull \hbox (2.70279pt too wide) detected at line 497
 [][] [] \OT1/cmr/m/n/12 E [] = [] [] E\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@
  []\OT1/cmr/m/n/12 E [] + E\OML/cmm/m/it/12 ^^V[]:
@@ -165,7 +171,7 @@ Here is how much of TeX's memory you used:
  24270 multiletter control sequences out of 15000+600000
  571748 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,9n,65p,317b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 56i,9n,65p,376b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-di
@@ -178,7 +184,7 @@ exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (10 pages, 152529 bytes).
+Output written on main.pdf (10 pages, 152588 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
