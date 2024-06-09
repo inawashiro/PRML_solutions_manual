@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  9 JUN 2024 19:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  10 JUN 2024 06:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,11 +110,20 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(c:/texlive/2024/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+
+(c:/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-04-11 L3 programming layer (loader) 
+
 (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box53
-)
+))
+Package: xparse 2024-03-14 L3 Experimental document command parser
+))
 (./main.aux)
 \openout1 = `main.aux'.
 
@@ -166,13 +175,13 @@ L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1829 strings out of 474049
- 25331 string characters out of 5746278
+ 2496 strings out of 474049
+ 33102 string characters out of 5746278
  1936754 words of memory out of 5000000
- 24272 multiletter control sequences out of 15000+600000
+ 24929 multiletter control sequences out of 15000+600000
  571748 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,9n,65p,361b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,9n,93p,361b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-di
@@ -186,7 +195,7 @@ exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024
 st/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (16 pages, 177541 bytes).
+Output written on main.pdf (16 pages, 177521 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
