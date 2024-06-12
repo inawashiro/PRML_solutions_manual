@@ -169,10 +169,10 @@ Overfull \hbox (2.70279pt too wide) detected at line 543
  []
 
 [10] [11] [12] [13] [14] [15] [16] [17] [18]
-Overfull \hbox (18.98703pt too wide) in paragraph at lines 1071--1074
-\OT1/cmr/m/n/12 Thus, mimis-ing the av-er-age loss re-duces to choos-ing the mi
-n-i-mum $[][] \OML/cmm/m/it/12 L[]p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C[]j\OT1/c
-mr/bx/n/12 x\OT1/cmr/m/n/12 )$. 
+Overfull \hbox (10.2399pt too wide) in paragraph at lines 1071--1074
+\OT1/cmr/m/n/12 Thus, mimis-ing the av-er-age loss re-duces to choos-ing to min
+-imise $[][] \OML/cmm/m/it/12 L[]p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C[]j\OT1/cm
+r/bx/n/12 x\OT1/cmr/m/n/12 )$. 
  []
 
 ) [19] (./main.aux)
@@ -203,7 +203,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb>
-Output written on main.pdf (19 pages, 196955 bytes).
+Output written on main.pdf (19 pages, 196938 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
  89 compressed objects within 1 object stream
