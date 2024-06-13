@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  13 JUN 2024 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  13 JUN 2024 20:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -168,14 +168,7 @@ Overfull \hbox (2.70279pt too wide) detected at line 543
  []\OT1/cmr/m/n/12 E [] + E\OML/cmm/m/it/12 ^^V[]:
  []
 
-[10] [11] [12] [13] [14] [15] [16] [17] [18]
-Overfull \hbox (10.2399pt too wide) in paragraph at lines 1071--1074
-\OT1/cmr/m/n/12 Thus, mimis-ing the av-er-age loss re-duces to choos-ing to min
--imise $[][] \OML/cmm/m/it/12 L[]p\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C[]j\OT1/cm
-r/bx/n/12 x\OT1/cmr/m/n/12 )$. 
- []
-
-[19]) [20] (./main.aux)
+[10] [11] [12] [13] [14] [15] [16] [17] [18] [19]) [20] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
@@ -203,7 +196,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb>
-Output written on main.pdf (20 pages, 198995 bytes).
+Output written on main.pdf (20 pages, 198986 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  91 compressed objects within 1 object stream
