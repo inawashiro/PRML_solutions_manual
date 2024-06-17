@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  17 JUN 2024 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  17 JUN 2024 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -156,14 +156,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./section_1/se
 ction_1.tex [2]
 [3] [4] [5] [6] [7]
-Overfull \hbox (2.414pt too wide) detected at line 399
+Overfull \hbox (2.414pt too wide) detected at line 400
 []\OT1/cmr/bx/n/12 0 \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [][] j\OT1/cmr/bx/n
 /12 ^^F\OMS/cmsy/m/n/12 j[] [] \OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 x \OMS/cmsy/m/
 n/12 ^^@ \OML/cmm/b/it/12 ^^V\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 :
  []
 
 [8] [9]
-Overfull \hbox (2.70279pt too wide) detected at line 543
+Overfull \hbox (2.70279pt too wide) detected at line 545
 [][] [] \OT1/cmr/m/n/12 E [] = [] [] E\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@
  []\OT1/cmr/m/n/12 E [] + E\OML/cmm/m/it/12 ^^V[]:
  []
@@ -197,7 +197,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb>
-Output written on main.pdf (23 pages, 206441 bytes).
+Output written on main.pdf (23 pages, 206432 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream
