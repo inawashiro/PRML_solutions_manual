@@ -47,3 +47,4 @@
 \contentsline {subsection}{\numberline {1.40}}{34}{}%
 \contentsline {subsection}{\numberline {1.41}}{34}{}%
 \contentsline {section}{\numberline {2}Probability Distributions}{36}{}%
+\contentsline {subsection}{\numberline {2.1}}{36}{}%
