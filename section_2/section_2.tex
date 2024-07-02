@@ -444,9 +444,27 @@ where
 %
 
 
-
-
-
+\subsection{}
+\label{2.8}
+Let $x$ and $y$ be variables.
+Then, by the definition,
+%
+\begin{equation}
+{\rm E} x = \int x p(x) dx.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\int x \left( \int p(x, y) dy \right) dx = \int \left( \int x p(x | y) dx \right) p(y) dy.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} x = {\rm E}_y \left( {\rm E}_x (x | y) \right).
+\end{equation}
+%
 
 
 
