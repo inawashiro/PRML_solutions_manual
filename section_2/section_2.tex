@@ -509,10 +509,32 @@ Therefore,
 \label{2.9}
 
 
-
-
-
-
+\subsection{(Incomplete)}
+\label{2.10}
+Let $\bm{\mu}$ be a variable such that
+%
+\begin{equation}
+p(\bm{\mu} | \bm{\alpha}) = \frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1}.
+\end{equation}
+%
+Then
+%
+\begin{equation}
+{\rm E} \mu_j = \int \mu_j p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 1)}{\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)} = \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} \mu_j = \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}.
+\end{equation}
+%
 
 
 
