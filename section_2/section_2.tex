@@ -476,19 +476,33 @@ The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&{\rm E} \left( x - {\rm E} (x | y) + {\rm E} (x | y) - {\rm E} x \right) ^ 2 \\
-&= {\rm E} \left( x - {\rm E} (x | y) \right) ^ 2 + 2 {\rm E} \left( \left( x - {\rm E} (x | y) \right) \left( {\rm E} (x | y) - {\rm E} x \right) \right) + {\rm E} \left( {\rm E} (x | y) - {\rm E} x \right) ^ 2
+{\rm E}_{x, y} \left( x - {\rm E} (x | y) + {\rm E} (x | y) - {\rm E} x \right) ^ 2
+=& {\rm E}_{x, y} \left( x - {\rm E}_x (x | y) \right) ^ 2 \\
+&+ 2 {\rm E}_{x, y} \left( \left( x - {\rm E}_x (x | y) \right) \left( {\rm E}_x (x | y) - {\rm E} x \right) \right) \\
+&+ {\rm E}_y \left( {\rm E}_x (x | y) - {\rm E} x \right) ^ 2
 \end{aligned}
 \end{equation}
 %
-By the definition, the first term of the right hand side can be written as ${\rm E}_y \left( {\rm var}_x (x | y) \right)$.
-By the result above, the third term of the right hand side can be written as
+Let us look at each term of the right hand side.
+By the definition, the first term can be written as ${\rm E}_y \left( {\rm var}_x (x | y) \right)$.
+The second term can be written as
+%
+\begin{equation}
+2 {\rm E}_y \left( \left( {\rm E}_x (x | y) - {\rm E} x \right) {\rm E}_x \left( x - {\rm E}_x (x | y) \right) \right) = - 2 {\rm E}_y \left( {\rm E}_x (x | y) - {\rm E} x \right) ^ 2
+\end{equation}
+%
+By the result above, the third term can be written as
 %
 \begin{equation}
 {\rm E}_y \left( {\rm E}_x (x | y) - {\rm E}_y \left( {\rm E}_x (x | y) \right) \right) ^ 2 = {\rm var}_y \left( {\rm E}_x (x | y) \right).
 \end{equation}
 %
-
+Therefore,
+%
+\begin{equation}
+{\rm var} x = {\rm E}_y \left( {\rm var}_x (x | y) \right) + {\rm var}_y \left( {\rm E}_x (x | y) \right).
+\end{equation}
+%
 
 
 
