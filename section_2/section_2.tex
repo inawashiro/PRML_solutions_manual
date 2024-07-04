@@ -520,22 +520,51 @@ p(\bm{\mu} | \bm{\alpha}) = \frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right
 Then
 %
 \begin{equation}
-{\rm E} \mu_j = \int \mu_j p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}.
+\begin{aligned}
+{\rm E} \mu_j &= \int \mu_j p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}, \\
+{\rm E} \mu_j ^ 2 &= \int \mu_j ^ 2 p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}, \\
+{\rm E} \mu_j \mu_l &= \int \mu_j \mu_l p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}.
+\end{aligned}
 \end{equation}
 %
-The right hand side can be written as
+If $j \neq l$, then the right hand sides can be written as
 %
 \begin{equation}
-\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 1)}{\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)} = \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}.
+\begin{aligned}
+\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 1)}{\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)} &= \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}, \\
+\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 2)}{\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 2 \right)} &= \frac{\alpha_j (\alpha_j + 1)}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)},  \\
+\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 1) \Gamma(\alpha_l + 1)}{\Gamma(\alpha_j) \Gamma(\alpha_l)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 2 \right)} &= \frac{\alpha_j \alpha_l}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
+\end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm E} \mu_j = \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}.
+\begin{aligned}
+{\rm E} \mu_j &= \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}. \\
+{\rm E} \mu_j ^ 2 &= \frac{\alpha_j (\alpha_j + 1)}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}, \\
+{\rm E} \mu_j \mu_l &= \frac{\alpha_j \alpha_l}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
+\end{aligned}
 \end{equation}
 %
-
+Since
+%
+\begin{equation}
+\begin{aligned}
+{\rm var} \mu_j &= {\rm E} \mu_j ^ 2 - \left( {\rm E} \mu_j \right) ^ 2, \\
+{\rm cov} \left( \mu_j, \mu_l \right) &= {\rm E} \mu_j \mu_l - {\rm E} \mu_j {\rm E} \mu_l,
+\end{aligned}
+\end{equation}
+%
+we have
+%
+\begin{equation}
+\begin{aligned}
+{\rm var} \mu_j &= \frac{\alpha_j \left( \sum_{k = 1}^{K} \alpha_k - \alpha_j \right)}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}, \\
+{\rm cov} \left( \mu_j, \mu_l \right) &= - \frac{\alpha_j \alpha_l}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
+\end{aligned}
+\end{equation}
+%
 
 
 
