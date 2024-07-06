@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  5 JUL 2024 13:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  6 JUL 2024 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -189,12 +189,16 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2559 strings out of 474049
- 33598 string characters out of 5746278
+ 2560 strings out of 474049
+ 33604 string characters out of 5746278
  1942754 words of memory out of 5000000
- 24985 multiletter control sequences out of 15000+600000
+ 24986 multiletter control sequences out of 15000+600000
  571748 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,11n,93p,413b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -212,7 +216,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb>
-Output written on main.pdf (48 pages, 255938 bytes).
+Output written on main.pdf (48 pages, 255957 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  153 compressed objects within 2 object streams
