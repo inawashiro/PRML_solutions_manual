@@ -663,8 +663,73 @@ we have
 %
 
 
-\subsection{}
+\subsection{(Incomplete)}
 \label{2.13}
+For a vector $\mathbf{x}$ in $D$ dimensions, let
+%
+\begin{equation}
+\begin{aligned}
+p(\mathbf{x}) &= \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}), \\
+q(\mathbf{x}) &= \mathcal{N} (\mathbf{x} | \mathbf{m}, \mathbf{L}).
+\end{aligned}
+\end{equation}
+%
+Then, by the definition,
+%
+\begin{equation}
+{\rm KL} (p || q) = - \int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) \ln \frac{\mathcal{N} (\mathbf{x} | \mathbf{m}, \mathbf{L})}{\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma})} d\mathbf{x}.
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\ln \frac{\mathcal{N} (\mathbf{x} | \mathbf{m}, \mathbf{L})}{\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma})} = \ln \frac{\left( 2 \pi \abs{\det \mathbf{L}} \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \mathbf{m}) \right)}{\left( 2 \pi \abs{\det \bm{\Sigma}} \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right)},
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+& \frac{1}{2} \ln \abs{\frac{\det \mathbf{L}}{\det \bm{\Sigma}}} \int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
+&+ \frac{1}{2} \int (\mathbf{x} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \mathbf{m}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
+&- \frac{1}{2} \int (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x}.
+\end{aligned}
+\end{equation}
+%
+Let us look at each term.
+Since
+%
+\begin{equation}
+\int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} = 1,
+\end{equation}
+%
+the first term can be written as $\frac{1}{2} \ln \abs{\frac{\det \mathbf{L}}{\det \bm{\Sigma}}}$.
+Since
+%
+\begin{equation}
+(\mathbf{x} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \mathbf{m}) = (\mathbf{x} - \bm{\mu} + \bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \bm{\mu} + \bm{\mu} - \mathbf{m})
+\end{equation}
+%
+the second term can be written as
+%
+\begin{equation}
+\begin{aligned}
+&\frac{1}{2} \int (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
+&+ (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} \int (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
+&+ \frac{1}{2} (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\bm{\mu} - \mathbf{m}) \int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x}.
+\end{aligned}
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} = \bm{\Sigma},
+\end{equation}
+%
+the third term can be written as $D$.
+
+
+
 
 
 
