@@ -683,14 +683,14 @@ Then, by the definition,
 Since
 %
 \begin{equation}
-\ln \frac{\mathcal{N} (\mathbf{x} | \mathbf{m}, \mathbf{L})}{\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma})} = \ln \frac{\left( 2 \pi \abs{\det \mathbf{L}} \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \mathbf{m}) \right)}{\left( 2 \pi \abs{\det \bm{\Sigma}} \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right)},
+\ln \frac{\mathcal{N} (\mathbf{x} | \mathbf{m}, \mathbf{L})}{\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma})} = \ln \frac{(2 \pi) ^ {- \frac{D}{2}} \left( \abs{\det \mathbf{L}} \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \mathbf{m}) \right)}{(2 \pi) ^ {- \frac{D}{2}} \left( \abs{\det \bm{\Sigma}} \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right)},
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-& \frac{1}{2} \ln \abs{\frac{\det \mathbf{L}}{\det \bm{\Sigma}}} \int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
+&\frac{1}{2} \ln \abs{\frac{\det \mathbf{L}}{\det \bm{\Sigma}}} \int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
 &+ \frac{1}{2} \int (\mathbf{x} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \mathbf{m}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
 &- \frac{1}{2} \int (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x}.
 \end{aligned}
