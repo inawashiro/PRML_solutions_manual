@@ -863,42 +863,49 @@ gives
 
 \subsection{(Incomplete)}
 \label{2.15}
-%Let $\mathbf{x}$ be a variable such that
-%%
-%\begin{equation}
-%p(\mathbf{x}) = \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}).
-%\end{equation}
-%%
-%Then, by the definition,
-%%
-%\begin{equation}
-%{\rm H}(x) = - \int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) \ln \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx,
-%\end{equation}
-%%
-%where
-%%
-%\begin{equation}
-%\mathcal{N} \left( x | \mu, \sigma ^ 2 \right) = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2 \sigma ^2} (x - \mu) ^ 2 \right).
-%\end{equation}
-%%
-%Therefore,
-%%
-%\begin{equation}
-%{\rm H}(x) = - \int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) \left( - \frac{1}{2} \ln \left( 2 \pi \sigma ^ 2 \right) - \frac{1}{2 \sigma ^2} (x - \mu) ^ 2 \right) dx.
-%\end{equation}
-%%
-%The right hand side can be written as
-%%
-%\begin{equation}
-%\frac{1}{2} \ln \left( 2 \pi \sigma ^ 2 \right) \int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx + \frac{1}{2 \sigma ^2} \int_{- \infty}^{\infty} (x - \mu) ^ 2 \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx.
-%\end{equation}
-%%
-%Thus,
-%%
-%\begin{equation}
-%{\rm H}(x) = \frac{1}{2} \left( 1 + \ln \left( 2 \pi \sigma ^ 2 \right) \right).
-%\end{equation}
-%%
+Let $\mathbf{x}$ be a variable in $D$ dimensions such that
+%
+\begin{equation}
+p(\mathbf{x}) = \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}).
+\end{equation}
+%
+Then, by the definition,
+%
+\begin{equation}
+{\rm H}(\mathbf{x}) = - \int \mathcal{N} \left( \mathbf{x} | \mathbf{\mu}, \mathbf{\Sigma} \right) \ln \mathcal{N} \left( \mathbf{x} | \mathbf{\mu}, \mathbf{\Sigma} \right) d\mathbf{x}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&- \int \mathcal{N} \left( \mathbf{x} | \bm{\mu}, \bm{\Sigma} \right) \left( - \frac{D}{2} \ln (2 \pi) - \frac{1}{2} \ln \abs{\det \bm{\Sigma}} - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right) d\mathbf{x} \\
+=& \left( \frac{D}{2} \ln (2 \pi) + \frac{1}{2} \ln \abs{\det \bm{\Sigma}} \right) \int \mathcal{N} \left( \mathbf{x} | \bm{\mu}, \bm{\Sigma} \right) d\mathbf{x} \\
+&+ \frac{1}{2} \int (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \mathcal{N} \left( \mathbf{x} | \bm{\mu}, \bm{\Sigma} \right) d\mathbf{x}.
+\end{aligned}
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\begin{aligned}
+\int \mathcal{N} \left( \mathbf{x} | \bm{\mu}, \bm{\Sigma} \right) d\mathbf{x} &= 1, \\
+\int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathcal{N} \left( \mathbf{x} | \bm{\mu}, \bm{\Sigma} \right) d\mathbf{x} &= \bm{\Sigma},
+\end{aligned}
+\end{equation}
+%
+the right hand side can be written as
+%
+\begin{equation}
+\frac{D}{2} \ln (2 \pi) + \frac{1}{2} \ln \abs{\det \bm{\Sigma}} + \frac{1}{2}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm H}(\mathbf{x}) = \frac{D}{2} \ln (2 \pi) + \frac{1}{2} \left( 1 + \ln \abs{\det \bm{\Sigma}} \right).
+\end{equation}
+%
 
 
 
