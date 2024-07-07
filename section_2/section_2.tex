@@ -710,7 +710,17 @@ Since
 (\mathbf{x} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \mathbf{m}) = (\mathbf{x} - \bm{\mu} + \bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \bm{\mu} + \bm{\mu} - \mathbf{m}),
 \end{equation}
 %
-and 
+the second term can be written as
+%
+\begin{equation}
+\begin{aligned}
+&\frac{1}{2} \int (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
+&+ (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} \int (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
+&+ \frac{1}{2} (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\bm{\mu} - \mathbf{m}) \int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x}.
+\end{aligned}
+\end{equation}
+%
+Since
 %
 \begin{equation}
 \begin{aligned}
@@ -720,16 +730,11 @@ and
 \end{aligned}
 \end{equation}
 %
-the second term can be written as
+it can be written as
 %
 \begin{equation}
-\begin{aligned}
-&\frac{1}{2} \int (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{L} ^ {- 1} (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
-&+ (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} \int (\mathbf{x} - \bm{\mu}) \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
-&+ \frac{1}{2} (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\bm{\mu} - \mathbf{m}) \int \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) d\mathbf{x} \\
-=& \frac{1}{2} \frac{\det \bm{\Sigma}}{\det \mathbf{L}}
-+ \frac{1}{2} (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\bm{\mu} - \mathbf{m}). 
-\end{aligned}
+\frac{1}{2} \frac{\det \bm{\Sigma}}{\det \mathbf{L}}
++ \frac{1}{2} (\bm{\mu} - \mathbf{m}) ^ \intercal \mathbf{L} ^ {- 1} (\bm{\mu} - \mathbf{m}).
 \end{equation}
 %
 Since

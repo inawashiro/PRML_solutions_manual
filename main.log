@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  7 JUL 2024 17:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  7 JUL 2024 20:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -185,12 +185,12 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 110.
 
 [37] [38] [39] [40] [41] [42] [43] [44] [45] [46]
-Overfull \hbox (9.3761pt too wide) detected at line 765
+Overfull \hbox (9.3761pt too wide) detected at line 770
 [][][]
  []
 
 [47]
-Overfull \hbox (72.41971pt too wide) detected at line 803
+Overfull \hbox (72.41971pt too wide) detected at line 808
 [][][]
  []
 
@@ -199,10 +199,6 @@ Overfull \hbox (72.41971pt too wide) detected at line 803
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  2562 strings out of 474049
@@ -226,7 +222,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb>
-Output written on main.pdf (50 pages, 262158 bytes).
+Output written on main.pdf (50 pages, 262174 bytes).
 PDF statistics:
  242 PDF objects out of 1000 (max. 8388607)
  158 compressed objects within 2 object streams
