@@ -507,6 +507,52 @@ Therefore,
 
 \subsection{(Incomplete)}
 \label{2.9}
+By \ref{2.5}, we have
+%
+\begin{equation}
+\int_0^1 \mu_1 ^ {\alpha_1 - 1} \mu_2 ^ {\alpha_2 - 1} d\mu = \frac{\Gamma(\alpha_1) \Gamma(\alpha_2)}{\Gamma(\alpha_1 + \alpha_2)},
+\end{equation}
+%
+where
+%
+\begin{equation}
+\mu_1 + \mu_2 = 1.
+\end{equation}
+%
+Let $\bm{\mu}_K = (\mu_1, \cdots, \mu_K) ^ \intercal$ and
+%
+\begin{equation}
+\sum_{k = 1}^{K} \mu_k = 1.
+\end{equation}
+%
+Let us assume that
+%
+\begin{equation}
+\int \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1} d\bm{\mu}_K = \frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}.
+\end{equation}
+%
+Let $\bm{\mu}_{K + 1} = (\mu_1, \cdots, \mu_{K + 1}) ^ \intercal$ and
+%
+\begin{equation}
+\sum_{k = 1}^{K + 1} \mu_k = 1.
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\int \prod_{k = 1}^{K + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu}_{K + 1} = \int (1 - \mu_{K + 1}) ^ {\alpha_{K + 1} - 1} \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1} d\bm{\mu}_{K + 1}.
+\end{equation}
+%
+By the assumption, the right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&\int (1 - \mu_{K + 1}) ^ {\sum_{k = 1}^{K + 1 }\alpha_k - 1} \left( \int \prod_{k = 1}^{K} \left( \frac{\mu_k}{1 - \mu_{K + 1}} \right) ^ {\alpha_k - 1} d\bm{\mu}_K \right) d\mu_{K + 1} \\
+&= \frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)} \int_0^1 (1 - \mu_{K + 1}) ^ {\sum_{k = 1}^{K + 1 }\alpha_k - 1} d\mu_{K + 1}.
+\end{aligned}
+\end{equation}
+%
+
 
 
 \subsection{}
