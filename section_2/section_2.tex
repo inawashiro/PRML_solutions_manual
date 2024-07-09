@@ -519,19 +519,19 @@ where
 \mu_1 + \mu_2 = 1.
 \end{equation}
 %
-Let $\bm{\mu}_K = (\mu_1, \cdots, \mu_K) ^ \intercal$ and
+Let us assume that
+%
+\begin{equation}
+\int \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1} d\bm{\mu} = \frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)},
+\end{equation}
+%
+where
 %
 \begin{equation}
 \sum_{k = 1}^{K} \mu_k = 1.
 \end{equation}
 %
-Let us assume that
-%
-\begin{equation}
-\int \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1} d\bm{\mu}_K = \frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}.
-\end{equation}
-%
-Let $\bm{\mu}_{K + 1} = (\mu_1, \cdots, \mu_{K + 1}) ^ \intercal$ and
+Let $\bm{\mu}$ be a vector of $K + 1$ elements such that
 %
 \begin{equation}
 \sum_{k = 1}^{K + 1} \mu_k = 1.
@@ -540,19 +540,46 @@ Let $\bm{\mu}_{K + 1} = (\mu_1, \cdots, \mu_{K + 1}) ^ \intercal$ and
 Then
 %
 \begin{equation}
-\int \prod_{k = 1}^{K + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu}_{K + 1} = \int (1 - \mu_{K + 1}) ^ {\alpha_{K + 1} - 1} \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1} d\bm{\mu}_{K + 1}.
+\int \prod_{k = 1}^{K + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} 
+= \int \mu_{K + 1} ^ {\alpha_{K + 1} - 1} \left( \int \prod_{k = 1}^{K} {\mu'_k} ^ {\alpha_k - 1} d\bm{\mu}' \right) d\mu_{K + 1}.
 \end{equation}
 %
-By the assumption, the right hand side can be written as
+where $\bm{\mu}'$ is the vector of first $K$ elements of $\bm{\mu}$.
+By the transformation 
+%
+\begin{equation}
+\bm{\mu}'' = \frac{1}{1 - \mu_{K + 1}} \bm{\mu}',
+\end{equation}
+%
+the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int (1 - \mu_{K + 1}) ^ {\sum_{k = 1}^{K + 1 }\alpha_k - 1} \left( \int \prod_{k = 1}^{K} \left( \frac{\mu_k}{1 - \mu_{K + 1}} \right) ^ {\alpha_k - 1} d\bm{\mu}_K \right) d\mu_{K + 1} \\
-&= \frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)} \int_0^1 (1 - \mu_{K + 1}) ^ {\sum_{k = 1}^{K + 1 }\alpha_k - 1} d\mu_{K + 1}.
+&\int \mu_{K + 1} ^ {\alpha_{K + 1} - 1} \left( \int \prod_{k = 1}^{K} \left( (1 - \mu_{K + 1}){\mu''_k} \right) ^ {\alpha_k - 1} (1 - \mu_{K + 1}) ^ K d\bm{\mu}'' \right) d\mu_{K + 1} \\
+&= \int \mu_{K + 1} ^ {\alpha_{K + 1} - 1} (1 - \mu_{K + 1}) ^ {\Sigma_{k = 1}^{K} \alpha_k} \left( \int \prod_{k = 1}^{K} {\mu''_k} ^ {\alpha_k - 1} d\bm{\mu}'' \right) d\mu_{K + 1}.
 \end{aligned}
 \end{equation}
 %
-
+Since
+%
+\begin{equation}
+\sum_{k = 1}^{K} {\mu''_k} = 1,
+\end{equation}
+%
+the assumption can be used to write the right hand as
+%
+\begin{equation}
+\frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)} \frac{\Gamma(\alpha_{K + 1}) \Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k + 1 \right)}
+= \frac{\prod_{k = 1}^{K + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k + 1 \right)}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\int \prod_{k = 1}^{K + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} = \frac{\prod_{k = 1}^{K + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k + 1 \right)}.
+\end{equation}
+%
+Thus, the assumption is proved by induction on $K$.
 
 
 \subsection{}
