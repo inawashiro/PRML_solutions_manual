@@ -544,7 +544,7 @@ Then
 = \int \mu_{K + 1} ^ {\alpha_{K + 1} - 1} \left( \int \prod_{k = 1}^{K} {\mu'_k} ^ {\alpha_k - 1} d\bm{\mu}' \right) d\mu_{K + 1}.
 \end{equation}
 %
-where $\bm{\mu}'$ is the vector of first $K$ elements of $\bm{\mu}$.
+where $\bm{\mu}'$ is the vector of the first $K$ elements of $\bm{\mu}$.
 By the transformation 
 %
 \begin{equation}
@@ -555,7 +555,7 @@ the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int \mu_{K + 1} ^ {\alpha_{K + 1} - 1} \left( \int \prod_{k = 1}^{K} \left( (1 - \mu_{K + 1}){\mu''_k} \right) ^ {\alpha_k - 1} (1 - \mu_{K + 1}) ^ K d\bm{\mu}'' \right) d\mu_{K + 1} \\
+&\int \mu_{K + 1} ^ {\alpha_{K + 1} - 1} \left( \int \left( \prod_{k = 1}^{K} \left( (1 - \mu_{K + 1}){\mu''_k} \right) ^ {\alpha_k - 1} \right) (1 - \mu_{K + 1}) ^ K d\bm{\mu}'' \right) d\mu_{K + 1} \\
 &= \int \mu_{K + 1} ^ {\alpha_{K + 1} - 1} (1 - \mu_{K + 1}) ^ {\Sigma_{k = 1}^{K} \alpha_k} \left( \int \prod_{k = 1}^{K} {\mu''_k} ^ {\alpha_k - 1} d\bm{\mu}'' \right) d\mu_{K + 1}.
 \end{aligned}
 \end{equation}
@@ -569,14 +569,14 @@ Since
 the assumption can be used to write the right hand as
 %
 \begin{equation}
-\frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)} \frac{\Gamma(\alpha_{K + 1}) \Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k + 1 \right)}
-= \frac{\prod_{k = 1}^{K + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k + 1 \right)}.
+\frac{\prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)} \frac{\Gamma(\alpha_{K + 1}) \Gamma \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k + 1 \right)}
+= \frac{\sum_{k = 1}^{K} \alpha_k}{\sum_{k = 1}^{K + 1} \alpha_k} \frac{\prod_{k = 1}^{K + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k \right)}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\int \prod_{k = 1}^{K + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} = \frac{\prod_{k = 1}^{K + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k + 1 \right)}.
+\int \prod_{k = 1}^{K + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} = \frac{\prod_{k = 1}^{K + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K + 1} \alpha_k \right)}.
 \end{equation}
 %
 Thus, the assumption is proved by induction on $K$.
