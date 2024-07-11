@@ -886,7 +886,7 @@ p(\mathbf{x})
 - 1 
 + \lambda_1 
 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2
-+ \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) 
++ \lambda_3 \left( \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) 
 \right).
 \end{equation}
 %
@@ -900,13 +900,25 @@ Substituting it to
 \end{aligned}
 \end{equation}
 %
+and the transformation 
+%
+\begin{equation}
+\mathbf{y} = \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu}
+\end{equation}
+%
 gives
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) \int \exp \left( \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \right) d\mathbf{x} &= 1, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) \int \mathbf{x} \exp \left( \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \right) d\mathbf{x} &= \bm{\mu}, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \exp \left( \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \right) d\mathbf{x} &= \bm{\Sigma}.
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
+\int \exp \left( \lambda_3 \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+&= 1, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
+\int \left( \mathbf{y} + \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \exp \left( \lambda_3 \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+&= \bm{\mu}, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
+\int \left( \mathbf{y} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) \left( \mathbf{y} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) ^ \intercal \exp \left( \lambda_3 \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+&= \bm{\Sigma}.
 \end{aligned}
 \end{equation}
 %
