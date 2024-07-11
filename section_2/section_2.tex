@@ -859,27 +859,35 @@ Let
 \begin{aligned}
 L(p(\mathbf{x})) = &- \int p(\mathbf{x}) \ln p(\mathbf{x}) d\mathbf{x}
 + \lambda_1 \left( \int p(\mathbf{x}) d\mathbf{x} - 1 \right) \\
-&+ \bm{\lambda}_2 ^ \intercal \left( \int \mathbf{x} p(\mathbf{x}) d\mathbf{x} - \bm{\mu} \right)
-+ \bm{\lambda}_3 ^ \intercal \left( \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal p(\mathbf{x}) d\mathbf{x} - \bm{\Sigma} \right) \bm{\lambda}_3.
+&+ \lambda_2 \left( \int \bm{\mu} ^ \intercal \mathbf{x} p(\mathbf{x}) d\mathbf{x} - \norm{\bm{\mu}} ^ 2 \right)
++ \lambda_3 \left( \int (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{x} - \bm{\mu}) p(\mathbf{x}) d\mathbf{x} - \tr \bm{\Sigma} \right).
 \end{aligned}
 \end{equation}
-
+%
 Then
 %
 \begin{equation}
-\frac{\delta L(p(\mathbf{x}))}{\delta p(\mathbf{x})} = \int_{- \infty}^{\infty} \left( - \ln p(\mathbf{x}) - 1 + \lambda_1 + \bm{\lambda}_2 ^ \intercal \mathbf{x} + \left( \bm{\lambda}_3 ^ \intercal (\mathbf{x} - \bm{\mu}) \right) ^ 2 \right) d\mathbf{x}.
+\frac{\delta L(p(\mathbf{x}))}{\delta p(\mathbf{x})} 
+= - \ln p(\mathbf{x}) - 1 + \lambda_1 + \lambda_2 \bm{\mu} ^ \intercal \mathbf{x} + \lambda_3 (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{x} - \bm{\mu}).
 \end{equation}
-
+%
 Setting the left hand side to zero gives
 %
 \begin{equation}
-p(\mathbf{x}) = \exp \left( - 1 + \lambda_1 + \bm{\lambda}_2 ^ \intercal \mathbf{x} + \left( \bm{\lambda}_3 ^ \intercal (\mathbf{x} - \bm{\mu}) \right) ^ 2 \right).
+p(\mathbf{x}) 
+= \exp \left( - 1 + \lambda_1 + \lambda_2 \bm{\mu} ^ \intercal \mathbf{x} + \lambda_3 (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{x} - \bm{\mu}) \right),
 \end{equation}
 %
-Therefore,
+so that
 %
 \begin{equation}
-p(\mathbf{x}) = \exp \left( - 1 + \lambda_1 - \frac{\left \lVert \bm{\lambda}_2 \right \rVert ^ 2}{4} + \left( \bm{\lambda}_3 ^ \intercal \left( \mathbf{x} - \left( \bm{\mu} - \frac{\bm{\lambda}_2}{2 \left \lVert \bm{\lambda}_3 \right \rVert} \right) \right) \right) ^ 2 \right).
+p(\mathbf{x}) 
+= \exp \left( 
+- 1 
++ \lambda_1 
+- \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2
++ \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) 
+\right).
 \end{equation}
 %
 Substituting it to 
@@ -896,9 +904,9 @@ gives
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( - 1 + \lambda_1 - \frac{\left \lVert \bm{\lambda}_2 \right \rVert ^ 2}{4} \right) \int \exp \left( \left( \bm{\lambda}_3 ^ \intercal \left( \mathbf{x} - \left( \bm{\mu} - \frac{\bm{\lambda}_2}{2 \left \lVert \bm{\lambda}_3 \right \rVert} \right) \right) \right) ^ 2 \right) d\mathbf{x} &= 1, \\
-\exp \left( - 1 + \lambda_1 - \frac{\left \lVert \bm{\lambda}_2 \right \rVert ^ 2}{4} \right) \int \mathbf{x} \exp \left( \left( \bm{\lambda}_3 ^ \intercal \left( \mathbf{x} - \left( \bm{\mu} - \frac{\bm{\lambda}_2}{2 \left \lVert \bm{\lambda}_3 \right \rVert} \right) \right) \right) ^ 2 \right) d\mathbf{x} &= \bm{\mu}, \\
-\exp \left( - 1 + \lambda_1 - \frac{\left \lVert \bm{\lambda}_2 \right \rVert ^ 2}{4} \right) \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \exp \left( \left( \bm{\lambda}_3 ^ \intercal \left( \mathbf{x} - \left( \bm{\mu} - \frac{\bm{\lambda}_2}{2 \left \lVert \bm{\lambda}_3 \right \rVert} \right) \right) \right) ^ 2 \right) d\mathbf{x} &= \bm{\Sigma}.
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) \int \exp \left( \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \right) d\mathbf{x} &= 1, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) \int \mathbf{x} \exp \left( \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \right) d\mathbf{x} &= \bm{\mu}, \\
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \exp \left( \lambda_3 \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 + \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \right) d\mathbf{x} &= \bm{\Sigma}.
 \end{aligned}
 \end{equation}
 %
