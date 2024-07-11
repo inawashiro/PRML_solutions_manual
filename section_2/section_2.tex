@@ -519,30 +519,39 @@ where
 \mu_1 + \mu_2 = 1.
 \end{equation}
 %
-Let us assume that
+For a vector $\bm{\mu}$ in $M$ dimensions, let us assume that
 %
-\begin{equation}
-\int \prod_{k = 1}^{M} \mu_k ^ {\alpha_k - 1} d\bm{\mu} = \frac{\prod_{k = 1}^{M} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)},
-\end{equation}
+\[ 
+\int_{
+\begin{subarray}{l}
+\sum_{k = 1}^{M} \mu_k = 1 \\\\
+\mu_k \geq 0
+\end{subarray}
+} 
+\prod_{k = 1}^{M} \mu_k ^ {\alpha_k - 1} d\bm{\mu} 
+= \frac{\prod_{k = 1}^{M} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)},
+\]
 %
-where
+Then, for a vector $\bm{\mu}$ in $M + 1$ dimensions, 
 %
-\begin{equation}
-\sum_{k = 1}^{M} \mu_k = 1.
-\end{equation}
-%
-Let $\bm{\mu}$ be a vector of $M + 1$ elements such that
-%
-\begin{equation}
-\sum_{k = 1}^{M + 1} \mu_k = 1.
-\end{equation}
-%
-Then
-%
-\begin{equation}
-\int \prod_{k = 1}^{M + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} 
-= \int \mu_{M + 1} ^ {\alpha_{M + 1} - 1} \left( \int \prod_{k = 1}^{M} {\mu'_k} ^ {\alpha_k - 1} d\bm{\mu}' \right) d\mu_{M + 1}.
-\end{equation}
+\[
+\int_{
+\begin{subarray}{l}
+\sum_{k = 1}^{M + 1} \mu_k = 1 \\\\
+\mu_k \geq 0
+\end{subarray}
+}
+\prod_{k = 1}^{M + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} 
+= \int_{0}^{1} \mu_{M + 1} ^ {\alpha_{M + 1} - 1} 
+\left( \int_{
+\begin{subarray}{l}
+\sum_{k = 1}^{M} \mu'_k = 1 - \mu_{M + 1} \\\\
+\mu'_k \geq 0
+\end{subarray}
+}
+\prod_{k = 1}^{M} {\mu'_k} ^ {\alpha_k - 1} d\bm{\mu}' 
+\right) d\mu_{M + 1}.
+\]
 %
 where $\bm{\mu}'$ is the vector of the first $M$ elements of $\bm{\mu}$.
 By the transformation 
@@ -553,20 +562,27 @@ By the transformation
 %
 the right hand side can be written as
 %
-\begin{equation}
-\begin{aligned}
-&\int \mu_{M + 1} ^ {\alpha_{M + 1} - 1} \left( \int \left( \prod_{k = 1}^{M} \left( (1 - \mu_{M + 1}){\mu''_k} \right) ^ {\alpha_k - 1} \right) (1 - \mu_{M + 1}) ^ M d\bm{\mu}'' \right) d\mu_{M + 1} \\
-&= \int \mu_{M + 1} ^ {\alpha_{M + 1} - 1} (1 - \mu_{M + 1}) ^ {\Sigma_{k = 1}^{M} \alpha_k} \left( \int \prod_{k = 1}^{M} {\mu''_k} ^ {\alpha_k - 1} d\bm{\mu}'' \right) d\mu_{M + 1}.
-\end{aligned}
-\end{equation}
+\[
+\int_{0}^{1} \mu_{M + 1} ^ {\alpha_{M + 1} - 1} 
+\left( \int_{
+\begin{subarray}{l}
+\sum_{k = 1}^{M} \mu''_k = 1 \\\\
+\mu''_k \geq 0
+\end{subarray}
+} \left( \prod_{k = 1}^{M} \left( (1 - \mu_{M + 1}){\mu''_k} \right) ^ {\alpha_k - 1} \right) (1 - \mu_{M + 1}) ^ M d\bm{\mu}'' \right) d\mu_{M + 1},
+\]
 %
-Since
-%
-\begin{equation}
-\sum_{k = 1}^{M} {\mu''_k} = 1,
-\end{equation}
-%
-the assumption can be used to write the right hand as
+so that
+\[
+\int_{0}^{1} \mu_{M + 1} ^ {\alpha_{M + 1} - 1} (1 - \mu_{M + 1}) ^ {\Sigma_{k = 1}^{M} \alpha_k} 
+\left( \int_{
+\begin{subarray}{l}
+\sum_{k = 1}^{M} \mu''_k = 1 \\\\
+\mu''_k \geq 0
+\end{subarray}
+} \prod_{k = 1}^{M} {\mu''_k} ^ {\alpha_k - 1} d\bm{\mu}'' \right) d\mu_{M + 1}.
+\]
+By the assumption, it can be written as
 %
 \begin{equation}
 \frac{\prod_{k = 1}^{M} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)} \frac{\Gamma(\alpha_{M + 1}) \Gamma \left( \sum_{k = 1}^{M} \alpha_k + 1 \right)}{\Gamma \left( \sum_{k = 1}^{M + 1} \alpha_k + 1 \right)}
