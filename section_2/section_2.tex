@@ -507,17 +507,18 @@ Therefore,
 
 \subsection{(Incomplete)}
 \label{2.9}
-By \ref{2.5}, we have
+For a vector $\bm{\mu}$ in 2 dimensions, \ref{2.5} gives
 %
-\begin{equation}
-\int_0^1 \mu_1 ^ {\alpha_1 - 1} \mu_2 ^ {\alpha_2 - 1} d\mu = \frac{\Gamma(\alpha_1) \Gamma(\alpha_2)}{\Gamma(\alpha_1 + \alpha_2)},
-\end{equation}
-%
-where
-%
-\begin{equation}
-\mu_1 + \mu_2 = 1.
-\end{equation}
+\[
+\int_{
+\begin{subarray}{l}
+\mu_1 + \mu_2 = 1 \\\\
+\mu_1 \geq 0, \mu_2 \geq 0
+\end{subarray}
+} 
+\mu_1 ^ {\alpha_1 - 1} \mu_2 ^ {\alpha_2 - 1} d\bm{\mu}
+= \frac{\Gamma(\alpha_1) \Gamma(\alpha_2)}{\Gamma(\alpha_1 + \alpha_2)}.
+\]
 %
 For a vector $\bm{\mu}$ in $M$ dimensions, let us assume that
 %
@@ -529,7 +530,7 @@ For a vector $\bm{\mu}$ in $M$ dimensions, let us assume that
 \end{subarray}
 } 
 \prod_{k = 1}^{M} \mu_k ^ {\alpha_k - 1} d\bm{\mu} 
-= \frac{\prod_{k = 1}^{M} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)},
+= \frac{\prod_{k = 1}^{M} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)}.
 \]
 %
 Then, for a vector $\bm{\mu}$ in $M + 1$ dimensions, 
