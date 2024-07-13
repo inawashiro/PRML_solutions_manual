@@ -853,7 +853,7 @@ Therefore,
 
 \subsection{(Incomplete)}
 \label{2.14}
-Let
+Let $\mathbf{x}$ be a variable in $D$ dimensions and 
 %
 \begin{equation}
 \begin{aligned}
@@ -903,7 +903,7 @@ Substituting it to
 and the transformation 
 %
 \begin{equation}
-\mathbf{y} = \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu}
+\mathbf{y} = \sqrt{- \lambda_3} \left( \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right)
 \end{equation}
 %
 gives
@@ -911,69 +911,65 @@ gives
 \begin{equation}
 \begin{aligned}
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \exp \left( \lambda_3 \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+\int \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) \frac{1}{\sqrt{- \lambda_3}} d\mathbf{y} 
 &= 1, \\
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \left( \mathbf{y} + \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \exp \left( \lambda_3 \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} + \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) \frac{1}{\sqrt{- \lambda_3}} d\mathbf{y} 
 &= \bm{\mu}, \\
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \left( \mathbf{y} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) \left( \mathbf{y} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) ^ \intercal \exp \left( \lambda_3 \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) ^ \intercal \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) \frac{1}{\sqrt{- \lambda_3}} d\mathbf{y} 
 &= \bm{\Sigma}.
 \end{aligned}
 \end{equation}
 %
-%By the transformation
-%%
-%\begin{equation}
-%y = \sqrt{- \lambda_3} \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right),
-%\end{equation}
-%%
-%they can be written as
-%%
-%\begin{equation}
-%\begin{aligned}
-%\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= 1,\\
-%\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \left( (- \lambda_3) ^ {- \frac{1}{2}} y + \mu - \frac{\lambda_2}{2 \lambda_3} \right) \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= \mu,\\
-%\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \left( (- \lambda_3) ^ {- \frac{1}{2}} y - \frac{\lambda_2}{2 \lambda_3} \right) ^ 2 \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= \sigma ^ 2.\\
-%\end{aligned}
-%\end{equation}
-%%
-%Since
-%%
-%\begin{equation}
-%\begin{aligned}
-%\int_{- \infty}^{\infty} \exp \left( - y ^ 2 \right) dy &= \Gamma \left( \frac{1}{2} \right), \\
-%\int_{- \infty}^{\infty} y \exp \left( - y ^ 2 \right) dy &= 0, \\
-%\int_{- \infty}^{\infty} y ^ 2 \exp \left( - y ^ 2 \right) dy &= \Gamma \left( \frac{3}{2} \right),
-%\end{aligned}
-%\end{equation}
-%%
-%they can be written as
-%%
-%\begin{equation}
-%\begin{aligned}
-%\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= 1, \\
-%\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= \mu, \\
-%\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( (- \lambda_3) ^ {- \frac{3}{2}} \Gamma \left( \frac{3}{2} \right) + (- \lambda_3) ^ {- \frac{1}{2}} \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \Gamma \left( \frac{1}{2} \right) \right) &= \sigma ^ 2.
-%\end{aligned}
-%\end{equation}
-%%
-%Thus,
-%%
-%\begin{equation}
-%\begin{aligned}
-%\lambda_1 &= 1 - \frac{1}{2} \ln \left( 2 \pi \sigma ^ 2 \right), \\
-%\lambda_2 &= 0, \\
-%\lambda_3 &= - \frac{1}{2 \sigma ^ 2},
-%\end{aligned}
-%\end{equation}
-%%
-%so that
-%%
-%\begin{equation}
-%p(x) = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
-%\end{equation}
-%%
+Since
+%
+\begin{equation}
+\begin{aligned}
+\int \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+&= \left( \Gamma \left( \frac{1}{2} \right) \right) ^ D, \\
+\int \mathbf{y} \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
+&= \mathbf{0}, \\
+\int \mathbf{y} \mathbf{y} ^ \intercal \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y}
+&= \Gamma \left( \frac{3}{2} \right) \left( \Gamma \left( \frac{1}{2} \right) \right) ^ {D - 1} \mathbf{I}, \\
+\end{aligned}
+\end{equation}
+%
+they can  be written as
+%
+\begin{equation}
+\begin{aligned}
+\frac{1}{\sqrt{- \lambda_3}} \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
+\left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
+&= 1, \\
+\frac{1}{\sqrt{- \lambda_3}} \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
+\left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) 
+\left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
+\bm{\mu}
+&= \bm{\mu}, \\
+\frac{1}{\sqrt{- \lambda_3}} \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
+\left( - \frac{1}{\lambda_3} \Gamma \left( \frac{3}{2} \right) \left( \Gamma \left( \frac{1}{2} \right) \right) ^ {D - 1} \mathbf{I} 
++ \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \bm{\mu} \bm{\mu} ^ \intercal \right) 
+&= \bm{\Sigma}. 
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\begin{aligned}
+\lambda_1 &= , \\
+\lambda_2 &= 0, \\
+\lambda_3 &= .
+\end{aligned}
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+p(\mathbf{x}) = (2 \pi) ^ {- \frac{D}{2}} (\det \bm{\Sigma}) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right).
+\end{equation}
+%
 
 
 \subsection{}
