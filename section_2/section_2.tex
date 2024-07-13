@@ -911,13 +911,13 @@ gives
 \begin{equation}
 \begin{aligned}
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) \frac{1}{\sqrt{- \lambda_3}} d\mathbf{y} 
+\int \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) (- \lambda_3) ^ {- \frac{1}{2}} d\mathbf{y} 
 &= 1, \\
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} + \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) \frac{1}{\sqrt{- \lambda_3}} d\mathbf{y} 
+\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} + \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) (- \lambda_3) ^ {- \frac{1}{2}} d\mathbf{y} 
 &= \bm{\mu}, \\
 \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) ^ \intercal \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) \frac{1}{\sqrt{- \lambda_3}} d\mathbf{y} 
+\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) ^ \intercal \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) (- \lambda_3) ^ {- \frac{1}{2}} d\mathbf{y} 
 &= \bm{\Sigma}.
 \end{aligned}
 \end{equation}
@@ -939,15 +939,18 @@ they can  be written as
 %
 \begin{equation}
 \begin{aligned}
-\frac{1}{\sqrt{- \lambda_3}} \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
+(- \lambda_3) ^ {- \frac{1}{2}}
 \left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
 &= 1, \\
-\frac{1}{\sqrt{- \lambda_3}} \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
 \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) 
+(- \lambda_3) ^ {- \frac{1}{2}}
 \left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
 \bm{\mu}
 &= \bm{\mu}, \\
-\frac{1}{\sqrt{- \lambda_3}} \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
+\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
+(- \lambda_3) ^ {- \frac{1}{2}}
 \left( - \frac{1}{\lambda_3} \Gamma \left( \frac{3}{2} \right) \left( \Gamma \left( \frac{1}{2} \right) \right) ^ {D - 1} \mathbf{I} 
 + \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \bm{\mu} \bm{\mu} ^ \intercal \right) 
 &= \bm{\Sigma}. 
