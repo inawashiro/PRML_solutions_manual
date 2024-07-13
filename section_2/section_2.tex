@@ -858,9 +858,9 @@ Let $\mathbf{x}$ be a variable in $D$ dimensions and
 \begin{equation}
 \begin{aligned}
 L(p(\mathbf{x})) = &- \int p(\mathbf{x}) \ln p(\mathbf{x}) d\mathbf{x}
-+ \lambda_1 \left( \int p(\mathbf{x}) d\mathbf{x} - 1 \right) \\
-&+ \lambda_2 \left( \int \bm{\mu} ^ \intercal \mathbf{x} p(\mathbf{x}) d\mathbf{x} - \norm{\bm{\mu}} ^ 2 \right)
-+ \lambda_3 \left( \int (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{x} - \bm{\mu}) p(\mathbf{x}) d\mathbf{x} - \tr \bm{\Sigma} \right).
++ \lambda \left( \int p(\mathbf{x}) d\mathbf{x} - 1 \right) \\
+&+ \mathbf{w}_1 ^ \intercal \left( \int \mathbf{x} p(\mathbf{x}) d\mathbf{x} - \bm{\mu} \right)
++ \mathbf{w}_2 ^ \intercal \left( \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal p(\mathbf{x}) d\mathbf{x} - \bm{\Sigma} \right) \mathbf{w}_2.
 \end{aligned}
 \end{equation}
 %
@@ -868,14 +868,22 @@ Then
 %
 \begin{equation}
 \frac{\delta L(p(\mathbf{x}))}{\delta p(\mathbf{x})} 
-= - \ln p(\mathbf{x}) - 1 + \lambda_1 + \lambda_2 \bm{\mu} ^ \intercal \mathbf{x} + \lambda_3 (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{x} - \bm{\mu}).
+= - \ln p(\mathbf{x}) - 1 
++ \lambda
++ \mathbf{w}_1 ^ \intercal \mathbf{x} 
++ \mathbf{w}_2 ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{w}_2.
 \end{equation}
 %
 Setting the left hand side to zero gives
 %
 \begin{equation}
 p(\mathbf{x}) 
-= \exp \left( - 1 + \lambda_1 + \lambda_2 \bm{\mu} ^ \intercal \mathbf{x} + \lambda_3 (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{x} - \bm{\mu}) \right),
+= \exp \left( 
+- 1 
++ \lambda
++ \mathbf{w}_1 ^ \intercal \mathbf{x} 
++ \mathbf{w}_2 ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{w}_2 
+\right),
 \end{equation}
 %
 so that
@@ -884,9 +892,9 @@ so that
 p(\mathbf{x}) 
 = \exp \left( 
 - 1 
-+ \lambda_1 
-- \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2
-+ \lambda_3 \left( \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) ^ \intercal \left( \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) 
++ \lambda
+- \mathbf{w}_1 ^ \intercal \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) ^ {- 1} \mathbf{w}_1
++ \left( \mathbf{x} - \bm{\mu} - \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) ^ {- 1} \mathbf{w}_1\right) ^ \intercal \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) \left( \mathbf{x} - \bm{\mu} - \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) ^ {- 1} \mathbf{w}_1\right).
 \right).
 \end{equation}
 %
