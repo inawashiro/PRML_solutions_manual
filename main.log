@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  12 JUL 2024 08:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  13 JUL 2024 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -207,11 +207,16 @@ Overfull \hbox (43.02364pt too wide) detected at line 891
  []
 
 
-Overfull \hbox (14.17648pt too wide) detected at line 923
+Overfull \hbox (97.2933pt too wide) detected at line 923
 [][][]
  []
 
-[49]) [50] (./main.aux)
+[49]
+Overfull \hbox (29.30309pt too wide) detected at line 955
+[][][]
+ []
+
+[50]) [51] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
@@ -240,10 +245,10 @@ ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on main.pdf (52 pages, 275462 bytes).
+Output written on main.pdf (53 pages, 277916 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 256 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
