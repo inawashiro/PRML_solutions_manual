@@ -851,7 +851,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.14}
 Let $\mathbf{x}$ be a variable in $D$ dimensions and 
 %
@@ -983,20 +983,33 @@ they can  be written as
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-(- \lambda_3) ^ {- \frac{1}{2}}
+\exp \left( 
+- 1 
++ \lambda
+- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\right) 
 \left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
+(\det \mathbf{M}) ^ \frac{1}{2}
 &= 1, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
-\left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) 
-(- \lambda_3) ^ {- \frac{1}{2}}
+\exp \left( 
+- 1 
++ \lambda
+- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\right)
+(\bm{\mu} + \mathbf{M} \mathbf{l}) 
 \left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
-\bm{\mu}
+(\det \mathbf{M}) ^ \frac{1}{2}
 &= \bm{\mu}, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right)
-(- \lambda_3) ^ {- \frac{1}{2}}
-\left( - \frac{1}{\lambda_3} \Gamma \left( \frac{3}{2} \right) \left( \Gamma \left( \frac{1}{2} \right) \right) ^ {D - 1} \mathbf{I} 
-+ \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \bm{\mu} \bm{\mu} ^ \intercal \right) 
+\exp \left( 
+- 1 
++ \lambda
+- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\right)
+\left( \Gamma \left( \frac{3}{2} \right) \left( \Gamma \left( \frac{1}{2} \right) \right) ^ {D - 1} \mathbf{M} 
++ \mathbf{M} \mathbf{l} (\mathbf{M} \mathbf{l}) ^ \intercal 
+\left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
+\right) 
+(\det \mathbf{M}) ^ \frac{1}{2}
 &= \bm{\Sigma}. 
 \end{aligned}
 \end{equation}
@@ -1005,9 +1018,9 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-\lambda_1 &= , \\
-\lambda_2 &= 0, \\
-\lambda_3 &= .
+\lambda &= 1 - \frac{D}{2} \ln \pi - \frac{1}{2} \ln (\det \mathbf{M}), \\
+\mathbf{l} &= \mathbf{0}, \\
+\mathbf{M} &= 2 \bm{\Sigma}.
 \end{aligned}
 \end{equation}
 %
