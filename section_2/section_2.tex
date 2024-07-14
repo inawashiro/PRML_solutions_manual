@@ -857,10 +857,11 @@ Let $\mathbf{x}$ be a variable in $D$ dimensions and
 %
 \begin{equation}
 \begin{aligned}
-L(p(\mathbf{x})) = &- \int p(\mathbf{x}) \ln p(\mathbf{x}) d\mathbf{x}
+L(p(\mathbf{x})) = 
+&- \int p(\mathbf{x}) \ln p(\mathbf{x}) d\mathbf{x}
 + \lambda \left( \int p(\mathbf{x}) d\mathbf{x} - 1 \right) \\
-&+ \mathbf{w}_1 ^ \intercal \left( \int \mathbf{x} p(\mathbf{x}) d\mathbf{x} - \bm{\mu} \right)
-+ \mathbf{w}_2 ^ \intercal \left( \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal p(\mathbf{x}) d\mathbf{x} - \bm{\Sigma} \right) \mathbf{w}_2.
+&+ \mathbf{l} ^ \intercal \left( \int \mathbf{x} p(\mathbf{x}) d\mathbf{x} - \bm{\mu} \right)
++ \mathbf{m} ^ \intercal \left( \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal p(\mathbf{x}) d\mathbf{x} - \bm{\Sigma} \right) \mathbf{m}.
 \end{aligned}
 \end{equation}
 %
@@ -870,8 +871,8 @@ Then
 \frac{\delta L(p(\mathbf{x}))}{\delta p(\mathbf{x})} 
 = - \ln p(\mathbf{x}) - 1 
 + \lambda
-+ \mathbf{w}_1 ^ \intercal \mathbf{x} 
-+ \mathbf{w}_2 ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{w}_2.
++ \mathbf{l} ^ \intercal \mathbf{x} 
++ \mathbf{m} ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{m}.
 \end{equation}
 %
 Setting the left hand side to zero gives
@@ -881,8 +882,8 @@ p(\mathbf{x})
 = \exp \left( 
 - 1 
 + \lambda
-+ \mathbf{w}_1 ^ \intercal \mathbf{x} 
-+ \mathbf{w}_2 ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{w}_2 
++ \mathbf{l} ^ \intercal \mathbf{x} 
++ \mathbf{m} ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{m} 
 \right),
 \end{equation}
 %
@@ -893,9 +894,15 @@ p(\mathbf{x})
 = \exp \left( 
 - 1 
 + \lambda
-- \mathbf{w}_1 ^ \intercal \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) ^ {- 1} \mathbf{w}_1
-+ \left( \mathbf{x} - \bm{\mu} - \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) ^ {- 1} \mathbf{w}_1\right) ^ \intercal \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) \left( \mathbf{x} - \bm{\mu} - \left( \mathbf{w}_2 \mathbf{w}_2 ^ \intercal \right) ^ {- 1} \mathbf{w}_1\right).
-\right).
+- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l}
++ \left( \mathbf{x} - \bm{\mu} - \mathbf{M} \mathbf{l} \right) ^ \intercal \mathbf{M} ^ {- 1} \left( \mathbf{x} - \bm{\mu} - \mathbf{M} \mathbf{l} \right)
+\right),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\mathbf{M} = \left( \mathbf{m} \mathbf{m} ^ \intercal \right) ^ {- 1}.
 \end{equation}
 %
 Substituting it to 
@@ -911,21 +918,50 @@ Substituting it to
 and the transformation 
 %
 \begin{equation}
-\mathbf{y} = \sqrt{- \lambda_3} \left( \mathbf{x} - \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right)
+\mathbf{y} = \mathbf{x} - \bm{\mu} - \mathbf{M} \mathbf{l}
 \end{equation}
 %
 gives
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) (- \lambda_3) ^ {- \frac{1}{2}} d\mathbf{y} 
+\exp \left( 
+- 1 
++ \lambda
+- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\right) 
+\int 
+\exp \left( 
+- \mathbf{y} ^ \intercal \mathbf{M} ^ {- 1} \mathbf{y} 
+\right) 
+d\mathbf{y} 
 &= 1, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} + \left( 1 - \frac{\lambda_2}{2 \lambda_3} \right) \bm{\mu} \right) \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) (- \lambda_3) ^ {- \frac{1}{2}} d\mathbf{y} 
+\exp \left( 
+- 1 
++ \lambda
+- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\right) 
+\int 
+\left( 
+\mathbf{y} 
++ \bm{\mu} 
++ \mathbf{M} \mathbf{l} \right) 
+\exp \left( - \mathbf{y} ^ \intercal \mathbf{M} ^ {- 1} \mathbf{y} \right) 
+d\mathbf{y} 
 &= \bm{\mu}, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \norm{\bm{\mu}} ^ 2 \right) 
-\int \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) \left( \frac{\mathbf{y}}{\sqrt{- \lambda_3}} - \frac{\lambda_2}{2 \lambda_3} \bm{\mu} \right) ^ \intercal \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) (- \lambda_3) ^ {- \frac{1}{2}} d\mathbf{y} 
+\exp \left( 
+- 1 
++ \lambda
+- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\right) 
+\int 
+\left( \mathbf{y} 
++ \mathbf{M} \mathbf{l} 
+\right) 
+\left( \mathbf{y} 
++ \mathbf{M} \mathbf{l} \right) ^ \intercal
+\exp \left( - \mathbf{y} ^ \intercal \mathbf{M} ^ {- 1}\mathbf{y} \right) 
+d\mathbf{y} 
 &= \bm{\Sigma}.
 \end{aligned}
 \end{equation}
