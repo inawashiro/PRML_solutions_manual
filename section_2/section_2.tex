@@ -1154,13 +1154,52 @@ Thus, by \ref{1.35},
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.17}
-
-
-
-
-
+Let $\bm{\Sigma}$ be a matrix and
+%
+\begin{equation}
+\begin{aligned}
+\mathbf{S} &= \frac{1}{2} \left( \bm{\Sigma} ^ {- 1} + \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal \right), \\
+\mathbf{A} &= \frac{1}{2} \left( \bm{\Sigma} ^ {- 1} - \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal \right).
+\end{aligned}
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) 
+= (2 \pi) ^ {- \frac{D}{2}} (\det \bm{\Sigma}) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{S} + \mathbf{A}) (\mathbf{x} - \bm{\mu})  \right).
+\end{equation}
+%
+By above,
+%
+\begin{equation}
+(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{A} (\mathbf{x} - \bm{\mu})
+= \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal (\mathbf{x} - \bm{\mu}).
+\end{equation}
+%
+The second term of the right hand side can be written as
+%
+\begin{equation}
+- \frac{1}{2} \left( \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right) ^ \intercal (\mathbf{x} - \bm{\mu})
+= - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{A} (\mathbf{x} - \bm{\mu}) 
+= 0.
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) 
+= (2 \pi) ^ {- \frac{D}{2}} (\det \bm{\Sigma}) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{S} (\mathbf{x} - \bm{\mu}) \right).
+\end{equation}
+%
 
 
 
