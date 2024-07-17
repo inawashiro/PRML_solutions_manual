@@ -1168,15 +1168,21 @@ Let $\bm{\Sigma}$ be a matrix and
 Then
 %
 \begin{equation}
-\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) 
-= (2 \pi) ^ {- \frac{D}{2}} (\det \bm{\Sigma}) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal (\mathbf{S} + \mathbf{A}) (\mathbf{x} - \bm{\mu})  \right).
+\bm{\Sigma} ^ {- 1} = \mathbf{S} + \mathbf{A}.
 \end{equation}
 %
-By above,
+Therefore,
 %
 \begin{equation}
-(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{A} (\mathbf{x} - \bm{\mu})
-= \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal (\mathbf{x} - \bm{\mu}).
+(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {-1} (\mathbf{x} - \bm{\mu})
+= (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{S} (\mathbf{x} - \bm{\mu}) 
++ (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{A} (\mathbf{x} - \bm{\mu}) .
+\end{equation}
+%
+The second term of the right hand side can be written as
+%
+\begin{equation}
+\frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal (\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 The second term of the right hand side can be written as
@@ -1196,8 +1202,8 @@ Therefore,
 Thus,
 %
 \begin{equation}
-\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}) 
-= (2 \pi) ^ {- \frac{D}{2}} (\det \bm{\Sigma}) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{S} (\mathbf{x} - \bm{\mu}) \right).
+(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu})
+= (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{S} (\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 
