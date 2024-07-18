@@ -1216,23 +1216,48 @@ Let $\bm{\Sigma}$ be a real symmetric matrix such that
 \bm{\Sigma} \mathbf{u}_i = \lambda_i \mathbf{u}_i. 
 \end{equation}
 %
-Taking the complex conjugate of both sides and subtracting the original equation gives
+Taking the complex conjugate of both sides and subtracting the original equation 
 %
 \begin{equation}
 \bm{\Sigma} \left( \overline{\mathbf{u}_i} - \mathbf{u}_i \right)
 = \overline{\lambda_i} \overline{\mathbf{u}_i} - \lambda_i \mathbf{u}_i.
 \end{equation}
 %
-Then
+Taking the inner product with $\mathbf{u}_i$ of both sides gives
 %
 \begin{equation}
-\mathbf{u}_i ^ \intercal \bm{\Sigma} \left( \overline{\mathbf{u}_i} - \mathbf{u}_i \right)
-= \mathbf{u}_i ^ \intercal \left( \overline{\lambda_i} \overline{\mathbf{u}_i} - \lambda_i \mathbf{u}_i \right).
+\mathbf{u}_i ^ \intercal \bm{\Sigma} \overline{\mathbf{u}_i} 
+- \mathbf{u}_i ^ \intercal \bm{\Sigma} \mathbf{u}_i
+= \overline{\lambda_i} - \mathbf{u}_i ^ \intercal \lambda_i \mathbf{u}_i.
 \end{equation}
 %
 
+%
+\begin{equation}
+\begin{aligned}
+\lambda_i
+&= \overline{\mathbf{u}_i} ^ \intercal \lambda_i \mathbf{u}_i \\
+&= \overline{\mathbf{u}_i} ^ \intercal \bm{\Sigma} \mathbf{u}_i \\
+&= \overline{\mathbf{u}_i} ^ \intercal \overline{\bm{\Sigma}} ^ \intercal \mathbf{u}_i \\
+&= \left( \overline{\bm{\Sigma}} \overline{\mathbf{u}}_i \right) ^ \intercal \mathbf{u}_i \\
+&= \overline{\lambda}_i \overline{\mathbf{u}}_i ^ \intercal \mathbf{u}_i \\
+&= \overline{\lambda}_i.
+\end{aligned}
+\end{equation}
+%
 
-
+%
+\begin{equation}
+\begin{aligned}
+\lambda_j \mathbf{u}_i ^ \intercal \mathbf{u}_j
+&= \mathbf{u}_i ^ \intercal \lambda_j \mathbf{u}_j \\
+&= \mathbf{u}_i ^ \intercal \bm{\Sigma} \mathbf{u}_j \\
+&= \mathbf{u}_i ^ \intercal \bm{\Sigma} ^ \intercal \mathbf{u}_j \\
+&= (\bm{\Sigma} \mathbf{u}_i) ^ \intercal \mathbf{u}_j \\
+&= \lambda_i \mathbf{u}_i ^ \intercal \mathbf{u}_j.
+\end{aligned}
+\end{equation}
+%
 
 
 
