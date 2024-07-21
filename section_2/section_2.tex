@@ -1276,7 +1276,7 @@ Thus, if $\lambda_i \neq \lambda_j$, then
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.19}
 Let $\bm{\Sigma}$ be a $D \times D$ real symmetric matrix such that
 %
@@ -1312,8 +1312,23 @@ By \ref{2.18},
 Therefore,
 %
 \begin{equation}
+\begin{aligned}
 \bm{\Sigma}
-= \mathbf{U} \bm{\Lambda} \mathbf{U} ^ \intercal.
+&= \mathbf{U} \bm{\Lambda} \mathbf{U} ^ \intercal, \\
+\bm{\Sigma} ^ {- 1}
+&= \mathbf{U} \bm{\Lambda} ^ {- 1} \mathbf{U} ^ \intercal,
+\end{aligned}
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\begin{aligned}
+\bm{\Sigma}
+&= \sum_{i = 1}^{D} \lambda_i \mathbf{u}_i \mathbf{u}_i ^ \intercal, \\
+\bm{\Sigma} ^ {- 1}
+&= \sum_{i = 1}^{D} \frac{1}{\lambda_i} \mathbf{u}_i \mathbf{u}_i ^ \intercal.
+\end{aligned}
 \end{equation}
 %
 
