@@ -1306,7 +1306,8 @@ Then
 By \ref{2.18}, 
 %
 \begin{equation}
-\mathbf{U} ^ \intercal \mathbf{U} = \mathbf{I}.
+\mathbf{U} ^ \intercal \mathbf{U} 
+= \mathbf{I}.
 \end{equation}
 %
 Therefore,
@@ -1333,7 +1334,7 @@ Thus,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.20}
 Let $\bm{\Sigma}$ be a $D \times D$ real symmetric matrix such that
 %
@@ -1353,28 +1354,34 @@ Let
 \end{aligned}
 \end{equation}
 %
-Then
+By \ref{2.19}, 
 %
 \begin{equation}
-\bm{\Sigma} \mathbf{U}
-= \mathbf{U} \bm{\Lambda}.
+\mathbf{a} ^ \intercal \bm{\Sigma} \mathbf{a}
+= \mathbf{b} ^ \intercal \bm{\Lambda} \mathbf{b},
 \end{equation}
 %
-By \ref{2.18}, 
+where
 %
 \begin{equation}
-\mathbf{U} ^ \intercal \mathbf{U} = \mathbf{I}.
+\mathbf{b}
+= \mathbf{U} ^ \intercal \mathbf{a}.
 \end{equation}
 %
-Therefore,
+The right hand side can be written as $\sum_{i = 1}^{D} \lambda_i b_i ^ 2$.
+Therefore, the necessary and sufficient condition for
 %
 \begin{equation}
-\bm{\Sigma}
-= \mathbf{U} \bm{\Lambda} \mathbf{U} ^ \intercal, \\
+\mathbf{a} ^ \intercal \bm{\Sigma} \mathbf{a}
+> 0
 \end{equation}
 %
-
-
+for any real vector $\mathbf{a}$ is 
+%
+\begin{equation}
+\lambda_i > 0.
+\end{equation}
+%
 
 
 
