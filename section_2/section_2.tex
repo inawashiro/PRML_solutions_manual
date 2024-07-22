@@ -1414,7 +1414,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.23}
 Let $\bm{\Sigma}$ be a $D \times D$ real symmetric matrix such that
 %
@@ -1437,7 +1437,7 @@ Let
 By \ref{2.19}, 
 %
 \begin{equation}
-\int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1}  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x} 
+\int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x} 
 = \int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{U} \bm{\Lambda} ^ {- 1} \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x}.
 \end{equation}
 %
@@ -1445,13 +1445,20 @@ By the transformation
 %
 \begin{equation}
 \mathbf{y}
-= \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu}),
+= \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu})
+\end{equation}
+%
+and the property
+%
+\begin{equation}
+\mathbf{U} ^ \intercal \mathbf{U} = \mathbf{I},
 \end{equation}
 %
 the right hand side can be written as
 %
 \begin{equation}
-\int_{\mathbf{y} ^ \intercal \bm{\Lambda} ^ {- 1} \mathbf{y} = \Delta} \abs{\det \mathbf{U}} d\mathbf{y}
+\int_{\mathbf{y} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{y} = \Delta} \abs{\det \mathbf{U}} d\mathbf{y}
+= \int_{\mathbf{y} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{y} = \Delta} d\mathbf{y}.
 \end{equation}
 %
 Therefore,
