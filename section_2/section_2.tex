@@ -1416,8 +1416,58 @@ Therefore,
 
 \subsection{(Incomplete)}
 \label{2.23}
-
-
+Let $\bm{\Sigma}$ be a $D \times D$ real symmetric matrix such that
+%
+\begin{equation}
+\bm{\Sigma} \mathbf{u}_i = \lambda_i \mathbf{u}_i,
+\end{equation}
+%
+where $i = 1, \cdots, D$ and $\mathbf{u}_i$ are unit vectors.
+Let 
+%
+\begin{equation}
+\begin{aligned}
+\bm{\Lambda}
+&= \diag (\lambda_1, \cdots, \lambda_D), \\
+\mathbf{U} 
+&= [\mathbf{u}_1 \cdots \mathbf{u}_D].
+\end{aligned}
+\end{equation}
+%
+By \ref{2.19}, 
+%
+\begin{equation}
+\int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1}  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x} 
+= \int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{U} \bm{\Lambda} ^ {- 1} \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x}.
+\end{equation}
+%
+By the transformation
+%
+\begin{equation}
+\mathbf{y}
+= \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu}),
+\end{equation}
+%
+the right hand side can be written as
+%
+\begin{equation}
+\int_{\mathbf{y} ^ \intercal \bm{\Lambda} ^ {- 1} \mathbf{y} = \Delta} \abs{\det \mathbf{U}} d\mathbf{y}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1}  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x}
+= \abs{\det \mathbf{\Sigma}} ^ \frac{1}{2} \Delta ^ D V_D,
+\end{equation}
+%
+where
+%
+\begin{equation}
+V_D
+= \int_{\norm{\mathbf{x}} = 1} d\mathbf{x}.
+\end{equation}
+%
 
 
 
