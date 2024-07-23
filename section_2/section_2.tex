@@ -1427,8 +1427,8 @@ Let
 %
 \begin{equation}
 \begin{aligned}
-\bm{\Lambda}
-&= \diag (\lambda_1, \cdots, \lambda_D), \\
+\bm{\Lambda}'
+&= \diag \left( \lambda_1 ^ {- \frac{1}{2}}, \cdots, \lambda_D ^ {- \frac{1}{2}} \right), \\
 \mathbf{U} 
 &= [\mathbf{u}_1 \cdots \mathbf{u}_D].
 \end{aligned}
@@ -1438,14 +1438,14 @@ By \ref{2.19},
 %
 \begin{equation}
 \int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x} 
-= \int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{U} \bm{\Lambda} ^ {- 1} \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x}.
+= \int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{U} \bm{\Lambda}' {\bm{\Lambda}'} ^ \intercal \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x}.
 \end{equation}
 %
 By the transformation
 %
 \begin{equation}
 \mathbf{y}
-= \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu})
+= {\bm{\Lambda}'} ^ \intercal \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu})
 \end{equation}
 %
 and the property
@@ -1457,8 +1457,8 @@ and the property
 the right hand side can be written as
 %
 \begin{equation}
-\int_{\mathbf{y} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{y} = \Delta} \abs{\det \mathbf{U}} d\mathbf{y}
-= \int_{\mathbf{y} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{y} = \Delta} d\mathbf{y}.
+\int_{\norm{\mathbf{y}} ^ 2 = \Delta} \abs{\det \left( \mathbf{U} {\mathbf{\Lambda}'} ^ {- 1} \right)} d\mathbf{y}
+= \abs{\det \mathbf{\Sigma}} ^ \frac{1}{2} \int_{\norm{\mathbf{y}} ^ 2 = \Delta} d\mathbf{y}.
 \end{equation}
 %
 Therefore,
