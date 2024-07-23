@@ -70,4 +70,4 @@
 \contentsline {subsection}{\numberline {2.21}}{55}{}%
 \contentsline {subsection}{\numberline {2.22}}{55}{}%
 \contentsline {subsection}{\numberline {2.23}}{56}{}%
-\contentsline {subsection}{\numberline {2.24}(Incomplete)}{56}{}%
+\contentsline {subsection}{\numberline {2.24}}{56}{}%
