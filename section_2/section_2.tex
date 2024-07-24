@@ -1552,10 +1552,67 @@ Therefore,
 
 \subsection{(Incomplete)}
 \label{2.25}
-
-
-
-
+Let $\mathbf{x}$ be a variable in $D$ dimensions such that
+%
+\begin{equation}
+p(\mathbf{x})
+= \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}),
+\end{equation}
+%
+where
+%
+\[
+\mathbf{x}
+=
+\begin{bmatrix}
+\mathbf{x}_a \\
+\mathbf{x}_b \\
+\mathbf{x}_c
+\end{bmatrix}
+,
+\bm{\mu}
+=
+\begin{bmatrix}
+\bm{\mu}_a \\
+\bm{\mu}_b \\
+\bm{\mu}_c
+\end{bmatrix}
+,
+\bm{\Sigma}
+=
+\begin{bmatrix}
+\bm{\Sigma}_{aa} & \bm{\Sigma}_{ab} & \bm{\Sigma}_{ac} \\
+\bm{\Sigma}_{ba} & \bm{\Sigma}_{bb} & \bm{\Sigma}_{bc} \\
+\bm{\Sigma}_{ca} & \bm{\Sigma}_{cb} & \bm{\Sigma}_{cc}
+\end{bmatrix}
+.
+\]
+%
+Let
+%
+\begin{equation}
+\bm{\Lambda}
+= \bm{\Sigma} ^ {-1},
+\end{equation}
+%
+where 
+\[
+\bm{\Lambda}
+=
+\begin{bmatrix}
+\bm{\Lambda}_{aa} & \bm{\Lambda}_{ab} & \bm{\Lambda}_{ac} \\
+\bm{\Lambda}_{ba} & \bm{\Lambda}_{bb} & \bm{\Lambda}_{bc} \\
+\bm{\Lambda}_{ca} & \bm{\Lambda}_{cb} & \bm{\Lambda}_{cc}
+\end{bmatrix}
+.
+\]
+Since
+%
+\begin{equation}
+- \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu})
+= 
+\end{equation}
+%
 
 
 
