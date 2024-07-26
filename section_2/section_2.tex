@@ -1645,8 +1645,8 @@ where
 Therefore,
 %
 \begin{equation}
-p \left( \mathbf{x}_a | \mathbf{x}_b, \mathbf{x}_c \right)
-= \mathcal{N} \left( \mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c} \right).
+p(\mathbf{x}_a | \mathbf{x}_b, \mathbf{x}_c)
+= \mathcal{N}(\mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c}).
 \end{equation}
 %
 Integrating both sides with respect to $\mathbf{x}_c$ gives
@@ -1656,7 +1656,26 @@ p(\mathbf{x}_a | \mathbf{x}_b)
 = \int \mathcal{N}(\mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c}) d\mathbf{x}_c.
 \end{equation}
 %
-
+Thus,
+%
+\begin{equation}
+p(\mathbf{x}_a | \mathbf{x}_b)
+= \mathcal{N}(\mathbf{x}_a | \bm{\mu}_{a | b}, \bm{\Sigma}_{a | b}),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\bm{\mu}_{a | b}
+&= \bm{\mu}_a 
+- \bm{\Lambda}_{aa} ^ {- 1} \bm{\Lambda}_{ab} \left( \mathbf{x}_b - \bm{\mu}_b \right) 
++ \bm{\Lambda}_{aa} ^ {- 1} \bm{\Lambda}_{ac} \bm{\mu}_c, \\
+\bm{\Sigma}_{a | b}
+&= \bm{\Lambda}_{aa} ^ {- 1}.
+\end{aligned}
+\end{equation}
+%
 
 
 
