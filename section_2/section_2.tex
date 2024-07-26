@@ -1556,7 +1556,7 @@ Let $\mathbf{x}$ be a variable in $D$ dimensions such that
 %
 \begin{equation}
 p(\mathbf{x})
-= \mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma}),
+= \mathcal{N}(\mathbf{x} | \bm{\mu}, \bm{\Sigma}),
 \end{equation}
 %
 where
@@ -1606,15 +1606,56 @@ where
 \end{bmatrix}
 .
 \]
-Since
+Then
 %
 \begin{equation}
-- \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu})
-= 
+\begin{aligned}
+&- \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \\
+=& - \frac{1}{2} (\mathbf{x}_a - \bm{\mu}_a) ^ \intercal \bm{\Lambda}_{aa} (\mathbf{x}_a - \bm{\mu}_a)
+- \frac{1}{2} (\mathbf{x}_a - \bm{\mu}_a) ^ \intercal \bm{\Lambda}_{ab} (\mathbf{x}_b - \bm{\mu}_b)
+- \frac{1}{2} (\mathbf{x}_a - \bm{\mu}_a) ^ \intercal \bm{\Lambda}_{ac} (\mathbf{x}_c - \bm{\mu}_c) \\
+& - \frac{1}{2} (\mathbf{x}_b - \bm{\mu}_b) ^ \intercal \bm{\Lambda}_{ba} (\mathbf{x}_a - \bm{\mu}_a)
+- \frac{1}{2} (\mathbf{x}_b - \bm{\mu}_b) ^ \intercal \bm{\Lambda}_{bb} (\mathbf{x}_b - \bm{\mu}_b)
+- \frac{1}{2} (\mathbf{x}_b - \bm{\mu}_b) ^ \intercal \bm{\Lambda}_{bc} (\mathbf{x}_c - \bm{\mu}_c) \\
+& - \frac{1}{2} (\mathbf{x}_c - \bm{\mu}_c) ^ \intercal \bm{\Lambda}_{ca} (\mathbf{x}_a - \bm{\mu}_a)
+- \frac{1}{2} (\mathbf{x}_c - \bm{\mu}_c) ^ \intercal \bm{\Lambda}_{cb} (\mathbf{x}_b - \bm{\mu}_b)
+- \frac{1}{2} (\mathbf{x}_c - \bm{\mu}_c) ^ \intercal \bm{\Lambda}_{cc} (\mathbf{x}_c - \bm{\mu}_c).
+\end{aligned} 
 \end{equation}
 %
-
-
+Excluding the terms independent of $\mathbf{x}_a$, the right hand side can be written as
+%
+\begin{equation}
+- \frac{1}{2} (\mathbf{x}_a - \bm{\mu}_{a | b, c}) ^ \intercal \bm{\Sigma}_{a | b, c} ^ {- 1} (\mathbf{x}_a - \bm{\mu}_{a | b, c}),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\bm{\mu}_{a | b, c}
+&= \bm{\mu}_a 
+- \bm{\Lambda}_{aa} ^ {- 1} \bm{\Lambda}_{ab} \left( \mathbf{x}_b - \bm{\mu}_b \right) 
+- \bm{\Lambda}_{aa} ^ {- 1} \bm{\Lambda}_{ac} \left( \mathbf{x}_c - \bm{\mu}_c \right), \\
+\bm{\Sigma}_{a | b, c}
+&= \bm{\Lambda}_{aa} ^ {- 1}.
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p \left( \mathbf{x}_a | \mathbf{x}_b, \mathbf{x}_c \right)
+= \mathcal{N} \left( \mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c} \right).
+\end{equation}
+%
+Integrating both sides with respect to $\mathbf{x}_c$ gives
+%
+\begin{equation}
+p(\mathbf{x}_a | \mathbf{x}_b)
+= \int \mathcal{N}(\mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c}) d\mathbf{x}_c.
+\end{equation}
+%
 
 
 
