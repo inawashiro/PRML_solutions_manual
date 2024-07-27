@@ -1550,7 +1550,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.25}
 Let $\mathbf{x}$ be a variable in $D$ dimensions such that
 %
@@ -1649,11 +1649,11 @@ p(\mathbf{x}_a | \mathbf{x}_b, \mathbf{x}_c)
 = \mathcal{N}(\mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c}).
 \end{equation}
 %
-Integrating both sides with respect to $\mathbf{x}_c$ gives
+Multiplying both sides by $p(\mathbf{x}_c)$ and integrating both sides with respect to $\mathbf{x}_c$ gives
 %
 \begin{equation}
 p(\mathbf{x}_a | \mathbf{x}_b)
-= \int \mathcal{N}(\mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c}) d\mathbf{x}_c.
+= \int \mathcal{N}(\mathbf{x}_a | \bm{\mu}_{a | b, c}, \bm{\Sigma}_{a | b, c}) p(\mathbf{x}_c) d\mathbf{x}_c.
 \end{equation}
 %
 Thus,
@@ -1676,6 +1676,22 @@ where
 \end{aligned}
 \end{equation}
 %
+
+
+\subsection{(Incomplete)}
+\label{2.26}
+%
+\begin{equation}
+\begin{aligned}
+\mathbf{I}
+&= (\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D}) \left( \mathbf{A} ^ {- 1} - \mathbf{A} ^ {- 1} \mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} \right) 
++ \left( \mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} \right) ^ 2.
+\end{aligned}
+\end{equation}
+%
+
+
+
 
 
 
