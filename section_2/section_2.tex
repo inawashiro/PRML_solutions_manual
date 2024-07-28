@@ -1700,10 +1700,31 @@ where
 
 \subsection{(Incomplete)}
 \label{2.27}
-
-
-
-
+Let $\mathbf{x}$ and $\mathbf{z}$ be two variables.
+Then
+%
+\begin{equation}
+{\rm E} (\mathbf{x} + \mathbf{z})
+= \int \int (\mathbf{x} + \mathbf{z}) p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\int \mathbf{x} \left( \int p(\mathbf{x}, \mathbf{z}) d\mathbf{z} \right) d\mathbf{x}
++ \int \mathbf{z} \left( \int p(\mathbf{x}, \mathbf{z}) d\mathbf{x} \right) d\mathbf{z} \\
+= \int \mathbf{x} p(\mathbf{x}) d\mathbf{x}
++ \int \mathbf{z} p(\mathbf{z}) d\mathbf{z}.
+\end{equation}
+%
+The right hand side can be written as ${\rm E} \mathbf{x} + {\rm E} \mathbf{z}$.
+Therefore,
+%
+\begin{equation}
+{\rm E} (\mathbf{x} + \mathbf{z})
+= {\rm E} \mathbf{x} + {\rm E} \mathbf{z}.
+\end{equation}
+%
 
 
 
