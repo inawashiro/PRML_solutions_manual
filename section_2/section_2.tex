@@ -1698,7 +1698,7 @@ where
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.27}
 Let $\mathbf{x}$ and $\mathbf{z}$ be two variables.
 Then
@@ -1726,9 +1726,46 @@ Therefore,
 \end{equation}
 %
 
-
-
-
+Additionally,
+%
+\begin{equation}
+{\rm cov} (\mathbf{x} + \mathbf{z})
+= \int \int \left( \mathbf{x} + \mathbf{z} - {\rm E} (\mathbf{x} + \mathbf{z}) \right) \left( \mathbf{x} + \mathbf{z} - {\rm E} (\mathbf{x} + \mathbf{z}) \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&\int \int \left( \mathbf{x} - {\rm E} \mathbf{x} \right) \left( \mathbf{x} - {\rm E} \mathbf{x} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}
++ \int \int \left( \mathbf{x} - {\rm E} \mathbf{x} \right) \left( \mathbf{z} - {\rm E} \mathbf{z} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z} \\
+&+ \int \int \left( \mathbf{z} - {\rm E} \mathbf{z} \right) \left( \mathbf{x} - {\rm E} \mathbf{x} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}
++ \int \int \left( \mathbf{z} - {\rm E} \mathbf{z} \right) \left( \mathbf{z} - {\rm E} \mathbf{z} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}.
+\end{aligned}
+\end{equation}
+%
+The first and fourth terms can be written as ${\rm cov} \mathbf{x}$ and ${\rm cov} \mathbf{z}$.
+%
+If $\mathbf{x}$ and $\mathbf{z}$ are independent, the second and third terms can be written as
+%
+\begin{equation}
+\begin{aligned}
+\int \left( \mathbf{x} - {\rm E} \mathbf{x} \right) p(\mathbf{x}) d\mathbf{x}
+\int \left( \mathbf{z} - {\rm E} \mathbf{z} \right) ^ \intercal p(\mathbf{z})  d\mathbf{z}
+&= \mathbf{O}, \\
+\int \left( \mathbf{z} - {\rm E} \mathbf{z} \right) p(\mathbf{z}) d\mathbf{z}
+\int \left( \mathbf{x} - {\rm E} \mathbf{x} \right) ^ \intercal p(\mathbf{x})  d\mathbf{x}
+&= \mathbf{O}.
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm cov} (\mathbf{x} + \mathbf{z})
+= {\rm cov} \mathbf{x} + {\rm cov} \mathbf{z}.
+\end{equation}
+%
 
 
 
