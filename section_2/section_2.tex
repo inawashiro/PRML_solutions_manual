@@ -1805,7 +1805,21 @@ and
 .
 \]
 %
-
+Then
+%
+\begin{equation}
+\begin{aligned}
+\int \left( \mathbf{x} - \bm{\mu} \right) \left( \mathbf{x} - \bm{\mu} \right) ^ \intercal p(\mathbf{x}) d\mathbf{x}
+&= \bm{\Lambda} ^ {- 1}, \\
+\int \int \left( \mathbf{x} - \bm{\mu} \right) \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) ^ \intercal p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}
+&= \bm{\Lambda} ^ {- 1} \mathbf{A} ^ \intercal, \\
+\int \int \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) \left( \mathbf{x} - \bm{\mu} \right) ^ \intercal p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}
+&= \mathbf{A} \bm{\Lambda} ^ {- 1}, \\
+\int \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) ^ \intercal p(\mathbf{y}) d\mathbf{y}
+&= \mathbf{L} ^ {- 1} + \mathbf{A} \bm{\Lambda} ^ {- 1} \mathbf{A} ^ \intercal.
+\end{aligned}
+\end{equation}
+%
 
 
 
