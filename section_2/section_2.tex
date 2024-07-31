@@ -1908,6 +1908,34 @@ p(\mathbf{z})
 \end{aligned}
 \end{equation}
 %
+Then
+%
+\begin{equation}
+p(\mathbf{y})
+= \int p(\mathbf{y} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\int \mathcal{N} \left( \mathbf{y} | \mathbf{x} + \bm{\mu}_{\mathbf{z}}, \bm{\Sigma}_{\mathbf{z}} \right) \mathcal{N} \left( \mathbf{x} | \bm{\mu}_{\mathbf{x}}, \bm{\Sigma}_{\mathbf{x}} \right) d\mathbf{x}.
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\begin{aligned}
+&- \frac{1}{2} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right)
+- \frac{1}{2} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) ^ \intercal \bm{\Sigma}_{\mathbf{x}} ^ {- 1} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) \\
+&= 
+\end{aligned}
+\end{equation}
+%
+
+
+
+
+
 
 
 
