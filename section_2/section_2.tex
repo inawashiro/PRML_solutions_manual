@@ -1952,10 +1952,106 @@ The right hand side can be written as
 \end{aligned}
 \end{equation}
 %
-
-
-
-
+The firtst term of the right hand side can be written as
+%
+\begin{equation}
+- \frac{1}{2} 
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right) ^ \intercal 
+\left( 
+	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
+	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\right)
+\left( 
+	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
+	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\right) ^ {- 1}
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right)
+\end{equation}
+%
+Since $\bm{\Sigma}_{\mathbf{x}}$ and  $\bm{\Sigma}_{\mathbf{z}}$ are symmetric, the second term can be written as
+%
+\begin{equation}
+\frac{1}{2} 
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right) ^ \intercal 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\left( 
+	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
+	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\right) ^ {- 1} 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right).
+\end{equation}
+%
+Therefore, their sum can be written as
+%
+\begin{equation}
+\begin{aligned}
+&- \frac{1}{2}
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right) ^ \intercal
+\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
+\left( 
+	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
+	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\right) ^ {- 1}
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right) \\
+&=
+- \frac{1}{2}
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right) ^ \intercal
+\left( 
+	\bm{\Sigma}_{\mathbf{x}}
+	+ \bm{\Sigma}_{\mathbf{z}} 
+\right) ^ {- 1}
+\left( 
+	\mathbf{y} 
+	- \bm{\mu}_{\mathbf{x}} 
+	- \bm{\mu}_{\mathbf{z}} 
+\right)
+\end{aligned}
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+p(\mathbf{y})
+= 
+\mathcal{N} 
+\left( 
+	\mathbf{y} | 
+	\bm{\mu}_{\mathbf{x}} + \bm{\mu}_{\mathbf{z}}, 
+	\bm{\Sigma}_{\mathbf{x}} + \bm{\Sigma}_{\mathbf{z}}
+\right).
+\end{equation}
+%
 
 
 
