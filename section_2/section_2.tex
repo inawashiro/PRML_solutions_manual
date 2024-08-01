@@ -1925,17 +1925,33 @@ Since
 %
 \begin{equation}
 \begin{aligned}
-&- \frac{1}{2} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right)
-- \frac{1}{2} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) ^ \intercal \bm{\Sigma}_{\mathbf{x}} ^ {- 1} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) \\
-&= 
+&- \frac{1}{2} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) \\
+&= - \frac{1}{2} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} - \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} \right) \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} - \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} \right) \right),
 \end{aligned}
 \end{equation}
 %
-
-
-
-
-
+we have
+%
+\begin{equation}
+\begin{aligned}
+&- \frac{1}{2} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right)
+- \frac{1}{2} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) ^ \intercal \bm{\Sigma}_{\mathbf{x}} ^ {- 1} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) \\
+=& - \frac{1}{2} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \\
+&- \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) \\
+&- \frac{1}{2} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) ^ \intercal \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) (\mathbf{x} - \bm{\mu}_{\mathbf{x}}).
+\end{aligned}
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&- \frac{1}{2} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \\
+&+ \frac{1}{2} \left( \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right) ^ \intercal \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) \left( \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right) \\
+&- \frac{1}{2} \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} - \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right) ^ \intercal \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} - \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right).
+\end{aligned}
+\end{equation}
+%
 
 
 
