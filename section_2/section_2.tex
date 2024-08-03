@@ -1888,7 +1888,7 @@ Then
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.31}
 Let $\mathbf{y}$ be a variable such that 
 %
@@ -1924,11 +1924,10 @@ The right hand side can be written as
 	d\mathbf{x}.
 \end{equation}
 %
-Since
+The logarithm of the integrand is given by
 %
 \begin{equation}
-\begin{aligned}
-&- \frac{1}{2} 
+- \frac{1}{2} 
 \left( 
 	\mathbf{y}
 	 - \mathbf{x} 
@@ -1937,53 +1936,153 @@ Since
 	\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
 	\left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} 
 \right) 
-- \frac{1}{2} 
+- 
+\frac{1}{2} 
 (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) ^ \intercal 
 \bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
-(\mathbf{x} - \bm{\mu}_{\mathbf{x}}) \\
-= 
-&- \frac{1}{2} 
-\left( 
-	\mathbf{y} 
-	- \bm{\mu}_{\mathbf{z}}  
-\right) ^ \intercal 
-\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-\left( 
-	\mathbf{y} 
-	- \bm{\mu}_{\mathbf{z}}  
-\right) \\
-&+ \frac{1}{2}
-\mathbf{x} ^ \intercal
-\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
-\left( 
-	\mathbf{y} 
-	- \bm{\mu}_{\mathbf{z}}  
-\right)
-+ \frac{1}{2}
-\mathbf{x} ^ \intercal
-\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
-\bm{\mu}_{\mathbf{x}} \\
-&+ \frac{1}{2}
-\left( 
-	\mathbf{y} 
-	- \bm{\mu}_{\mathbf{z}}  
-\right) ^ \intercal 
-\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
-\mathbf{x} 
-+ \frac{1}{2}
-\bm{\mu}_{\mathbf{x}} ^ \intercal
-\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
-\mathbf{x} \\
-&- \frac{1}{2} 
-\mathbf{x} ^ \intercal 
-\left(
-	\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
-	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1}
-\right) 
-\mathbf{x},
-\end{aligned}
+(\mathbf{x} - \bm{\mu}_{\mathbf{x}}).
 \end{equation}
 %
+The first and second order terms can be written as
+%
+\begin{equation}
+-
+\mathbf{x} ^ \intercal
+\left( 
+	\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+	\bm{\mu}_{\mathbf{z}}
+	-
+	\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
+	\bm{\mu}_{\mathbf{x}}
+\right)
++
+\mathbf{y} ^ \intercal
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\bm{\mu}_{\mathbf{z}}
+=
+\mathbf{u} ^ \intercal
+\mathbf{v}
+\end{equation}
+%
+and 
+%
+\begin{equation}
+- 
+\frac{1}{2}
+\mathbf{x} ^ \intercal
+\left( 
+	\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
+	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\right)
+\mathbf{x} 
++ 
+\frac{1}{2} 
+\mathbf{x} ^ \intercal 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\mathbf{y}
++ 
+\frac{1}{2} 
+\mathbf{y} ^ \intercal 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\mathbf{x}
+- 
+\frac{1}{2} 
+\mathbf{y} ^ \intercal 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\mathbf{y}
+=
+-\frac{1}{2}
+\mathbf{u} ^ \intercal
+\mathbf{R}
+\mathbf{u},
+\end{equation}
+%
+respectively, where
+%
+\[
+\mathbf{u}
+= 
+\begin{bmatrix}
+\mathbf{x} \\
+\mathbf{y}
+\end{bmatrix}
+,
+\mathbf{v}
+= 
+\begin{bmatrix}
+\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
+\bm{\mu}_{\mathbf{x}}
+-
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\bm{\mu}_{\mathbf{z}} 
+\\
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\bm{\mu}_{\mathbf{z}}
+\end{bmatrix}
+,
+\mathbf{R}
+= 
+\begin{bmatrix}
+\bm{\Sigma}_{\mathbf{x}} ^ {- 1} & - \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \\
+- \bm{\Sigma}_{\mathbf{z}} ^ {- 1} & \bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\end{bmatrix}
+.
+\]
+%
+Therefore, the logarithm of the integrand except the constant can be written as
+%
+\begin{equation}
+-\frac{1}{2}
+\left( 
+	\mathbf{u}
+	- 
+	\mathbf{R} ^ {- 1}
+	\mathbf{v}
+\right) ^ \intercal
+\mathbf{R}
+\left( 
+	\mathbf{u}
+	- 
+	\mathbf{R} ^ {- 1}
+	\mathbf{v}
+\right),
+\end{equation}
+%
+where
+%
+\[
+\mathbf{R} ^ {- 1}
+=
+\begin{bmatrix}
+\bm{\Sigma}_\mathbf{x} & \bm{\Sigma}_\mathbf{x} \\
+\bm{\Sigma}_\mathbf{x} & \bm{\Sigma}_\mathbf{x} + \bm{\Sigma}_\mathbf{z}
+\end{bmatrix}
+,
+\mathbf{R} ^ {- 1}
+\mathbf{v}
+=
+\begin{bmatrix}
+\bm{\mu}_\mathbf{x} \\
+\bm{\mu}_\mathbf{x} + \bm{\mu}_\mathbf{z}
+\end{bmatrix}
+.
+\]
+%
+by \ref{2.29} and \ref{2.30}.
+Thus,
+%
+\begin{equation}
+p(\mathbf{y})
+= 
+\mathcal{N} 
+(\mathbf{y} 
+| 
+\bm{\mu}_\mathbf{x} + \bm{\mu}_\mathbf{z},
+\bm{\Sigma}_\mathbf{x} + \bm{\Sigma}_\mathbf{z}
+).
+\end{equation}
+%
+
 
 
 %\subsection{(Incomplete)}
