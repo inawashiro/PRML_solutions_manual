@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  3 AUG 2024 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  3 AUG 2024 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -205,21 +205,30 @@ Overfull \hbox (62.12598pt too wide) detected at line 1015
 [][][]
  []
 
-[50] [51] [52] [53] [54] [55] [56]
-Overfull \hbox (51.31068pt too wide) detected at line 1624
+[50] [51]
+Overfull \hbox (81.32915pt too wide) detected at line 1146
 [][][]
  []
 
-[57] [58]
-Overfull \hbox (11.06741pt too wide) detected at line 1745
+[52] [53] [54] [55] [56]
+Overfull \hbox (51.31068pt too wide) detected at line 1629
 [][][]
  []
 
-[59] [60]) [61] (./main.aux)
+[57]
+Overfull \hbox (11.06741pt too wide) detected at line 1750
+[][][]
+ []
+
+[58] [59] [60]) [61] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  2586 strings out of 474049
@@ -246,7 +255,7 @@ ic/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 7.pfb>
-Output written on main.pdf (63 pages, 316534 bytes).
+Output written on main.pdf (63 pages, 317387 bytes).
 PDF statistics:
  298 PDF objects out of 1000 (max. 8388607)
  195 compressed objects within 2 object streams
