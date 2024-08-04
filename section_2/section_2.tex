@@ -2144,7 +2144,7 @@ p(\mathbf{y} | \mathbf{x})
 \end{aligned}
 \end{equation}
 %
-Then
+By the definition,
 %
 \begin{equation}
 p (\mathbf{y})
@@ -2153,6 +2153,49 @@ p (\mathbf{y})
 p(\mathbf{y} | \mathbf{x})
 p(\mathbf{x})
 d\mathbf{x}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\int
+\mathcal{N}
+\left( 
+	\mathbf{y}
+	|
+	\mathbf{A} \mathbf{x} + \mathbf{b},
+	\mathbf{L} ^ {- 1}
+\right)
+\mathcal{N}
+\left( 
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Lambda} ^ {- 1}
+\right)
+d\mathbf{x}.
+\end{equation}
+%
+The logarithm of the integrand except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ is given by
+%
+\begin{equation}
+- \frac{1}{2} 
+\left( 
+	\mathbf{y}
+	 - \mathbf{A} \mathbf{x} 
+	 - \mathbf{b} 
+\right) ^ \intercal 
+\mathbf{L} 
+\left( 
+	\mathbf{y} 
+	- \mathbf{A} \mathbf{x} 
+	- \mathbf{b} 
+\right) 
+- 
+\frac{1}{2} 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Lambda}
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 %%
