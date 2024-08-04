@@ -2257,168 +2257,113 @@ and
 \end{equation}
 %
 respectively.
+Therefore, the logarithm can be written as
 %
-%%
-%\begin{equation}
-%\mathbf{y}
-%= \mathbf{x} + \mathbf{z},
-%\end{equation}
-%%
-%where
-%%
-%\begin{equation}
-%\begin{aligned}
-%p(\mathbf{x}) 
-%&= \mathcal{N} \left( \mathbf{x} | \bm{\mu}_{\mathbf{x}}, \bm{\Sigma}_{\mathbf{x}} \right), \\
-%p(\mathbf{z}) 
-%&= \mathcal{N} \left( \mathbf{z} | \bm{\mu}_{\mathbf{z}}, \bm{\Sigma}_{\mathbf{z}} \right).
-%\end{aligned}
-%\end{equation}
-%%
-%Then
-%%
-%\begin{equation}
-%p(\mathbf{y})
-%= \int p(\mathbf{y} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
-%\end{equation}
-%%
-%The right hand side can be written as
-%%
-%\begin{equation}
-%\int \mathcal{N} \left( \mathbf{y} | \mathbf{x} + \bm{\mu}_{\mathbf{z}}, \bm{\Sigma}_{\mathbf{z}} \right) \mathcal{N} \left( \mathbf{x} | \bm{\mu}_{\mathbf{x}}, \bm{\Sigma}_{\mathbf{x}} \right) d\mathbf{x}.
-%\end{equation}
-%%
-%Since
-%%
-%\begin{equation}
-%\begin{aligned}
-%&- \frac{1}{2} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) \\
-%&= - \frac{1}{2} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} - \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} \right) \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} - \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} \right) \right),
-%\end{aligned}
-%\end{equation}
-%%
-%we have
-%%
-%\begin{equation}
-%\begin{aligned}
-%&- \frac{1}{2} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} \right)
-%- \frac{1}{2} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) ^ \intercal \bm{\Sigma}_{\mathbf{x}} ^ {- 1} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) \\
-%=& - \frac{1}{2} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \\
-%&- \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) \\
-%&- \frac{1}{2} (\mathbf{x} - \bm{\mu}_{\mathbf{x}}) ^ \intercal \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) (\mathbf{x} - \bm{\mu}_{\mathbf{x}}).
-%\end{aligned}
-%\end{equation}
-%%
-%The right hand side can be written as
-%%
-%\begin{equation}
-%\begin{aligned}
-%&- \frac{1}{2} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) ^ \intercal \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \\
-%&+ \frac{1}{2} \left( \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right) ^ \intercal \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) \left( \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right) \\
-%&- \frac{1}{2} \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} - \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right) ^ \intercal \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) \left( \mathbf{x} - \bm{\mu}_{\mathbf{x}} - \left( \bm{\Sigma}_{\mathbf{x}} ^ {- 1} + \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \right) ^ {- 1} \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \left( \mathbf{y} - \bm{\mu}_{\mathbf{x}} - \bm{\mu}_{\mathbf{z}} \right) \right).
-%\end{aligned}
-%\end{equation}
-%%
-%The firtst term of the right hand side can be written as
-%%
-%\begin{equation}
-%- \frac{1}{2} 
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right) ^ \intercal 
-%\left( 
-%	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
-%	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-%\right)
-%\left( 
-%	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
-%	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-%\right) ^ {- 1}
-%\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right)
-%\end{equation}
-%%
-%Since $\bm{\Sigma}_{\mathbf{x}}$ and  $\bm{\Sigma}_{\mathbf{z}}$ are symmetric, the second term can be written as
-%%
-%\begin{equation}
-%\frac{1}{2} 
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right) ^ \intercal 
-%\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-%\left( 
-%	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
-%	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-%\right) ^ {- 1} 
-%\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right).
-%\end{equation}
-%%
-%Therefore, their sum can be written as
-%%
-%\begin{equation}
-%\begin{aligned}
-%&- \frac{1}{2}
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right) ^ \intercal
-%\bm{\Sigma}_{\mathbf{x}} ^ {- 1}
-%\left( 
-%	\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
-%	+ \bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-%\right) ^ {- 1}
-%\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right) \\
-%&=
-%- \frac{1}{2}
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right) ^ \intercal
-%\left( 
-%	\bm{\Sigma}_{\mathbf{x}}
-%	+ \bm{\Sigma}_{\mathbf{z}} 
-%\right) ^ {- 1}
-%\left( 
-%	\mathbf{y} 
-%	- \bm{\mu}_{\mathbf{x}} 
-%	- \bm{\mu}_{\mathbf{z}} 
-%\right)
-%\end{aligned}
-%\end{equation}
-%%
-%Thus,
-%%
-%\begin{equation}
-%p(\mathbf{y})
-%= 
-%\mathcal{N} 
-%\left( 
-%	\mathbf{y} | 
-%	\bm{\mu}_{\mathbf{x}} + \bm{\mu}_{\mathbf{z}}, 
-%	\bm{\Sigma}_{\mathbf{x}} + \bm{\Sigma}_{\mathbf{z}}
-%\right).
-%\end{equation}
-%%
+\begin{equation}
+\begin{aligned}
+&- 
+\frac{1}{2}
+\left(
+	\mathbf{x}
+	- 
+	\mathbf{z}
+\right) ^ \intercal
+\left( 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right)
+\left(
+	\mathbf{x}
+	- 
+	\mathbf{z}
+\right)
++
+\frac{1}{2}
+\mathbf{z} ^ \intercal
+\left( 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right)
+\mathbf{z}
+-
+\frac{1}{2}
+\mathbf{y} ^ \intercal
+\mathbf{L}
+\mathbf{y}
++
+\mathbf{y} ^ \intercal
+\mathbf{L}
+\mathbf{b} \\
+&=
+- 
+\frac{1}{2}
+\left(
+	\mathbf{x}
+	- 
+	\mathbf{z}
+\right) ^ \intercal
+\left( 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right)
+\left(
+	\mathbf{x}
+	- 
+	\mathbf{z}
+\right)
+-
+\frac{1}{2}
+\left(
+	\mathbf{y}
+	-
+	\mathbf{b}
+\right) ^ \intercal
+\mathbf{L}
+\left(
+	\mathbf{y}
+	-
+	\mathbf{b}
+\right)
++
+\end{aligned}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\mathbf{z}
+=
+\left( 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right) ^ {- 1}
+\left(
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	(\mathbf{y} - \mathbf{b})
+	+
+	\bm{\Lambda}
+	\bm{\mu}
+\right).
+\end{equation}
+%
+
+
+
+
+
 
 
 
