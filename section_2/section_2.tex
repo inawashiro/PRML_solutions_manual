@@ -1907,13 +1907,27 @@ where
 \begin{equation}
 \begin{aligned}
 p(\mathbf{x}) 
-&= \mathcal{N} \left( \mathbf{x} | \bm{\mu}_{\mathbf{x}}, \bm{\Sigma}_{\mathbf{x}} \right), \\
+&= 
+\mathcal{N} 
+\left( 
+	\mathbf{x} 
+	| 
+	\bm{\mu}_{\mathbf{x}}, 
+	\bm{\Sigma}_{\mathbf{x}} 
+\right), \\
 p(\mathbf{z}) 
-&= \mathcal{N} \left( \mathbf{z} | \bm{\mu}_{\mathbf{z}}, \bm{\Sigma}_{\mathbf{z}} \right).
+&= 
+\mathcal{N} 
+\left( 
+	\mathbf{z} 
+	| 
+	\bm{\mu}_{\mathbf{z}}, 
+	\bm{\Sigma}_{\mathbf{z}} 
+\right).
 \end{aligned}
 \end{equation}
 %
-Then
+By the definition,
 %
 \begin{equation}
 p(\mathbf{y})
@@ -1924,8 +1938,20 @@ The right hand side can be written as
 %
 \begin{equation}
 \int 
-	\mathcal{N} \left( \mathbf{y} | \mathbf{x} + \bm{\mu}_{\mathbf{z}}, \bm{\Sigma}_{\mathbf{z}} \right) 
-	\mathcal{N} \left( \mathbf{x} | \bm{\mu}_{\mathbf{x}}, \bm{\Sigma}_{\mathbf{x}} \right) 
+\mathcal{N} 
+\left( 
+	\mathbf{y} 
+	| 
+	\mathbf{x} + \bm{\mu}_{\mathbf{z}}, 
+	\bm{\Sigma}_{\mathbf{z}} 
+\right) 
+\mathcal{N} 
+\left( 
+	\mathbf{x} 
+	| 
+	\bm{\mu}_{\mathbf{x}}, 
+	\bm{\Sigma}_{\mathbf{x}} 
+\right) 
 	d\mathbf{x}.
 \end{equation}
 %
