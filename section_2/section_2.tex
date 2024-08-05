@@ -2257,11 +2257,10 @@ and
 \end{equation}
 %
 respectively.
-Therefore, the logarithm can be written as
+Therefore, the logarithm except the indnependent terms can be written as
 %
 \begin{equation}
-\begin{aligned}
-&- 
+- 
 \frac{1}{2}
 \left(
 	\mathbf{x}
@@ -2299,42 +2298,7 @@ Therefore, the logarithm can be written as
 +
 \mathbf{y} ^ \intercal
 \mathbf{L}
-\mathbf{b} \\
-&=
-- 
-\frac{1}{2}
-\left(
-	\mathbf{x}
-	- 
-	\mathbf{z}
-\right) ^ \intercal
-\left( 
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-	+
-	\bm{\Lambda}
-\right)
-\left(
-	\mathbf{x}
-	- 
-	\mathbf{z}
-\right)
--
-\frac{1}{2}
-\left(
-	\mathbf{y}
-	-
-	\mathbf{b}
-\right) ^ \intercal
-\mathbf{L}
-\left(
-	\mathbf{y}
-	-
-	\mathbf{b}
-\right)
-+
-\end{aligned}
+\mathbf{b}.
 \end{equation}
 %
 where
@@ -2359,7 +2323,118 @@ where
 \right).
 \end{equation}
 %
-
+By \ref{2.26}, the right hand side can be written as
+%
+\begin{equation}
+\left( 
+	\bm{\Lambda} ^ {- 1}
+	-
+	\bm{\Lambda} ^ {- 1}
+	\mathbf{A} ^ \intercal
+	\left(
+		\mathbf{L} ^ {- 1}
+		+
+		\mathbf{A}
+		\bm{\Lambda} ^ {- 1}
+		\mathbf{A} ^ \intercal
+	\right) ^ {- 1}
+	\mathbf{A}
+	\bm{\Lambda} ^ {- 1}
+\right)
+\left(
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	(\mathbf{y} - \mathbf{b})
+	+
+	\bm{\Lambda}
+	\bm{\mu}
+\right).
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\mathbf{A} ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{b})
++
+\bm{\Lambda}
+\bm{\mu}
+=
+\left(
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	+
+	\bm{\Lambda}
+	\mathbf{A} ^ {- 1}
+\right)
+(\mathbf{y} - \mathbf{b})
+-
+\bm{\Lambda}
+\mathbf{A} ^ {- 1}
+(\mathbf{y} - \mathbf{b})
++
+\bm{\Lambda}
+\bm{\mu},
+\end{equation}
+%
+it can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\bm{\Lambda} ^ {- 1}
+\mathbf{A} ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{b})
++
+\bm{\mu}
+-
+\bm{\Lambda} ^ {- 1}
+\mathbf{A} ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{b})
++
+\bm{\Lambda} ^ {- 1}
+\mathbf{A} ^ \intercal
+\left(
+	\mathbf{L} ^ {- 1}
+	+
+	\mathbf{A}
+	\bm{\Lambda} ^ {- 1}
+	\mathbf{A} ^ \intercal
+\right) ^ {- 1}
+\left( 
+	\mathbf{y} 
+	- 
+	\mathbf{b}
+	-
+	\mathbf{A}
+	\bm{\mu}
+\right) \\
+&=
+\bm{\mu}
++
+\bm{\Lambda} ^ {- 1}
+\mathbf{A} ^ \intercal
+\left(
+	\mathbf{L} ^ {- 1}
+	+
+	\mathbf{A}
+	\bm{\Lambda} ^ {- 1}
+	\mathbf{A} ^ \intercal
+\right) ^ {- 1}
+\left( 
+	\mathbf{y} 
+	-
+	\mathbf{A}
+	\bm{\mu}
+	- 
+	\mathbf{b}
+\right).
+\end{aligned}
+\end{equation}
+%
 
 
 
