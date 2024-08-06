@@ -2195,253 +2195,65 @@ The logarithm of the integrand except the terms independent of $\mathbf{x}$ and 
 \frac{1}{2} 
 (\mathbf{x} - \bm{\mu}) ^ \intercal 
 \bm{\Lambda}
-(\mathbf{x} - \bm{\mu}).
+(\mathbf{x} - \bm{\mu})
 \end{equation}
 %
-The first and second order terms can be written as
-%
-\begin{equation}
--
-\frac{1}{2}
-\mathbf{x} ^ \intercal
-\mathbf{A} ^ \intercal
-\mathbf{L}
-\mathbf{b}
--
-\frac{1}{2}
-\mathbf{b} ^ \intercal
-\mathbf{L}
-\mathbf{A}
-\mathbf{x}
-+
-\mathbf{x} ^ \intercal
-\bm{\Lambda}
-\bm{\mu}
-+
-\mathbf{y} ^ \intercal
-\mathbf{L}
-\mathbf{b}
-\end{equation}
-%
-and 
-%
-\begin{equation}
-- 
-\frac{1}{2}
-\mathbf{x} ^ \intercal
-\left( 
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-	+
-	\bm{\Lambda}
-\right)
-\mathbf{x} 
-+ 
-\frac{1}{2} 
-\mathbf{x} ^ \intercal 
-\mathbf{A} ^ \intercal
-\mathbf{L}
-\mathbf{y}
-+ 
-\frac{1}{2} 
-\mathbf{y} ^ \intercal 
-\mathbf{L}
-\mathbf{A}
-\mathbf{x}
-- 
-\frac{1}{2} 
-\mathbf{y} ^ \intercal 
-\mathbf{L}
-\mathbf{y},
-\end{equation}
-%
-respectively.
-Therefore, the logarithm except the indnependent terms can be written as
-%
-\begin{equation}
-- 
-\frac{1}{2}
-\left(
-	\mathbf{x}
-	- 
-	\mathbf{z}
-\right) ^ \intercal
-\left( 
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-	+
-	\bm{\Lambda}
-\right)
-\left(
-	\mathbf{x}
-	- 
-	\mathbf{z}
-\right)
-+
-\frac{1}{2}
-\mathbf{z} ^ \intercal
-\left( 
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-	+
-	\bm{\Lambda}
-\right)
-\mathbf{z}
--
-\frac{1}{2}
-\mathbf{y} ^ \intercal
-\mathbf{L}
-\mathbf{y}
-+
-\mathbf{y} ^ \intercal
-\mathbf{L}
-\mathbf{b}.
-\end{equation}
-%
-where
-%
-\begin{equation}
-\mathbf{z}
-=
-\left( 
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-	+
-	\bm{\Lambda}
-\right) ^ {- 1}
-\left(
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	(\mathbf{y} - \mathbf{b})
-	+
-	\bm{\Lambda}
-	\bm{\mu}
-\right).
-\end{equation}
-%
-By \ref{2.26}, the right hand side can be written as
-%
-\begin{equation}
-\left( 
-	\bm{\Lambda} ^ {- 1}
-	-
-	\bm{\Lambda} ^ {- 1}
-	\mathbf{A} ^ \intercal
-	\left(
-		\mathbf{L} ^ {- 1}
-		+
-		\mathbf{A}
-		\bm{\Lambda} ^ {- 1}
-		\mathbf{A} ^ \intercal
-	\right) ^ {- 1}
-	\mathbf{A}
-	\bm{\Lambda} ^ {- 1}
-\right)
-\left(
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	(\mathbf{y} - \mathbf{b})
-	+
-	\bm{\Lambda}
-	\bm{\mu}
-\right).
-\end{equation}
-%
-Since
-%
-\begin{equation}
-\mathbf{A} ^ \intercal
-\mathbf{L}
-(\mathbf{y} - \mathbf{b})
-+
-\bm{\Lambda}
-\bm{\mu}
-=
-\left(
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	+
-	\bm{\Lambda}
-	\mathbf{A} ^ {- 1}
-\right)
-(\mathbf{y} - \mathbf{b})
--
-\bm{\Lambda}
-\mathbf{A} ^ {- 1}
-(\mathbf{y} - \mathbf{b})
-+
-\bm{\Lambda}
-\bm{\mu},
-\end{equation}
-%
-it can be written as
+Since the first term can be written as
 %
 \begin{equation}
 \begin{aligned}
 &
-\bm{\Lambda} ^ {- 1}
-\mathbf{A} ^ \intercal
-\mathbf{L}
-(\mathbf{y} - \mathbf{b})
-+
-\bm{\mu}
--
-\bm{\Lambda} ^ {- 1}
-\mathbf{A} ^ \intercal
-\mathbf{L}
-(\mathbf{y} - \mathbf{b})
-+
-\bm{\Lambda} ^ {- 1}
-\mathbf{A} ^ \intercal
-\left(
-	\mathbf{L} ^ {- 1}
-	+
-	\mathbf{A}
-	\bm{\Lambda} ^ {- 1}
-	\mathbf{A} ^ \intercal
-\right) ^ {- 1}
+- 
+\frac{1}{2} 
 \left( 
-	\mathbf{y} 
-	- 
-	\mathbf{b}
-	-
-	\mathbf{A}
-	\bm{\mu}
+	\mathbf{y}
+	 - \mathbf{A} (\mathbf{x} - \bm{\mu})
+	 - \mathbf{A} \bm{\mu}
+	 - \mathbf{b} 
+\right) ^ \intercal 
+\mathbf{L} 
+\left( 
+	\mathbf{y}
+	 - \mathbf{A} (\mathbf{x} - \bm{\mu})
+	 - \mathbf{A} \bm{\mu}
+	 - \mathbf{b} 
 \right) \\
-&=
-\bm{\mu}
-+
-\bm{\Lambda} ^ {- 1}
+=&
+- 
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
 \mathbf{A} ^ \intercal
-\left(
-	\mathbf{L} ^ {- 1}
-	+
-	\mathbf{A}
-	\bm{\Lambda} ^ {- 1}
-	\mathbf{A} ^ \intercal
-\right) ^ {- 1}
-\left( 
-	\mathbf{y} 
-	-
-	\mathbf{A}
-	\bm{\mu}
-	- 
-	\mathbf{b}
-\right).
+\mathbf{L}
+\mathbf{A}
+(\mathbf{x} - \bm{\mu})
++
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\mathbf{A} ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
+-
+\frac{1}{2}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}),
 \end{aligned}
 \end{equation}
 %
-Thus,
+the logarithm except the independent terms of $\mathbf{x}$ and $\mathbf{y}$ can be written as
+
+By \ref{2.26},
 %
 \begin{equation}
-\mathbf{z}
+\left( 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right) ^ {- 1}
 =
-\bm{\mu}
-+
+\bm{\Lambda} ^ {- 1}
+-
 \bm{\Lambda} ^ {- 1}
 \mathbf{A} ^ \intercal
 \left(
@@ -2451,14 +2263,8 @@ Thus,
 	\bm{\Lambda} ^ {- 1}
 	\mathbf{A} ^ \intercal
 \right) ^ {- 1}
-\left( 
-	\mathbf{y} 
-	-
-	\mathbf{A}
-	\bm{\mu}
-	- 
-	\mathbf{b}
-\right).
+\mathbf{A}
+\bm{\Lambda} ^ {- 1}.
 \end{equation}
 %
 
