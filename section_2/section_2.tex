@@ -2230,8 +2230,8 @@ Since the first term can be written as
 (\mathbf{x} - \bm{\mu}) ^ \intercal
 \mathbf{A} ^ \intercal
 \mathbf{L}
-(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
--
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) \\
+&-
 \frac{1}{2}
 (\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
 \mathbf{L}
@@ -2239,8 +2239,92 @@ Since the first term can be written as
 \end{aligned}
 \end{equation}
 %
-the logarithm except the independent terms of $\mathbf{x}$ and $\mathbf{y}$ can be written as
-
+the logarithm except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ can be written as
+%
+\begin{equation}
+\begin{aligned}
+&-
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu} - \mathbf{z}) ^ \intercal
+\left(
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right)
+(\mathbf{x} - \bm{\mu} - \mathbf{z})
++
+\frac{1}{2}
+\mathbf{z} ^ \intercal
+\left(
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right)
+\mathbf{z} \\
+&-
+\frac{1}{2}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) \\
+=
+&-
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu} - \mathbf{z}) ^ \intercal
+\left(
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right)
+(\mathbf{x} - \bm{\mu} - \mathbf{z})
+-
+\frac{1}{2}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
+\mathbf{M}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}),
+\end{aligned}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\mathbf{z}
+&= 
+\left( 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right) ^ {- 1}
+\mathbf{A} ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}), 
+\\
+\mathbf{M}
+&=
+\mathbf{L}
+-
+\mathbf{L} ^ \intercal
+\mathbf{A}
+\left( 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	+
+	\bm{\Lambda}
+\right) ^ {- 1}
+\mathbf{A} ^ \intercal
+\mathbf{L}.
+\end{aligned}
+\end{equation}
+%
 By \ref{2.26},
 %
 \begin{equation}
@@ -2267,7 +2351,50 @@ By \ref{2.26},
 \bm{\Lambda} ^ {- 1}.
 \end{equation}
 %
-
+Therefore,
+%
+\begin{equation}
+\mathbf{M}
+=
+\mathbf{L}
+-
+\mathbf{L} ^ \intercal
+\mathbf{A}
+\left(
+	\bm{\Lambda} ^ {- 1}
+	-
+	\bm{\Lambda} ^ {- 1}
+	\mathbf{A} ^ \intercal
+	\left(
+		\mathbf{L} ^ {- 1}
+		+
+		\mathbf{A}
+		\bm{\Lambda} ^ {- 1}
+		\mathbf{A} ^ \intercal
+	\right) ^ {- 1}
+	\mathbf{A}
+	\bm{\Lambda} ^ {- 1}
+\right)
+\mathbf{A} ^ \intercal
+\mathbf{L}.
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+p(\mathbf{y})
+=
+\mathcal{N}
+\left(
+	\mathbf{y}
+	|
+	\mathbf{A}
+	\bm{\mu}
+	+
+	\mathbf{b},
+\right)
+\end{equation}
+%
 
 
 
