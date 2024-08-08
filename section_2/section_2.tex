@@ -2247,11 +2247,11 @@ the logarithm except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ can 
 \frac{1}{2}
 (\mathbf{x} - \bm{\mu} - \mathbf{z}) ^ \intercal
 \left(
+	\bm{\Lambda}
+	+
 	\mathbf{A} ^ \intercal
 	\mathbf{L}
 	\mathbf{A}
-	+
-	\bm{\Lambda}
 \right)
 (\mathbf{x} - \bm{\mu} - \mathbf{z})
 +
@@ -2275,11 +2275,11 @@ the logarithm except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ can 
 \frac{1}{2}
 (\mathbf{x} - \bm{\mu} - \mathbf{z}) ^ \intercal
 \left(
+	\bm{\Lambda}
+	+
 	\mathbf{A} ^ \intercal
 	\mathbf{L}
 	\mathbf{A}
-	+
-	\bm{\Lambda}
 \right)
 (\mathbf{x} - \bm{\mu} - \mathbf{z})
 -
@@ -2297,11 +2297,11 @@ where
 \mathbf{z}
 &= 
 \left( 
+	\bm{\Lambda}
+	+
 	\mathbf{A} ^ \intercal
 	\mathbf{L}
 	\mathbf{A}
-	+
-	\bm{\Lambda}
 \right) ^ {- 1}
 \mathbf{A} ^ \intercal
 \mathbf{L}
@@ -2311,14 +2311,14 @@ where
 &=
 \mathbf{L}
 -
-\mathbf{L} ^ \intercal
+\mathbf{L}
 \mathbf{A}
 \left( 
+	\bm{\Lambda}
+	+
 	\mathbf{A} ^ \intercal
 	\mathbf{L}
 	\mathbf{A}
-	+
-	\bm{\Lambda}
 \right) ^ {- 1}
 \mathbf{A} ^ \intercal
 \mathbf{L}.
@@ -2329,11 +2329,11 @@ By \ref{2.26},
 %
 \begin{equation}
 \left( 
+	\bm{\Lambda}
+	+
 	\mathbf{A} ^ \intercal
 	\mathbf{L}
 	\mathbf{A}
-	+
-	\bm{\Lambda}
 \right) ^ {- 1}
 =
 \bm{\Lambda} ^ {- 1}
@@ -2356,27 +2356,13 @@ Therefore,
 \begin{equation}
 \mathbf{M}
 =
-\mathbf{L}
--
-\mathbf{L} ^ \intercal
-\mathbf{A}
 \left(
-	\bm{\Lambda} ^ {- 1}
-	-
-	\bm{\Lambda} ^ {- 1}
-	\mathbf{A} ^ \intercal
-	\left(
-		\mathbf{L} ^ {- 1}
-		+
-		\mathbf{A}
-		\bm{\Lambda} ^ {- 1}
-		\mathbf{A} ^ \intercal
-	\right) ^ {- 1}
+	\mathbf{L} ^ {- 1}
+	+
 	\mathbf{A}
 	\bm{\Lambda} ^ {- 1}
-\right)
-\mathbf{A} ^ \intercal
-\mathbf{L}.
+	\mathbf{A} ^ \intercal
+\right) ^ {- 1}.
 \end{equation}
 %
 Thus,
@@ -2392,9 +2378,15 @@ p(\mathbf{y})
 	\bm{\mu}
 	+
 	\mathbf{b},
+	\mathbf{L} ^ {- 1}
+	+
+	\mathbf{A}
+	\bm{\Lambda} ^ {- 1}
+	\mathbf{A} ^ \intercal
 \right)
 \end{equation}
 %
+
 
 
 
