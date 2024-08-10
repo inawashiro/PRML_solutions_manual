@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  10 AUG 2024 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  10 AUG 2024 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -166,14 +166,14 @@ n/12 ^^@ \OML/cmm/b/it/12 ^^V\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 :
  []
 
 [7] [8]
-Overfull \hbox (2.70279pt too wide) detected at line 560
+Overfull \hbox (2.70279pt too wide) detected at line 576
 [][] [] \OT1/cmr/m/n/12 E [] = [] [] E\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 ^^@
  []\OT1/cmr/m/n/12 E [] + E\OML/cmm/m/it/12 ^^V[]:
  []
 
 [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
 [24] [25] [26]
-Overfull \hbox (14.53548pt too wide) detected at line 1612
+Overfull \hbox (14.53548pt too wide) detected at line 1628
 [][][]
  []
 
@@ -256,7 +256,7 @@ ic/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 7.pfb>
-Output written on main.pdf (65 pages, 320940 bytes).
+Output written on main.pdf (65 pages, 320975 bytes).
 PDF statistics:
  304 PDF objects out of 1000 (max. 8388607)
  199 compressed objects within 2 object streams
