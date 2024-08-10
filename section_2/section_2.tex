@@ -2147,39 +2147,18 @@ p(\mathbf{y} | \mathbf{x})
 By the definition,
 %
 \begin{equation}
-p (\mathbf{y})
-=
-\int 
 p(\mathbf{y} | \mathbf{x})
 p(\mathbf{x})
-d\mathbf{x}.
+=
+p(\mathbf{x} | \mathbf{y})
+p(\mathbf{y}).
 \end{equation}
 %
-The right hand side can be written as
+The logarithm of the left hand side except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ is given by
 %
 \begin{equation}
-\int
-\mathcal{N}
-\left( 
-	\mathbf{y}
-	|
-	\mathbf{A} \mathbf{x} + \mathbf{b},
-	\mathbf{L} ^ {- 1}
-\right)
-\mathcal{N}
-\left( 
-	\mathbf{x}
-	|
-	\bm{\mu},
-	\bm{\Lambda} ^ {- 1}
-\right)
-d\mathbf{x}.
-\end{equation}
-%
-The logarithm of the integrand except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ is given by
-%
-\begin{equation}
-- \frac{1}{2} 
+- 
+\frac{1}{2} 
 \left( 
 	\mathbf{y}
 	 - \mathbf{A} \mathbf{x} 
@@ -2195,7 +2174,7 @@ The logarithm of the integrand except the terms independent of $\mathbf{x}$ and 
 \frac{1}{2} 
 (\mathbf{x} - \bm{\mu}) ^ \intercal 
 \bm{\Lambda}
-(\mathbf{x} - \bm{\mu})
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 Since the first term can be written as
@@ -2325,6 +2304,30 @@ where
 \end{aligned}
 \end{equation}
 %
+we have
+%
+\begin{equation}
+\bm{\mu}
++
+\mathbf{z}
+=
+\left( 
+	\bm{\Lambda}
+	+
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+\right) ^ {- 1}
+\left(
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	(\mathbf{y} - \mathbf{b})
+	+
+	\bm{\Lambda}
+	\bm{\mu}
+\right).
+\end{equation}
+%
 By \ref{2.26},
 %
 \begin{equation}
@@ -2368,8 +2371,39 @@ Therefore,
 Thus,
 %
 \begin{equation}
+\begin{aligned}
+p(\mathbf{x} | \mathbf{y})
+&=
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\left( 
+		\bm{\Lambda}
+		+
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		\mathbf{A}
+	\right) ^ {- 1}
+	\left(
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		(\mathbf{y} - \mathbf{b})
+		+
+		\bm{\Lambda}
+		\bm{\mu}
+	\right),
+	\left( 
+		\bm{\Lambda}
+		+
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		\mathbf{A}
+	\right) ^ {- 1}
+\right),
+\\
 p(\mathbf{y})
-=
+&=
 \mathcal{N}
 \left(
 	\mathbf{y}
@@ -2383,64 +2417,15 @@ p(\mathbf{y})
 	\mathbf{A}
 	\bm{\Lambda} ^ {- 1}
 	\mathbf{A} ^ \intercal
-\right).
-\end{equation}
-%
-
-
-\subsection{(Incomplete)}
-\label{2.33}
-Let $\mathbf{x}$ and $\mathbf{y}$ be variables such that 
-%
-\begin{equation}
-\begin{aligned}
-p(\mathbf{x})
-&=
-\mathcal{N}
-\left( 
-	\mathbf{x}
-	|
-	\bm{\mu},
-	\bm{\Lambda} ^ {- 1}
-\right), 
-\\
-p(\mathbf{y} | \mathbf{x})
-&=
-\mathcal{N}
-\left( 
-	\mathbf{y}
-	|
-	\mathbf{A} \mathbf{x} + \mathbf{b},
-	\mathbf{L} ^ {- 1}
 \right).
 \end{aligned}
 \end{equation}
 %
-Then, by \ref{2.32}, 
-%
-\begin{equation}
-p(\mathbf{y})
-=
-\mathcal{N}
-\left(
-	\mathbf{y}
-	|
-	\mathbf{A}
-	\bm{\mu}
-	+
-	\mathbf{b},
-	\mathbf{L} ^ {- 1}
-	+
-	\mathbf{A}
-	\bm{\Lambda} ^ {- 1}
-	\mathbf{A} ^ \intercal
-\right).
-\end{equation}
-%
 
 
-
-
+\subsection{}
+\label{2.33}
+Refer to \ref{2.32}.
 
 
 
