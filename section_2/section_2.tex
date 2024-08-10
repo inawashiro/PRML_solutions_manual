@@ -2390,6 +2390,54 @@ p(\mathbf{y})
 
 \subsection{(Incomplete)}
 \label{2.33}
+Let $\mathbf{x}$ and $\mathbf{y}$ be variables such that 
+%
+\begin{equation}
+\begin{aligned}
+p(\mathbf{x})
+&=
+\mathcal{N}
+\left( 
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Lambda} ^ {- 1}
+\right), 
+\\
+p(\mathbf{y} | \mathbf{x})
+&=
+\mathcal{N}
+\left( 
+	\mathbf{y}
+	|
+	\mathbf{A} \mathbf{x} + \mathbf{b},
+	\mathbf{L} ^ {- 1}
+\right).
+\end{aligned}
+\end{equation}
+%
+Then, by \ref{2.32}, 
+%
+\begin{equation}
+p(\mathbf{y})
+=
+\mathcal{N}
+\left(
+	\mathbf{y}
+	|
+	\mathbf{A}
+	\bm{\mu}
+	+
+	\mathbf{b},
+	\mathbf{L} ^ {- 1}
+	+
+	\mathbf{A}
+	\bm{\Lambda} ^ {- 1}
+	\mathbf{A} ^ \intercal
+\right).
+\end{equation}
+%
+
 
 
 
