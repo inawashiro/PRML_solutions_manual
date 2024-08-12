@@ -2507,6 +2507,156 @@ Therefore,
 %
 
 
+\subsection{(Incomplete)}
+\label{2.35}
+Let $\mathbf{x}$ be a variable such that
+%
+\begin{equation}
+p(\mathbf{x})
+=
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+{\rm E} \mathbf{x} \mathbf{x} ^ \intercal
+=
+\int 
+\mathbf{x} \mathbf{x} ^ \intercal
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&\int 
+(\mathbf{x} - \bm{\mu} + \bm{\mu}) (\mathbf{x} - \bm{\mu} + \bm{\mu}) ^ \intercal
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x} \\
+=&
+\int 
+(\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x}
++
+\bm{\mu}
+\int 
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x} \\
+&+
+\left(
+	\int
+	(\mathbf{x} - \bm{\mu})
+	\mathcal{N}
+	\left(
+		\mathbf{x}
+		|
+		\bm{\mu},
+		\bm{\Sigma}
+	\right)
+	d\mathbf{x}
+\right)
+\bm{\mu} ^ \intercal
++
+\bm{\mu} \bm{\mu} ^ \intercal
+\int 
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x}.
+\end{aligned}
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\begin{aligned}
+\int 
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x}
+&=
+1, \\
+\int 
+\mathbf{x}
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x}
+&=
+\bm{\mu},
+\\
+\int 
+(\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right)
+d\mathbf{x}
+&=
+\bm{\Sigma},
+\end{aligned}
+\end{equation}
+%
+the right hand side can be written as $\bm{\Sigma} + \bm{\mu} \bm{\mu} ^ \intercal$.
+Therefore,
+%
+\begin{equation}
+{\rm E} \mathbf{x} \mathbf{x} ^ \intercal
+=
+\bm{\Sigma} + \bm{\mu} \bm{\mu} ^ \intercal.
+\end{equation}
+%
 
 
 
