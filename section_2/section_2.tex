@@ -1685,20 +1685,37 @@ where
 
 \subsection{(Incomplete)}
 \label{2.26}
+Since
 %
 \begin{equation}
 \mathbf{I}
-= (\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D}) \left( \mathbf{A} ^ {- 1} - \mathbf{A} ^ {- 1} \mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} \right) 
-+ \left( \mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} \right) ^ 2.
+= (\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D}) 
+\left( 
+	\mathbf{A} ^ {- 1} 
+	- 
+	\mathbf{A} ^ {- 1} \mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} 
+\right) 
++ 
+\left( 
+	\mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} 
+\right) ^ 2,
 \end{equation}
 %
+we have
 %
 \begin{equation}
-\begin{aligned}
-\mathbf{I}
-= \left( \mathbf{C} ^ {- 1} + \mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B} \right) 
-\left( \mathbf{C} - \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B} \mathbf{C} \right) + \left( \mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B} \mathbf{C} \right) ^ 2.
-\end{aligned}
+(\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D}) ^ {- 1}
+=
+\mathbf{A} ^ {- 1}
+-
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\left(
+	\mathbf{C} ^ {- 1}
+	+
+	\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
+\right)
+\mathbf{D} \mathbf{A} ^ {- 1}.
 \end{equation}
 %
 
