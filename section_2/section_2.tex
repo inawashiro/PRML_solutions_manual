@@ -2524,7 +2524,7 @@ Therefore,
 %
 
 
-\subsection{}
+\subsection{(Incomplete)}
 \label{2.35}
 Let $\mathbf{x}$ be a variable such that
 %
@@ -2675,7 +2675,7 @@ Therefore,
 \end{equation}
 %
 
-Let $\mathbf{x}_n$ and $\mathbf{x}_m$ be variables such that
+Additionally, let $\mathbf{x}_n$ and $\mathbf{x}_m$ be variables such that
 %
 \begin{equation}
 \begin{aligned}
@@ -2718,6 +2718,49 @@ Therefore,
 \delta_{nm} \bm{\Sigma} + \bm{\mu} \bm{\mu} ^ \intercal.
 \end{equation}
 %
+
+Finally, let $\mathbf{x}_1, \cdots, \mathbf{x}_N$ be variables such that
+%
+\begin{equation}
+p(\mathbf{x}_n)
+=
+\mathcal{N}
+\left(
+	\mathbf{x}_n
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right).
+\end{equation}
+% 
+By \ref{2.34},
+%
+\begin{equation}
+\begin{aligned}
+\bm{\mu}_{{\rm ML}}
+&= 
+\sum_{n = 1}^{N} 
+\mathbf{x}_n,
+\\
+\bm{\Sigma}_{{\rm ML}}
+&=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML})
+(\mathbf{x}_n - \bm{\mu}_{\rm ML}) ^ \intercal.
+\end{aligned}
+\end{equation}
+%
+Then
+%
+\begin{equation}
+{\rm E} \bm{\Sigma}_{\rm ML}
+=
+\end{equation}
+%
+
+
+
 
 
 
