@@ -2428,7 +2428,7 @@ p(\mathbf{y})
 Refer to \ref{2.32}.
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.34}
 Let $\mathbf{X}$ be a set of $N$ variables such that
 %
@@ -2446,7 +2446,7 @@ Let $\mathbf{X}$ be a set of $N$ variables such that
 \ln (2 \pi)
 -
 \frac{N}{2}
-\ln \det \bm{\Sigma}
+\ln (\det \bm{\Sigma})
 -
 \frac{1}{2}
 \sum_{n = 1}^{N}
@@ -2455,9 +2455,56 @@ Let $\mathbf{X}$ be a set of $N$ variables such that
 (\mathbf{x}_n - \bm{\mu}).
 \end{equation}
 %
-To maximise it with respect to $\bm{\Sigma}$, setting the partial derivative to zero gives
-
-
+To maximise it with respect to $\bm{\mu}$ and $\bm{\Sigma}$, setting the partial derivatives to zero gives
+%
+\begin{equation}
+\begin{aligned}
+\mathbf{0}
+&= 
+\sum_{n = 1}^{N}
+\left(
+	\bm{\Sigma} ^ {- 1}
+	+
+	\left(
+		\bm{\Sigma} ^ {- 1}
+	\right) ^ \intercal
+\right)
+(\mathbf{x}_n - \bm{\mu}),
+\\
+\mathbf{O}
+&=
+-
+\frac{N}{2}
+\left( 
+	\bm{\Sigma} ^ {- 1}
+\right) ^ \intercal
++
+\frac{1}{2}
+\left( \bm{\Sigma} ^ {- 1} \right) ^ 2
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu})
+(\mathbf{x}_n - \bm{\mu}) ^ \intercal.
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\begin{aligned}
+\bm{\mu}_{{\rm ML}}
+&= 
+\sum_{n = 1}^{N} 
+\mathbf{x}_n,
+\\
+\bm{\Sigma}_{{\rm ML}}
+&=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML})
+(\mathbf{x}_n - \bm{\mu}_{\rm ML}) ^ \intercal.
+\end{aligned}
+\end{equation}
+%
 
 
 
