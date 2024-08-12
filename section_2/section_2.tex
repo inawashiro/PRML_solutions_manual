@@ -2756,8 +2756,113 @@ Then
 \begin{equation}
 {\rm E} \bm{\Sigma}_{\rm ML}
 =
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML})
+(\mathbf{x}_n - \bm{\mu}_{\rm ML}) ^ \intercal.
 \end{equation}
 %
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E}
+(\mathbf{x}_n - \bm{\mu} + \bm{\mu} - \bm{\mu}_{\rm ML})
+(\mathbf{x}_n - \bm{\mu} + \bm{\mu} - \bm{\mu}_{\rm ML}) ^ \intercal \\
+=&
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E} (\mathbf{x}_n - \bm{\mu}) (\mathbf{x}_n - \bm{\mu}) ^ \intercal
++
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E} (\mathbf{x}_n - \bm{\mu}) (\bm{\mu} - \bm{\mu}_{\rm ML}) ^ \intercal \\
+&+
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E} (\bm{\mu} - \bm{\mu}_{\rm ML}) (\mathbf{x}_n - \bm{\mu}) ^ \intercal
++
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E} (\bm{\mu} - \bm{\mu}_{\rm ML}) (\bm{\mu} - \bm{\mu}_{\rm ML}) ^ \intercal.
+\end{aligned}
+\end{equation}
+%
+Each term of the right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+\frac{1}{N}
+\sum_{n = 1}^{N}
+\bm{\Sigma}
+&=
+\bm{\Sigma}, 
+\\
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E} 
+(\mathbf{x}_n - \bm{\mu}) 
+\left(
+	\bm{\mu} 
+	- 
+	\frac{1}{N} \sum_{n = 1}^{N} \mathbf{x}_n
+\right) ^ \intercal
+&= 
+-
+\frac{1}{N ^ 2}
+\sum_{n = 1}^{N}
+{\rm E} (\mathbf{x}_n - \bm{\mu}) \mathbf{x}_n ^ \intercal,
+\\
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E}  
+\left(
+	\bm{\mu} 
+	- 
+	\frac{1}{N} \sum_{n = 1}^{N} \mathbf{x}_n
+\right)
+(\mathbf{x}_n - \bm{\mu}) ^ \intercal
+&= 
+-
+\frac{1}{N ^ 2}
+\sum_{n = 1}^{N}
+{\rm E} \mathbf{x}_n (\mathbf{x}_n - \bm{\mu}) ^ \intercal,
+\\
+\frac{1}{N}
+\sum_{n = 1}^{N}
+{\rm E}  
+\left(
+	\bm{\mu} 
+	- 
+	\frac{1}{N} \sum_{n = 1}^{N} \mathbf{x}_n
+\right)
+\left(
+	\bm{\mu} 
+	- 
+	\frac{1}{N} \sum_{n = 1}^{N} \mathbf{x}_n
+\right) ^ \intercal
+&=
+\frac{1}{N ^ 3}
+\sum_{n = 1}^{N}
+{\rm E}
+(\bm{\mu} - \mathbf{x}_n)
+(\bm{\mu} - \mathbf{x}_n) ^ \intercal.
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} \bm{\Sigma}_{\rm ML}
+=
+\frac{N - 1}{N} \bm{\Sigma}.
+\end{equation}
+%
+
+
 
 
 
