@@ -2507,7 +2507,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.35}
 Let $\mathbf{x}$ be a variable such that
 %
@@ -2658,9 +2658,49 @@ Therefore,
 \end{equation}
 %
 
-
-
-
+Let $\mathbf{x}_n$ and $\mathbf{x}_m$ be variables such that
+%
+\begin{equation}
+\begin{aligned}
+p(\mathbf{x}_n)
+&=
+\mathcal{N}
+\left(
+	\mathbf{x_n}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right), 
+\\
+p(\mathbf{x}_m)
+&=
+\mathcal{N}
+\left(
+	\mathbf{x_m}
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right).
+\end{aligned}
+\end{equation}
+%
+If $n \neq m$, then
+%
+\begin{equation}
+{\rm E} \mathbf{x}_n \mathbf{x}_m ^ \intercal
+= 
+{\rm E} \mathbf{x}_n {\rm E} \mathbf{x}_m ^ \intercal.
+\end{equation}
+%
+The right hand side can be written as $\bm{\mu} \bm{\mu} ^ \intercal$.
+Therefore,
+%
+\begin{equation}
+{\rm E} \mathbf{x}_n \mathbf{x}_m ^ \intercal
+=
+\delta_{nm} \bm{\Sigma} + \bm{\mu} \bm{\mu} ^ \intercal.
+\end{equation}
+%
 
 
 
