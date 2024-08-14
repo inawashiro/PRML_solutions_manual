@@ -2864,6 +2864,71 @@ Therefore,
 %
 
 
+\subsection{(Incomplete)}
+\label{2.36}
+Let $x_1, \cdots, x_N$ be variables such that
+%
+\begin{equation}
+p(x_n)
+=
+\mathcal{N}
+\left(
+	x_n
+	|
+	\mu,
+	\sigma ^ 2
+\right).
+\end{equation}
+%
+Let us assume that $\mu$ is known.
+Then, by \ref{2.34},
+%
+\begin{equation}
+{\sigma_{\rm ML} ^ 2} ^ {(N)}
+=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+(x_n - \mu) ^ 2.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{1}{N}
+( x_N - \mu) ^ 2
++
+\frac{1}{N}
+\sum_{n = 1}^{N - 1}
+(x_n - \mu) ^ 2
+=
+\frac{1}{N}
+( x_N - \mu) ^ 2
++
+\frac{N - 1}{N}
+{\sigma_{\rm ML} ^ 2} ^ {(N - 1)}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\sigma_{\rm ML} ^ 2} ^ {(N)}
+=
+{\sigma_{\rm ML} ^ 2} ^ {(N - 1)}
++
+\frac{1}{N}
+\left(
+	(x_N - \mu) ^ 2
+	-
+	{\sigma_{\rm ML} ^ 2} ^ {(N - 1)}
+\right).
+\end{equation}
+%
+
+
+
+
+
+
 
 
 
