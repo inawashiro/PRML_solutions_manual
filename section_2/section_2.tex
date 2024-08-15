@@ -2864,7 +2864,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.36}
 Let $x_1, \cdots, x_N$ be variables such that
 %
@@ -2923,8 +2923,43 @@ Therefore,
 \right).
 \end{equation}
 %
-
-
+Since
+%
+\begin{equation}
+\frac{\partial}{\partial \sigma ^ 2} 
+\left(
+	- \ln p
+	\left(
+		x_n 
+		| 
+		\sigma ^ 2
+	\right)
+\right)
+=
+\frac{1}{2 \sigma ^ 2}
+-
+\frac{1}{2 \left( \sigma ^ 2 \right) ^ 2} (x_n - \mu) ^ 2,
+\end{equation}
+%
+we have
+%
+\begin{equation}
+{\sigma_{\rm ML} ^ 2} ^ {(N)}
+=
+{\sigma_{\rm ML} ^ 2} ^ {(N - 1)}
+-
+\frac{{\sigma_{\rm ML} ^ 2} ^ {(N - 1)}}{N}
+\frac{\partial}{\partial {\sigma_{\rm ML} ^ 2} ^ {(N - 1)}} 
+\left(
+	- \ln p
+	\left(
+		x_N 
+		| 
+		{\sigma_{\rm ML} ^ 2} ^ {(N - 1)}
+	\right)
+\right).
+\end{equation}
+%
 
 
 
