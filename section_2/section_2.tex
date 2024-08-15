@@ -2962,7 +2962,107 @@ we have
 %
 
 
-
+\subsection{(Incomplete)}
+\label{2.37}
+Let $\mathbf{x}_1, \cdots, \mathbf{x}_N$ be variables such that
+%
+\begin{equation}
+p(\mathbf{x}_n)
+=
+\mathcal{N}
+\left(
+	\mathbf{x}_n
+	|
+	\bm{\mu},
+	\bm{\Sigma}
+\right).
+\end{equation}
+%
+Let us assume that $\bm{\mu}$ is known.
+Then, by \ref{2.34},
+%
+\begin{equation}
+\bm{\Sigma}_{\rm ML} ^ {(N)}
+=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu})
+(\mathbf{x}_n - \bm{\mu}) ^ \intercal.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&\frac{1}{N}
+(\mathbf{x}_N - \bm{\mu})
+(\mathbf{x}_N - \bm{\mu}) ^ \intercal
++
+\frac{1}{N}
+\sum_{n = 1}^{N - 1}
+(\mathbf{x}_n - \bm{\mu})
+(\mathbf{x}_n - \bm{\mu}) ^ \intercal \\
+&=
+\frac{1}{N}
+(\mathbf{x}_N - \bm{\mu})
+(\mathbf{x}_N - \bm{\mu}) ^ \intercal
++
+\frac{N - 1}{N}
+\bm{\Sigma}_{\rm ML} ^ {(N - 1)}.
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\bm{\Sigma}_{\rm ML} ^ {(N)}
+=
+\bm{\Sigma}_{\rm ML} ^ {(N - 1)}
++
+\frac{1}{N}
+\left(
+	(\mathbf{x}_N - \bm{\mu})
+	(\mathbf{x}_N - \bm{\mu}) ^ \intercal
+	-
+	\bm{\Sigma}_{\rm ML} ^ {(N - 1)}
+\right).
+\end{equation}
+%
+Since
+%
+\begin{equation}
+\frac{\partial}{\partial \bm{\Sigma}} 
+\left(
+	- \ln p
+	\left(
+		x_n 
+		| 
+		\bm{\Sigma}
+	\right)
+\right)
+=
+,
+\end{equation}
+%
+we have
+%
+\begin{equation}
+\bm{\Sigma}_{\rm ML} ^ {(N)}
+=
+\bm{\Sigma}_{\rm ML} ^ {(N - 1)}
+-
+\frac{\bm{\Sigma}_{\rm ML} ^ {(N - 1)}}{N}
+\frac{\partial}{\partial \bm{\sigma}_{\rm ML} ^ {(N - 1)}} 
+\left(
+	- \ln p
+	\left(
+		\mathbf{x}_N 
+		| 
+		\bm{\Sigma}_{\rm ML} ^ {(N - 1)}
+	\right)
+\right).
+\end{equation}
+%
 
 
 
