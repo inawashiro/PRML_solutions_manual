@@ -2962,7 +2962,7 @@ we have
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.37}
 Let $\mathbf{x}_1, \cdots, \mathbf{x}_N$ be variables such that
 %
@@ -3033,15 +3033,21 @@ Since
 \begin{equation}
 \frac{\partial}{\partial \bm{\Sigma}} 
 \left(
-	- \ln p
-	\left(
-		x_n 
-		| 
-		\bm{\Sigma}
-	\right)
+	- \ln p (x_n | \bm{\Sigma})
 \right)
 =
-,
+-
+\frac{1}{2}
+\left(
+	\bm{\Sigma} ^ {- 1}
+\right) ^ \intercal
++
+\frac{1}{2}
+\left(
+	\bm{\Sigma} ^ {- 1}
+\right) ^ 2
+(\mathbf{x}_N - \bm{\mu})
+(\mathbf{x}_N - \bm{\mu}) ^ \intercal,
 \end{equation}
 %
 we have
