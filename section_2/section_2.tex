@@ -3226,10 +3226,96 @@ p(\mu | \mathbf{x})
 
 \subsection{(Incomplete)}
 \label{2.39}
-
-
-
-
+Let $\mathbf{x}$ be a set of $N$ variables such that
+%
+\begin{equation}
+p(\mathbf{x} | \mu)
+=
+\prod_{n = 1}^{N}
+p(x_n | \mu),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+p(x_n | \mu)
+&=
+\mathcal{N}
+\left(
+	x_n
+	|
+	\mu,
+	\sigma ^ 2	
+\right),
+\\
+p(\mu)
+&=
+\mathcal{N}
+\left(
+	\mu
+	|
+	\mu_0,
+	\sigma_0 ^ 2	
+\right).
+\end{aligned}
+\end{equation}
+%
+Then, by \ref{2.38},
+%
+\begin{equation}
+p(\mu | \mathbf{x})
+= 
+\mathcal{N}
+\left( 
+	\mu
+	|
+	\mu_N,
+	\sigma_N ^ 2
+\right),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\mu_N
+&= 
+\frac{\sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} 
+\sum_{n = 1}^{N}
+x_n
++
+\frac{\sigma ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} 
+\mu_0,
+\\
+\sigma_N ^ 2
+&= 
+\frac{\sigma ^ 2 \sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2}.
+\end{aligned}
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\begin{aligned}
+\mu_N
+&= 
+\frac{(N - 1) \sigma_0 ^ 2 + \sigma ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2}
+\mu_{N - 1}
++
+\frac{\sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2}
+x_{N}
++
+\frac{\sigma ^ 2 - \sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} 
+\mu_0,
+\\
+\sigma_N ^ 2
+&= 
+\frac{(N - 1) \sigma_0 ^ 2 + \sigma ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} 
+\sigma_{N - 1} ^ 2.
+\end{aligned}
+\end{equation}
+%
 
 
 
