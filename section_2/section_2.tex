@@ -3071,22 +3071,29 @@ we have
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.38}
 Let $\mathbf{x}$ be a set of $N$ variables such that
 %
 \begin{equation}
-\begin{aligned}
 p(\mathbf{x} | \mu)
+=
+\prod_{n = 1}^{N}
+p(x_n | \mu),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+p(x_n | \mu)
 &=
+\mathcal{N}
 \left(
-	2 \pi \sigma ^ 2
-\right) ^ {- \frac{N}{2}}
-\exp
-\left(
-	-
-	\frac{1}{2 \sigma ^ 2}
-	\sum_{n = 1}^{N} (x_n - \mu) ^ 2
+	x_n
+	|
+	\mu,
+	\sigma ^ 2	
 \right),
 \\
 p(\mu)
@@ -3101,12 +3108,120 @@ p(\mu)
 \end{aligned}
 \end{equation}
 %
-
-
-
-
-
-
+By the definition,
+%
+\begin{equation}
+p(\mu | \mathbf{x})
+p(\mathbf{x})
+=
+p(\mathbf{x} | \mu)
+p(\mu).
+\end{equation}
+%
+The logarithm of the right hand side excpt the terms independent of $\mathbf{x}$ and $\mu$ can be written as
+%
+\begin{equation}
+-
+\frac{1}{2 \sigma ^ 2}
+\sum_{n = 1}^{N}
+(x_n - \mu) ^ 2
+-
+\frac{1}{2 \sigma_0 ^ 2}
+(\mu - \mu_0) ^ 2.
+\end{equation}
+%
+The first term can be written as
+%
+\begin{equation}
+-
+\frac{1}{2 \sigma ^ 2}
+\sum_{n = 1}^{N}
+(x_n - \mu_{\rm ML} + \mu_{\rm ML} - \mu) ^ 2
+=
+-
+\frac{1}{2 \sigma ^ 2}
+\sum_{n = 1}^{N}
+(x_n - \mu_{\rm ML}) ^ 2
+-
+\frac{N}{2 \sigma ^ 2}
+(\mu_{\rm ML} - \mu) ^ 2.
+\end{equation}
+%
+where
+%
+\begin{equation}
+\mu_{\rm ML}
+=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+x_n,
+\end{equation}
+%
+as derived in \ref{2.34}.
+Therefore, the logarithme except the terms independent of $\mathbf{x}$ and $\mu$ can be written as
+%
+\begin{equation}
+\begin{aligned}
+&-
+\frac{1}{2 \sigma ^ 2}
+\sum_{n = 1}^{N}
+(x_n - \mu_{\rm ML}) ^ 2
+-
+\frac{N}{2 \sigma ^ 2}
+(\mu_{\rm ML} - \mu) ^ 2
+-
+\frac{1}{2 \sigma_0 ^ 2}
+(\mu - \mu_0) ^ 2 \\
+&=
+-
+\frac{1}{2 \sigma ^ 2}
+\sum_{n = 1}^{N}
+(x_n - \mu_{\rm ML}) ^ 2
+-
+\frac{1}{2 \sigma_N ^ 2}
+\left(
+	\mu
+	-
+	\mu_N	
+\right) ^ 2
++
+\frac{\mu_N ^ 2}{2 \sigma_N ^ 2},
+\end{aligned}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\mu_N
+&= 
+\frac{N \sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} \mu_{\rm ML} 
++
+\frac{\sigma ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} \mu_0,
+\\
+\sigma_N ^ 2
+&= 
+\frac{\sigma ^ 2 \sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2}.
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(\mu | \mathbf{x})
+= 
+\mathcal{N}
+\left( 
+	\mu
+	\left.
+	\right \vert
+	\frac{N \sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} \mu_{\rm ML} 
+	+
+	\frac{\sigma ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2} \mu_0,
+	\frac{\sigma ^ 2 \sigma_0 ^ 2}{N \sigma_0 ^ 2 + \sigma ^ 2}
+\right).
+\end{equation}
+%
 
 
 
