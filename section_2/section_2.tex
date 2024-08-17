@@ -3318,6 +3318,204 @@ x_{N}
 %
 
 
+\subsection{}
+\label{2.40}
+Let $\mathbf{X}$ be a set of $N$ variables such that
+%
+\begin{equation}
+p(\mathbf{X} | \bm{\mu})
+=
+\prod_{n = 1}^{N}
+p(\mathbf{x}_n | \bm{\mu}),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+p(\mathbf{x}_n | \bm{\mu})
+&=
+\mathcal{N}
+\left(
+	\mathbf{x}_n
+	|
+	\bm{\mu},
+	\bm{\Sigma}	
+\right),
+\\
+p(\bm{\mu})
+&=
+\mathcal{N}
+\left(
+	\bm{\mu}
+	|
+	\bm{\mu}_0,
+	\bm{\Sigma}	
+\right).
+\end{aligned}
+\end{equation}
+%
+By the definition,
+%
+\begin{equation}
+p(\bm{\mu} | \mathbf{X})
+p(\mathbf{X})
+=
+p(\mathbf{X} | \bm{\mu})
+p(\bm{\mu}).
+\end{equation}
+%
+The logarithm of the right hand side excpt the terms independent of $\mathbf{X}$ and $\bm{\mu}$ can be written as
+%
+\begin{equation}
+-
+\frac{1}{2}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\mathbf{x}_n - \bm{\mu})
+-
+\frac{1}{2}
+(\bm{\mu} - \bm{\mu}_0)
+\bm{\Sigma}_0 ^ {- 1}
+(\bm{\mu} - \bm{\mu}_0) ^ \intercal.
+\end{equation}
+%
+The first term can be written as
+%
+\begin{equation}
+\begin{aligned}
+&-
+\frac{1}{2}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML} + \bm{\mu}_{\rm ML} - \bm{\mu}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML} + \bm{\mu}_{\rm ML} - \bm{\mu}) \\
+&=
+-
+\frac{1}{2}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML})
+-
+\frac{N}{2}
+(\bm{\mu}_{\rm ML} - \bm{\mu}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\bm{\mu}_{\rm ML} - \bm{\mu}).
+\end{aligned}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\bm{\mu}_{\rm ML}
+=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+\mathbf{x}_n,
+\end{equation}
+%
+as derived in \ref{2.34}.
+Therefore, the logarithm except the terms independent of $\mathbf{X}$ and $\bm{\mu}$ can be written as
+%
+\begin{equation}
+\begin{aligned}
+&-
+\frac{1}{2}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML})
+-
+\frac{N}{2}
+(\bm{\mu}_{\rm ML} - \bm{\mu}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\bm{\mu}_{\rm ML} - \bm{\mu}) \\
+&-
+\frac{1}{2}
+(\bm{\mu} - \bm{\mu}_0)
+\bm{\Sigma}_0 ^ {- 1}
+(\bm{\mu} - \bm{\mu}_0) ^ \intercal \\
+=&
+-
+\frac{1}{2}
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\mathbf{x}_n - \bm{\mu}_{\rm ML})
+-
+\frac{1}{2} 
+(\bm{\mu} - \bm{\mu}_N) ^ \intercal
+\bm{\Sigma}_N ^ {- 1}
+(\bm{\mu} - \bm{\mu}_N) \\
+&+
+\frac{1}{2} 
+\bm{\mu}_N ^ \intercal
+\bm{\Sigma}_N ^ {- 1}
+\bm{\mu}_N,
+\end{aligned}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\bm{\mu}_N
+&= 
+\left(
+	N \bm{\Sigma}_0 ^ {- 1}
+	+
+	\bm{\Sigma} ^ {- 1}
+\right) ^ {- 1} 
+\left(
+	N \bm{\Sigma}_0 ^ {- 1}
+	\bm{\mu}_{\rm ML}
+	+
+	\bm{\Sigma} ^ {- 1}
+	\bm{\mu}_0	
+\right),
+\\
+\bm{\Sigma}_N
+&= 
+\left(
+	N \bm{\Sigma}_0 ^ {- 1}
+	+
+	\bm{\Sigma} ^ {- 1}
+\right) ^ {- 1}.
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(\bm{\mu} | \mathbf{X})
+= 
+\mathcal{N}
+\left( 
+	\bm{\mu}
+	\left.
+	\right \vert
+	\left(
+		N \bm{\Sigma}_0 ^ {- 1}
+		+
+		\bm{\Sigma} ^ {- 1}
+	\right) ^ {- 1} 
+	\left(
+		N \bm{\Sigma}_0 ^ {- 1}
+		\bm{\mu}_{\rm ML}
+		+
+		\bm{\Sigma} ^ {- 1}
+		\bm{\mu}_0	
+	\right),
+	\left(
+		N \bm{\Sigma}_0 ^ {- 1}
+		+
+		\bm{\Sigma} ^ {- 1}
+	\right) ^ {- 1}
+\right).
+\end{equation}
+%
 
 
 
