@@ -3910,7 +3910,56 @@ p
 \end{equation}
 %
 
-
+Finally, let $\mathbf{t} = (t_1, \cdots, t_N) ^ \intercal$ and $\mathbf{X} = \{ x_1, \cdots, x_N \}$ such that
+%
+\begin{equation}
+t_n
+=
+y (\mathbf{x}_n, \mathbf{w})
++
+\epsilon_n,
+\end{equation}
+%
+where
+%
+\begin{equation}
+p(\epsilon_n)
+=
+p
+\left(
+	\epsilon_n
+	| 
+	\sigma ^ 2, 
+	q
+\right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\ln p
+\left(
+	\mathbf{t}
+	|
+	\mathbf{X},
+	\mathbf{w},
+	\sigma ^ 2
+\right)
+=
+-
+\frac{1}{2 \sigma ^ 2}
+\sum_{n = 1}^{N}
+\abs{y (\mathbf{x}_n, \mathbf{w}) - t_n} ^ q
+-
+\frac{N}{q}
+\ln 
+\left( 
+	2 \sigma ^ 2
+\right)
++
+{\rm const}.
+\end{equation}
+%
 
 
 
