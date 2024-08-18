@@ -3491,18 +3491,90 @@ p(\bm{\mu} | \mathbf{X})
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.41}
+By the definition,
+%
+\begin{equation}
+{\rm Gam} (\lambda | a, b)
+=
+\frac{1}{\Gamma(a)} 
+b ^ a
+\lambda ^ {a - 1}
+\exp (- b \lambda).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\int_{0}^{\infty} 
+{\rm Gam} (\lambda | a, b)
+d\lambda
+=
+\frac{1}{\Gamma(a)} 
+b ^ a
+\int_{0}^{\infty}
+\lambda ^ {a - 1}
+\exp (- b \lambda)
+d\lambda.
+\end{equation}
+%
+By the transformation
+%
+\begin{equation}
+\lambda'
+= 
+b \lambda,
+\end{equation}
+%
+the right hand side can be written as
 %
 \begin{equation}
 \frac{1}{\Gamma(a)} 
 b ^ a
-\int_0^\infty
-\lambda ^ {a - 1}
-\exp (- b \lambda)
-d\lambda
+\int_{0}^{\infty}
+\left(
+	\frac{\lambda'}{b}
+\right) ^ {a - 1}
+\exp (- \lambda')
+\frac{1}{b}
+d\lambda'
+=
+\frac{1}{\Gamma(a)}
+\int_{0}^{\infty}
+{\lambda'} ^ {a - 1}
+\exp (- \lambda')
+d\lambda'.
 \end{equation}
 %
+The right hand side can be written as
+%
+\begin{equation}
+\frac{1}{\Gamma(a)}
+\Gamma(a)
+=
+1.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\int_{0}^{\infty} 
+{\rm Gam} (\lambda | a, b)
+d\lambda
+=
+1.
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
 
 
 
