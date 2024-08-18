@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  18 AUG 2024 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  18 AUG 2024 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -124,7 +124,11 @@ File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 ))
 Package: xparse 2024-03-14 L3 Experimental document command parser
 ))
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `2.41' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -231,11 +235,15 @@ Overfull \hbox (15.49089pt too wide) detected at line 3490
 /cmr/bx/n/12 X\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 N [] \OML/cmm/m/it/12 :
  []
 
-) [70] (./main.aux)
+[70] [71]) [72] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
  2596 strings out of 474049
@@ -262,10 +270,10 @@ ic/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 7.pfb>
-Output written on main.pdf (72 pages, 335952 bytes).
+Output written on main.pdf (74 pages, 339061 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 335 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
