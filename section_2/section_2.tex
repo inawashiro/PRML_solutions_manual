@@ -3568,13 +3568,199 @@ d\lambda
 %
 
 
+\subsection{}
+\label{2.41}
+Let $\lambda$ be a variable such that
+%
+\begin{equation}
+p(\lambda)
+=
+{\rm Gam} (\lambda | a, b).
+\end{equation}
+%
+By the definition,
+%
+\begin{equation}
+{\rm Gam} (\lambda | a, b)
+=
+\frac{1}{\Gamma(a)} 
+b ^ a
+\lambda ^ {a - 1}
+\exp (- b \lambda).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+{\rm E} \lambda
+=
+\frac{1}{\Gamma(a)}
+b ^ a
+\int_{0}^{\infty}
+\lambda ^ a
+\exp
+\left(
+	-
+	\frac{\lambda}{b}
+\right)
+d\lambda.
+\end{equation}
+%
+By the transformation
+%
+\begin{equation}
+\lambda'
+= 
+b \lambda,
+\end{equation}
+%
+the right hand side can be written as
+%
+\begin{equation}
+\frac{1}{\Gamma(a)} 
+b ^ a
+\int_{0}^{\infty}
+\left(
+	\frac{\lambda'}{b}
+\right) ^ a
+\exp (- \lambda')
+\frac{1}{b}
+d\lambda'
+=
+\frac{1}{b \Gamma(a)}
+\int_{0}^{\infty}
+{\lambda'} ^ a
+\exp (- \lambda')
+d\lambda'.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{1}{b \Gamma(a)}
+\Gamma(a + 1)
+=
+\frac{a}{b}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} \lambda
+=
+\frac{a}{b}.
+\end{equation}
+%
 
+Additionally,
+%
+\begin{equation}
+{\rm E} \lambda ^ 2
+=
+\frac{1}{\Gamma(a)}
+b ^ a
+\int_{0}^{\infty}
+\lambda ^ {a + 1}
+\exp
+\left(
+	-
+	\frac{\lambda}{b}
+\right)
+d\lambda.
+\end{equation}
+%
+By the transformation
+%
+\begin{equation}
+\lambda'
+= 
+b \lambda,
+\end{equation}
+%
+the right hand side can be written as
+%
+\begin{equation}
+\frac{1}{\Gamma(a)} 
+b ^ a
+\int_{0}^{\infty}
+\left(
+	\frac{\lambda'}{b}
+\right) ^ {a + 1}
+\exp (- \lambda')
+\frac{1}{b}
+d\lambda'
+=
+\frac{1}{b ^ 2 \Gamma(a)}
+\int_{0}^{\infty}
+{\lambda'} ^ {a + 1}
+\exp (- \lambda')
+d\lambda'.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{1}{b ^ 2 \Gamma(a)}
+\Gamma(a + 2)
+=
+\frac{a (a + 1)}{b ^ 2}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm E} \lambda ^ 2
+=
+\frac{a (a + 1)}{b ^ 2}.
+\end{equation}
+%
+By the definition,
+%
+\begin{equation}
+{\rm var} \lambda
+=
+{\rm E} \lambda ^ 2
+-
+({\rm E} \lambda) ^ 2.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm var} \lambda
+=
+\frac{a}{b ^ 2}.
+\end{equation}
+%
 
-
-
-
-
-
+Finally, setting the derivative of ${\rm Gam}(\lambda | a, b)$ with respect to $\lambda$ to zero gives
+%
+\begin{equation}
+0
+=
+\frac{1}{\Gamma(a)}
+b ^ a
+\left(
+	\frac{a - 1}{\lambda}
+	-
+	\frac{1}{b}
+\right)
+\lambda ^ {a - 1}
+\exp
+\left(
+	-
+	\frac{\lambda}{b}
+\right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+{\rm mode} \lambda
+=
+(a - 1) b.
+\end{equation}
+%
 
 
 
