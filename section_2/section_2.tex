@@ -3763,6 +3763,161 @@ Therefore,
 %
 
 
+\subsection{(Incomplete)}
+\label{2.43}
+Let
+%
+\begin{equation}
+p
+\left(
+	x 
+	| 
+	\sigma ^ 2, 
+	q
+\right)
+=
+\frac{q}{2 \Gamma \left( \frac{1}{q} \right)} 
+\left( 2 \sigma ^ 2 \right) ^ {- \frac{1}{q}}
+\exp 
+\left( 
+-
+\frac{\abs{x} ^ q}{2 \sigma ^ 2}
+\right).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\int_{- \infty}^{\infty}
+p
+\left(
+	x 
+	| 
+	\sigma ^ 2, 
+	q
+\right)
+dx
+=
+\frac{q}{\Gamma \left( \frac{1}{q} \right)} 
+\left( 2 \sigma ^ 2 \right) ^ {- \frac{1}{q}}
+\int_{0}^{\infty}
+\exp 
+\left( 
+-
+\frac{x ^ q}{2 \sigma ^ 2}
+\right)
+dx.
+\end{equation}
+%
+By the transformation 
+%
+\begin{equation}
+x'
+=
+\frac{x ^ q}{2 \sigma ^ 2},
+\end{equation}
+%
+the right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\frac{q}{\Gamma \left( \frac{1}{q} \right)} 
+\left( 2 \sigma ^ 2 \right) ^ {- \frac{1}{q}}
+\int_{0}^{\infty}
+\exp ( - x' )
+\left(
+	2 \sigma ^ 2 
+\right) ^ {\frac{1}{q}}
+\frac{1}{q}
+x ^ {\frac{1}{q} - 1}
+dx' \\
+&=
+\frac{1}{\Gamma \left( \frac{1}{q} \right)}
+\int_{0}^{\infty}
+x ^ {\frac{1}{q} - 1}
+\exp ( - x' )
+dx'.
+\end{aligned}
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{1}{\Gamma \left( \frac{1}{q} \right)}
+\Gamma \left( \frac{1}{q} \right)
+=
+1.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\int_{- \infty}^{\infty}
+p
+\left(
+	x 
+	| 
+	\sigma ^ 2, 
+	q
+\right)
+dx
+=
+1.
+\end{equation}
+%
+
+Additionally,
+%
+\begin{equation}
+p
+\left(
+	x 
+	| 
+	\sigma ^ 2, 
+	2
+\right)
+=
+\frac{1}{\Gamma \left( \frac{1}{2} \right)}
+\left(
+	2 \sigma ^ 2
+\right) ^ {- \frac{1}{2}}
+\exp
+\left(
+	-
+	\frac{x ^ 2}{2 \sigma ^ 2}
+\right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p
+\left(
+	x 
+	| 
+	\sigma ^ 2, 
+	2
+\right)
+=
+\mathcal{N}
+\left(
+	x
+	|
+	0,
+	\sigma ^ 2
+\right).
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
 
 
 
