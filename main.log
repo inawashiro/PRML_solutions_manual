@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  20 AUG 2024 07:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  20 AUG 2024 07:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -124,11 +124,7 @@ File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
 ))
 Package: xparse 2024-03-14 L3 Experimental document command parser
 ))
-(./main.aux
-
-LaTeX Warning: Label `2.41' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -245,10 +241,6 @@ Overfull \hbox (116.44893pt too wide) detected at line 4028
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
  2599 strings out of 474049
@@ -275,7 +267,7 @@ ic/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 7.pfb>
-Output written on main.pdf (76 pages, 344537 bytes).
+Output written on main.pdf (76 pages, 344530 bytes).
 PDF statistics:
  341 PDF objects out of 1000 (max. 8388607)
  224 compressed objects within 3 object streams
