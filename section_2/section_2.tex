@@ -3963,7 +3963,7 @@ Thus, the logarithm of $p\left( \mathbf{t} |\mathbf{X}, \mathbf{w}, \sigma ^ 2 \
 
 \subsection{(Incomplete)}
 \label{2.44}
-Let $x_1, \cdots, x_n$ be variables such that
+Let $x_1, \cdots, x_N$ be variables such that
 %
 \begin{equation}
 \begin{aligned}
@@ -3986,12 +3986,47 @@ p(\mu, \tau)
 	\mu_0,
 	(\beta \tau) ^ {- 1}
 \right)
-{\rm Gam} (\lambda | a, b).
+{\rm Gam} (\tau | a, b).
 \end{aligned}
 \end{equation}
 %
-
-
+By the definition,
+%
+\begin{equation}
+p(\mu, \tau | \mathbf{x})
+p(\mathbf{x})
+=
+p(\mathbf{x} | \mu, \tau)
+p(\mu, \tau).
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\left(
+	2 \pi \tau ^ {- 1}
+\right) ^ {- \frac{N}{2}}
+\exp 
+\left(
+	-
+	\frac{\tau}{2}
+	\sum_{n = 1}^{N} (x_n - \mu) ^ 2
+\right)
+\left(
+	2 \pi (\beta \tau) ^ {- 1}
+\right) ^ {- \frac{N}{2}}
+\exp 
+\left(
+	-
+	\frac{\beta \tau}{2}
+	\sum_{n = 1}^{N} (\mu - \mu_0) ^ 2
+\right)
+\frac{1}{\Gamma(a)} 
+b ^ a
+\tau ^ {a - 1} 
+\exp(- b \lambda).
+\end{equation}
+%
 
 
 
