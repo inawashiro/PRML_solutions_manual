@@ -3934,18 +3934,19 @@ p
 \right).
 \end{equation}
 %
-Therefore,
+Therefore, the logarithm of $p(\epsilon_n)$ except the terms independent of $\mathbf{w}$ and $\sigma ^ 2$ can be written as
 %
 \begin{equation}
-\ln p
-\left(
-	\mathbf{t}
-	|
-	\mathbf{X},
-	\mathbf{w},
-	\sigma ^ 2
-\right)
-=
+-
+\frac{\abs{\epsilon_n} ^ q}{2 \sigma ^ 2}
+-
+\frac{1}{q}
+\ln \left( 2 \sigma ^ 2 \right).
+\end{equation}
+%
+Thus, the logarithm of $p\left( \mathbf{t} |\mathbf{X}, \mathbf{w}, \sigma ^ 2 \right)$ except the terms independent of $\mathbf{w}$ and $\sigma ^ 2$ can be written as
+%
+\begin{equation}
 -
 \frac{1}{2 \sigma ^ 2}
 \sum_{n = 1}^{N}
@@ -3955,9 +3956,7 @@ Therefore,
 \ln 
 \left( 
 	2 \sigma ^ 2
-\right)
-+
-{\rm const}.
+\right).
 \end{equation}
 %
 
