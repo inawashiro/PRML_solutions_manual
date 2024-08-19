@@ -4000,31 +4000,30 @@ p(\mathbf{x} | \mu, \tau)
 p(\mu, \tau).
 \end{equation}
 %
-The right hand side can be written as
+The right hand side except the terms independent of $\mathbf{x}$, $\mu$ and $\tau$ can be written as
 %
 \begin{equation}
-\left(
-	2 \pi \tau ^ {- 1}
-\right) ^ {- \frac{N}{2}}
+\begin{aligned}
+&
+\tau ^ \frac{N}{2}
 \exp 
 \left(
 	-
 	\frac{\tau}{2}
 	\sum_{n = 1}^{N} (x_n - \mu) ^ 2
 \right)
-\left(
-	2 \pi (\beta \tau) ^ {- 1}
-\right) ^ {- \frac{N}{2}}
+(\beta \tau) ^ \frac{1}{2}
 \exp 
 \left(
 	-
 	\frac{\beta \tau}{2}
-	\sum_{n = 1}^{N} (\mu - \mu_0) ^ 2
+	(\mu - \mu_0) ^ 2
 \right)
-\frac{1}{\Gamma(a)} 
-b ^ a
 \tau ^ {a - 1} 
-\exp(- b \lambda).
+\exp(- b \tau) 
+\\
+&=
+\end{aligned}
 \end{equation}
 %
 
