@@ -4012,7 +4012,7 @@ The right hand side except the terms independent of $\mathbf{x}$, $\mu$ and $\ta
 	\frac{\tau}{2}
 	\sum_{n = 1}^{N} (x_n - \mu) ^ 2
 \right)
-(\beta \tau) ^ \frac{1}{2}
+\tau ^ \frac{1}{2}
 \exp 
 \left(
 	-
@@ -4020,29 +4020,67 @@ The right hand side except the terms independent of $\mathbf{x}$, $\mu$ and $\ta
 	(\mu - \mu_0) ^ 2
 \right)
 \tau ^ {a - 1} 
-\exp(- b \tau) 
-\\
+\exp(- b \tau) \\
 &=
+\tau ^ {\frac{N}{2} + \alpha - \frac{1}{2}}
+\exp
+\left(
+	-
+	\frac{N \tau}{2}
+	(\bar{x} - \mu) ^ 2	
+	-
+	\frac{\beta \tau}{2}
+	(\mu - \mu_0) ^ 2
+	-
+	b \tau
+\right)
+\exp
+\left(
+	-
+	\frac{\tau}{2}
+	\sum_{n = 1}^{N} (x_n - \bar{x}) ^ 2	
+\right).
 \end{aligned}
 \end{equation}
 %
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+where
+%
+\begin{equation}
+\bar{x}
+=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+x_n.
+\end{equation}
+%
+%
+\begin{equation}
+\begin{aligned}
+&-
+\frac{N \tau}{2}
+(\bar{x} - \mu) ^ 2	
+-
+\frac{\beta \tau}{2}
+(\mu - \mu_0) ^ 2
+-
+b \tau \\
+&=
+-
+\frac{(N + \beta) \tau}{2}
+\left(
+	\mu 
+	-
+	\frac{N \bar{x} + \beta \mu_0}{N + \beta}
+\right) ^ 2
++
+\left(
+	\frac{N \bar{x} + \beta \mu_0}{N + \beta}
+\right) ^ 2
+-
+b \tau.
+\end{aligned}
+\end{equation}
+%
 
 
 
