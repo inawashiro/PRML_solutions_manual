@@ -3961,7 +3961,7 @@ Thus, the logarithm of $p\left( \mathbf{t} |\mathbf{X}, \mathbf{w}, \sigma ^ 2 \
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.44}
 Let $x_1, \cdots, x_N$ be variables such that
 %
@@ -4033,12 +4033,9 @@ The right hand side except the terms independent of $\mathbf{x}$, $\mu$ and $\ta
 	(\mu - \mu_0) ^ 2
 	-
 	b \tau
-\right)
-\exp
-\left(
 	-
 	\frac{\tau}{2}
-	\sum_{n = 1}^{N} (x_n - \bar{x}) ^ 2	
+	\sum_{n = 1}^{N} (x_n - \bar{x}) ^ 2
 \right).
 \end{aligned}
 \end{equation}
@@ -4056,34 +4053,13 @@ x_n.
 Since
 %
 \begin{equation}
-\begin{aligned}
-&-
+-
 \frac{N \tau}{2}
 (\bar{x} - \mu) ^ 2	
 -
 \frac{\beta \tau}{2}
 (\mu - \mu_0) ^ 2
--
-b \tau \\
-&=
--
-\frac{(N + \beta) \tau}{2}
-\left(
-	\mu 
-	-
-	\frac{N \bar{x} + \beta \mu_0}{N + \beta}
-\right) ^ 2
-+
-\left(
-	-
-	\frac{N \bar{x} ^ 2 + \beta \mu_0 ^ 2}{2}
-	+
-	\frac{(N \bar{x} + \beta \mu_0) ^ 2}{2 (N + \beta)}
-	-
-	b
-\right)
- \tau \\
-&=
+=
 -
 \frac{(N + \beta) \tau}{2}
 \left(
@@ -4092,13 +4068,7 @@ b \tau \\
 	\frac{N \bar{x} + \beta \mu_0}{N + \beta}
 \right) ^ 2
 -
-\left(
-	\frac{N \beta (\bar{x} - \mu_0) ^ 2}{2 (N + \beta)}
-	+
-	b
-\right)
-\tau,
-\end{aligned}
+\frac{N \beta \tau (\bar{x} - \mu_0) ^ 2}{2 (N + \beta)},
 \end{equation}
 %
 the right hand side can be written as
@@ -4131,9 +4101,8 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-&
-p(\mu, \tau | \mathbf{x}) \\
-&=
+p(\mu, \tau | \mathbf{x})
+=&
 \mathcal{N} 
 \left(
 	\mu
@@ -4141,7 +4110,9 @@ p(\mu, \tau | \mathbf{x}) \\
 	\right \vert
 	\frac{N \bar{x} + \beta \mu_0}{N + \beta},
 	((N + \beta) \tau) ^ {- 1}
-\right)
+\right) 
+\\
+&
 {\rm Gam}
 \left(
 	\tau
@@ -4154,7 +4125,7 @@ p(\mu, \tau | \mathbf{x}) \\
 	+
 	\frac{1}{2}
 	\sum_{n = 1}^{N} (x_n - \bar{x}) ^ 2
-\right),
+\right).
 \end{aligned}
 \end{equation}
 %
