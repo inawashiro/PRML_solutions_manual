@@ -4204,7 +4204,7 @@ where
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.46}
 Let $x$ be a variable such that
 %
@@ -4238,11 +4238,12 @@ p(x | \mu, a, b)
 d\tau.
 \end{equation}
 %
-The integrand of the right hand side can be written as
+The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
 &
+\int_{0}^{\infty}
 \left(
 	\frac{\tau}{2 \pi}
 \right) ^ \frac{1}{2}
@@ -4254,10 +4255,12 @@ The integrand of the right hand side can be written as
 \right)
 \frac{b ^ a}{\Gamma(a)}
 \tau ^ {a - 1}
-\exp (- b \tau) \\
+\exp (- b \tau)
+d\tau \\
 &=
 (2 \pi) ^ {- \frac{1}{2}}
 \frac{b ^ a}{\Gamma(a)}
+\int_{0}^{\infty}
 \tau ^ {a - \frac{1}{2}}
 \exp
 \left(
@@ -4268,19 +4271,94 @@ The integrand of the right hand side can be written as
 		\frac{(x - \mu) ^ 2}{2}
 	\right)
 	\tau
-\right).
+\right)
+d\tau.
 \end{aligned}
 \end{equation}
 %
-
-
-
-
-
-
-
-
-
+By the transformation
+%
+\begin{equation}
+\tau'
+=
+\left(
+		b
+		+
+		\frac{(x - \mu) ^ 2}{2}
+	\right)
+\tau,
+\end{equation}
+%
+the integral of the right hand side can be written as
+%
+\begin{equation}
+\int_{0}^{\infty}
+\left(
+	\frac{\tau'}{b + \frac{(x - \mu) ^ 2}{2}}
+\right) ^ {a - \frac{1}{2}}
+\exp (- \tau')
+\frac{d\tau'}{b + \frac{(x - \mu) ^ 2}{2}}
+=
+\Gamma
+\left(
+	a 
+	+
+	\frac{1}{2}
+\right)
+\left(
+	b 
+	+ 
+	\frac{(x - \mu) ^ 2}{2}
+\right) ^ {- a - \frac{1}{2}}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(x | \mu, \tau, a, b)
+=
+(2 \pi) ^ {- \frac{1}{2}}
+\frac{\Gamma(a + \frac{1}{2})}
+{\Gamma(a)}
+b ^ a
+\left(
+	b 
+	+ 
+	\frac{(x - \mu) ^ 2}{2}
+\right) ^ {- a - \frac{1}{2}}.
+\end{equation}
+%
+Let
+%
+\begin{equation}
+\begin{aligned}
+\nu
+&=
+2 a, \\
+\lambda
+&=
+\frac{a}{b}.
+\end{aligned}
+\end{equation}
+%
+Then, the right hand side can be written as
+%
+\begin{equation}
+{\rm St}
+(x | \mu, \lambda, \nu)
+=
+\left(
+	\frac{\lambda}{\pi \nu}
+\right) ^ {\frac{1}{2}}
+\frac{\Gamma(\frac{\nu + 1}{2})}
+{\Gamma(\frac{\nu}{2})}
+\left(
+	1 
+	+ 
+	\frac{\lambda (x - \mu) ^ 2}{\nu}
+\right) ^ {- \frac{\nu + 1}{2}}.
+\end{equation}
+%
 
 
 
