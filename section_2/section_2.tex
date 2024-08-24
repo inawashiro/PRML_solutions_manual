@@ -4204,7 +4204,74 @@ where
 %
 
 
-
+\subsection{(Incomplete)}
+\label{2.46}
+Let $x$ be a variable such that
+%
+\begin{equation}
+p(x | \mu, \tau, a, b)
+=
+\mathcal{N} 
+\left(
+	x 
+	| 
+	\mu, 
+	\tau ^ {- 1}
+\right)
+{\rm Gam} (\tau | a, b).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+p(x | \mu, a, b)
+=
+\int_{0}^{\infty}
+\mathcal{N} 
+\left(
+	x 
+	| 
+	\mu, 
+	\tau ^ {- 1}
+\right)
+{\rm Gam} (\tau | a, b)
+d\tau.
+\end{equation}
+%
+The integrand of the right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\left(
+	\frac{\tau}{2 \pi}
+\right) ^ \frac{1}{2}
+\exp
+\left(
+	-
+	\frac{\tau}{2} 
+	(x - \mu) ^ 2
+\right)
+\frac{b ^ a}{\Gamma(a)}
+\tau ^ {a - 1}
+\exp (- b \tau) \\
+&=
+(2 \pi) ^ {- \frac{1}{2}}
+\frac{b ^ a}{\Gamma(a)}
+\tau ^ {a - \frac{1}{2}}
+\exp
+\left(
+	-
+	\left(
+		b
+		+
+		\frac{(x - \mu) ^ 2}{2}
+	\right)
+	\tau
+\right).
+\end{aligned}
+\end{equation}
+%
 
 
 
