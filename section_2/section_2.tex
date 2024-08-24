@@ -4131,6 +4131,90 @@ p(\mu, \tau | \mathbf{x})
 %
 
 
+\subsection{(Incomplete)}
+\label{2.45}
+Let $\mathbf{x}$ be a variable in $D$ dimensions such that
+%
+\begin{equation}
+p(\mathbf{x})
+=
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Lambda} ^ {- 1}
+\right).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+p(\mathbf{X} | \bm{\Lambda})
+=
+\prod_{n = 1}^{N}
+\mathcal{N}
+\left(
+	\mathbf{x}
+	|
+	\bm{\mu},
+	\bm{\Lambda} ^ {- 1}
+\right).
+\end{equation}
+%
+The right hand side exept the terms independent of $\bm{\Lambda}$ can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+(\det \bm{\Lambda}) ^ \frac{N}{2}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	\sum_{n = 1}^{N}
+	(\mathbf{x}_n - \bm{\mu}) ^ \intercal
+	\bm{\Lambda}
+	(\mathbf{x}_n - \bm{\mu})
+\right) \\
+&=
+(\det \bm{\Lambda}) ^ \frac{N}{2}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	\tr
+	\left(
+		\mathbf{W} ^ {- 1}
+		\bm{\Lambda}
+	\right)
+\right),
+\end{aligned}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\mathbf{W} ^ {- 1}
+=
+\sum_{n = 1}^{N}
+(\mathbf{x}_n - \bm{\mu})
+(\mathbf{x}_n - \bm{\mu}) ^ \intercal.
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
