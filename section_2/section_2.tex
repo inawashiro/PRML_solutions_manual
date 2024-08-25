@@ -4593,10 +4593,73 @@ By the definition,
 \right) ^ {- \frac{D + \nu}{2}}.
 \end{equation}
 %
-
-
-
-
+Then
+%
+\begin{equation}
+{\rm E} \mathbf{x}
+=
+\frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
+\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
+\int
+\mathbf{x}
+\left(
+	1 
+	+ 
+	\frac
+	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+	{\nu}
+\right) ^ {- \frac{D + \nu}{2}}
+d\mathbf{x}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
+\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
+\int
+(\mathbf{x} - \bm{\mu} + \bm{\mu})
+\left(
+	1 
+	+ 
+	\frac
+	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+	{\nu}
+\right) ^ {- \frac{D + \nu}{2}}
+d\mathbf{x} \\
+=&
+\frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
+\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
+\int
+(\mathbf{x} - \bm{\mu})
+\left(
+	1 
+	+ 
+	\frac
+	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+	{\nu}
+\right) ^ {- \frac{D + \nu}{2}}
+d\mathbf{x} \\
+&+
+\bm{\mu}
+\int
+{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
+d\mathbf{x}.
+\end{aligned}
+\end{equation}
+%
+By the symmetry, the first term of the right hand side can be written as $0$.
+By the definition, the second term of the right hand side can be written as $\bm{\mu}$
+Therefore,
+%
+\begin{equation}
+{\rm E} \mathbf{x}
+=
+\bm{\mu}.
+\end{equation}
+%
 
 
 

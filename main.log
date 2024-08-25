@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  25 AUG 2024 20:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  26 AUG 2024 07:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -254,7 +254,7 @@ Overfull \hbox (11.58386pt too wide) detected at line 4505
 [][][]
  []
 
-[76]) [77] (./main.aux)
+[76] [77]) [78] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
@@ -263,7 +263,7 @@ L3 programming layer <2024-04-11>
 Here is how much of TeX's memory you used:
  2604 strings out of 474049
  34009 string characters out of 5746278
- 1942754 words of memory out of 5000000
+ 1943754 words of memory out of 5000000
  25030 multiletter control sequences out of 15000+600000
  571748 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -285,10 +285,10 @@ ic/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 7.pfb>
-Output written on main.pdf (79 pages, 355919 bytes).
+Output written on main.pdf (80 pages, 357602 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
+ 354 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
