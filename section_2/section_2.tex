@@ -4411,7 +4411,7 @@ Therefore, in the limit $\nu \to \infty$, ${\rm St}(x | \mu, \lambda, \nu)$ beco
 
 \subsection{(Incomplete)}
 \label{2.48}
-Let $\mathbf{x}$ be a variable such that
+Let $\mathbf{x}$ be a variable in $D$ dimensions such that
 %
 \begin{equation}
 p(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \eta, \nu)
@@ -4457,44 +4457,54 @@ p(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
 d\eta.
 \end{equation}
 %
-%The right hand side can be written as
-%%
-%\begin{equation}
-%\begin{aligned}
-%&
-%\int_{0}^{\infty}
-%\left(
-%	\frac{\tau}{2 \pi}
-%\right) ^ \frac{1}{2}
-%\exp
-%\left(
-%	-
-%	\frac{\tau}{2} 
-%	(x - \mu) ^ 2
-%\right)
-%\frac{b ^ a}{\Gamma(a)}
-%\tau ^ {a - 1}
-%\exp (- b \tau)
-%d\tau \\
-%&=
-%(2 \pi) ^ {- \frac{1}{2}}
-%\frac{b ^ a}{\Gamma(a)}
-%\int_{0}^{\infty}
-%\tau ^ {a - \frac{1}{2}}
-%\exp
-%\left(
-%	-
-%	\left(
-%		b
-%		+
-%		\frac{(x - \mu) ^ 2}{2}
-%	\right)
-%	\tau
-%\right)
-%d\tau.
-%\end{aligned}
-%\end{equation}
-%%
+The right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\int_{0}^{\infty}
+(2 \pi) ^ {- \frac{D}{2}}
+(\det (\eta \bm{\Lambda})) ^ \frac{1}{2}
+\exp
+\left(
+	-
+	\frac{1}{2} 
+	(\mathbf{x} - \bm{\mu}) ^ \intercal
+	\eta \bm{\Lambda}
+	(\mathbf{x} - \bm{\mu})
+\right)
+\frac{(\frac{\nu}{2}) ^ \frac{\nu}{2}}{\Gamma (\frac{\nu}{2})}
+\eta ^ {\frac{\nu}{2} - 1}
+\exp 
+\left(
+	- 
+	\frac{\nu}{2}
+	\eta
+\right)
+d\eta \\
+&=
+(2 \pi) ^ {- \frac{D}{2}}
+\frac{(\frac{\nu}{2}) ^ \frac{\nu}{2}}{\Gamma (\frac{\nu}{2})}
+(\det \bm{\Lambda}) ^ \frac{1}{2}
+\int_{0}^{\infty}
+\eta ^ {\frac{D + \nu}{2} - 1}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	\left(
+		(\mathbf{x} - \bm{\mu}) ^ \intercal
+		\bm{\Lambda}
+		(\mathbf{x} - \bm{\mu})
+		+
+		\nu
+	\right)
+	\eta
+\right)
+d\eta.
+\end{aligned}
+\end{equation}
+%
 %By the transformation
 %%
 %\begin{equation}
