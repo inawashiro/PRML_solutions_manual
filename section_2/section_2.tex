@@ -4409,7 +4409,7 @@ In the limit $y \to \infty$, it becomes
 Therefore, in the limit $\nu \to \infty$, ${\rm St}(x | \mu, \lambda, \nu)$ becomes $\mathcal{N} (x | \mu, \lambda ^ {- 1})$.
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.48}
 Let $\mathbf{x}$ be a variable in $D$ dimensions such that
 %
@@ -4493,11 +4493,11 @@ d\eta \\
 	-
 	\frac{1}{2}
 	\left(
+		\nu
+		+
 		(\mathbf{x} - \bm{\mu}) ^ \intercal
 		\bm{\Lambda}
 		(\mathbf{x} - \bm{\mu})
-		+
-		\nu
 	\right)
 	\eta
 \right)
@@ -4505,90 +4505,67 @@ d\eta.
 \end{aligned}
 \end{equation}
 %
-%By the transformation
-%%
-%\begin{equation}
-%\tau'
-%=
-%\left(
-%		b
-%		+
-%		\frac{(x - \mu) ^ 2}{2}
-%	\right)
-%\tau,
-%\end{equation}
-%%
-%the integral of the right hand side can be written as
-%%
-%\begin{equation}
-%\int_{0}^{\infty}
-%\left(
-%	\frac{\tau'}{b + \frac{(x - \mu) ^ 2}{2}}
-%\right) ^ {a - \frac{1}{2}}
-%\exp (- \tau')
-%\frac{d\tau'}{b + \frac{(x - \mu) ^ 2}{2}}
-%=
-%\Gamma
-%\left(
-%	a 
-%	+
-%	\frac{1}{2}
-%\right)
-%\left(
-%	b 
-%	+ 
-%	\frac{(x - \mu) ^ 2}{2}
-%\right) ^ {- a - \frac{1}{2}}.
-%\end{equation}
-%%
-%Therefore,
-%%
-%\begin{equation}
-%p(x | \mu, \tau, a, b)
-%=
-%(2 \pi) ^ {- \frac{1}{2}}
-%\frac{\Gamma(a + \frac{1}{2})}
-%{\Gamma(a)}
-%b ^ a
-%\left(
-%	b 
-%	+ 
-%	\frac{(x - \mu) ^ 2}{2}
-%\right) ^ {- a - \frac{1}{2}}.
-%\end{equation}
-%%
-%Let
-%%
-%\begin{equation}
-%\begin{aligned}
-%\nu
-%&=
-%2 a, \\
-%\lambda
-%&=
-%\frac{a}{b}.
-%\end{aligned}
-%\end{equation}
-%%
-%Then, the right hand side can be written as
-%%
-%\begin{equation}
-%{\rm St}
-%(x | \mu, \lambda, \nu)
-%=
-%\left(
-%	\frac{\lambda}{\pi \nu}
-%\right) ^ {\frac{1}{2}}
-%\frac{\Gamma(\frac{\nu + 1}{2})}
-%{\Gamma(\frac{\nu}{2})}
-%\left(
-%	1 
-%	+ 
-%	\frac{\lambda (x - \mu) ^ 2}{\nu}
-%\right) ^ {- \frac{\nu + 1}{2}}.
-%\end{equation}
-%%
-
+By the transformation
+%
+\begin{equation}
+\eta'
+=
+\frac{1}{2}
+\left(
+	\nu
+	+
+	(\mathbf{x} - \bm{\mu}) ^ \intercal
+	\bm{\Lambda}
+	(\mathbf{x} - \bm{\mu})
+\right)
+\eta,
+\end{equation}
+%
+the integral of the right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\int_{0}^{\infty}
+\left(
+	\frac
+	{2 \eta'}
+	{\nu + (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+\right) ^ {\frac{D + \nu}{2} - 1}
+\exp (- \eta')
+\frac
+{2}
+{\nu + (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+d\eta' \\
+&=
+\left(
+	\frac
+	{2}
+	{\nu + (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+\right) ^ {\frac{D + \nu}{2}}
+\Gamma
+\left(
+	\frac{D + \nu}{2}
+\right).
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
+=
+\frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
+\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
+\left(
+	1 
+	+ 
+	\frac
+	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+	{\nu}
+\right) ^ {- \frac{D + \nu}{2}}.
+\end{equation}
+%
 
 
 
