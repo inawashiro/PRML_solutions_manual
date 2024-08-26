@@ -4689,13 +4689,7 @@ Finally, setting the derivative of ${\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}
 =
 \frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
 \frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
-\frac{1}{\nu}
-\left(
-	\bm{\Lambda}
-	+
-	\bm{\Lambda} ^ \intercal
-\right)
-(\mathbf{x} - \bm{\mu})
+\frac{(\bm{\Lambda} + \bm{\Lambda} ^ \intercal) (\mathbf{x} - \bm{\mu})}{\nu}
 \left(
 	-
 	\frac{D + \nu}{2}
