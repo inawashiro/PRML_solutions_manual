@@ -4748,8 +4748,52 @@ Therefore,
 %
 
 
-
-
+\subsection{}
+\label{2.50}
+By the definition,
+%
+\begin{equation}
+{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
+=
+\frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
+\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
+\left(
+	1 
+	+ 
+	\frac
+	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+	{\nu}
+\right) ^ {- \frac{D + \nu}{2}}.
+\end{equation}
+%
+By the transformation
+%
+\begin{equation}
+y
+=
+\frac
+{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+{\nu},
+\end{equation}
+%
+The right hand side except the terms independent of $\mathbf{x}$ can be written as
+%
+\begin{equation}
+(1 + y) ^ {- \frac{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}{2y} - \frac{D}{2}}.
+\end{equation}
+%
+In the limit $y \to \infty$, it becomes
+%
+\begin{equation}
+\exp 
+\left(
+	-
+	\frac{1}{2}
+	(\mathbf{x} - \bm{\mu}) ^ \intercal \Lambda (\mathbf{x} - \bm{\mu})
+\right).
+\end{equation}
+%
+Therefore, in the limit $\nu \to \infty$, ${\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)$ becomes $\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Lambda} ^ {- 1})$.
 
 
 
