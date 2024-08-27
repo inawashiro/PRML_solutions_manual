@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  28 AUG 2024 07:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  28 AUG 2024 07:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,12 +250,12 @@ Overfull \hbox (5.60765pt too wide) detected at line 4313
  []
 
 [75]
-Overfull \hbox (11.58386pt too wide) detected at line 4505
+Overfull \hbox (11.58386pt too wide) detected at line 4504
 [][][]
  []
 
 [76]
-Overfull \hbox (9.37987pt too wide) detected at line 4624
+Overfull \hbox (9.37987pt too wide) detected at line 4623
 [][]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 x \OMS/cmsy/m/n/12 ^^@ \OML/cmm/b/it/12 ^
 ^V \OT1/cmr/m/n/12 + \OML/cmm/b/it/12 ^^V\OT1/cmr/m/n/12 )[](\OT1/cmr/bx/n/12 x
 \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 ^^V\OML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 ^^C\O
@@ -270,19 +270,19 @@ mm/m/it/12 d\OT1/cmr/bx/n/12 x\OML/cmm/m/it/12 :
  []
 
 [77]
-Overfull \hbox (13.15257pt too wide) detected at line 4685
+Overfull \hbox (13.15257pt too wide) detected at line 4684
 [][][]
  []
 
 
-Overfull \hbox (7.68124pt too wide) detected at line 4702
+Overfull \hbox (7.68124pt too wide) detected at line 4701
 [][]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 x\OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 ^^V\O
 ML/cmm/m/it/12 ; \OT1/cmr/bx/n/12 ^^C\OML/cmm/m/it/12 ; ^^W \OT1/cmr/m/n/12 + 2
 ) = [][] [][] \OML/cmm/m/it/12 ;
  []
 
 
-Overfull \hbox (47.23523pt too wide) detected at line 4739
+Overfull \hbox (47.23523pt too wide) detected at line 4738
 []\OT1/cmr/bx/n/12 0 \OT1/cmr/m/n/12 = [][][] [] [][] \OML/cmm/m/it/12 :
  []
 
@@ -318,7 +318,7 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (81 pages, 376855 bytes).
+Output written on main.pdf (81 pages, 376872 bytes).
 PDF statistics:
  367 PDF objects out of 1000 (max. 8388607)
  241 compressed objects within 3 object streams
