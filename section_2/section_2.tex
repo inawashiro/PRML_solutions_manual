@@ -4903,8 +4903,76 @@ Therefore,
 %
 
 
-
-
+\subsection{(Incomplete)}
+\label{2.52}
+Let $\theta$ be a variable such that 
+%
+\begin{equation}
+p(\theta | \theta_0, m)
+=
+\frac{1}{2 \pi I_0 (m)}
+\exp
+\left(
+	m \cos (\theta - \theta_0)
+\right),
+\end{equation}
+%
+where
+%
+\begin{equation}
+I_0(m)
+=
+\frac{1}{2 \pi}
+\int_{0}^{2 \pi}
+\exp(m \cos \theta) 
+d\theta.
+\end{equation}
+%
+By the Taylor series
+%
+\begin{equation}
+\cos \alpha
+=
+1 
+- 
+\frac{1}{2} \alpha ^ 2 
++ 
+O 
+\left( 
+	\alpha ^ 4 
+\right)
+\end{equation}
+%
+and the transformation
+%
+\begin{equation}
+\xi
+=
+m ^ \frac{1}{2}
+(\theta - \theta_0),
+\end{equation}
+%
+we have
+%
+\begin{equation}
+\exp
+\left(
+	m \cos (\theta - \theta_0)
+\right)
+=
+\exp
+\left(
+	m 
+	-
+	\frac{1}{2} \xi ^ 2
+	+
+	O 
+	\left(
+		m ^ {- 2}
+	\right)
+\right).
+\end{equation}
+%
 
 
 
