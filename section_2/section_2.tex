@@ -4702,70 +4702,59 @@ Additionally,
 d\mathbf{x}.
 \end{equation}
 %
-Differentiating both sides of 
-%
-\begin{equation}
-\int 
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
-d\mathbf{x}
-=
-1
-\end{equation}
-%
-with respect to $\bm{\Lambda}$ gives
+The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
 &
-\frac{{(\bm{\Lambda} ^ {- 1})} ^ \intercal}{2}
 \int
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
+(\mathbf{x} - \bm{\mu})
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\left(
+	\int
+	\mathcal{N} 
+	\left(
+		\mathbf{x} 
+		| 
+		\bm{\mu}, 
+		(\eta \bm{\Lambda}) ^ {- 1}
+	\right)
+	{\rm Gam} 
+	\left(
+		\eta 
+		\left.
+		\right \vert
+		\frac{\nu}{2}, 
+		\frac{\nu}{2}
+	\right)
+	d\eta
+\right)
 d\mathbf{x} \\
-&
--
-\frac{D + \nu}{2 \nu}
+=&
 \int
-(\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal
 \left(
-	1 
-	+ 
-	\frac
-	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
-	{\nu}
-\right) ^ {- 1}
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
-d\mathbf{x}
-=
-\mathbf{O}.
+	\int
+	(\mathbf{x} - \bm{\mu})
+	(\mathbf{x} - \bm{\mu}) ^ \intercal
+	\mathcal{N} 
+	\left(
+		\mathbf{x} 
+		| 
+		\bm{\mu}, 
+		(\eta \bm{\Lambda}) ^ {- 1}
+	\right)
+	d\mathbf{x}
+\right)
+{\rm Gam} 
+	\left(
+		\eta 
+		\left.
+		\right \vert
+		\frac{\nu}{2}, 
+		\frac{\nu}{2}
+	\right)
+d\eta.
 \end{aligned}
-\end{equation}
-%
-The first term of the left hand side can be written as $\frac{\bm{\Lambda} ^ {- 1}}{2}$.
-Since
-%
-\begin{equation}
-\left(
-	1 
-	+ 
-	\frac
-	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
-	{\nu}
-\right) ^ {- 1}
-=
-\frac
-{\nu}
-{\nu + (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})},
-\end{equation}
-%
-the second term can be written as 
-%
-\begin{equation}
-\frac{D + \nu}{2 \nu}
-\frac{\nu - 2}{D + \nu}
-{\rm cov} \mathbf{x}
-=
-\frac{\nu - 2}{2 \nu}
-{\rm cov} \mathbf{x}.
 \end{equation}
 %
 Therefore,
