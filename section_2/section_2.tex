@@ -4682,28 +4682,38 @@ d\mathbf{x}
 \end{aligned}
 \end{equation}
 %
-The first term of the left hand side can be written as $\bm{\Lambda} ^ {- 1}$.
+The first term of the left hand side can be written as $\frac{\bm{\Lambda} ^ {- 1}}{2}$.
 Since
 %
 \begin{equation}
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu + 2)
-=
-\frac{\Gamma(\frac{D + \nu}{2} + 1)}{\Gamma (\frac{\nu}{2} + 1)}
-\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi (\nu + 2)) ^ \frac{D}{2}}
 \left(
 	1 
 	+ 
 	\frac
 	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
-	{\nu + 2}
-\right) ^ {- \frac{D + \nu}{2} - 1},
+	{\nu}
+\right) ^ {- 1}
+=
+1
+-
+\frac
+{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+{\nu + (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})},
 \end{equation}
 %
-the second term can be written as
+the second term can be written as 
 %
 \begin{equation}
-\begin{aligned}
-\end{aligned}
+\frac{D + \nu}{2 \nu}
+\left(
+	1
+	-
+	\frac{D + 2}{D + \nu}
+\right)
+{\rm cov} \mathbf{x}
+=
+\frac{\nu - 2}{2 \nu}
+{\rm cov} \mathbf{x}.
 \end{equation}
 %
 Therefore,
