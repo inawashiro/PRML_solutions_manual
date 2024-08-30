@@ -4580,15 +4580,23 @@ By the definition,
 \begin{equation}
 {\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
 =
-\frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
-\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
+\int
+\mathcal{N} 
 \left(
-	1 
-	+ 
-	\frac
-	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
-	{\nu}
-\right) ^ {- \frac{D + \nu}{2}}.
+	\mathbf{x} 
+	| 
+	\bm{\mu}, 
+	(\eta \bm{\Lambda}) ^ {- 1}
+\right)
+{\rm Gam} 
+\left(
+	\eta 
+	\left.
+	\right \vert
+	\frac{\nu}{2}, 
+	\frac{\nu}{2}
+\right)
+d\eta.
 \end{equation}
 %
 First,
@@ -4605,24 +4613,74 @@ d\mathbf{x}.
 The right hand side can be written as
 %
 \begin{equation}
+\begin{aligned}
+&
 \int
-(\mathbf{x} - \bm{\mu} + \bm{\mu})
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
+\mathbf{x}
+\left(
+	\int
+	\mathcal{N} 
+	\left(
+		\mathbf{x} 
+		| 
+		\bm{\mu}, 
+		(\eta \bm{\Lambda}) ^ {- 1}
+	\right)
+	{\rm Gam} 
+	\left(
+		\eta 
+		\left.
+		\right \vert
+		\frac{\nu}{2}, 
+		\frac{\nu}{2}
+	\right)
+	d\eta
+\right)
 d\mathbf{x} \\
-=
+=&
 \int
-(\mathbf{x} - \bm{\mu})
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
-d\mathbf{x} \\
-+
-\bm{\mu}
-\int
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
-d\mathbf{x}.
+\left(
+	\int
+	\mathbf{x}
+	\mathcal{N} 
+	\left(
+		\mathbf{x} 
+		| 
+		\bm{\mu}, 
+		(\eta \bm{\Lambda}) ^ {- 1}
+	\right)
+	d\mathbf{x}
+\right)
+{\rm Gam} 
+\left(
+	\eta 
+	\left.
+	\right \vert
+	\frac{\nu}{2}, 
+	\frac{\nu}{2}
+\right)
+d\eta.
+\end{aligned}
 \end{equation}
 %
-By the symmetry, the first term of the right hand side can be written as $0$.
-By the definition, the second term of the right hand side can be written as $\bm{\mu}$
+The right hand side can be written as
+%
+\begin{equation}
+\bm{\mu}
+\int
+{\rm Gam}
+\left(
+	\eta 
+	\left.
+	\right \vert
+	\frac{\nu}{2}, 
+	\frac{\nu}{2}
+\right)
+d\eta
+=
+\bm{\mu}.
+\end{equation}
+%
 Therefore,
 %
 \begin{equation}
@@ -4694,10 +4752,8 @@ Since
 	{\nu}
 \right) ^ {- 1}
 =
-1
--
 \frac
-{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+{\nu}
 {\nu + (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})},
 \end{equation}
 %
@@ -4705,11 +4761,7 @@ the second term can be written as
 %
 \begin{equation}
 \frac{D + \nu}{2 \nu}
-\left(
-	1
-	-
-	\frac{D + 2}{D + \nu}
-\right)
+\frac{\nu - 2}{D + \nu}
 {\rm cov} \mathbf{x}
 =
 \frac{\nu - 2}{2 \nu}
