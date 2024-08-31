@@ -4565,7 +4565,7 @@ p(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.49}
 Let $\mathbf{x}$ be a variable such that
 %
@@ -4852,20 +4852,32 @@ Finally, setting the derivative of ${\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}
 \begin{equation}
 \mathbf{0}
 =
-\frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
-\frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
-\frac{(\bm{\Lambda} + \bm{\Lambda} ^ \intercal) (\mathbf{x} - \bm{\mu})}{\nu}
+-
+\frac{1}{2}
 \left(
-	-
-	\frac{D + \nu}{2}
+	\bm{\Lambda}
+	+
+	\bm{\Lambda} ^ \intercal
 \right)
+(\mathbf{x} - \bm{\mu})
+\int
+\eta
+\mathcal{N} 
 \left(
-	1 
-	+ 
-	\frac
-	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
-	{\nu}
-\right) ^ {- \frac{D + \nu}{2} - 1}.
+	\mathbf{x} 
+	| 
+	\bm{\mu}, 
+	(\eta \bm{\Lambda}) ^ {- 1}
+\right)
+{\rm Gam} 
+\left(
+	\eta 
+	\left.
+	\right \vert
+	\frac{\nu}{2}, 
+	\frac{\nu}{2}
+\right)
+d\eta.
 \end{equation}
 %
 Therefore,
