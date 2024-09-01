@@ -5166,7 +5166,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.54}
 Let $\theta$ be a variable such that 
 %
@@ -5203,17 +5203,29 @@ m
 p(\theta | \theta_0, m), \\
 0
 &=
-m
 \left(
+	m ^ 2
 	\sin ^ 2 (\theta - \theta_0)
 	-
-	\cos (\theta - \theta_0)
+	m \cos (\theta - \theta_0)
 \right)
 p(\theta | \theta_0, m).
 \end{aligned}
 \end{equation}
 %
-
+Therefore,
+%
+\begin{equation}
+\begin{aligned}
+\argmax_\theta p(\theta | \theta_0, m)
+&=
+\theta_0, \\
+\argmin_\theta p(\theta | \theta_0, m)
+&=
+\theta_0 - \pi \sgn (\theta_0 - \pi).
+\end{aligned}
+\end{equation}
+%
 
 
 
