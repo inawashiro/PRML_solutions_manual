@@ -178,19 +178,19 @@ Therefore,
 By the definition, 
 %
 \begin{equation}
-{\rm var} f(x) = {\rm E} \left( f(x) - {\rm E} f(x) \right) ^ 2.
+\Var f(x) = \E \left( f(x) - \E f(x) \right) ^ 2.
 \end{equation}
 %
 The right hand side can be written as 
 %
 \begin{equation}
-{\rm E} \left( \left( f(x) \right) ^ 2 - 2 f(x) {\rm E} f(x) + \left( {\rm E} f(x) \right) ^ 2 \right) = {\rm E} \left( f(x) \right) ^ 2 - \left( {\rm E} f(x) \right) ^ 2.
+\E \left( \left( f(x) \right) ^ 2 - 2 f(x) \E f(x) + \left( \E f(x) \right) ^ 2 \right) = \E \left( f(x) \right) ^ 2 - \left( \E f(x) \right) ^ 2.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-{\rm var} f(x) = {\rm E} \left( f(x) \right) ^ 2 - \left( {\rm E} f(x) \right) ^ 2.
+\Var f(x) = \E \left( f(x) \right) ^ 2 - \left( \E f(x) \right) ^ 2.
 \end{equation}
 %
 
@@ -200,13 +200,13 @@ Therefore,
 By the definition,
 %
 \begin{equation}
-{\rm cov} (x, y) = {\rm E} \left( \left( x - {\rm E} x \right) \left( y - {\rm E} y\right) \right).
+\cov (x, y) = \E \left( \left( x - \E x \right) \left( y - \E y\right) \right).
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-{\rm E} x y - {\rm E} \left( x {\rm E} y \right) - {\rm E} \left( y {\rm E} x \right) + {\rm E} \left( {\rm E} x {\rm E} y \right) = {\rm E} x y - {\rm E} x {\rm E} y.
+\E x y - \E \left( x \E y \right) - \E \left( y \E x \right) + \E \left( \E x \E y \right) = \E x y - \E x \E y.
 \end{equation}
 %
 The right hand side can be written as
@@ -230,7 +230,7 @@ Then,
 Therefore,
 %
 \begin{equation}
-{\rm cov} (x, y) = 0.
+\cov (x, y) = 0.
 \end{equation}
 %
 
@@ -311,7 +311,7 @@ p(x) = \mathcal{N} (x | \mu, \sigma ^ 2).
 Then
 %
 \begin{equation}
-{\rm E} x = \int_{-\infty}^{\infty} x \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx.
+\E x = \int_{-\infty}^{\infty} x \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx.
 \end{equation}
 %
 By the definition, the right hand side can be written as
@@ -341,7 +341,7 @@ and
 we have
 %
 \begin{equation}
-{\rm E} x = \mu.
+\E x = \mu.
 \end{equation}
 %
 
@@ -371,14 +371,14 @@ The left hand side can be written as
 \begin{equation}
 \begin{aligned}
 - \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 1} \int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx + \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 2} \int_{- \infty} ^ {\infty} (x - \mu) ^ 2 \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx \\
-= - \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 1} + \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 2} {\rm var} x.
+= - \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 1} + \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 2} \Var x.
 \end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm var} x = \sigma ^ 2.
+\Var x = \sigma ^ 2.
 \end{equation}
 %
 
@@ -419,7 +419,7 @@ Therefore, the mode is given by $\bm{\mu}$.
 By the definition,
 %
 \begin{equation}
-{\rm E} (x + y) = \int \int (x + y) p(x, y) dx dy.
+\E (x + y) = \int \int (x + y) p(x, y) dx dy.
 \end{equation}
 %
 The right hand side can be written as 
@@ -431,42 +431,42 @@ The right hand side can be written as
 By the definition, the right hand side can be written as 
 %
 \begin{equation}
-{\rm E} x + {\rm E} y.
+\E x + \E y.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-{\rm E} (x + y) = {\rm E} x + {\rm E} y.
+\E (x + y) = \E x + \E y.
 \end{equation}
 %
 
 Similarly, by the definition,
 %
 \begin{equation}
-{\rm var} (x + y) = {\rm E} \left( x + y - {\rm E} (x + y) \right) ^ 2
+\Var (x + y) = \E \left( x + y - \E (x + y) \right) ^ 2
 \end{equation}
 %
 By the result above and the definition, the right hand side can be written as 
 %
 \begin{equation}
 \begin{aligned}
-{\rm E} \left( x - {\rm E} x \right) ^ 2 + 2 {\rm E} \left( \left( x - {\rm E} x \right) \left( y - {\rm E} y \right) \right) + {\rm E} \left( y - {\rm E} y \right) ^ 2 \\
-= {\rm var} x + 2 {\rm cov} (x, y) + {\rm var} y.
+\E \left( x - \E x \right) ^ 2 + 2 \E \left( \left( x - \E x \right) \left( y - \E y \right) \right) + \E \left( y - \E y \right) ^ 2 \\
+= \Var x + 2 \cov (x, y) + \Var y.
 \end{aligned}
 \end{equation}
 %
 If $x$ and $y$ are independent, then 
 %
 \begin{equation}
-{\rm cov} (x, y) = 0,
+\cov (x, y) = 0,
 \end{equation}
 
 %
 by \ref{1.6}. Therefore,
 %
 \begin{equation}
-{\rm var} (x + y) = {\rm var} x + {\rm var} y.
+\Var (x + y) = \Var x + \Var y.
 \end{equation}
 %
 
@@ -521,21 +521,21 @@ Let $x_m$ and $x_n$ be independent variables.
 Then
 %
 \begin{equation}
-{\rm E} x_m x_n = {\rm E} x_m {\rm E} x_n.
+\E x_m x_n = \E x_m \E x_n.
 \end{equation}
 %
 If they are samples from the Gaussian distribution with mean $\mu$ and variance $\sigma ^ 2$, the right hand side is given by $\mu ^ 2$.
 On the other hand, by the definition, 
 %
 \begin{equation}
-{\rm E} x_n ^ 2 =  {\rm var} x_n + \left( {\rm E} x_n \right) ^ 2.
+\E x_n ^ 2 =  \Var x_n + \left( \E x_n \right) ^ 2.
 \end{equation}
 %
 If $x_n$ is a sample from the Gaussian distribution with mean $\mu$ and variance $\sigma ^ 2$, the right hand side is given by $\sigma ^ 2 + \mu ^ 2$.
 Therefore,
 %
 \begin{equation}
-{\rm E} x_m x_n = \mu ^ 2 + \delta_{mn} \sigma ^ 2.
+\E x_m x_n = \mu ^ 2 + \delta_{mn} \sigma ^ 2.
 \end{equation}
 %
 
@@ -548,13 +548,13 @@ Here, since
 we have
 %
 \begin{equation}
-{\rm E} \mu_{\rm ML} = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} x_n.
+\E \mu_{\rm ML} = \frac{1}{N} \sum_{n = 1}^{N} \E x_n.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-{\rm E} \mu_{\rm ML} = \mu.
+\E \mu_{\rm ML} = \mu.
 \end{equation}
 %
 Similarly, since 
@@ -566,13 +566,13 @@ Similarly, since
 we have 
 %
 \begin{equation}
-{\rm E} \sigma_{\rm ML}^2 = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} \left( x_n - \mu_{\rm ML} \right) ^ 2.
+\E \sigma_{\rm ML}^2 = \frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n - \mu_{\rm ML} \right) ^ 2.
 \end{equation}
 %
 The right hand side can be writen as 
 %
 \begin{equation}
-\frac{1}{N} \sum_{n = 1}^{N} {\rm E} \left( x_n ^ 2 - 2 \mu_{\rm ML} x_n + \mu_{\rm ML} ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} x_n ^ 2 - \frac{2}{N} {\rm E} \left( \mu_{\rm ML} \left( \sum_{n = 1}^{N} x_n \right) \right) + {\rm E} \mu_{\rm ML} ^ 2.
+\frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n ^ 2 - 2 \mu_{\rm ML} x_n + \mu_{\rm ML} ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} \E x_n ^ 2 - \frac{2}{N} \E \left( \mu_{\rm ML} \left( \sum_{n = 1}^{N} x_n \right) \right) + \E \mu_{\rm ML} ^ 2.
 \end{equation}
 %
 The first term of the right hand side can be written as 
@@ -584,31 +584,31 @@ The first term of the right hand side can be written as
 while the second and third terms can be writen as
 %
 \begin{equation}
-- 2 {\rm E} \mu_{\rm ML} ^ 2 + {\rm E} \mu_{\rm ML} ^ 2 = - {\rm E} \mu_{\rm ML} ^ 2.
+- 2 \E \mu_{\rm ML} ^ 2 + \E \mu_{\rm ML} ^ 2 = - \E \mu_{\rm ML} ^ 2.
 \end{equation}
 %
 Here, 
 %
 \begin{equation}
-{\rm E} \mu_{\rm ML} ^ 2 = {\rm E} \left( \frac{1}{N} \sum_{n = 1}^{N} x_n \right) ^ 2.
+\E \mu_{\rm ML} ^ 2 = \E \left( \frac{1}{N} \sum_{n = 1}^{N} x_n \right) ^ 2.
 \end{equation}
 %
 The right hand side can be written as 
 %
 \begin{equation}
-\frac{1}{N ^ 2} \sum_{n = 1}^{N} {\rm E} x_n ^ 2 + \frac{2}{N ^ 2} \sum_{1 \leq m < n \leq N} {\rm E} x_m x_n = \frac{1}{N} (\mu ^ 2 + \sigma ^ 2) + \frac{N - 1}{N} \mu ^ 2.
+\frac{1}{N ^ 2} \sum_{n = 1}^{N} \E x_n ^ 2 + \frac{2}{N ^ 2} \sum_{1 \leq m < n \leq N} \E x_m x_n = \frac{1}{N} (\mu ^ 2 + \sigma ^ 2) + \frac{N - 1}{N} \mu ^ 2.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm E} \mu_{\rm ML} ^ 2 = \mu ^ 2 + \frac{1}{N} \sigma ^ 2.
+\E \mu_{\rm ML} ^ 2 = \mu ^ 2 + \frac{1}{N} \sigma ^ 2.
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-{\rm E} \sigma_{\rm ML}^2 = \frac{N - 1}{N} \sigma ^ 2.
+\E \sigma_{\rm ML}^2 = \frac{N - 1}{N} \sigma ^ 2.
 \end{equation}
 %
 
@@ -619,13 +619,13 @@ Let $\{ x_n \}$ be a set of variables whose mean is $\mu$ and variance is $\sigm
 Then
 %
 \begin{equation}
-{\rm E} \left( \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu \right) ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} \left( x_n - \mu \right) ^ 2.
+\E \left( \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu \right) ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n - \mu \right) ^ 2.
 \end{equation}
 %
 The right hand side can be writen as 
 %
 \begin{equation}
-\frac{1}{N} \sum_{n = 1}^{N} {\rm E} \left( x_n ^ 2 - 2 \mu x_n + \mu ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} {\rm E} x_n ^ 2 - \frac{2 \mu}{N}  \sum_{n = 1}^{N} {\rm E} x_n + \mu ^ 2.
+\frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n ^ 2 - 2 \mu x_n + \mu ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} \E x_n ^ 2 - \frac{2 \mu}{N}  \sum_{n = 1}^{N} \E x_n + \mu ^ 2.
 \end{equation}
 %
 The first term of the right hand side can be written as 
@@ -643,7 +643,7 @@ while the second term can be writen as
 Therefore,
 %
 \begin{equation}
-{\rm E} \left( \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu \right) ^ 2 \right) = \sigma ^2.
+\E \left( \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu \right) ^ 2 \right) = \sigma ^2.
 \end{equation}
 %
 
@@ -1058,7 +1058,7 @@ Therefore,
 Let
 %
 \begin{equation}
-{\rm E} L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
+\E L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
 \end{equation}
 %
 If
@@ -1082,10 +1082,10 @@ The right hand side can be written as
 Therefore,
 %
 \begin{equation}
-{\rm E} L = 1 - \sum_{j} \int_{\mathcal{R}_j} p(\mathcal{C}_j | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\E L = 1 - \sum_{j} \int_{\mathcal{R}_j} p(\mathcal{C}_j | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
-Thus, minimising ${\rm E} L$ reduces to choosing the criterion to maximise the posterior probatility $p(\mathcal{C}_j | \mathbf{x})$.
+Thus, minimising $\E L$ reduces to choosing the criterion to maximise the posterior probatility $p(\mathcal{C}_j | \mathbf{x})$.
 
 
 \subsection{}
@@ -1093,7 +1093,7 @@ Thus, minimising ${\rm E} L$ reduces to choosing the criterion to maximise the p
 Let
 %
 \begin{equation}
-{\rm E} L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
+\E L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
 \end{equation}
 %
 The right hand side can be written as
@@ -1105,10 +1105,10 @@ The right hand side can be written as
 Therefore,
 %
 \begin{equation}
-{\rm E} L = \sum_{j} \int_{\mathcal{R}_j} \left( \sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x}) \right) p(\mathbf{x}) d\mathbf{x}.
+\E L = \sum_{j} \int_{\mathcal{R}_j} \left( \sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x}) \right) p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
-Thus, mimising ${\rm E} L$ reduces to choosing to minimise $\sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x})$.
+Thus, mimising $\E L$ reduces to choosing to minimise $\sum_{k} L_{kj} p(\mathcal{C}_k | \mathbf{x})$.
 
 
 \subsection{(Incomplete)}
@@ -1120,16 +1120,16 @@ Thus, mimising ${\rm E} L$ reduces to choosing to minimise $\sum_{k} L_{kj} p(\m
 Let
 %
 \begin{equation}
-{\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\frac{\delta {\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)}{\delta \mathbf{y} (\mathbf{x})} = 2 \int \left( \mathbf{y} (\mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
+\frac{\delta \E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)}{\delta \mathbf{y} (\mathbf{x})} = 2 \int \left( \mathbf{y} (\mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
 \end{equation}
 %
-To minimise ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setting the left hand side to zero gives
+To minimise $\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setting the left hand side to zero gives
 %
 \begin{equation}
 \mathbf{0} = \int \left( \mathbf{y}(\mathbf{x}) - \mathbf{t} \right) p(\mathbf{t} | \mathbf{x}) d\mathbf{t}.
@@ -1138,20 +1138,20 @@ To minimise ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setti
 The right hand side can be written as
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) \int p(\mathbf{t} | \mathbf{x}) d\mathbf{t} - \int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} = \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\mathbf{y}(\mathbf{x}) \int p(\mathbf{t} | \mathbf{x}) d\mathbf{t} - \int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} = \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) = {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\mathbf{y}(\mathbf{x}) = \E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
 %
 
 Finally, for a single target variable $t$, it reduces to 
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) = {\rm E}_t (t | \mathbf{x}).
+\mathbf{y}(\mathbf{x}) = \E_t (t | \mathbf{x}).
 \end{equation}
 %
 
@@ -1161,17 +1161,17 @@ Finally, for a single target variable $t$, it reduces to
 Let
 %
 \begin{equation}
-{\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) + {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\ 
-&= \int \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
-&+ 2 \int \int \left( \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
-&+ \int \int \lVert {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+&\int \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) + \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\ 
+&= \int \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
+&+ 2 \int \int \left( \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
+&+ \int \int \lVert \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
 \end{aligned}
 \end{equation}
 %
@@ -1179,21 +1179,21 @@ Let us look at each term of the right hand side.
 The first term can be written as
 %
 \begin{equation}
-\int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 \left( \int p(\mathbf{x}, \mathbf{t}) d\mathbf{t} \right) d\mathbf{x} = \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x}.
+\int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 \left( \int p(\mathbf{x}, \mathbf{t}) d\mathbf{t} \right) d\mathbf{x} = \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
 The second term can be written as
 %
 \begin{equation}
-2 \int \left( \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( \int \left( {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x}.
+2 \int \left( \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( \int \left( \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
 Since
 %
 \begin{equation}
 \begin{aligned}
-\int {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \frac{\int p(\mathbf{x}, \mathbf{t}) d\mathbf{t}}{p(\mathbf{x})}, \\
-\int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}),
+\int \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \frac{\int p(\mathbf{x}, \mathbf{t}) d\mathbf{t}}{p(\mathbf{x})}, \\
+\int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= \E_\mathbf{t} (\mathbf{t} | \mathbf{x}),
 \end{aligned}
 \end{equation}
 %
@@ -1201,19 +1201,19 @@ the second term is zero.
 The third term can be written as
 %
 \begin{equation}
-\int \left( \int \lVert {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x} = \int {\rm var}_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\int \left( \int \lVert \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x} = \int \Var_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \lVert \mathbf{y}(\mathbf{x}) - {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x} + \int {\rm var}_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x} + \int \Var_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
 \end{equation}
 %
-Thus, ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$ is mimimised if
+Thus, $\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$ is mimimised if
 %
 \begin{equation}
-\mathbf{y} (\mathbf{x}) = {\rm E}_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\mathbf{y} (\mathbf{x}) = \E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
 %.
 
@@ -1223,22 +1223,22 @@ Thus, ${\rm E} L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$ is mimimised
 Let
 %
 \begin{equation}
-{\rm E} L_q = \int \int \abs{y(\mathbf{x}) - t} ^ q p(\mathbf{x}, t) d\mathbf{x} dt.
+\E L_q = \int \int \abs{y(\mathbf{x}) - t} ^ q p(\mathbf{x}, t) d\mathbf{x} dt.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\frac{\delta {\rm E} L_q}{\delta y (\mathbf{x})} = \int q \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(\mathbf{x}, t) dt.
+\frac{\delta \E L_q}{\delta y (\mathbf{x})} = \int q \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(\mathbf{x}, t) dt.
 \end{equation}
 %
-To minimise ${\rm E} L_q$, setting the left hand side to zero gives
+To minimise $\E L_q$, setting the left hand side to zero gives
 %
 \begin{equation}
 0 = \int \abs{y(\mathbf{x}) - t} ^ {q - 1} {\rm sign} (y(\mathbf{x}) - t) p(t | \mathbf{x}) dt.
 \end{equation}
 %
-This is the condition that $y(\mathbf{x})$ must satisfy in order to minimise ${\rm E} L_q$.
+This is the condition that $y(\mathbf{x})$ must satisfy in order to minimise $\E L_q$.
 
 If $q = 1$, the condition can be written as
 %

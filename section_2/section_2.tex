@@ -28,13 +28,13 @@ By the definition,
 Since
 %
 \begin{equation}
-{\rm var} x = {\rm E} x ^ 2 - \left( {\rm E} x \right) ^ 2,
+\Var x = {\rm E} x ^ 2 - \left( {\rm E} x \right) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-{\rm var} x = \mu (1 - \mu).
+\Var x = \mu (1 - \mu).
 \end{equation}
 %
 By the definition,
@@ -78,13 +78,13 @@ By the definition,
 Since
 %
 \begin{equation}
-{\rm var} x = {\rm E} x ^ 2 - \left( {\rm E} x \right) ^ 2,
+\Var x = {\rm E} x ^ 2 - \left( {\rm E} x \right) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-{\rm var} x = 1 - \mu ^ 2.
+\Var x = 1 - \mu ^ 2.
 \end{equation}
 %
 By the definition,
@@ -279,13 +279,13 @@ Therefore,
 Thus, since 
 %
 \begin{equation}
-{\rm var} m = {\rm E} m (m - 1) + {\rm E} m - ( {\rm E} m ) ^ 2,
+\Var m = {\rm E} m (m - 1) + {\rm E} m - ( {\rm E} m ) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-{\rm var} m = N \mu ( 1 - \mu).
+\Var m = N \mu ( 1 - \mu).
 \end{equation}
 %
 
@@ -364,13 +364,13 @@ we have
 Since
 %
 \begin{equation}
-{\rm var} \mu = {\rm E} \mu ^ 2 - \left( {\rm E \mu} \right) ^ 2,
+\Var \mu = {\rm E} \mu ^ 2 - \left( {\rm E \mu} \right) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-{\rm var} \mu = \frac{a b}{(a + b) ^ 2 (a + b + 1)}.
+\Var \mu = \frac{a b}{(a + b) ^ 2 (a + b + 1)}.
 \end{equation}
 %
 Since
@@ -469,7 +469,7 @@ Therefore,
 By the definition,
 %
 \begin{equation}
-{\rm var} x = {\rm E} \left( x - {\rm E} x \right) ^ 2.
+\Var x = {\rm E} \left( x - {\rm E} x \right) ^ 2.
 \end{equation}
 %
 By the result above, the right hand side can be written as
@@ -484,7 +484,7 @@ By the result above, the right hand side can be written as
 \end{equation}
 %
 Let us look at each term of the right hand side.
-By the definition, the first term can be written as ${\rm E}_y \left( {\rm var}_x (x | y) \right)$.
+By the definition, the first term can be written as ${\rm E}_y \left( \Var_x (x | y) \right)$.
 The second term can be written as
 %
 \begin{equation}
@@ -494,13 +494,13 @@ The second term can be written as
 By the result above, the third term can be written as
 %
 \begin{equation}
-{\rm E}_y \left( {\rm E}_x (x | y) - {\rm E}_y \left( {\rm E}_x (x | y) \right) \right) ^ 2 = {\rm var}_y \left( {\rm E}_x (x | y) \right).
+{\rm E}_y \left( {\rm E}_x (x | y) - {\rm E}_y \left( {\rm E}_x (x | y) \right) \right) ^ 2 = \Var_y \left( {\rm E}_x (x | y) \right).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm var} x = {\rm E}_y \left( {\rm var}_x (x | y) \right) + {\rm var}_y \left( {\rm E}_x (x | y) \right).
+\Var x = {\rm E}_y \left( \Var_x (x | y) \right) + \Var_y \left( {\rm E}_x (x | y) \right).
 \end{equation}
 %
 
@@ -641,8 +641,8 @@ Since
 %
 \begin{equation}
 \begin{aligned}
-{\rm var} \mu_j &= {\rm E} \mu_j ^ 2 - \left( {\rm E} \mu_j \right) ^ 2, \\
-{\rm cov} \left( \mu_j, \mu_l \right) &= {\rm E} \mu_j \mu_l - {\rm E} \mu_j {\rm E} \mu_l,
+\Var \mu_j &= {\rm E} \mu_j ^ 2 - \left( {\rm E} \mu_j \right) ^ 2, \\
+\cov \left( \mu_j, \mu_l \right) &= {\rm E} \mu_j \mu_l - {\rm E} \mu_j {\rm E} \mu_l,
 \end{aligned}
 \end{equation}
 %
@@ -650,8 +650,8 @@ we have
 %
 \begin{equation}
 \begin{aligned}
-{\rm var} \mu_j &= \frac{\alpha_j \left( \sum_{k = 1}^{K} \alpha_k - \alpha_j \right)}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}, \\
-{\rm cov} \left( \mu_j, \mu_l \right) &= - \frac{\alpha_j \alpha_l}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
+\Var \mu_j &= \frac{\alpha_j \left( \sum_{k = 1}^{K} \alpha_k - \alpha_j \right)}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}, \\
+\cov \left( \mu_j, \mu_l \right) &= - \frac{\alpha_j \alpha_l}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
 \end{aligned}
 \end{equation}
 %
@@ -742,13 +742,13 @@ Therefore,
 Since 
 %
 \begin{equation}
-{\rm var} x = {\rm E} x ^ 2 - \left( {\rm E} x \right) ^ 2,
+\Var x = {\rm E} x ^ 2 - \left( {\rm E} x \right) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-{\rm var} x = \frac{1}{12} (b - a) ^ 2.
+\Var x = \frac{1}{12} (b - a) ^ 2.
 \end{equation}
 %
 
@@ -1751,7 +1751,7 @@ Therefore,
 Additionally,
 %
 \begin{equation}
-{\rm cov} (\mathbf{x} + \mathbf{z})
+\cov (\mathbf{x} + \mathbf{z})
 = \int \int \left( \mathbf{x} + \mathbf{z} - {\rm E} (\mathbf{x} + \mathbf{z}) \right) \left( \mathbf{x} + \mathbf{z} - {\rm E} (\mathbf{x} + \mathbf{z}) \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}.
 \end{equation}
 %
@@ -1766,7 +1766,7 @@ The right hand side can be written as
 \end{aligned}
 \end{equation}
 %
-The first and fourth terms can be written as ${\rm cov} \mathbf{x}$ and ${\rm cov} \mathbf{z}$.
+The first and fourth terms can be written as $\cov \mathbf{x}$ and $\cov \mathbf{z}$.
 %
 If $\mathbf{x}$ and $\mathbf{z}$ are independent, the second and third terms can be written as
 %
@@ -1784,8 +1784,8 @@ If $\mathbf{x}$ and $\mathbf{z}$ are independent, the second and third terms can
 Therefore,
 %
 \begin{equation}
-{\rm cov} (\mathbf{x} + \mathbf{z})
-= {\rm cov} \mathbf{x} + {\rm cov} \mathbf{z}.
+\cov (\mathbf{x} + \mathbf{z})
+= \cov \mathbf{x} + \cov \mathbf{z}.
 \end{equation}
 %
 
@@ -1818,7 +1818,7 @@ where
 and
 %
 \[
-{\rm cov} \mathbf{z}
+\cov \mathbf{z}
 = 
 \begin{bmatrix}
 \bm{\Lambda} ^ {- 1} & \bm{\Lambda} ^ {- 1} \mathbf{A} ^ \intercal \\
@@ -3717,7 +3717,7 @@ Therefore,
 By the definition,
 %
 \begin{equation}
-{\rm var} \lambda
+\Var \lambda
 =
 {\rm E} \lambda ^ 2
 -
@@ -3727,7 +3727,7 @@ By the definition,
 Therefore,
 %
 \begin{equation}
-{\rm var} \lambda
+\Var \lambda
 =
 \frac{a}{b ^ 2}.
 \end{equation}
@@ -4693,7 +4693,7 @@ Therefore,
 Additionally,
 %
 \begin{equation}
-{\rm cov} \mathbf{x}
+\cov \mathbf{x}
 =
 \int
 (\mathbf{x} - \bm{\mu})
@@ -4841,7 +4841,7 @@ Therefore, the right hand side can be written as
 Thus,
 %
 \begin{equation}
-{\rm cov} \mathbf{x}
+\cov \mathbf{x}
 =
 \frac{\nu}{\nu - 2} \bm{\Lambda} ^ {- 1}.
 \end{equation}
