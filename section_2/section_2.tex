@@ -5166,10 +5166,53 @@ Therefore,
 %
 
 
-
-
-
-
+\subsection{(Incomplete)}
+\label{2.54}
+Let $\theta$ be a variable such that 
+%
+\begin{equation}
+p(\theta | \theta_0, m)
+=
+\frac{1}{2 \pi I_0 (m)}
+\exp
+\left(
+	m \cos (\theta - \theta_0)
+\right),
+\end{equation}
+%
+where
+%
+\begin{equation}
+I_0(m)
+=
+\frac{1}{2 \pi}
+\int_{0}^{2 \pi}
+\exp(m \cos \theta) 
+d\theta.
+\end{equation}
+%
+Setting the first and seconnd derivatives with respect to $\theta$ to zero gives
+%
+\begin{equation}
+\begin{aligned}
+0
+&=
+-
+m
+\sin (\theta - \theta_0)
+p(\theta | \theta_0, m), \\
+0
+&=
+m
+\left(
+	\sin ^ 2 (\theta - \theta_0)
+	-
+	\cos (\theta - \theta_0)
+\right)
+p(\theta | \theta_0, m).
+\end{aligned}
+\end{equation}
+%
 
 
 
