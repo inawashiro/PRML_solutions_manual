@@ -5228,18 +5228,103 @@ Therefore,
 %
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+\subsection{}
+\label{2.55}
+Let
+%
+\begin{equation}
+\theta_0 ^ {\rm ML}
+=
+\arctan 
+\left(
+	\frac
+	{\sum_{n = 1}^{N} \sin \theta_n}
+	{\sum_{n = 1}^{N} \cos \theta_n}
+\right).
+\end{equation}
+%
+Let
+%
+\begin{equation}
+\begin{aligned}
+\bar{r} 
+\cos \bar{\theta}
+&=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+\cos \theta_n, 
+\\
+\bar{r} 
+\sin \bar{\theta}
+&=
+\frac{1}{N}
+\sum_{n = 1}^{N}
+\sin \theta_n.
+\end{aligned}
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\theta_0 ^ {\rm ML}
+=
+\bar{\theta}.
+\end{equation}
+%
+Here,
+%
+\begin{equation}
+\frac{1}{N}
+\sum_{n = 1}^{N}
+\cos
+\left(
+	\theta_n
+	-
+	\theta_0 ^ {\rm ML}
+\right)
+=
+\left(
+	\frac{1}{N}
+	\sum_{n = 1}^{N}
+	\cos \theta_n
+\right)
+\cos \theta_0 ^ {\rm ML}
++
+\left(
+	\frac{1}{N}
+	\sum_{n = 1}^{N}
+	\sin \theta_n
+\right)
+\sin \theta_0 ^ {\rm ML}.
+\end{equation}
+%
+By the result above, the right hand side can be written as
+%
+\begin{equation}
+\bar{r} 
+\cos ^ 2 \bar{\theta}
++
+\bar{r} 
+\sin ^ 2 \bar{\theta}
+=
+\bar{r}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\frac{1}{N}
+\sum_{n = 1}^{N}
+\cos
+\left(
+	\theta_n
+	-
+	\theta_0 ^ {\rm ML}
+\right)
+=
+\bar{r}.
+\end{equation}
+%
 
 
 
