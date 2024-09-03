@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  3 SEP 2024 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  3 SEP 2024 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -232,7 +232,7 @@ Overfull \hbox (15.49089pt too wide) detected at line 3490
  []
 
 [70] [71] [72] [73]
-Overfull \hbox (4.88232pt too wide) detected at line 4072
+Overfull \hbox (4.88232pt too wide) detected at line 4063
 []\OMS/cmsy/m/n/12 ^^@[]\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/
 12 ^^V\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it
 /12 ^^V \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 )[] = \OMS/c
@@ -240,17 +240,17 @@ msy/m/n/12 ^^@[] [][] ^^@ []\OML/cmm/m/it/12 ;
  []
 
 
-Overfull \hbox (70.44658pt too wide) detected at line 4098
+Overfull \hbox (70.44658pt too wide) detected at line 4089
 []\OML/cmm/m/it/12 ^^\[] [] [] :
  []
 
 [74]
-Overfull \hbox (5.60765pt too wide) detected at line 4313
+Overfull \hbox (5.60765pt too wide) detected at line 4304
 [][][] [][] [][][][] \OT1/cmr/m/n/12 = ^^@ [] [][] \OML/cmm/m/it/12 :
  []
 
 [75]
-Overfull \hbox (11.58386pt too wide) detected at line 4503
+Overfull \hbox (11.58386pt too wide) detected at line 4494
 [][][]
  []
 
@@ -286,7 +286,7 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (85 pages, 384644 bytes).
+Output written on main.pdf (85 pages, 384658 bytes).
 PDF statistics:
  380 PDF objects out of 1000 (max. 8388607)
  250 compressed objects within 3 object streams
