@@ -5318,7 +5318,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.56}
 By the definition,
 %
@@ -5333,8 +5333,6 @@ By the definition,
 The right hand side can be written as
 %
 \begin{equation}
-\begin{aligned}
-&
 \frac{\Gamma(a + b)}{\Gamma(a) \Gamma(b)}
 \exp
 \left(
@@ -5342,35 +5340,93 @@ The right hand side can be written as
 	+
 	(b - 1) \ln (1 - \mu)
 \right) \\
-=&
-\frac{\Gamma(a + b)}{\Gamma(a) \Gamma(b)}
-(1 - \mu) ^ {b - a}
-\exp
-\left(
-	(a - 1)
-	\ln
-	\left(
-		\frac{\mu}{1 - \mu}
-	\right)
-\right).
-\end{aligned}
 \end{equation}
 %
-Therefore, the natural parameter is $a - 1$.
+Therefore, the natural parameters are given by
+\[
+\bm{\eta}
+=
+\begin{bmatrix}
+a - 1  \\
+b - 1 
+\end{bmatrix}
+.
+\]
 
+Additionally, by the definition,
+%
+\begin{equation}
+{\rm Gam} (\lambda | a, b)
+=
+\frac{b ^ a}{\Gamma(a)}
+\lambda ^ {a - 1}
+\exp (- b \lambda).
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{b ^ a}{\Gamma(a)}
+\exp 
+\left( 
+	(a - 1)
+	\ln \lambda
+	- 
+	b \lambda
+\right).
+\end{equation}
+%
+Therefore, the natural parameters are given by
+\[
+\bm{\eta}
+=
+\begin{bmatrix}
+a - 1  \\
+- b 
+\end{bmatrix}
+.
+\]
 
-
-
-
-
-
-
-
-
-
-
-
-
+Finally, for 
+%
+\begin{equation}
+p(\theta | \theta_0, m)
+=
+\frac{1}{2 \pi I_0 (m)}
+\exp
+\left(
+	m \cos (\theta - \theta_0)
+\right),
+\end{equation}
+%
+where
+%
+\begin{equation}
+I_0(m)
+=
+\frac{1}{2 \pi}
+\int_{0}^{2 \pi}
+\exp(m \cos \theta) 
+d\theta,
+\end{equation}
+%
+the right hand side can be written as
+%
+\begin{equation}
+\frac{1}{2 \pi I_0 (m)}
+\exp(m \cos \theta_0 \cos \theta + m \sin \theta_0 \sin \theta).
+\end{equation}
+%
+Therefore, the natural parameters are given by
+\[
+\bm{\eta}
+=
+\begin{bmatrix}
+m \cos \theta_0  \\
+m \sin \theta_0
+\end{bmatrix}
+.
+\]
 
 
 
