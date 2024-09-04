@@ -5429,6 +5429,99 @@ m \sin \theta_0
 \]
 
 
+\subsection{(Incomplete)}
+\label{2.57}
+By the definition,
+%
+\begin{equation}
+\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma})
+=
+(2 \pi) ^ {- \frac{D}{2}}
+(\det \bm{\Sigma}) ^ {- \frac{1}{2}}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	(\mathbf{x} - \bm{\mu}) ^ \intercal
+	\bm{\Sigma} ^ {- 1}
+	(\mathbf{x} - \bm{\mu})
+\right).
+\end{equation}
+%
+Since
+%
+\begin{equation}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+(\mathbf{x} - \bm{\mu})
+=
+\mathbf{x} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{x}
+-
+2 \bm{\mu} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{x}
++
+\bm{\mu} ^ \intercal \bm{\Sigma} ^ {- 1} \bm{\mu},
+\end{equation}
+%
+we have
+%
+\begin{equation}
+\mathcal{N} (\mathbf{x} | \bm{\mu}, \bm{\Sigma})
+=
+h(\mathbf{x})
+g(\bm{\eta})
+\exp
+\left(
+	\bm{\eta} ^ \intercal
+	\mathbf{u} (\mathbf{x})
+\right),
+\end{equation}
+%
+where
+\[
+\begin{aligned}
+h(\mathbf{x})
+&=
+(2 \pi) ^ {- \frac{D}{2}}
+, \\
+g(\bm{\eta})
+&=
+(\det \bm{\Sigma}) ^ {- \frac{1}{2}}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	\bm{\mu} ^ \intercal
+	\bm{\mu}
+\right)
+, \\
+\bm{\eta}
+&=
+\begin{bmatrix}
+1 \\
+-\frac{1}{2}
+\end{bmatrix}
+, \\
+\mathbf{u} (\mathbf{x})
+&=
+\begin{bmatrix}
+\bm{\mu} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{x} \\
+\mathbf{x} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{x}
+\end{bmatrix}
+.
+\end{aligned}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
