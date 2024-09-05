@@ -5429,7 +5429,7 @@ m \sin \theta_0
 \]
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.57}
 By the definition,
 %
@@ -5467,35 +5467,40 @@ where
 \begin{aligned}
 h(\mathbf{x})
 &=
-(2 \pi) ^ {- \frac{D}{2}}
-, \\
+(2 \pi) ^ {- \frac{D}{2}}, 
+\\
 g(\bm{\eta})
 &=
-(\det \bm{\Sigma}) ^ {- \frac{1}{2}}
+(\det (- 2 \bm{\eta}_2)) ^ {- \frac{1}{2}}
 \exp
 \left(
 	-
-	\frac{1}{2}
-	\bm{\mu} ^ \intercal
-	\bm{\mu}
-\right)
-, \\
+	\frac{1}{4}
+	\bm{\eta}_1 ^ \intercal
+	\bm{\eta}_2 ^ {- 1}
+	\bm{\eta}_1
+\right), 
+\\
 \bm{\eta}
 &=
 \begin{bmatrix}
-1 \\
--\frac{1}{2}
+\bm{\Sigma} ^ {- 1}
+\bm{\mu} \\
+-
+\frac{1}{2}
+\bm{\Sigma} ^ {- 1}
 \end{bmatrix}
 , \\
 \mathbf{u} (\mathbf{x})
 &=
 \begin{bmatrix}
-\bm{\mu} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{x} \\
-\mathbf{x} ^ \intercal \bm{\Sigma} ^ {- 1} \mathbf{x}
+\mathbf{x} \\
+\mathbf{x} \mathbf{x} ^ \intercal
 \end{bmatrix}
 .
 \end{aligned}
 \]
+
 
 
 
