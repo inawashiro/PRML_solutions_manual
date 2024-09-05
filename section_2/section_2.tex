@@ -5503,10 +5503,46 @@ g(\bm{\eta})
 
 \subsection{(Incomplete)}
 \label{2.58}
-Taking the second derivative of
+Let $\mathbf{x}$ be a variable such that
+%
+\begin{equation}
+p(\mathbf{x} | \bm{\eta})
+=
+h(\mathbf{x})
+g(\bm{\eta})
+\exp
+\left(
+	\bm{\eta} ^ \intercal
+	\mathbf{u} (\mathbf{x})
+\right).
+\end{equation}
+%
+Then, taking the derivative of
 %
 \begin{equation}
 \int
+p(\mathbf{x} | \bm{\eta})
+d\mathbf{x}
+=
+1
+\end{equation}
+%
+with respect to $\bm{\eta}$ gives
+%
+\begin{equation}
+g'(\bm{\eta})
+\int
+h(\mathbf{x})
+\exp
+\left(
+	\bm{\eta} ^ \intercal
+	\mathbf{u} (\mathbf{x})
+\right)
+d\mathbf{x}
++
+g(\bm{\eta})
+\int
+\mathbf{u} (\mathbf{x})
 h(\mathbf{x})
 g(\bm{\eta})
 \exp
@@ -5514,22 +5550,11 @@ g(\bm{\eta})
 	\bm{\eta} ^ \intercal
 	\mathbf{u} (\mathbf{x})
 \right)
+d\mathbf{x}
 =
-1
+0.
 \end{equation}
 %
-with respect to $\bm{\eta}$ gives
-
-
-
-
-
-
-
-
-
-
-
 
 
 
