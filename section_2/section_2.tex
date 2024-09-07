@@ -5517,7 +5517,7 @@ g(\bm{\eta})
 \right).
 \end{equation}
 %
-Then, taking the derivative of
+Then, taking the first derivative of
 %
 \begin{equation}
 \int
@@ -5530,7 +5530,7 @@ d\mathbf{x}
 with respect to $\bm{\eta}$ gives
 %
 \begin{equation}
-g'(\bm{\eta})
+\nabla g(\bm{\eta})
 \int
 h(\mathbf{x})
 \exp
@@ -5544,7 +5544,6 @@ g(\bm{\eta})
 \int
 \mathbf{u} (\mathbf{x})
 h(\mathbf{x})
-g(\bm{\eta})
 \exp
 \left(
 	\bm{\eta} ^ \intercal
@@ -5552,15 +5551,154 @@ g(\bm{\eta})
 \right)
 d\mathbf{x}
 =
-0.
+\mathbf{0}. 
 \end{equation}
 %
-
-
-
-
-
-
+The left hand side can be written as
+%
+\begin{equation}
+\frac{\nabla g(\bm{\eta})}{g(\bm{\eta})}
+\int
+p(\mathbf{x} | \bm{\eta})
+d\mathbf{x}
++
+\int
+\mathbf{u}(\mathbf{x})
+p(\mathbf{x} | \bm{\eta})
+d\mathbf{x}
+=
+\frac{\nabla g(\bm{\eta})}{g(\bm{\eta})}
++
+\E \mathbf{u} (\mathbf{x}).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\E \mathbf{u} (\mathbf{x})
+=
+-
+\frac{\nabla g(\bm{\eta})}{g(\bm{\eta})}
+\end{equation}
+%
+Taking the second derivative with respect to $\bm{\eta}$ gives
+%
+\begin{equation}
+\begin{aligned}
+\nabla \nabla g(\bm{\eta})
+\int
+h(\mathbf{x})
+\exp
+\left(
+	\bm{\eta} ^ \intercal
+	\mathbf{u} (\mathbf{x})
+\right)
+d\mathbf{x}
++
+2 \nabla g(\bm{\eta})
+\int
+\mathbf{u} (\mathbf{x}) ^ \intercal
+h(\mathbf{x})
+\exp
+\left(
+	\bm{\eta} ^ \intercal
+	\mathbf{u} (\mathbf{x})
+\right)
+d\mathbf{x} \\
++
+g(\bm{\eta})
+\int
+\mathbf{u} (\mathbf{x})
+\mathbf{u} (\mathbf{x}) ^ \intercal
+h(\mathbf{x})
+\exp
+\left(
+	\bm{\eta} ^ \intercal
+	\mathbf{u} (\mathbf{x})
+\right)
+d\mathbf{x}
+&=
+\mathbf{O}.
+\end{aligned}
+\end{equation}
+%
+The left hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\frac{\nabla \nabla g(\bm{\eta})}{g(\bm{\eta})}
+\int
+p(\mathbf{x} | \bm{\eta})
+d\mathbf{x}
++
+\frac{2 \nabla g(\bm{\eta})}{g(\bm{\eta})}
+\int
+\mathbf{u}(\mathbf{x}) ^ \intercal
+p(\mathbf{x} | \bm{\eta})
+d\mathbf{x}
++
+\int
+\mathbf{u} (\mathbf{x})
+\mathbf{u} (\mathbf{x}) ^ \intercal
+p(\mathbf{x} | \bm{\eta})
+d\mathbf{x} \\
+=&
+\frac{\nabla \nabla g(\bm{\eta})}{g(\bm{\eta})}
+-
+2
+\E \mathbf{u} (\mathbf{x})
+\E \mathbf{u} (\mathbf{x}) ^ \intercal
++
+\E 
+\left(
+	\mathbf{u} (\mathbf{x}) 
+	\mathbf{u} (\mathbf{x}) ^ \intercal
+\right).
+\end{aligned}
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\E 
+\left(
+	\mathbf{u} (\mathbf{x}) 
+	\mathbf{u} (\mathbf{x}) ^ \intercal
+\right)
+=
+-
+\frac{\nabla \nabla g(\bm{\eta})}{g(\bm{\eta})}
++
+\frac{2 \nabla g(\bm{\eta}) (\nabla g(\bm{\eta})) ^ \intercal}{g ^ 2 (\bm{\eta})}.
+\end{equation}
+%
+By the definition,
+%
+\begin{equation}
+\cov \mathbf{u} (\mathbf{x})
+=
+\E 
+\left(
+	\mathbf{u} (\mathbf{x}) 
+	\mathbf{u} (\mathbf{x}) ^ \intercal
+\right)
+-
+\E \mathbf{u} (\mathbf{x})
+\E \mathbf{u} (\mathbf{x}) ^ \intercal.
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\cov \mathbf{u} (\mathbf{x})
+=
+-
+\frac{\nabla \nabla g(\bm{\eta})}{g(\bm{\eta})}
++
+\frac{\nabla g(\bm{\eta}) (\nabla g(\bm{\eta})) ^ \intercal}{g ^ 2 (\bm{\eta})}.
+\end{equation}
+%
 
 
 
