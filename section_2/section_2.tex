@@ -5776,35 +5776,93 @@ Therefore, $p(x | \sigma)$ will be normalised if $f(x)$ is normalised.
 
 \subsection{(Incomplete)}
 \label{2.60}
-Let $\mathbf{x}$ be a variable such that if $\mathbf{x} \in R_i$, then
+Let $\mathbf{x}$ be a variable such that 
 %
 \begin{equation}
+\mathbf{x} 
+\in 
+R_i
+\Rightarrow
 p(\mathbf{x})
 =
-h_i.
+h_i,
 \end{equation}
 %
-Let $n_i$ be the number observations fall in $R_i$ out of $N$ observations.
-Then
+where
 %
 \begin{equation}
-\prod_{\sum_{i} n_i = N}
-{h_i} ^ {n_i}.
+\int_{\mathbf{x} \in R_i}
+d\mathbf{x}
+=
+\Delta_i.
 \end{equation}
 %
-The logarithm can be written as
+Since
 %
 \begin{equation}
-\sum_{\sum_{i} n_i = N}
+\int 
+p(\mathbf{x})
+d\mathbf{x}
+=
+1,
+\end{equation}
+%
+we have
+%
+\begin{equation}
+\sum_i
+h_i
+\Delta_i
+=
+1.
+\end{equation}
+%
+Out of $N$ observations, let $n_i$ be the number of observations which fall in $R_i$.
+Then, the logarithm of the likelyhood is given by
+%
+\begin{equation}
+\ln
+\prod_{i}
+{h_i} ^ {n_i}
+=
+\sum_{i}
 n_i 
-\ln h_i.
+\ln h_i,
 \end{equation}
 %
-Setting the derivative with respect to $h_i$ gives
+where
 %
 \begin{equation}
-\sum_{\sum_{i} n_i = N}
+\sum_i n_i
+=
+N.
+\end{equation}
+%
+In order to maximise 
+%
+\begin{equation}
+\sum_{i}
+n_i 
+\ln h_i
++
+\lambda
+\left(
+	\sum_i
+	h_i
+	\Delta_i
+	-
+	1
+\right),
+\end{equation}
+%
+setting the derivative with respect to $h_i$ to zero gives
+%
+\begin{equation}
+\sum_{i}
 \frac{n_i}{h_i}
++
+\lambda
+\Delta_i
 =
 0.
 \end{equation}
