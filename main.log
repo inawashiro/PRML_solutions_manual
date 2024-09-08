@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  7 SEP 2024 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  8 SEP 2024 09:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -255,12 +255,12 @@ Overfull \hbox (11.58386pt too wide) detected at line 4494
  []
 
 [76] [77] [78] [79] [80] [81] [82] [83]
-Overfull \hbox (17.34496pt too wide) detected at line 5623
+Overfull \hbox (17.34496pt too wide) detected at line 5632
 [][][]
  []
 
 [84]
-Overfull \hbox (0.72604pt too wide) detected at line 5659
+Overfull \hbox (0.72604pt too wide) detected at line 5668
 [][][]
  []
 
@@ -296,7 +296,7 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (87 pages, 388724 bytes).
+Output written on main.pdf (87 pages, 388851 bytes).
 PDF statistics:
  386 PDF objects out of 1000 (max. 8388607)
  254 compressed objects within 3 object streams
