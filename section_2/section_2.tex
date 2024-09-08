@@ -5719,6 +5719,99 @@ Hence,
 %
 
 
+\subsection{}
+\label{2.59}
+Let 
+%
+\begin{equation}
+p(x | \sigma)
+=
+\frac{1}{\sigma}
+f
+\left(
+	\frac{x}{\sigma}
+\right).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\int 
+p(x | \sigma)
+dx
+=
+\frac{1}{\sigma}
+\int
+f
+\left(
+	\frac{x}{\sigma}
+\right)
+dx.
+\end{equation}
+%
+By the transformation
+%
+\begin{equation}
+x' 
+= 
+\frac{x}{\sigma},
+\end{equation}
+%
+the right hand side can be written as
+%
+\begin{equation}
+\frac{1}{\sigma}
+\int
+f(x')
+\sigma
+dx'
+=
+\int
+f(x')
+dx'.
+\end{equation}
+%
+Therefore, $p(x | \sigma)$ will be normalised if $f(x)$ is normalised.
+
+
+\subsection{(Incomplete)}
+\label{2.60}
+Let $\mathbf{x}$ be a variable such that if $\mathbf{x} \in R_i$, then
+%
+\begin{equation}
+p(\mathbf{x})
+=
+h_i.
+\end{equation}
+%
+Let $n_i$ be the number observations fall in $R_i$ out of $N$ observations.
+Then
+%
+\begin{equation}
+\prod_{\sum_{i} n_i = N}
+{h_i} ^ {n_i}.
+\end{equation}
+%
+The logarithm can be written as
+%
+\begin{equation}
+\sum_{\sum_{i} n_i = N}
+n_i 
+\ln h_i.
+\end{equation}
+%
+Setting the derivative with respect to $h_i$ gives
+%
+\begin{equation}
+\sum_{\sum_{i} n_i = N}
+\frac{n_i}{h_i}
+=
+0.
+\end{equation}
+%
+
+
+
 
 
 
