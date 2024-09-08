@@ -5501,7 +5501,7 @@ g(\bm{\eta})
 \]
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.58}
 Let $\mathbf{x}$ be a variable such that
 %
@@ -5578,7 +5578,16 @@ Therefore,
 \E \mathbf{u} (\mathbf{x})
 =
 -
-\frac{\nabla g(\bm{\eta})}{g(\bm{\eta})}
+\frac{\nabla g(\bm{\eta})}{g(\bm{\eta})}.
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\E \mathbf{u} (\mathbf{x})
+=
+-
+\nabla \ln g(\bm{\eta}).
 \end{equation}
 %
 Taking the second derivative with respect to $\bm{\eta}$ gives
@@ -5699,7 +5708,15 @@ Thus,
 \frac{\nabla g(\bm{\eta}) (\nabla g(\bm{\eta})) ^ \intercal}{g ^ 2 (\bm{\eta})}.
 \end{equation}
 %
-
+Hence,
+%
+\begin{equation}
+\cov \mathbf{u} (\mathbf{x})
+=
+-
+\nabla \nabla \ln g(\bm{\eta}).
+\end{equation}
+%
 
 
 
