@@ -5774,7 +5774,7 @@ dx'.
 Therefore, $p(x | \sigma)$ will be normalised if $f(x)$ is normalised.
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.60}
 Let $\mathbf{x}$ be a variable such that 
 %
@@ -5818,12 +5818,14 @@ h_i
 \end{equation}
 %
 Out of $N$ observations, let $n_i$ be the number of observations which fall in $R_i$.
-Then, the logarithm of the likelyhood is given by
+Then, the logarithm of the likelihood is given by
 %
 \begin{equation}
 \ln
-\prod_{i}
-{h_i} ^ {n_i}
+\left(
+	\prod_{i}
+	{h_i} ^ {n_i}
+\right)
 =
 \sum_{i}
 n_i 
@@ -5838,7 +5840,7 @@ where
 N.
 \end{equation}
 %
-In order to maximise 
+Setting the derivatives of
 %
 \begin{equation}
 \sum_{i}
@@ -5852,22 +5854,45 @@ n_i
 	\Delta_i
 	-
 	1
-\right),
+\right)
 \end{equation}
 %
-setting the derivative with respect to $h_i$ to zero gives
+with respect to $h_i$ and $\lambda$ to zero gives
 %
 \begin{equation}
+\begin{aligned}
 \frac{n_i}{h_i}
 +
 \lambda
 \Delta_i
-=
+&=
+0,
+\\
+\sum_i
+h_i
+\Delta_i
+-
+1
+&=
 0.
+\end{aligned}
 \end{equation}
 %
-
-
+Therefore,
+%
+\begin{equation}
+\begin{aligned}
+\lambda
+&=
+- N,
+\\
+h_i
+&=
+\frac{n_i}{N \Delta_i}.
+\end{aligned}
+\end{equation}
+%
+Thus, the maximum likelihood estimator for the $\{ h_i \}$ is $\frac{n_i}{N \Delta_i}$.
 
 
 
