@@ -5905,15 +5905,22 @@ p(\mathbf{x})
 \frac{K}{N V},
 \end{equation}
 %
-where $N$ is the total number of observations, $K$ is the number of obervations which fall in $\mathcal{R}$ and 
+where $N$ is the total number of observations, $K$ is the number of obervations which fall in $\mathcal{R}$ and $V$ is the volume of the sphere of the minimum radius centered on $\mathbf{x}$ which contains precisely $K$ points.
 %
 \begin{equation}
+\begin{aligned}
 V
-=
-\int_{\mathcal{R}}
-d\mathbf{x}.
+&=
+\int_{\lVert \mathbf{x}' - \mathbf{x} \rVert \leq r}
+d\mathbf{x'},
+\\
+r
+&=
+\min
+\end{aligned}
 \end{equation}
 %
+
 
 
 
