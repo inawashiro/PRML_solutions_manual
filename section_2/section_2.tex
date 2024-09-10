@@ -5897,39 +5897,32 @@ Thus, the maximum likelihood estimator for the $\{ h_i \}$ is $\frac{n_i}{N \Del
 
 \subsection{(Incomplete)}
 \label{2.61}
-Let $\mathbf{x}$ be a variable such that
+Let $\mathbf{x}$ be a variable and $\mathbf{x}_1, \cdots, \mathbf{x}_N$ be observations.
+Let
 %
 \begin{equation}
 p(\mathbf{x})
 =
-\frac{K}{N V},
+\frac{K}{N V(\mathbf{x})},
 \end{equation}
 %
-where $N$ is the total number of observations, $K$ is the number of obervations which fall in $\mathcal{R}$ and $V$ is the volume of the sphere of the minimum radius centered on $\mathbf{x}$ which contains precisely $K$ points.
+where
 %
 \begin{equation}
-\begin{aligned}
-V
-&=
-\int_{\lVert \mathbf{x}' - \mathbf{x} \rVert \leq r}
+V(\mathbf{x})
+=
+\int_
+{\lVert 
+	\mathbf{x}' - \mathbf{x} 
+\rVert
+\leq 
+\lVert
+	\mathbf{x}_{(K)} - \mathbf{x}	
+\rVert}
 d\mathbf{x'},
-\\
-r
-&=
-\min
-\end{aligned}
 \end{equation}
 %
-
-
-
-
-
-
-
-
-
-
+$K$ is a constant and $\mathbf{x}_{(K)}$ is the $K$th nearest observation from the point $\mathbf{x}$.
 
 
 
