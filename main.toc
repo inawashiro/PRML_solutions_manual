@@ -109,4 +109,4 @@
 \contentsline {subsection}{\numberline {2.60}}{86}{}%
 \contentsline {subsection}{\numberline {2.61}(Incomplete)}{87}{}%
 \contentsline {section}{\numberline {3}Linear Models for Regression}{88}{}%
-\contentsline {subsection}{\numberline {3.1}(Incomplete)}{88}{}%
+\contentsline {subsection}{\numberline {3.1}}{88}{}%

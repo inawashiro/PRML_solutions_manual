@@ -1,7 +1,7 @@
 \section{Linear Models for Regression}
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{3.1}
 By the definition,
 %
@@ -48,6 +48,115 @@ the right hand side can be written as
 1.
 \end{equation}
 %
+
+Let 
+%
+\begin{equation}
+y(x_n, \mathbf{w})
+=
+w_0
++
+\sum_{j = 1}^{M}
+w_j
+\sigma 
+\left(
+	\frac
+	{x - \mu_j}
+	{s}
+\right).
+\end{equation}
+%
+By the result above, the right hand side can be written as
+%
+\begin{equation}
+w_0
++
+\sum_{j = 1}^{M}
+w_j
+\frac
+{\tanh
+\left(
+	\frac
+	{x - \mu_j}
+	{2 s}
+\right)
++
+1}
+{2}
+=
+w_0
++
+\frac
+{1}
+{2}
+\sum_{j = 1}^{M}
+w_j
++
+\frac
+{1}
+{2}
+\sum_{j = 1}^{M}
+w_j
+\tanh
+\left(
+	\frac
+	{x - \mu_j}
+	{2 s}
+\right).
+\end{equation}
+%
+Therefore, $y(x_n, \mathbf{w})$ is equivalent to
+%
+\begin{equation}
+y(x_n, \mathbf{u})
+=
+u_0
++
+\sum_{j = 1}^{M}
+u_j
+\tanh
+\left(
+	\frac
+	{x - \mu_j}
+	{2 s}
+\right),
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+u_0
+&=
+w_0
++
+\frac
+{1}
+{2}
+\sum_{j = 1}^{M}
+w_j, 
+\\
+u_j
+&=
+\frac
+{w_j}
+{2},
+\quad
+j
+=
+1, \cdots, M.
+\end{aligned}
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
 
 
 
