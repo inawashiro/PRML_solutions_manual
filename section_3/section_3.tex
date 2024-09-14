@@ -205,12 +205,60 @@ r_n
 \right).
 \end{equation}
 %
-
-
-
-
-
-
+The right hand side can be written as
+%
+\begin{equation}
+-
+\sum_{n = 1}^{N}
+r_n
+t_n
+\bm{\phi} (\mathbf{x}_n)
++
+\left(
+	\sum_{n = 1}^{N}
+	r_n
+	\bm{\phi} (\mathbf{x}_n)
+	\bm{\phi} (\mathbf{x}_n) ^ \intercal
+\right)
+\mathbf{w}.
+\end{equation}
+%
+Therefore, 
+%
+\begin{equation}
+\argmin_{\mathbf{w}}
+E_D (\mathbf{w})
+=
+\left(
+	\bm{\Phi}'
+	{\bm{\Phi}'} ^ \intercal
+\right) ^ {- 1}
+\bm{\Phi}'
+\mathbf{t}',
+\end{equation}
+%
+where
+%
+\[
+\bm{\Phi}'
+=
+\begin{bmatrix}
+\sqrt{r_1} \bm{\phi} (\mathbf{x}_1) && \cdots && \sqrt{r_N} \bm{\phi} (\mathbf{x}_N)
+\end{bmatrix}
+,
+\]
+and
+%
+\[
+\bm{t}'
+=
+\begin{bmatrix}
+\sqrt{r_1} t_1 \\
+\vdots \\
+\sqrt{r_N} t_N
+\end{bmatrix}
+.
+\]
 
 
 
