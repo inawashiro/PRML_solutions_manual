@@ -728,64 +728,186 @@ dx
 Let $x$ be a variable such that
 %
 \begin{equation}
-p(x) = \mathcal{N} (x | \mu, \sigma ^ 2).
+p(x) 
+= 
+\mathcal{N} (x | \mu, \sigma ^ 2).
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\E x = \int_{-\infty}^{\infty} x \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx.
+\E x 
+= 
+\int_{-\infty}^{\infty} 
+x 
+\mathcal{N} \left( x | \mu, \sigma ^ 2 \right) 
+dx.
 \end{equation}
 %
 By the definition, the right hand side can be written as
 %
 \begin{equation}
-\left( 2 \pi \sigma ^ 2 \right) ^ {-\frac{1}{2}} \int_{-\infty}^{\infty} x \exp \left( -\frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right) dx.
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {-\frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+x 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right) 
+dx.
 \end{equation}
 %
 By the transformation $y = x - \mu$, it can be written as 
 %
 \begin{equation}
-\left( 2 \pi \sigma ^ 2 \right) ^ {-\frac{1}{2}} \int_{-\infty}^{\infty} (y + \mu) \exp \left( -\frac{1}{2 \sigma ^ 2}y ^ 2 \right) dy.
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {-\frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+(y + \mu) 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2}
+	y ^ 2 
+\right) 
+dy.
 \end{equation}
 %
 Since 
 %
 \begin{equation}
-\left( 2 \pi \sigma ^ 2 \right) ^ {-\frac{1}{2}} \int_{-\infty}^{\infty} y \exp \left( -\frac{1}{2 \sigma ^ 2}y ^ 2 \right) dy = 0,
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {-\frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+y 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2}
+	y ^ 2 
+\right) 
+dy 
+= 
+0,
 \end{equation}
 %
 and
 %
 \begin{equation}
-\left( 2 \pi \sigma ^ 2 \right) ^ {-\frac{1}{2}} \int_{-\infty}^{\infty} \mu \exp \left( -\frac{1}{2 \sigma ^ 2}y ^ 2 \right) dy = \mu \int_{- \infty}^{\infty} \mathcal{N} \left( y | \mu, \sigma ^ 2 \right) dy,
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {-\frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+	\mu 
+	\exp 
+	\left( 
+		-
+		\frac{1}{2 \sigma ^ 2}
+		y ^ 2 
+	\right) 
+dy 
+= 
+\mu 
+\int_{- \infty}^{\infty} 
+\mathcal{N} 
+\left( 
+	y 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) 
+dy,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-\E x = \mu.
+\E x 
+= 
+\mu.
 \end{equation}
 %
 
 By the definition,  
 %
 \begin{equation}
-\int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx = 1
+\int_{- \infty}^{\infty} 
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) 
+dx 
+= 
+1
 \end{equation}
 %
 can be written as
 %
 \begin{equation}
-\left( 2 \pi \sigma ^ 2 \right) ^ {-\frac{1}{2}} \int_{-\infty}^{\infty} \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right) dx = 1.
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {-\frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right) 
+dx 
+= 
+1.
 \end{equation}
 %
 Taking the derivative with respect to $\sigma ^ 2$ gives 
 %
 \begin{equation}
 \begin{aligned}
-\left( 2 \pi \right) ^ {-\frac{1}{2}} \left( - \frac{1}{2} \right) \left( \sigma ^ 2 \right) ^ {- \frac{3}{2}} \int_{-\infty}^{\infty} \exp \left( -\frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right) dx \\
-+ \left( 2 \pi \sigma ^ 2 \right) ^ {-\frac{1}{2}} \int_{-\infty}^{\infty} \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 2} (x - \mu) ^ 2 \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right) dx = 0.
+\left( 
+	2 \pi 
+\right) ^ {-\frac{1}{2}} 
+\left( 
+	- 
+	\frac{1}{2} 
+\right) 
+\left( 
+	\sigma ^ 2 
+\right) ^ {- \frac{3}{2}} 
+\int_{-\infty}^{\infty} 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right) dx \\
++ 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {-\frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+\frac{1}{2} 
+\left( 
+	\sigma ^ 2 
+\right) ^ {- 2} 
+(x - \mu) ^ 2 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right) 
+dx 
+= 
+0.
 \end{aligned}
 \end{equation}
 %
@@ -793,15 +915,55 @@ The left hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-- \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 1} \int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx + \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 2} \int_{- \infty} ^ {\infty} (x - \mu) ^ 2 \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx \\
-= - \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 1} + \frac{1}{2} \left( \sigma ^ 2 \right) ^ {- 2} \Var x.
+- 
+\frac{1}{2} 
+\left( 
+	\sigma ^ 2 
+\right) ^ {- 1} 
+\int_{- \infty}^{\infty} 
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) 
+dx 
++ 
+\frac{1}{2} 
+\left( 
+	\sigma ^ 2 
+\right) ^ {- 2} 
+\int_{- \infty} ^ {\infty} 
+(x - \mu) ^ 2 
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) dx \\
+= 
+- 
+\frac{1}{2} 
+\left( 
+	\sigma ^ 2 
+\right) ^ {- 1} 
++ 
+\frac{1}{2} 
+\left( 
+	\sigma ^ 2 
+\right) ^ {- 2} 
+\Var x.
 \end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\Var x = \sigma ^ 2.
+\Var x 
+= 
+\sigma ^ 2.
 \end{equation}
 %
 
