@@ -973,13 +973,44 @@ Therefore,
 Let
 %
 \begin{equation}
-\mathcal{N} \left( x | \mu, \sigma ^ 2 \right) = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) 
+= 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right).
 \end{equation}
 %
 Setting its derivative with respect to $x$ to zero gives
 %
 \begin{equation}
-0 = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \left( - \frac{1}{\sigma ^ 2} (x - \mu) \right) \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
+0 
+= 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\left( 
+	- 
+	\frac{1}{\sigma ^ 2} 
+	(x - \mu) 
+\right) 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right).
 \end{equation}
 %
 Therefore, the mode is given by $\mu$.
@@ -987,13 +1018,54 @@ Therefore, the mode is given by $\mu$.
 Similarly, let
 %
 \begin{equation}
-\mathcal{N} \left( \mathbf{x} | \bm{\mu}, \bm{\Sigma} \right) = \left( 2 \pi \right) ^ {- \frac{D}{2}} |\bm{\Sigma}| ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right).
+\mathcal{N} 
+\left( 
+	\mathbf{x} 
+	| 
+	\bm{\mu}, 
+	\bm{\Sigma} 
+\right) 
+= 
+\left( 
+	2 \pi 
+\right) ^ {- \frac{D}{2}} 
+(\det \bm{\Sigma}) ^ {- \frac{1}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2} 
+	(\mathbf{x} - \bm{\mu}) ^ \intercal 
+	\bm{\Sigma} ^ {- 1} 
+	(\mathbf{x} - \bm{\mu}) 
+\right).
 \end{equation}
 %
 Setting its derivative with respect to $\mathbf{x}$ to zero gives
 %
 \begin{equation}
-\mathbf{0} = - \left( 2 \pi \right) ^ {- \frac{D}{2}} |\bm{\Sigma}| ^ {- \frac{1}{2}} \left( \bm{\Sigma} ^ {- 1} + \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal \right) (\mathbf{x} - \bm{\mu}) \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right).
+\mathbf{0} 
+= 
+- 
+\left( 
+	2 \pi 
+\right) ^ {- \frac{D}{2}} 
+(\det \bm{\Sigma}) ^ {- \frac{1}{2}} 
+\left( 
+	\bm{\Sigma} ^ {- 1} 
+	+ 
+	\left( 
+		\bm{\Sigma} ^ {- 1}
+	\right) ^ \intercal 
+\right) 
+(\mathbf{x} - \bm{\mu}) 
+\exp 
+\left( 
+	- 
+	\frac{1}{2} 
+	(\mathbf{x} - \bm{\mu}) ^ \intercal 
+	\bm{\Sigma} ^ {- 1} 
+	(\mathbf{x} - \bm{\mu}) 
+\right).
 \end{equation}
 %
 Therefore, the mode is given by $\bm{\mu}$.
