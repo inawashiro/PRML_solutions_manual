@@ -1235,15 +1235,27 @@ Let $\mathbf{x}$ be a set of $N$ variables such that
 \right) 
 - 
 \frac{1}{2 \sigma ^ 2} 
-\sum_{n = 1}^{N} (x_n - \mu) ^ 2.
+\sum_{n = 1}^{N} 
+(x_n - \mu) ^ 2.
 \end{equation}
 %
 To maximise it with respect to $\mu$ and $\sigma ^ 2$, setting the partial derivatives to zero gives
 %
 \begin{equation}
 \begin{aligned}
-0 &= \frac{1}{\sigma ^ 2} \sum_{n = 1}^{N} (x_n - \mu), \\
-0 &= - \frac{N}{2 \sigma ^ 2} + \frac{1}{2 \left( \sigma ^ 2 \right) ^ 2} \sum_{n = 1}^{N} (x_n - \mu) ^ 2.
+0 
+&= 
+\frac{1}{\sigma ^ 2} 
+\sum_{n = 1}^{N} 
+(x_n - \mu), \\
+0 
+&= 
+- 
+\frac{N}{2 \sigma ^ 2} 
++ 
+\frac{1}{2 \left( \sigma ^ 2 \right) ^ 2} 
+\sum_{n = 1}^{N} 
+(x_n - \mu) ^ 2.
 \end{aligned}
 \end{equation}
 %
@@ -1251,8 +1263,16 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-\mu_{\rm ML} &= \frac{1}{N} \sum_{n = 1}^{N} x_n, \\
-\sigma_{\rm ML} ^ 2 &= \frac{1}{N} \sum_{n = 1}^{N} (x_n - \mu_{\rm ML}) ^ 2.
+\mu_{\rm ML} 
+&= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+x_n, \\
+\sigma_{\rm ML} ^ 2 
+&= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+(x_n - \mu_{\rm ML}) ^ 2.
 \end{aligned}
 \end{equation}
 %
