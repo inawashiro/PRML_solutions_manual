@@ -111,4 +111,4 @@
 \contentsline {section}{\numberline {3}Linear Models for Regression}{88}{}%
 \contentsline {subsection}{\numberline {3.1}}{88}{}%
 \contentsline {subsection}{\numberline {3.2}(Incomplete)}{89}{}%
-\contentsline {subsection}{\numberline {3.3}(Incomplete)}{89}{}%
+\contentsline {subsection}{\numberline {3.3}}{89}{}%
