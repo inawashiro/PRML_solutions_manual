@@ -537,62 +537,188 @@ Therefore,
 Let
 %
 \begin{equation}
-I = \int_{-\infty}^{\infty} \exp \left( -\frac{1}{2 \sigma ^ 2} x ^ 2 \right) dx.
+I 
+= 
+\int_{-\infty}^{\infty} 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2} 
+	x ^ 2 
+\right) 
+dx.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-I ^ 2 = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \exp \left( -\frac{1}{2 \sigma ^ 2} \left( x ^ 2 + y ^ 2 \right) \right) dx dy.
+I ^ 2 
+= 
+\int_{-\infty}^{\infty} 
+\int_{-\infty}^{\infty} 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2} 
+	\left( 
+		x ^ 2 
+		+ 
+		y ^ 2 
+	\right) 
+\right) 
+dx 
+dy.
 \end{equation}
 %
 By the transformation from Cartesian coordinates $(x, y)$ to polar coordinates $(r, \theta)$, the right hand side can be written as
 %
 \begin{equation}
-\int_{0}^{\infty} \int_{0}^{2 \pi} \exp \left( - \frac{1}{2 \sigma ^ 2} r ^ 2 \right) 
+\int_{0}^{\infty} 
+\int_{0}^{2 \pi} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	r ^ 2 
+\right) 
 \begin{vmatrix}
 \cos \theta & - r \sin \theta \\
 \sin \theta &  r \cos \theta \\
 \end{vmatrix}
-dr d\theta
-= 2 \pi \int_{0}^{\infty} \exp \left( - \frac{1}{2 \sigma ^ 2} r ^ 2 \right) r dr.
+dr 
+d\theta
+= 
+2 \pi 
+\int_{0}^{\infty} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	r ^ 2 
+\right) 
+r 
+dr.
 \end{equation}
 %
 By the transformation $s = \frac{r}{\sigma}$, the right hand side can be written as
 %
 \begin{equation}
-2 \pi \sigma ^ 2 \int_{0}^{\infty} \exp \left( - \frac{1}{2} s ^ 2 \right) s ds = 2 \pi \sigma ^ 2 \left[ - \exp \left( - \frac{1}{2} s ^ 2 \right) \right]_0^\infty.
+2 \pi \sigma ^ 2 
+\int_{0}^{\infty} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2} 
+	s ^ 2 
+\right)
+s 
+ds 
+= 
+2 \pi \sigma ^ 2 
+\left[ 
+	- 
+	\exp 
+	\left( 
+		- 
+		\frac{1}{2} 
+		s ^ 2 
+	\right) 
+\right]_{0}^{\infty}.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-I = \left( 2 \pi \sigma ^ 2 \right) ^ \frac{1}{2}. 
+I 
+= 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ \frac{1}{2}. 
 \end{equation}
 %
 
 By the definition,
 %
 \begin{equation}
-\mathcal{N} \left( x | \mu, \sigma ^ 2 \right) = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) 
+= 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right).
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \int_{-\infty}^{\infty} \exp \left( -\frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right) dx.
+\int_{- \infty}^{\infty} 
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) 
+dx 
+= 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right) 
+dx.
 \end{equation}
 %
 By the transformation $t = x - \mu$, the right hand side can be written as 
 %
 \begin{equation}
-\left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \int_{-\infty}^{\infty} \exp \left( -\frac{1}{2 \sigma ^ 2} t ^ 2 \right) dt = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} I.
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\int_{-\infty}^{\infty} 
+\exp 
+\left( 
+	-
+	\frac{1}{2 \sigma ^ 2} 
+	t ^ 2 
+\right) dt 
+= 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+I.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\int_{- \infty}^{\infty} \mathcal{N} \left( x | \mu, \sigma ^ 2 \right) dx = 1.
+\int_{- \infty}^{\infty} 
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^ 2 
+\right) 
+dx 
+= 
+1.
 \end{equation}
 %
 
