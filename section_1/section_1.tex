@@ -202,13 +202,32 @@ Let $a$, $o$ and $l$ be the events where an apple, orange and lime are selected 
 The probability that an apple is selected is given by
 %
 \begin{equation}
-p(a) = p(a | r) p(r) + p(a | b) p(b) + p(a | g) p(g).
+p(a) 
+= 
+p(a | r) 
+p(r) 
++ 
+p(a | b) 
+p(b) 
++ 
+p(a | g) 
+p(g).
 \end{equation}
 %
-Substituting $p(a | r) = \frac{3}{10}$, $p(r) = \frac{1}{5}$, $p(a | g) = \frac{1}{2}$, $p(r) = \frac{1}{5}$, $p(a | g) = \frac{3}{10}$ and $p(g) = \frac{3}{5}$ gives
+Substituting 
+$p(a | r) = \frac{3}{10}$, 
+$p(r) = \frac{1}{5}$, 
+$p(a | g) = \frac{1}{2}$, 
+$p(r) = \frac{1}{5}$, 
+$p(a | g) = \frac{3}{10}$ 
+and 
+$p(g) = \frac{3}{5}$ 
+gives
 %
 \begin{equation}
-p(a) = \frac{17}{50}.
+p(a) 
+= 
+\frac{17}{50}.
 \end{equation}
 %
 
@@ -227,7 +246,18 @@ p(o) & = p(o | r) p(r) + p(o | b) p(b) + p(o | g) p(g).
 \end{aligned}
 \end{equation}
 %
-Substituting $p(o | r) = \frac{2}{5}$, $p(r) = \frac{1}{5}$, $p(o | b) = \frac{1}{2}$, $p(b) = \frac{1}{5}$, $p(o | g) = \frac{3}{10}$ and $p(g) = \frac{3}{5}$ gives $p(g, o) = \frac{9}{50}$ and $p(o) = \frac{9}{25}$.
+Substituting 
+$p(o | r) = \frac{2}{5}$, 
+$p(r) = \frac{1}{5}$, 
+$p(o | b) = \frac{1}{2}$, 
+$p(b) = \frac{1}{5}$, 
+$p(o | g) = \frac{3}{10}$ 
+and 
+$p(g) = \frac{3}{5}$ 
+gives 
+$p(g, o) = \frac{9}{50}$ 
+and 
+$p(o) = \frac{9}{25}$.
 %
 Therefore,
 \begin{equation}
@@ -240,7 +270,9 @@ p(g | o) = \frac{1}{2}.
 Let 
 %
 \begin{equation}
-x = g(y)
+x 
+= 
+g(y)
 \end{equation}
 %
 and $\hat{x}$ and $\hat{y}$ be the locations of the maximum of $p_x(x)$ and $p_y(y)$ respcetively.
@@ -248,38 +280,87 @@ Let us assume that there exists $\epsilon > 0$ such that $g'(y) \neq 0$ for $\le
 Then, Taking the derivative of the transoformation
 %
 \begin{equation}
-p_y(y) = p_x \left( g(y) \right) \abs{g'(y)}
+p_y(y) 
+= 
+p_x 
+\left( 
+	g(y) 
+\right) 
+\abs{g'(y)}
 \end{equation}
 %
 and substituting $y = \hat{y}$ gives
 %
 \begin{equation}
-0 = g'(\hat{y}) p_x' \left( g \left( \hat{y} \right) \right) + p_x \left( g \left( \hat{y} \right) \right) g'' \left( \hat{y} \right).
+0 
+= 
+g'(\hat{y}) 
+p_x' 
+\left( 
+	g 
+	\left( 
+		\hat{y} 
+	\right) 
+\right) 
++ 
+p_x 
+\left( 
+	g 
+	\left( 
+		\hat{y} 
+	\right) 
+\right) 
+g'' 
+\left( 
+	\hat{y} 
+\right).
 \end{equation}
 %
 Therefore, in general,
 %
 \begin{equation}
-\hat{x} \neq g \left( \hat{y} \right).
+\hat{x} 
+\neq 
+g 
+\left( 
+	\hat{y} 
+\right).
 \end{equation}
 %
 
 Here, let us assume that 
 %
 \begin{equation}
-g(y) = a y + b.
+g(y) 
+= 
+a y 
++ 
+b.
 \end{equation}
 %
 Then, Taking the derivative of the transformation and substituting $y = \hat{y}$ gives
 %
 \begin{equation}
-0 = p_x' \left( g \left( \hat{y} \right) \right).
+0 
+= 
+p_x' 
+\left( 
+	g 
+	\left( 
+		\hat{y} 
+	\right) 
+\right).
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-\hat{x} = g \left( \hat{y} \right).
+\hat{x} 
+= 
+g 
+\left( 
+	\hat{y} 
+\right).
 \end{equation}
 %
 
