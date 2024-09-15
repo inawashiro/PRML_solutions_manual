@@ -1284,94 +1284,205 @@ Let $x_m$ and $x_n$ be independent variables.
 Then
 %
 \begin{equation}
-\E x_m x_n = \E x_m \E x_n.
+\E x_m x_n 
+= 
+\E x_m 
+\E x_n.
 \end{equation}
 %
 If they are samples from the Gaussian distribution with mean $\mu$ and variance $\sigma ^ 2$, the right hand side is given by $\mu ^ 2$.
 On the other hand, by the definition, 
 %
 \begin{equation}
-\E x_n ^ 2 =  \Var x_n + \left( \E x_n \right) ^ 2.
+\E x_n ^ 2 
+=  
+\Var x_n 
++ 
+\left( 
+	\E x_n 
+\right) ^ 2.
 \end{equation}
 %
 If $x_n$ is a sample from the Gaussian distribution with mean $\mu$ and variance $\sigma ^ 2$, the right hand side is given by $\sigma ^ 2 + \mu ^ 2$.
 Therefore,
 %
 \begin{equation}
-\E x_m x_n = \mu ^ 2 + \delta_{mn} \sigma ^ 2.
+\E x_m x_n 
+= 
+\mu ^ 2 
++ 
+\delta_{mn}
+\sigma ^ 2.
 \end{equation}
 %
 
 Here, since 
 %
 \begin{equation}
-\mu_{\rm ML} = \frac{1}{N} \sum_{n = 1}^{N} x_n,
+\mu_{\rm ML} 
+= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+x_n,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-\E \mu_{\rm ML} = \frac{1}{N} \sum_{n = 1}^{N} \E x_n.
+\E \mu_{\rm ML} 
+= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\E x_n.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-\E \mu_{\rm ML} = \mu.
+\E \mu_{\rm ML} 
+= 
+\mu.
 \end{equation}
 %
 Similarly, since 
 %
 \begin{equation}
-\sigma_{\rm ML}^2 = \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu_{\rm ML} \right) ^ 2,
+\sigma_{\rm ML}^2 
+= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\left( 
+	x_n 
+	- 
+	\mu_{\rm ML} 
+\right) ^ 2,
 \end{equation}
 %
 we have 
 %
 \begin{equation}
-\E \sigma_{\rm ML}^2 = \frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n - \mu_{\rm ML} \right) ^ 2.
+\E \sigma_{\rm ML}^2 
+= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\E 
+\left( 
+	x_n 
+	- 
+	\mu_{\rm ML} 
+\right) ^ 2.
 \end{equation}
 %
 The right hand side can be writen as 
 %
 \begin{equation}
-\frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n ^ 2 - 2 \mu_{\rm ML} x_n + \mu_{\rm ML} ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} \E x_n ^ 2 - \frac{2}{N} \E \left( \mu_{\rm ML} \left( \sum_{n = 1}^{N} x_n \right) \right) + \E \mu_{\rm ML} ^ 2.
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\E 
+\left( 
+	x_n ^ 2 
+	- 
+	2 \mu_{\rm ML} x_n 
+	+ 
+	\mu_{\rm ML} ^ 2 
+\right) 
+= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\E x_n ^ 2 
+- 
+\frac{2}{N} 
+\E 
+\left( 
+	\mu_{\rm ML} 
+	\left( 
+		\sum_{n = 1}^{N} 
+		x_n 
+	\right) 
+\right) 
++ 
+\E \mu_{\rm ML} ^ 2.
 \end{equation}
 %
 The first term of the right hand side can be written as 
 %
 \begin{equation}
-\frac{1}{N} \sum_{n = 1}^{N} \left( \mu ^ 2 + \sigma ^ 2 \right) = \mu ^ 2 + \sigma ^ 2,
+\frac{1}{N}
+\sum_{n = 1}^{N} 
+\left( 
+	\mu ^ 2 
+	+ 
+	\sigma ^ 2 
+\right) 
+= 
+\mu ^ 2 
++ 
+\sigma ^ 2,
 \end{equation}
 %
 while the second and third terms can be writen as
 %
 \begin{equation}
-- 2 \E \mu_{\rm ML} ^ 2 + \E \mu_{\rm ML} ^ 2 = - \E \mu_{\rm ML} ^ 2.
+- 
+2 
+\E \mu_{\rm ML} ^ 2 
++ 
+\E \mu_{\rm ML} ^ 2 
+= 
+- 
+\E \mu_{\rm ML} ^ 2.
 \end{equation}
 %
 Here, 
 %
 \begin{equation}
-\E \mu_{\rm ML} ^ 2 = \E \left( \frac{1}{N} \sum_{n = 1}^{N} x_n \right) ^ 2.
+\E \mu_{\rm ML} ^ 2 
+= 
+\E 
+\left( 
+	\frac{1}{N} 
+	\sum_{n = 1}^{N} x_n 
+\right) ^ 2.
 \end{equation}
 %
 The right hand side can be written as 
 %
 \begin{equation}
-\frac{1}{N ^ 2} \sum_{n = 1}^{N} \E x_n ^ 2 + \frac{2}{N ^ 2} \sum_{1 \leq m < n \leq N} \E x_m x_n = \frac{1}{N} (\mu ^ 2 + \sigma ^ 2) + \frac{N - 1}{N} \mu ^ 2.
+\frac{1}{N ^ 2} 
+\sum_{n = 1}^{N} 
+\E x_n ^ 2 
++ 
+\frac{2}{N ^ 2} 
+\sum_{1 \leq m < n \leq N} 
+\E x_m x_n 
+= 
+\frac{1}{N} 
+\left(
+	\mu ^ 2 
+	+ 
+	\sigma ^ 2
+\right) 
++ 
+\frac{N - 1}{N} 
+\mu ^ 2.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E \mu_{\rm ML} ^ 2 = \mu ^ 2 + \frac{1}{N} \sigma ^ 2.
+\E \mu_{\rm ML} ^ 2 
+= 
+\mu ^ 2 
++ 
+\frac{1}{N} \sigma ^ 2.
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-\E \sigma_{\rm ML}^2 = \frac{N - 1}{N} \sigma ^ 2.
+\E \sigma_{\rm ML}^2 
+= 
+\frac{N - 1}{N} \sigma ^ 2.
 \end{equation}
 %
 
