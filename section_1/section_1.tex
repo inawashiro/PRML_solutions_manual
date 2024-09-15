@@ -1076,54 +1076,140 @@ Therefore, the mode is given by $\bm{\mu}$.
 By the definition,
 %
 \begin{equation}
-\E (x + y) = \int \int (x + y) p(x, y) dx dy.
+\E (x + y) 
+= 
+\int 
+\int 
+(x + y) 
+p(x, y) 
+dx 
+dy.
 \end{equation}
 %
 The right hand side can be written as 
 %
 \begin{equation}
-\int x \left( \int p(x, y) dy \right) dx + \int y \left( \int p(x, y) dx \right) dy = \int x p(x) dx + \int y p(y) dy.
+\int 
+x 
+\left( 
+	\int 
+	p(x, y) 
+	dy 
+\right) 
+dx 
++ 
+\int 
+y 
+\left( 
+	\int 
+	p(x, y) 
+	dx 
+\right) 
+dy 
+= 
+\int 
+x 
+p(x) 
+dx 
++ 
+\int 
+y 
+p(y) 
+dy.
 \end{equation}
 %
 By the definition, the right hand side can be written as 
 %
 \begin{equation}
-\E x + \E y.
+\E x 
++ 
+\E y.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-\E (x + y) = \E x + \E y.
+\E (x + y) 
+= 
+\E x 
++ 
+\E y.
 \end{equation}
 %
 
 Similarly, by the definition,
 %
 \begin{equation}
-\Var (x + y) = \E \left( x + y - \E (x + y) \right) ^ 2
+\Var (x + y) 
+= 
+\E 
+\left( 
+	x 
+	+ 
+	y 
+	- 
+	\E (x + y) 
+\right) ^ 2
 \end{equation}
 %
 By the result above and the definition, the right hand side can be written as 
 %
 \begin{equation}
 \begin{aligned}
-\E \left( x - \E x \right) ^ 2 + 2 \E \left( \left( x - \E x \right) \left( y - \E y \right) \right) + \E \left( y - \E y \right) ^ 2 \\
-= \Var x + 2 \cov (x, y) + \Var y.
+\E 
+\left( 
+	x 
+	- 
+	\E x 
+\right) ^ 2 
++ 
+2 
+\E 
+\left( 
+	\left( 
+		x 
+		- 
+		\E x 
+	\right) 
+	\left( 
+		y 
+		- 
+		\E y 
+	\right) 
+\right) 
++ 
+\E 
+\left( 
+	y 
+	- 
+	\E y 
+\right) ^ 2 \\
+= 
+\Var x 
++ 
+2 \cov (x, y) 
++ 
+\Var y.
 \end{aligned}
 \end{equation}
 %
 If $x$ and $y$ are independent, then 
 %
 \begin{equation}
-\cov (x, y) = 0,
+\cov (x, y) 
+= 
+0,
 \end{equation}
 
 %
 by \ref{1.6}. Therefore,
 %
 \begin{equation}
-\Var (x + y) = \Var x + \Var y.
+\Var (x + y) 
+= 
+\Var x 
++ 
+\Var y.
 \end{equation}
 %
 
