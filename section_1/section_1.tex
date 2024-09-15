@@ -1493,31 +1493,96 @@ Let $\{ x_n \}$ be a set of variables whose mean is $\mu$ and variance is $\sigm
 Then
 %
 \begin{equation}
-\E \left( \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu \right) ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n - \mu \right) ^ 2.
+\E 
+\left( 
+	\frac{1}{N} 
+	\sum_{n = 1}^{N} 
+	\left(
+		x_n 
+		- 
+		\mu 
+	\right) ^ 2 
+\right) 
+= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\E 
+\left( 
+	x_n 
+	- 
+	\mu 
+\right) ^ 2.
 \end{equation}
 %
 The right hand side can be writen as 
 %
 \begin{equation}
-\frac{1}{N} \sum_{n = 1}^{N} \E \left( x_n ^ 2 - 2 \mu x_n + \mu ^ 2 \right) = \frac{1}{N} \sum_{n = 1}^{N} \E x_n ^ 2 - \frac{2 \mu}{N}  \sum_{n = 1}^{N} \E x_n + \mu ^ 2.
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\E 
+\left( 
+	x_n ^ 2 
+	- 
+	2 \mu x_n 
+	+ 
+	\mu ^ 2 
+\right) 
+= 
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\E x_n ^ 2 
+- 
+\frac{2 \mu}{N}  
+\sum_{n = 1}^{N} 
+\E x_n 
++ 
+\mu ^ 2.
 \end{equation}
 %
 The first term of the right hand side can be written as 
 %
 \begin{equation}
-\frac{1}{N} \sum_{n = 1}^{N} \left( \mu ^ 2 + \sigma ^ 2 \right) = \mu ^ 2 + \sigma ^ 2,
+\frac{1}{N} 
+\sum_{n = 1}^{N} 
+\left( 
+	\mu ^ 2 
+	+ 
+	\sigma ^ 2 
+\right) 
+= 
+\mu ^ 2 
++ 
+\sigma ^ 2,
 \end{equation}
 %
 while the second term can be writen as
 %
 \begin{equation}
-- \frac{2 \mu}{N} \sum_{n = 1}^{N} \mu = - 2 \mu ^ 2.
+- 
+\frac{2 \mu}{N} 
+\sum_{n = 1}^{N} 
+\mu 
+= 
+- 
+2 
+\mu ^ 2.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E \left( \frac{1}{N} \sum_{n = 1}^{N} \left( x_n - \mu \right) ^ 2 \right) = \sigma ^2.
+\E 
+\left( 
+	\frac{1}{N} 
+	\sum_{n = 1}^{N} 
+	\left( 
+		x_n 
+		- 
+		\mu 
+	\right) ^ 2 
+\right) 
+= 
+\sigma ^2.
 \end{equation}
 %
 
