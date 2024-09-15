@@ -1723,6 +1723,121 @@ Finally, since the matrix $w_{ij}^{\rm S}$ is a $D \times D$ symmetric matrix, i
 
 \subsection{(Incomplete)}
 \label{1.15}
+Let $n(D, M)$ be the number of independent parameters of a polynomial where $D$ and $M$ are the dimensionality and order of the polynomial.
+Then
+%
+\begin{equation}
+n(1, M)
+=
+n(1, M - 1)
+=
+1.
+\end{equation}
+%
+Let us assume that
+%
+\begin{equation}
+n(D, M)
+=
+\sum_{i = 1}^{D}
+n(i, M - 1).
+\end{equation}
+%
+Then
+%
+\begin{equation}
+n(D + 1, M)
+=
+n(D + 1, M - 1)
++
+n(D, M)?
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+n(D + 1, M)
+=
+\sum_{i = 1}^{D + 1}
+n(i, M - 1).
+\end{equation}
+%
+Thus, the assumption is proved by the induction on $D$.
+
+Additionally,
+%
+\begin{equation}
+\sum_{i = 1}^{1}
+\frac{(i + M - 2)!}{(i - 1)! (M - 1)!}
+=
+1.
+\end{equation}
+%
+Let us assume that
+%
+\begin{equation}
+\sum_{i = 1}^{D}
+\frac{(i + M - 2)!}{(i - 1)! (M - 1)!}
+=
+\frac{(D + M - 1)!}{(D - 1)! M!}.
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\sum_{i = 1}^{D + 1}
+\frac{(i + M - 2)!}{(i - 1)! (M - 1)!}
+=
+\frac{(D + M - 1)!}{(D - 1)! M!}
++
+\frac{(D + M - 1)!}{D! (M - 1)!}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{D (D + M - 1)! + M (D + M - 1)!}{D! M!}
+=
+\frac{(D + M)!}{D! M!}.
+\end{equation}
+%
+Therefore, the assumption is proved by the induction on $D$.
+
+Finally, by \ref{1.14},
+%
+\begin{equation}
+n(D, 2)
+=
+\frac{D (D + 1)}{2}.
+\end{equation}
+%
+Let us assume that
+%
+\begin{equation}
+n(D, M)
+=
+\frac{(D + M - 1)!}{(D - 1)! M!}.
+\end{equation}
+%
+Then, by the result above,
+%
+\begin{equation}
+n(D, M + 1)
+=
+\sum_{i = 1}^{D}
+n(i, M).
+\end{equation}
+%
+By the assumption and result above, the right hand side can be written as
+%
+\begin{equation}
+\sum_{i = 1}^{D}
+\frac{(i + M - 1)!}{(i - 1)! M!}
+=
+\frac{(D + M)!}{(D - 1)! M!}.
+\end{equation}
+%
+Therefore, the assumption is proved by the induction on $M$.
 
 
 \subsection{(Incomplete)}
