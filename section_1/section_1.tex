@@ -6,39 +6,89 @@
 Let 
 %
 \begin{equation}
-E(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2.
+E(\mathbf{w}) 
+= 
+\frac{1}{2} 
+\sum_{n = 1}^{N} 
+\left( 
+	y(x_n, 
+	\mathbf{w}) 
+	- 
+	t_n 
+\right) ^ 2.
 \end{equation}
 %
-To minimise it, setting the derivative to zero gives
+Setting the derivative to zero gives
 %
 \begin{equation}
-\mathbf{0} = \sum_{n = 1}^{N} \frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} \left( y(x_n, \mathbf{w}) - t_n \right).
+\mathbf{0} 
+= 
+\sum_{n = 1}^{N} 
+\frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} 
+\left( 
+	y(x_n, \mathbf{w}) 
+	- 
+	t_n 
+\right).
 \end{equation}
 %
 Substituting 
 %
 \begin{equation}
-y(x_n, \mathbf{w}) = \sum_{j = 0}^{M} w_j x_n^j
+y(x_n, \mathbf{w}) 
+= 
+\sum_{j = 0}^{M} 
+w_j 
+x_n ^ j
 \end{equation}
 %
 gives
 %
 \begin{equation}
-0 = \sum_{n = 1}^{N} x_n^i \left( \sum_{j = 0}^{M} w_j x_n^j - t_n \right).
+0 
+= 
+\sum_{n = 1}^{N} 
+x_n ^ i 
+\left( 
+	\sum_{j = 0}^{M} 
+	w_j 
+	x_n ^ j 
+	- 
+	t_n 
+\right).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\sum_{j = 0}^{M} A_{ij} w_j = T_i
+\argmin_{w_j}
+E(\mathbf{w})
+=
+\left \{
+	w_j
+	\left.
+	\right \vert
+	\sum_{j = 0}^{M} 
+	A_{ij} 
+	w_j 
+	= 
+	T_i	
+\right \},
 \end{equation}
 %
 where
 %
 \begin{equation}
 \begin{aligned}
-A_{ij} &= \sum_{n = 1}^{N} x_n^{i + j}, \\
-T_i &= \sum_{n = 1}^{N} x_n^i t_n.
+A_{ij} 
+&= 
+\sum_{n = 1}^{N} 
+x_n^{i + j}, \\
+T_i 
+&= 
+\sum_{n = 1}^{N} 
+x_n ^i 
+t_n.
 \end{aligned}
 \end{equation}
 
@@ -48,39 +98,100 @@ T_i &= \sum_{n = 1}^{N} x_n^i t_n.
 Let
 %
 \begin{equation}
-\tilde{E}(\mathbf{w}) = \frac{1}{2} \sum_{n = 1}^{N} \left( y(x_n, \mathbf{w}) - t_n \right) ^ 2 + \frac{\lambda}{2} \lVert \mathbf{w} \rVert ^ 2.
+\tilde{E}(\mathbf{w}) 
+= 
+\frac{1}{2} 
+\sum_{n = 1}^{N} 
+\left( 
+	y(x_n, \mathbf{w}) 
+	- 
+	t_n 
+\right) ^ 2 
++ 
+\frac{\lambda}{2} 
+\lVert \mathbf{w} \rVert ^ 2.
 \end{equation}
 %
-To minimise it, setting the derivative to zero gives
+Setting the derivative to zero gives
 %
 \begin{equation}
-\mathbf{0} = \sum_{n = 1}^{N} \frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} \left( y(x_n, \mathbf{w}) - t_n \right) + \lambda \mathbf{w}.
+\mathbf{0} 
+= 
+\sum_{n = 1}^{N} 
+\frac{\partial y(x_n, \mathbf{w})}{\partial \mathbf{w}} 
+\left( 
+	y(x_n, \mathbf{w}) 
+	- 
+	t_n 
+\right) 
++ 
+\lambda 
+\mathbf{w}.
 \end{equation}
 %
 Substituting 
 %
 \begin{equation}
-y(x_n, \mathbf{w}) = \sum_{j = 0}^{M} w_j x_n^j
+y(x_n, \mathbf{w}) 
+= 
+\sum_{j = 0}^{M} 
+w_j 
+x_n ^ j
 \end{equation}
 %
 gives
 %
 \begin{equation}
-0 = \sum_{n = 1}^{N} x_n^i \left( \sum_{j = 0}^{M} w_j x_n^j - t_n \right) + \lambda w_i.
+0 
+= 
+\sum_{n = 1}^{N} 
+x_n ^ i 
+\left( 
+	\sum_{j = 0}^{M} 
+	w_j 
+	x_n ^ j 
+	- 
+	t_n 
+\right) 
++ 
+\lambda 
+w_i.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\sum_{j = 0}^{M} \tilde{A}_{ij} w_j = T_i
+\argmin_{w_j}
+E(\mathbf{w})
+=
+\left \{
+	w_j
+	\left.
+	\right \vert
+	\sum_{j = 0}^{M} 
+	\tilde{A}_{ij} 
+	w_j 
+	= 
+	T_i	
+\right \},
 \end{equation}
 %
 where
 %
 \begin{equation}
 \begin{aligned}
-\tilde{A}_{ij} &= \sum_{n = 1}^{N} x_n^{i + j} + \lambda \delta_{ij}, \\
-T_i &= \sum_{n = 1}^{N} x_n^i t_n.
+\tilde{A}_{ij} 
+&= 
+\sum_{n = 1}^{N} 
+x_n ^ {i + j} 
++ 
+\lambda 
+\delta_{ij}, \\
+T_i 
+&= 
+\sum_{n = 1}^{N} 
+x_n ^ i 
+t_n.
 \end{aligned}
 \end{equation}
 
