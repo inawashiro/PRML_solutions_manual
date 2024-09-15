@@ -170,7 +170,7 @@ Then
 an orthogonal projection of $\mathbf{t}$ onto the space?
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{3.3}
 Let
 %
@@ -233,7 +233,7 @@ E_D (\mathbf{w})
 	\bm{\Phi}'
 	{\bm{\Phi}'} ^ \intercal
 \right) ^ {- 1}
-\bm{\Phi}'
+{\bm{\Phi}'} ^ \intercal
 \mathbf{t}',
 \end{equation}
 %
@@ -243,13 +243,11 @@ where
 \bm{\Phi}'
 =
 \begin{bmatrix}
-\sqrt{r_1} \bm{\phi} (\mathbf{x}_1) && \cdots && \sqrt{r_N} \bm{\phi} (\mathbf{x}_N)
+\sqrt{r_1} \bm{\phi} (\mathbf{x}_1) ^ \intercal \\
+\vdots \\
+\sqrt{r_N} \bm{\phi} (\mathbf{x}_N) ^ \intercal
 \end{bmatrix}
 ,
-\]
-and
-%
-\[
 \bm{t}'
 =
 \begin{bmatrix}
