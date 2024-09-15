@@ -1593,8 +1593,18 @@ Let
 %
 \begin{equation}
 \begin{aligned}
-w_{ij}^{\rm S} &= \frac{1}{2} (w_{ij} + w_{ji}), \\
-w_{ij}^{\rm A} &= \frac{1}{2} (w_{ij} - w_{ji}).
+w_{ij}^{\rm S} 
+&= 
+\frac{1}{2} 
+(w_{ij} 
++ 
+w_{ji}), \\
+w_{ij}^{\rm A} 
+&= 
+\frac{1}{2} 
+(w_{ij}
+ -
+  w_{ji}).
 \end{aligned}
 \end{equation}
 %
@@ -1602,47 +1612,109 @@ Then
 %
 \begin{equation}
 \begin{aligned}
-w_{ij} &= w_{ij}^{\rm S} + w_{ij}^{\rm A}, \\
-w_{ij}^{\rm S} &= w_{ji}^{\rm S}, \\
-w_{ij}^{\rm A} &= - w_{ji}^{\rm A}.
+w_{ij} 
+&= 
+w_{ij}^{\rm S} 
++ 
+w_{ij}^{\rm A}, \\
+w_{ij}^{\rm S} 
+&=
+w_{ji}^{\rm S}, \\
+w_{ij}^{\rm A} 
+&= 
+- 
+w_{ji}^{\rm A}.
 \end{aligned}
 \end{equation}
 %
 Here,
 \begin{equation}
-\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = \frac{1}{2} \sum_{i = 1}^{D} \sum_{j = 1}^{D} (w_{ij} - w_{ji}) x_i x_j.
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij}^{\rm A} 
+x_i x_j 
+= 
+\frac{1}{2} 
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+(w_{ij} 
+- 
+w_{ji}) 
+x_i x_j.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\frac{1}{2} \left( \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij} x_i x_j - \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ji} x_i x_j \right) = 0.
+\frac{1}{2} 
+\left( 
+	\sum_{i = 1}^{D} 
+	\sum_{j = 1}^{D} 
+	w_{ij} x_i x_j 
+	- 
+	\sum_{i = 1}^{D} 
+	\sum_{j = 1}^{D} 
+	w_{ji} x_i x_j 
+\right) 
+= 
+0.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = 0.
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij}^{\rm A} x_i x_j 
+= 
+0.
 \end{equation}
 %
 
 Additionally,
 %
 \begin{equation}
-\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} \left( w_{ij}^{\rm S} + w_{ij}^{\rm A} \right) x_i x_j.
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij} x_i x_j 
+= 
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+\left( 
+	w_{ij}^{\rm S} 
+	+ 
+	w_{ij}^{\rm A} 
+\right) 
+x_i x_j.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j + \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm A} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j,
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij}^{\rm S} x_i x_j 
++ 
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij}^{\rm A} x_i x_j 
+= 
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij}^{\rm S} x_i x_j,
 \end{equation}
 %
 where the result above is used. 
 Therefore,
 %
 \begin{equation}
-\sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij} x_i x_j = \sum_{i = 1}^{D} \sum_{j = 1}^{D} w_{ij}^{\rm S} x_i x_j.
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij} x_i x_j 
+= 
+\sum_{i = 1}^{D} 
+\sum_{j = 1}^{D} 
+w_{ij}^{\rm S} x_i x_j.
 \end{equation}
 %
 
