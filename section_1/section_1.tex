@@ -1763,7 +1763,7 @@ n(D + 1, M)
 n(i, M - 1).
 \end{equation}
 %
-Hence, the assumption is proved by the induction on $D$.
+Hence, the assumption is proved by induction on $D$.
 
 Additionally,
 %
@@ -1802,7 +1802,7 @@ The right hand side can be written as
 \frac{(D + M)!}{D! M!}.
 \end{equation}
 %
-Therefore, the assumption is proved by the induction on $D$.
+Therefore, the assumption is proved by induction on $D$.
 
 Finally, by \ref{1.14},
 %
@@ -1838,7 +1838,7 @@ By the assumption and result above, the right hand side can be written as
 \frac{(D + M)!}{(D - 1)! (M + 1)!}.
 \end{equation}
 %
-Therefore, the assumption is proved by the induction on $M$.
+Therefore, the assumption is proved by induction on $M$.
 
 
 \subsection{}
@@ -1898,7 +1898,7 @@ The right hand side can be written as
 \frac{(D + M + 1)!}{D! (M + 1)!}.
 \end{equation}
 %
-Therefore, the assumption is proved by the induction on $M$.
+Therefore, the assumption is proved by induction on $M$.
 Thus,
 %
 \begin{equation}
@@ -2035,39 +2035,83 @@ Thus, the assumption is proved by induction on $x$.
 Let us consider the transformation from Cartesian to polar coordinates
 %
 \begin{equation}
-\prod_{i = 1}^{D} \int_{- \infty}^{\infty} \exp \left( - x_i ^ 2 \right) dx_i = S_D \int_{0}^{\infty} \exp \left( - r ^ 2 \right) r ^ {D - 1} dr,
+\prod_{i = 1}^{D} 
+\int_{- \infty}^{\infty} 
+\exp 
+\left( 
+	- x_i ^ 2 
+\right) 
+dx_i 
+= 
+S_D 
+\int_{0}^{\infty} 
+\exp 
+\left( 
+	- r ^ 2 
+\right) 
+r ^ {D - 1} 
+dr,
 \end{equation}
 %
 where $S_D$ is the surface area of a sphere of unit raidus in $D$ dimensions. 
 By \ref{1.7}, the left hand side can be written as $\pi ^ \frac{D}{2}$. By the transformation $s = r ^ 2$, the right hand side can be written as
 %
 \begin{equation}
-\frac{S_D}{2} \int_0^\infty \exp(- s) s ^ \frac{D - 1}{2} s ^ {- \frac{1}{2}} ds = \frac{S_D}{2} \Gamma \left( \frac{D}{2} \right).
+\frac{S_D}{2} 
+\int_{0}^{\infty} 
+\exp(- s) 
+s ^ \frac{D - 1}{2} 
+s ^ {- \frac{1}{2}} 
+ds 
+= 
+\frac{S_D}{2} 
+\Gamma 
+\left( 
+	\frac{D}{2} 
+\right).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-S_D = \frac{2 \pi ^ \frac{D}{2}}{\Gamma \left( \frac{D}{2} \right)}.
+S_D 
+= 
+\frac{2 \pi ^ \frac{D}{2}}
+{\Gamma 
+\left( 
+	\frac{D}{2} 
+\right)}.
 \end{equation}
 %
 
 Additionally, the volume of the sphere can can be written as
 %
 \begin{equation}
-V_D = S_D \int_{0}^{1} r^{D - 1} dr.
+V_D 
+= 
+S_D 
+\int_{0}^{1} 
+r^{D - 1} 
+dr.
 \end{equation}
 %
 The right hand side can be written as 
 %
 \begin{equation}
-S_D \left[ \frac{r ^ D}{D} \right]_{r = 0}^{r = 1} = \frac{S_D}{D}.
+S_D 
+\left[ 
+	\frac{r ^ D}{D} 
+\right]_{r = 0}^{r = 1} 
+= 
+\frac{S_D}{D}.
 \end{equation}
 %
 Therefore, 
 %
 \begin{equation}
-V_D = \frac{S_D}{D}.
+V_D 
+= 
+\frac{S_D}{D}.
 \end{equation}
 %
 
@@ -2075,8 +2119,12 @@ Finally, the results above reduce to
 %
 \begin{equation}
 \begin{aligned}
-S_2 &= \frac{2 \pi}{\Gamma(1)}, \\
-V_2 &= \frac{S_2}{2}. 
+S_2 
+&= 
+\frac{2 \pi}{\Gamma(1)}, \\
+V_2 
+&= 
+\frac{S_2}{2}. 
 \end{aligned}
 \end{equation}
 %
@@ -2084,8 +2132,12 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-S_2 &= 2 \pi, \\
-V_2 &= \pi. 
+S_2 
+&= 
+2 \pi, \\
+V_2 
+&= 
+\pi. 
 \end{aligned}
 \end{equation}
 %
@@ -2093,8 +2145,16 @@ Similarly,
 %
 \begin{equation}
 \begin{aligned}
-S_3 &= \frac{2 \pi ^ \frac{3}{2}}{\Gamma \left( \frac{3}{2} \right)}, \\
-V_3 &= \frac{S_3}{3}. 
+S_3 
+&= 
+\frac{2 \pi ^ \frac{3}{2}}
+{\Gamma 
+\left( 
+	\frac{3}{2} 
+\right)}, \\
+V_3 
+&= 
+\frac{S_3}{3}. 
 \end{aligned}
 \end{equation}
 %
@@ -2102,8 +2162,12 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-S_3 &= 4 \pi, \\
-V_3 &= \frac{4}{3} \pi. 
+S_3 
+&= 
+4 \pi, \\
+V_3 
+&= 
+\frac{4}{3} \pi. 
 \end{aligned}
 \end{equation}
 %
