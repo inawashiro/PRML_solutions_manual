@@ -1841,8 +1841,97 @@ By the assumption and result above, the right hand side can be written as
 Therefore, the assumption is proved by the induction on $M$.
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{1.16}
+Let $N(D, M)$ be the number of independent parameters in all of the terms up to and including the ones of $D$ dimensions and $M$ orders.
+Then, by \ref{1.15},
+%
+\begin{equation}
+N(D, M)
+=
+\sum_{m = 0}^{M}
+n(D, m),
+\end{equation}
+%
+where
+%
+\begin{equation}
+n(D, m)
+=
+\frac{(D + m - 1)!}{(D - 1)! m!}.
+\end{equation}
+%
+
+Additionally,
+%
+\begin{equation}
+N(D, 0)
+=
+1.
+\end{equation}
+%
+Let us assume that
+%
+\begin{equation}
+\sum_{m = 0}^{M}
+n(D, m)
+=
+\frac{(D + M)!}{D! M!}.
+\end{equation}
+%
+Then
+%
+\begin{equation}
+\sum_{m = 0}^{M + 1}
+n(D, m)
+=
+\frac{(D + M)!}{D! M!}
++
+\frac{(D + M)!}{(D - 1)! (M + 1)!}.
+\end{equation}
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac{(M + 1) (D + M)! + D (D + M)!}{D! (M + 1)!}
+=
+\frac{(D + M + 1)!}{D! (M + 1)!}.
+\end{equation}
+%
+Therefore, the assumption is proved by the induction on $M$.
+Thus,
+%
+\begin{equation}
+N(D, M)
+=
+\frac{(D + M)!}{D! M!}.
+\end{equation}
+%
+
+Finally, by the approximation
+%
+\begin{equation}
+n!
+\approx
+n ^ n
+\exp(- n),
+\end{equation}
+%
+$\frac{(D + M)!}{D! M!}$ can be approximated as
+%
+\begin{equation}
+\frac
+{(D + M) ^ {D + M} 
+\exp 
+\left(
+	- (D + M)
+\right)}
+{D ^ D \exp (- D) M ^ M \exp(- M)}
+=
+\frac{(D + M) ^ {D + M}}{D ^ D M ^ M}.
+\end{equation}
+%
+Therefore, $N(D, M)$ can be approximated as $D ^ M$ for $D \gg M$ and as $M ^ D$ for $M \gg D$.
 
 
 \subsection{}
