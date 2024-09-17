@@ -2558,13 +2558,17 @@ Therefore,
 If $0 \leq a \leq b$, then
 %
 \begin{equation}
-0 \leq a (b - a).
+0 
+\leq 
+a (b - a).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-a \leq (ab) ^ \frac{1}{2}.
+a 
+\leq 
+(ab) ^ \frac{1}{2}.
 \end{equation}
 %
 
@@ -2573,31 +2577,71 @@ Let us choose the decision regions to minimise the probability of misclassificat
 Then,
 %
 \begin{equation}
-p(\mathbf{x}, \mathcal{C}_1) > p(\mathbf{x}, \mathcal{C}_2) \Rightarrow \mathbf{x} \in \mathcal{C}_1, 
+p(\mathbf{x}, \mathcal{C}_1) 
+> 
+p(\mathbf{x}, \mathcal{C}_2) 
+\Rightarrow 
+\mathbf{x} \in \mathcal{C}_1, 
 \end{equation}
 %
 and
 %
 \begin{equation}
-p(\mathbf{x}, \mathcal{C}_2) > p(\mathbf{x}, \mathcal{C}_1) \Rightarrow \mathbf{x} \in \mathcal{C}_2.
+p(\mathbf{x}, \mathcal{C}_2) 
+> 
+p(\mathbf{x}, \mathcal{C}_1) 
+\Rightarrow \mathbf{x} 
+\in 
+\mathcal{C}_2.
 \end{equation}
 %
 Then, using the inequality above,
 %
 \begin{equation}
-\int_{\mathcal{R}_1} p(\mathbf{x}, \mathcal{C}_2) d\mathbf{x} \leq \int_{\mathcal{R}_1} \left( p(\mathbf{x}, \mathcal{C}_1) p(\mathbf{x}, \mathcal{C}_2) \right) ^ \frac{1}{2} d\mathbf{x},
+\int_{\mathcal{R}_1} 
+p(\mathbf{x}, \mathcal{C}_2) 
+d\mathbf{x} 
+\leq 
+\int_{\mathcal{R}_1} 
+\left( 
+	p(\mathbf{x}, \mathcal{C}_1) 
+	p(\mathbf{x}, \mathcal{C}_2) 
+\right) ^ \frac{1}{2} 
+d\mathbf{x},
 \end{equation}
 %
 and
 %
 \begin{equation}
-\int_{\mathcal{R}_2} p(\mathbf{x}, \mathcal{C}_1) d\mathbf{x} \leq \int_{\mathcal{R}_2} \left( p(\mathbf{x}, \mathcal{C}_1) p(\mathbf{x}, \mathcal{C}_2) \right) ^ \frac{1}{2} d\mathbf{x}.
+\int_{\mathcal{R}_2} 
+p(\mathbf{x}, \mathcal{C}_1) 
+d\mathbf{x} 
+\leq 
+\int_{\mathcal{R}_2} 
+\left( 
+	p(\mathbf{x}, \mathcal{C}_1) 
+	p(\mathbf{x}, \mathcal{C}_2) 
+\right) ^ \frac{1}{2} 
+d\mathbf{x}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\int_{\mathcal{R}_1} p(\mathbf{x}, \mathcal{C}_2) d\mathbf{x} + \int_{\mathcal{R}_2} p(\mathbf{x}, \mathcal{C}_1) d\mathbf{x} \leq \int \left( p(\mathbf{x}, \mathcal{C}_1) p(\mathbf{x}, \mathcal{C}_2) \right) ^ \frac{1}{2} d\mathbf{x}.
+\int_{\mathcal{R}_1} 
+p(\mathbf{x}, \mathcal{C}_2) 
+d\mathbf{x} 
++ 
+\int_{\mathcal{R}_2} 
+p(\mathbf{x}, \mathcal{C}_1) 
+d\mathbf{x} 
+\leq 
+\int 
+\left( 
+	p(\mathbf{x}, \mathcal{C}_1) 
+	p(\mathbf{x}, \mathcal{C}_2) 
+\right) ^ \frac{1}{2} 
+d\mathbf{x}.
 \end{equation}
 %
 
