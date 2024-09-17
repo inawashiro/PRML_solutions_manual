@@ -1908,7 +1908,7 @@ N(D, M)
 \end{equation}
 %
 
-Finally, by the approximation
+Additionally, by the approximation
 %
 \begin{equation}
 n!
@@ -1917,7 +1917,7 @@ n ^ n
 \exp(- n),
 \end{equation}
 %
-$\frac{(D + M)!}{D! M!}$ can be approximated as
+the right hand side can be approximated as
 %
 \begin{equation}
 \frac
@@ -1931,7 +1931,53 @@ $\frac{(D + M)!}{D! M!}$ can be approximated as
 \frac{(D + M) ^ {D + M}}{D ^ D M ^ M}.
 \end{equation}
 %
+The right hand side can be written as
+%
+\begin{equation}
+D ^ M 
+\left(
+	1
+	+
+	\frac{M}{D}
+\right) ^ D
+\left(
+	\frac{1}{M}
+	+
+	\frac{1}{D}
+\right) ^ M
+=
+M ^ D 
+\left(
+	1
+	+
+	\frac{D}{M}
+\right) ^ M
+\left(
+	\frac{1}{D}
+	+
+	\frac{1}{M}
+\right) ^ D.
+\end{equation}
+%
 Therefore, $N(D, M)$ can be approximated as $D ^ M$ for $D \gg M$ and as $M ^ D$ for $M \gg D$.
+
+Finally, by the result above, 
+%
+\begin{equation}
+\begin{aligned}
+N(10, 3)
+&=
+286, \\
+N(100, 3)
+&=
+176851, \\
+N(1000, 3)
+&=
+167668501.
+\end{aligned}
+\end{equation}
+%
+
 
 
 \subsection{}
