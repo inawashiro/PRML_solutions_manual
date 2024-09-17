@@ -1979,7 +1979,6 @@ N(1000, 3)
 %
 
 
-
 \subsection{}
 \label{1.17}
 Let
@@ -2296,13 +2295,33 @@ Therefore, the ration goes to $\infty$ as $D \to \infty$.
 For a vector $\mathbf{x}$ in $D$ dimensions, let 
 %
 \begin{equation}
-p(\mathbf{x}) = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{\norm{\mathbf{x}} ^ 2}{2 \sigma ^2} \right).
+p(\mathbf{x}) 
+= 
+(2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{\norm{\mathbf{x}} ^ 2}{2 \sigma ^2} 
+\right).
 \end{equation}
 %
-Integrating both sides from $\norm{\mathbf{x}} = r$ to $\norm{\mathbf{x}} = r + \epsilon$ gives
+Then
 %
 \begin{equation}
-\int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} p(\mathbf{x}) d\mathbf{x} = \int_{r}^{r + \epsilon} \int (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{{r'} ^ 2}{2 \sigma ^2} \right) J dr' d\bm{\phi},
+\int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} 
+p(\mathbf{x}) 
+d\mathbf{x} 
+= 
+\int_{r}^{r + \epsilon} 
+\int (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{{r'} ^ 2}{2 \sigma ^2} 
+\right) 
+J 
+dr' 
+d\bm{\phi},
 \end{equation}
 %
 where $\bm{\phi}$ is the vector of the angular components of the polar corrdinate and $J$ is the Jacobian of the transformation from the Cartesian to polar coordinate.
@@ -2310,69 +2329,191 @@ For a sufficiently small $\epsilon$, the right hand side can be approximated as
 %
 \begin{equation}
 \begin{aligned}
-(2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right) \int_{r}^{r + \epsilon} \int J dr' d\bm{\phi} \\
-= (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right) \int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} d\mathbf{x}.
+(2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{r ^ 2}{2 \sigma ^2} 
+\right) 
+\int_{r}^{r + \epsilon} 
+\int 
+J 
+dr' 
+d\bm{\phi} \\
+= 
+(2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{r ^ 2}{2 \sigma ^2} 
+\right) 
+\int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} 
+d\mathbf{x}.
 \end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} p(\mathbf{x}) d\mathbf{x} \simeq p(r) \epsilon,
+\int_{r \leq \norm{\mathbf{x}} \leq r + \epsilon} 
+p(\mathbf{x}) 
+d\mathbf{x} 
+\simeq 
+p(r) 
+\epsilon,
 \end{equation}
 %
 where
 %
 \begin{equation}
-p(r) = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} S_D r ^ {D - 1} \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right),
+p(r) 
+= 
+(2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} 
+S_D 
+r ^ {D - 1} 
+\exp 
+\left( 
+	- 
+	\frac{r ^ 2}{2 \sigma ^2} 
+\right),
 \end{equation}
 %
 and $S_D$ is the surface area of a unit sphere in $D$ dimensions.
 
-Secondly, to maximise $p(r)$, setting the derivative to zero gives
+Additionally, setting the derivative of $p(r)$ to zero gives
 %
 \begin{equation}
-0 = (2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} S_D \left( (D - 1) r ^ {D - 2} - \frac{r ^ D}{\sigma ^ 2} \right) \exp \left( - \frac{r ^ 2}{2 \sigma ^2} \right).
+0 
+= 
+(2 \pi \sigma ^ 2) ^ {- \frac{D}{2}} 
+S_D 
+\left( 
+	(D - 1) r ^ {D - 2} 
+	- 
+	\frac{r ^ D}{\sigma ^ 2} 
+\right) 
+\exp 
+\left( 
+	- 
+	\frac{r ^ 2}{2 \sigma ^2} 
+\right).
 \end{equation}
 %
 Therefore, $p(r)$ is maximised at a sigle stationary point
 %
 \begin{equation}
-\hat{r} = \sqrt{D - 1} \sigma.
+\hat{r} 
+= 
+\sqrt{D - 1} 
+\sigma.
 \end{equation}
 %
 
-Thirdly, by the expression of $p(r)$ above,
+Additionally, by the expression of $p(r)$ above,
 %
 \begin{equation}
-\frac{p \left( \hat{r} + \epsilon \right)}{p \left( \hat{r} \right)} = \left( \frac{\hat{r} + \epsilon}{\hat{r}} \right) ^ {D - 1} \exp \left( - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right).
+\frac{p 
+\left( 
+	\hat{r} 
+	+ 
+	\epsilon 
+\right)}
+{p(\hat{r})} 
+= 
+\left( 
+	\frac{\hat{r} + \epsilon}{\hat{r}} 
+\right) ^ {D - 1} 
+\exp 
+\left( 
+	- 
+	\frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} 
+\right).
 \end{equation}
 %
 Using the expression of $\hat{r}$ above, the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( (D - 1) \ln \left( 1 + \frac{\epsilon}{\hat{r}} \right) - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right) \\
-= \exp \left( \frac{\hat{r} ^ 2}{\sigma ^ 2} \ln \left( 1 + \frac{\epsilon}{\hat{r}} \right) - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right).
+\exp 
+\left( 
+	(D - 1) 
+	\ln 
+	\left( 
+		1 
+		+ 
+		\frac{\epsilon}{\hat{r}} 
+	\right) 
+	- 
+	\frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} 
+\right) \\
+= \exp 
+\left( 
+	\frac{\hat{r} ^ 2}{\sigma ^ 2} 
+	\ln 
+	\left( 
+		1 
+		+ 
+		\frac{\epsilon}{\hat{r}} 
+	\right) 
+	- 
+	\frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} 
+\right).
 \end{aligned}
 \end{equation}
 %
 By the Taylor series
 %
 \begin{equation}
-\ln (1 + x) = x - \frac{1}{2} x ^ 2 + o \left( x ^ 3 \right),
+\ln (1 + x) 
+= 
+x 
+- 
+\frac{1}{2} x ^ 2 
++ 
+o \left( x ^ 3 \right),
 \end{equation}
 %
 the right hand side can be approximated as
 %
 \begin{equation}
-\exp \left( \frac{\hat{r} ^ 2}{\sigma ^ 2} \left( \frac{\epsilon}{\hat{r}} - \frac{\epsilon ^ 2}{2 {\hat{r}} ^ 2} \right) - \frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} \right) = \exp \left( - \frac{\epsilon ^ 2}{\sigma ^ 2} \right).
+\exp 
+\left( 
+	\frac{\hat{r} ^ 2}{\sigma ^ 2} 
+	\left( 
+		\frac{\epsilon}{\hat{r}} 
+		- 
+		\frac{\epsilon ^ 2}{2 {\hat{r}} ^ 2} 
+	\right) 
+	- 
+	\frac{2 \hat{r} \epsilon + \epsilon ^ 2}{2 \sigma ^ 2} 
+\right) 
+= 
+\exp 
+\left( 
+	- 
+	\frac{\epsilon ^ 2}{\sigma ^ 2} 
+\right).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-p \left( \hat{r} + \epsilon \right) \simeq p \left( \hat{r} \right) \exp \left( - \frac{\epsilon ^ 2}{\sigma ^ 2} \right).
+p 
+\left( 
+	\hat{r} 
+	+ 
+	\epsilon 
+\right) 
+\simeq 
+p 
+\left( 
+	\hat{r} 
+\right) 
+\exp 
+\left( 
+	- 
+	\frac{\epsilon ^ 2}{\sigma ^ 2} 
+\right).
 \end{equation}
 %
 
@@ -2380,14 +2521,34 @@ Finally, let a vector of length $\hat{r}$ be $\hat{\mathbf{r}}$.
 Then, by the definition of $p(\mathbf{x})$,
 %
 \begin{equation}
-\frac{p(\mathbf{0})}{p \left( \hat{\mathbf{r}} \right)} = \exp \left( \frac{\hat{r} ^ 2}{2 \sigma ^2} \right).
+\frac
+{p(\mathbf{0})}
+{p 
+\left( 
+	\hat{\mathbf{r}} 
+\right)} 
+= 
+\exp 
+\left( 
+	\frac{\hat{r} ^ 2}{2 \sigma ^2} 
+\right).
 \end{equation}
 %
 Substituting the expression of $\hat{r}$ above, the right hand side can be written as $\exp \left( \frac{D - 1}{2} \right)$.
 Therefore,
 %
 \begin{equation}
-\frac{p(\mathbf{0})}{p \left( \hat{\mathbf{r}} \right)} = \exp \left( \frac{D - 1}{2} \right).
+\frac
+{p(\mathbf{0})}
+{p 
+\left( 
+	\hat{\mathbf{r}} 
+\right)} 
+= 
+\exp 
+\left( 
+	\frac{D - 1}{2} 
+\right).
 \end{equation}
 %
 
