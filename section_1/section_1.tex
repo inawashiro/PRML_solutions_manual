@@ -2651,31 +2651,80 @@ d\mathbf{x}.
 Let
 %
 \begin{equation}
-\E L = \sum_{k} \sum_{j} \int_{\mathcal{R}_j} L_{kj} p(\mathbf{x}, \mathcal{C}_k) d\mathbf{x}.
+\E L 
+= 
+\sum_{k} 
+\sum_{j} 
+\int_{\mathcal{R}_j} L_{kj} 
+p(\mathbf{x}, \mathcal{C}_k) 
+d\mathbf{x}.
 \end{equation}
 %
 If
 %
 \begin{equation}
-L_{kj} = 1 - \delta_{kj},
+L_{kj} 
+= 
+1 
+- 
+\delta_{kj},
 \end{equation}
 %
 then the right hand side can be written as
 %
 \begin{equation}
-\sum_{k} \sum_{j} \int_{\mathcal{R}_j} \left( p(\mathbf{x}, \mathcal{C}_k) - p(\mathbf{x}, \mathcal{C}_j) \right)  d\mathbf{x} = \sum_{j} \int_{\mathcal{R}_j} \left( \sum_{k} p(\mathbf{x}, \mathcal{C}_k) - p(\mathbf{x}, \mathcal{C}_j) \right)  d\mathbf{x}.
+\sum_{k} \sum_{j} 
+\int_{\mathcal{R}_j} 
+\left( 
+	p(\mathbf{x}, \mathcal{C}_k) 
+	- 
+	p(\mathbf{x}, \mathcal{C}_j) 
+\right)  
+d\mathbf{x} 
+= 
+\sum_{j} 
+\int_{\mathcal{R}_j} 
+\left( 
+	\sum_{k} 
+	p(\mathbf{x}, \mathcal{C}_k) 
+	- 
+	p(\mathbf{x}, \mathcal{C}_j) 
+\right)  
+d\mathbf{x}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\sum_{j} \int_{\mathcal{R}_j} \left( p(\mathbf{x}) - p(\mathbf{x}, \mathcal{C}_j) \right)  d\mathbf{x} = 1 - \sum_{j} \int_{\mathcal{R}_j} p(\mathbf{x}, \mathcal{C}_j) d\mathbf{x}.
+\sum_{j} 
+\int_{\mathcal{R}_j} 
+\left( 
+	p(\mathbf{x}) 
+	- 
+	p(\mathbf{x}, \mathcal{C}_j) 
+\right)  
+d\mathbf{x} 
+= 
+1 
+- 
+\sum_{j} 
+\int_{\mathcal{R}_j} 
+p(\mathbf{x}, \mathcal{C}_j) 
+d\mathbf{x}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E L = 1 - \sum_{j} \int_{\mathcal{R}_j} p(\mathcal{C}_j | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\E L 
+= 
+1 
+- 
+\sum_{j} 
+\int_{\mathcal{R}_j}
+p(\mathcal{C}_j | \mathbf{x}) 
+p(\mathbf{x}) 
+d\mathbf{x}.
 \end{equation}
 %
 Thus, minimising $\E L$ reduces to choosing the criterion to maximise the posterior probatility $p(\mathcal{C}_j | \mathbf{x})$.
