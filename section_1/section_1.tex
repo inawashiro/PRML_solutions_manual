@@ -2812,38 +2812,77 @@ d\mathbf{x}.
 Let
 %
 \begin{equation}
-\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\E L(\mathbf{t}, \mathbf{y} (\mathbf{x})) 
+= 
+\int 
+\int 
+\norm{\mathbf{y}(\mathbf{x}) - \mathbf{t}} ^ 2 
+p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{x} 
+d\mathbf{t}.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\frac{\delta \E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)}{\delta \mathbf{y} (\mathbf{x})} = 2 \int \left( \mathbf{y} (\mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{t}.
+\frac
+{\delta \E L(\mathbf{t}, \mathbf{y} (\mathbf{x}))}
+{\delta \mathbf{y} (\mathbf{x})} 
+= 
+2 
+\int 
+\left( 
+	\mathbf{y} (\mathbf{x}) - \mathbf{t} 
+\right) 
+p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{t}.
 \end{equation}
 %
 To minimise $\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setting the left hand side to zero gives
 %
 \begin{equation}
-\mathbf{0} = \int \left( \mathbf{y}(\mathbf{x}) - \mathbf{t} \right) p(\mathbf{t} | \mathbf{x}) d\mathbf{t}.
+\mathbf{0} 
+= 
+\int 
+\left( 
+	\mathbf{y}(\mathbf{x}) - \mathbf{t} 
+\right) 
+p(\mathbf{t} | \mathbf{x}) 
+d\mathbf{t}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) \int p(\mathbf{t} | \mathbf{x}) d\mathbf{t} - \int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} = \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\mathbf{y}(\mathbf{x}) 
+\int 
+p(\mathbf{t} | \mathbf{x}) 
+d\mathbf{t} 
+- 
+\int 
+\mathbf{t} p(\mathbf{t} | \mathbf{x}) 
+d\mathbf{t} 
+= 
+\mathbf{y}(\mathbf{x}) 
+- 
+\E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) = \E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\mathbf{y}(\mathbf{x}) 
+= 
+\E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
 %
 
 Finally, for a single target variable $t$, it reduces to 
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) = \E_t (t | \mathbf{x}).
+\mathbf{y}(\mathbf{x}) 
+= 
+\E_t (t | \mathbf{x}).
 \end{equation}
 %
 
