@@ -3496,9 +3496,29 @@ Then, by the definition,
 %
 \begin{equation}
 \begin{aligned}
-{\rm H}(\mathbf{x}) &= - \int p(\mathbf{x}) \ln p(\mathbf{x}) d\mathbf{x}, \\
-{\rm H}(\mathbf{y}) &= - \int p(\mathbf{y}) \ln p(\mathbf{y}) d\mathbf{y}, \\
-{\rm H}(\mathbf{x}, \mathbf{y}) &= - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}.
+{\rm H}(\mathbf{x}) 
+&= 
+- 
+\int
+p(\mathbf{x}) 
+\ln p(\mathbf{x}) 
+d\mathbf{x}, \\
+{\rm H}(\mathbf{y}) 
+&= 
+- 
+\int 
+p(\mathbf{y}) 
+\ln p(\mathbf{y}) 
+d\mathbf{y}, \\
+{\rm H}(\mathbf{x}, \mathbf{y}) 
+&= 
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\ln p(\mathbf{x}, \mathbf{y}) 
+d\mathbf{x} 
+d\mathbf{y}.
 \end{aligned}
 \end{equation}
 %
@@ -3506,39 +3526,107 @@ Note that
 %
 \begin{equation}
 \begin{aligned}
-{\rm H}(\mathbf{x}) &= - \int \left( \int p(\mathbf{x}, \mathbf{y}) d\mathbf{y} \right) \ln p(\mathbf{x}) d\mathbf{x}, \\
-{\rm H}(\mathbf{y}) &= - \int \left( \int p(\mathbf{x}, \mathbf{y}) d\mathbf{x} \right) \ln p(\mathbf{y}) d\mathbf{y}.
+{\rm H}(\mathbf{x}) 
+&= 
+- 
+\int 
+\left( 
+	\int 
+	p(\mathbf{x}, \mathbf{y}) 
+	d\mathbf{y} 
+\right) 
+\ln p(\mathbf{x}) 
+d\mathbf{x}, \\
+{\rm H}(\mathbf{y}) 
+&= 
+- 
+\int 
+\left( 
+	\int p(\mathbf{x}, \mathbf{y}) 
+	d\mathbf{x} 
+\right) 
+\ln p(\mathbf{y}) 
+d\mathbf{y}.
 \end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm H}(\mathbf{x}) + {\rm H}(\mathbf{y}) - {\rm H}(\mathbf{x}, \mathbf{y}) = - \int \int p(\mathbf{x}, \mathbf{y}) \ln \frac{p(\mathbf{x}) p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} d\mathbf{x} d\mathbf{y}.
+{\rm H}(\mathbf{x}) 
++ 
+{\rm H}(\mathbf{y}) 
+- 
+{\rm H}(\mathbf{x}, \mathbf{y}) 
+= 
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\ln \frac{p(\mathbf{x}) p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} 
+d\mathbf{x} 
+d\mathbf{y}.
 \end{equation}
 %
 Since
 %
 \begin{equation}
-\int \int p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y} = 1,
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+d\mathbf{x} 
+d\mathbf{y} 
+=
+1,
 \end{equation}
 %
 Jensen's inequality can be used to write that
 %
 \begin{equation}
-- \int \int p(\mathbf{x}, \mathbf{y}) \ln \frac{p(\mathbf{x}) p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} d\mathbf{x} d\mathbf{y} \geq - \ln \left( \int \int p(\mathbf{x}) p(\mathbf{y}) d\mathbf{x} d\mathbf{y} \right).
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\ln \frac{p(\mathbf{x}) p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} 
+d\mathbf{x} d\mathbf{y} 
+\geq 
+- 
+\ln 
+\left( 
+	\int 
+	\int 
+	p(\mathbf{x}) 
+	p(\mathbf{y}) 
+	d\mathbf{x} 
+	d\mathbf{y} 
+\right).
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-- \ln \left( \int p(\mathbf{x}) d\mathbf{x} \int  p(\mathbf{y}) d\mathbf{y} \right) = 0.
+- 
+\ln 
+\left( 
+	\int 
+	p(\mathbf{x}) 
+	d\mathbf{x} 
+	\int  
+	p(\mathbf{y}) 
+	d\mathbf{y} 
+\right) 
+= 
+0.
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-{\rm H}(\mathbf{x}, \mathbf{y}) \leq {\rm H}(\mathbf{x}) + {\rm H}(\mathbf{y}).
+{\rm H}(\mathbf{x}, \mathbf{y}) 
+\leq 
+{\rm H}(\mathbf{x}) 
++ 
+{\rm H}(\mathbf{y}).
 \end{equation}
 %
 
