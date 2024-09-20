@@ -3636,50 +3636,88 @@ Thus,
 Let $\mathbf{x}$ be a vector of continuous variables and 
 %
 \begin{equation}
-\mathbf{y} = \mathbf{A} \mathbf{x},
+\mathbf{y} 
+= 
+\mathbf{A} 
+\mathbf{x},
 \end{equation}
 %
 where $\mathbf{A}$ is a nonsingular matrix.
 By the definition, 
 %
 \begin{equation}
-{\rm H}(\mathbf{y}) = - \int p_y(\mathbf{y}) \ln p_y(\mathbf{y}) d\mathbf{y}.
+{\rm H}(\mathbf{y}) 
+= 
+- 
+\int 
+p_y(\mathbf{y}) 
+\ln p_y(\mathbf{y}) 
+d\mathbf{y}.
 \end{equation}
 %
 By the transformation
 %
 \begin{equation}
-p_y(\mathbf{y}) = p_x(\mathbf{A} \mathbf{x}) \abs{\det \mathbf{A} ^ {-1}},
+p_y(\mathbf{y}) 
+= 
+p_x(\mathbf{A} \mathbf{x}) 
+\abs{\det \mathbf{A} ^ {-1}},
 \end{equation}
 %
 the right hand side can be written as
 %
 \begin{equation}
-- \int p_x(\mathbf{A} \mathbf{x}) \ln p_x(\mathbf{A} \mathbf{x}) \abs{\det \mathbf{A}} d\mathbf{x} - \ln \abs{\det \mathbf{A} ^ {-1}} \int p_y(\mathbf{y}) d\mathbf{y}.
+- 
+\int 
+p_x(\mathbf{A} \mathbf{x}) 
+\ln p_x(\mathbf{A} \mathbf{x}) 
+\abs{\det \mathbf{A}} 
+d\mathbf{x} 
+- 
+\ln \abs{\det \mathbf{A} ^ {-1}} 
+\int 
+p_y(\mathbf{y}) 
+d\mathbf{y}.
 \end{equation}
 %
 By the transformation 
 %
 \begin{equation}
-\mathbf{x}' = \mathbf{A} \mathbf{x},
+\mathbf{x}' 
+= 
+\mathbf{A} 
+\mathbf{x},
 \end{equation}
 %
 the first term can be written as
 %
 \begin{equation}
-- \int p_x(\mathbf{x}') \ln p_x(\mathbf{x}') d\mathbf{x}' = {\rm H}(\mathbf{x}),
+- 
+\int 
+p_x(\mathbf{x}') 
+\ln p_x(\mathbf{x}') 
+d\mathbf{x}' 
+= 
+{\rm H}(\mathbf{x}),
 \end{equation}
 %
 and the second term can be written as
 %
 \begin{equation}
-- \ln \abs{\det \mathbf{A} ^ {-1}} = \ln \abs{\det \mathbf{A}}.
+- 
+\ln 
+\abs{\det \mathbf{A} ^ {-1}} 
+= \ln \abs{\det \mathbf{A}}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm H}(\mathbf{y}) = {\rm H}(\mathbf{x}) + \ln \abs{\det \mathbf{A}}.
+{\rm H}(\mathbf{y}) 
+= 
+{\rm H}(\mathbf{x}) 
++ 
+\ln \abs{\det \mathbf{A}}.
 \end{equation}
 %
 
