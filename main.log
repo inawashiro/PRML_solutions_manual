@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  20 SEP 2024 15:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  20 SEP 2024 16:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -127,26 +127,26 @@ Package: xparse 2024-03-14 L3 Experimental document command parser
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
 
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -173,7 +173,7 @@ Overfull \hbox (8.7027pt too wide) detected at line 1405
 
 [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
 [24] [25] [26] [27] [28] [29]
-Overfull \hbox (14.53548pt too wide) detected at line 3466
+Overfull \hbox (14.53548pt too wide) detected at line 3528
 [][][]
  []
 
@@ -271,10 +271,10 @@ L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2639 strings out of 474049
- 34315 string characters out of 5746278
+ 2641 strings out of 474049
+ 34328 string characters out of 5746278
  1942754 words of memory out of 5000000
- 25061 multiletter control sequences out of 15000+600000
+ 25063 multiletter control sequences out of 15000+600000
  571748 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,13n,93p,572b,316s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -296,7 +296,7 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (94 pages, 404635 bytes).
+Output written on main.pdf (94 pages, 405575 bytes).
 PDF statistics:
  408 PDF objects out of 1000 (max. 8388607)
  269 compressed objects within 3 object streams
