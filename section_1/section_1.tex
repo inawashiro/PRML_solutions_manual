@@ -2822,12 +2822,10 @@ d\mathbf{x}
 d\mathbf{t}.
 \end{equation}
 %
-Then
+Setting the derivative with respect to $\mathbf{y}(\mathbf{x})$ gives
 %
 \begin{equation}
-\frac
-{\delta \E L(\mathbf{t}, \mathbf{y} (\mathbf{x}))}
-{\delta \mathbf{y} (\mathbf{x})} 
+\mathbf{0}
 = 
 2 
 \int 
@@ -2838,40 +2836,45 @@ p(\mathbf{x}, \mathbf{t})
 d\mathbf{t}.
 \end{equation}
 %
-To minimise $\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$, setting the left hand side to zero gives
+The integral of the right hand side can be written as
 %
 \begin{equation}
-\mathbf{0} 
-= 
+\mathbf{y}(\mathbf{x}) 
 \int 
-\left( 
-	\mathbf{y}(\mathbf{x}) - \mathbf{t} 
-\right) 
-p(\mathbf{t} | \mathbf{x}) 
+p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{t} 
+- 
+\int 
+\mathbf{t} p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{t} 
+=
+\mathbf{y}(\mathbf{x})
+p(\mathbf{x})
+-
+p(\mathbf{x})
+\int
+\mathbf{t}
+p(\mathbf{t} | \mathbf{x})
 d\mathbf{t}.
 \end{equation}
 %
-The right hand side can be written as
+The integral in the second term of the right hand side can be written as $\E_\mathbf{t} (\mathbf{t} | \mathbf{x})$.
+Therefore, the right hand side can be written as
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) 
-\int 
-p(\mathbf{t} | \mathbf{x}) 
-d\mathbf{t} 
-- 
-\int 
-\mathbf{t} p(\mathbf{t} | \mathbf{x}) 
-d\mathbf{t} 
-= 
-\mathbf{y}(\mathbf{x}) 
-- 
-\E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+p(\mathbf{x})
+\left(
+	\mathbf{y}(\mathbf{x}) 
+	- 
+	\E_\mathbf{t} (\mathbf{t} | \mathbf{x})
+\right).
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) 
+\argmin_{\mathbf{y}(\mathbf{x})}
+\E L(\mathbf{t}, \mathbf{y} (\mathbf{x}))
 = 
 \E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
@@ -2880,7 +2883,8 @@ Thus,
 Finally, for a single target variable $t$, it reduces to 
 %
 \begin{equation}
-\mathbf{y}(\mathbf{x}) 
+\argmin_{\mathbf{y}(\mathbf{x})}
+\E L(\mathbf{t}, \mathbf{y} (\mathbf{x}))
 = 
 \E_t (t | \mathbf{x}).
 \end{equation}
@@ -2892,17 +2896,55 @@ Finally, for a single target variable $t$, it reduces to
 Let
 %
 \begin{equation}
-\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \int \lVert \mathbf{y}(\mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+\E L(\mathbf{t}, \mathbf{y} (\mathbf{x})) 
+= 
+\int 
+\int 
+\norm{\mathbf{y}(\mathbf{x}) - \mathbf{t}} ^ 2 
+p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{x} 
+d\mathbf{t}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) + \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\ 
-&= \int \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
-&+ 2 \int \int \left( \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t} \\
-&+ \int \int \lVert \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{x}, \mathbf{t}) d\mathbf{x} d\mathbf{t}.
+&
+\int 
+\int \norm{\mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) + \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t}} ^ 2 
+p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{x} 
+d\mathbf{t} \\ 
+=& 
+\int 
+\int \norm{\mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x})} ^ 2 p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{x} 
+d\mathbf{t} \\
+&+ 
+2 
+\int 
+\int 
+\left( 
+	\mathbf{y}(\mathbf{x}) 
+	- 
+	\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) 
+\right) ^ \intercal 
+\left( 
+	\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) 
+	- 
+	\mathbf{t} 
+\right) 
+p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{x} 
+d\mathbf{t} \\
+&+ 
+\int 
+\int 
+\norm{\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t}} ^ 2 
+p(\mathbf{x}, \mathbf{t}) 
+d\mathbf{x} 
+d\mathbf{t}.
 \end{aligned}
 \end{equation}
 %
@@ -2910,21 +2952,60 @@ Let us look at each term of the right hand side.
 The first term can be written as
 %
 \begin{equation}
-\int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 \left( \int p(\mathbf{x}, \mathbf{t}) d\mathbf{t} \right) d\mathbf{x} = \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x}.
+\int 
+\norm{\mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x})} ^ 2 \left( 
+	\int 
+	p(\mathbf{x}, \mathbf{t}) 
+	d\mathbf{t} 
+\right) 
+d\mathbf{x} 
+= 
+\int 
+\norm{\mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x})} ^ 2 p(\mathbf{x}) 
+d\mathbf{x}.
 \end{equation}
 %
 The second term can be written as
 %
 \begin{equation}
-2 \int \left( \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \right) ^ \intercal \left( \int \left( \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \right) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x}.
+2 
+\int 
+\left( 
+	\mathbf{y}(\mathbf{x}) 
+	- 
+	\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) 
+\right) ^ \intercal 
+\left( 
+	\int 
+	\left( 
+		\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} 
+	\right) 
+	p(\mathbf{t} | \mathbf{x}) 
+	d\mathbf{t} 
+\right) 
+p(\mathbf{x}) 
+d\mathbf{x}.
 \end{equation}
 %
 Since
 %
 \begin{equation}
 \begin{aligned}
-\int \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \frac{\int p(\mathbf{x}, \mathbf{t}) d\mathbf{t}}{p(\mathbf{x})}, \\
-\int \mathbf{t} p(\mathbf{t} | \mathbf{x}) d\mathbf{t} &= \E_\mathbf{t} (\mathbf{t} | \mathbf{x}),
+\int 
+\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) 
+p(\mathbf{t} | \mathbf{x}) 
+d\mathbf{t} 
+&= 
+\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) 
+\frac
+{\int p(\mathbf{x}, \mathbf{t}) d\mathbf{t}}
+{p(\mathbf{x})}, \\
+\int 
+\mathbf{t} 
+p(\mathbf{t} | \mathbf{x}) 
+d\mathbf{t} 
+&= 
+\E_\mathbf{t} (\mathbf{t} | \mathbf{x}),
 \end{aligned}
 \end{equation}
 %
@@ -2932,19 +3013,43 @@ the second term is zero.
 The third term can be written as
 %
 \begin{equation}
-\int \left( \int \lVert \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t} \rVert ^ 2 p(\mathbf{t} | \mathbf{x}) d\mathbf{t} \right) p(\mathbf{x}) d\mathbf{x} = \int \Var_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\int 
+\left( 
+	\int 
+	\norm{\E_\mathbf{t} (\mathbf{t} | \mathbf{x}) - \mathbf{t}} ^ 2 
+	p(\mathbf{t} | \mathbf{x}) 
+	d\mathbf{t} 
+\right) 
+p(\mathbf{x}) 
+d\mathbf{x} 
+= 
+\int 
+\Var_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) 
+p(\mathbf{x}) 
+d\mathbf{x}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right) = \int \lVert \mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x}) \rVert ^ 2 p(\mathbf{x}) d\mathbf{x} + \int \Var_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+\E L(\mathbf{t}, \mathbf{y} (\mathbf{x})) 
+= 
+\int 
+\norm{\mathbf{y}(\mathbf{x}) - \E_\mathbf{t} (\mathbf{t} | \mathbf{x})} ^ 2 p(\mathbf{x}) 
+d\mathbf{x} 
++ 
+\int 
+\Var_{\mathbf{t}} (\mathbf{t} | \mathbf{x}) p(\mathbf{x}) 
+d\mathbf{x}.
 \end{equation}
 %
-Thus, $\E L\left( \mathbf{t}, \mathbf{y} (\mathbf{x}) \right)$ is mimimised if
+Thus, 
 %
 \begin{equation}
-\mathbf{y} (\mathbf{x}) = \E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
+\argmin_{\mathbf{y}(\mathbf{x})} 
+\E L(\mathbf{t}, \mathbf{y} (\mathbf{x}))
+= 
+\E_\mathbf{t} (\mathbf{t} | \mathbf{x}).
 \end{equation}
 %.
 
