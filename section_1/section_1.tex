@@ -3347,44 +3347,144 @@ Let
 %
 \begin{equation}
 \begin{aligned}
-p(x) &= \mathcal{N} \left( x | \mu, \sigma ^2 \right), \\
-q(x) &= \mathcal{N} \left( x | m, s ^2 \right).
+p(x) 
+&= 
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	\mu, 
+	\sigma ^2 
+\right), \\
+q(x) 
+&= 
+\mathcal{N} 
+\left( 
+	x 
+	| 
+	m, 
+	s ^2 
+\right).
 \end{aligned}
 \end{equation}
 %
-Then, by the definition,
+By the definition,
 %
 \begin{equation}
-{\rm KL} \left( p || q \right) = - \int p(x) \ln \frac{q(x)}{p(x)} dx.
+{\rm KL} 
+\left( 
+	p 
+	|| 
+	q 
+\right) 
+= 
+- 
+\int 
+p(x) 
+\ln 
+\frac{q(x)}{p(x)} 
+dx.
 \end{equation}
 %
 The right hand side can be written as 
 %
 \begin{equation}
 \begin{aligned}
-&- \int_{- \infty}^{\infty} p(x) \ln \frac{\left( 2 \pi s ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{(x - m) ^ 2}{2 s ^ 2} \right)}{\left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{(x - \mu) ^ 2}{2 \sigma ^ 2} \right)} dx \\
-& = - \int_{- \infty}^{\infty} p(x) \left( -\frac{1}{2} \ln \frac{s ^ 2}{\sigma ^ 2} - \frac{(x - m) ^ 2}{2 s ^ 2} + \frac{(x - \mu) ^ 2}{2 \sigma ^ 2} \right) dx.
+&
+- 
+\int_{- \infty}^{\infty} 
+p(x) 
+\ln 
+\frac{
+\left( 
+	2 \pi s ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{(x - m) ^ 2}{2 s ^ 2} 
+\right)
+}
+{
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{(x - \mu) ^ 2}{2 \sigma ^ 2} 
+\right)} 
+dx \\
+& 
+= 
+- 
+\int_{- \infty}^{\infty} 
+p(x) 
+\left( 
+	-
+	\frac{1}{2} 
+	\ln \frac{s ^ 2}{\sigma ^ 2} 
+	- 
+	\frac{(x - m) ^ 2}{2 s ^ 2} 
+	+ 
+	\frac{(x - \mu) ^ 2}{2 \sigma ^ 2} 
+\right) 
+dx.
 \end{aligned}
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\ln \frac{s}{\sigma} \int_{- \infty}^{\infty} p(x) dx + \frac{1}{2 s ^2} \int_{- \infty}^{\infty} (x - m) ^ 2 p(x) dx - \frac{1}{2 \sigma ^2} \int_{- \infty}^{\infty} (x - \mu) ^ 2 p(x) dx.
+\ln \frac{s}{\sigma} 
+\int_{- \infty}^{\infty} 
+p(x) 
+dx 
++ 
+\frac{1}{2 s ^2} 
+\int_{- \infty}^{\infty} 
+(x - m) ^ 2 
+p(x) 
+dx 
+- 
+\frac{1}{2 \sigma ^2} 
+\int_{- \infty}^{\infty} 
+(x - \mu) ^ 2 
+p(x) 
+dx.
 \end{equation}
 %
+%
 The first term can be written as $\ln \frac{s}{\sigma}$.
+%
 The second term can be written as
 %
 \begin{equation}
-\frac{1}{2 s ^2} \int_{- \infty}^{\infty} (x - \mu + \mu - m) ^ 2 p(x) dx = \frac{\sigma ^ 2 + (\mu - m) ^ 2}{2 s ^ 2}.
+\frac{1}{2 s ^2} 
+\int_{- \infty}^{\infty} 
+(x - \mu + \mu - m) ^ 2 
+p(x) 
+dx 
+= 
+\frac{\sigma ^ 2 + (\mu - m) ^ 2}{2 s ^ 2}.
 \end{equation}
 %
 The third term can be written as $- \frac{1}{2}$.
 Therefore,
 %
 \begin{equation}
-{\rm KL} \left( p || q \right) = \ln \frac{s}{\sigma} + \frac{\sigma ^ 2 + (\mu - m) ^ 2}{2 s ^ 2} - \frac{1}{2}. 
+{\rm KL} 
+\left( 
+	p 
+	|| 
+	q 
+\right) 
+= 
+\ln \frac{s}{\sigma} 
++ 
+\frac{\sigma ^ 2 + (\mu - m) ^ 2}{2 s ^ 2} 
+- 
+\frac{1}{2}. 
 \end{equation}
 %
 
