@@ -3792,36 +3792,131 @@ Let
 %
 \begin{equation}
 \begin{aligned}
-L(p(x)) = &- \int_{- \infty}^{\infty} p(x) \ln p(x) dx + \lambda_1 \left( \int_{- \infty}^{\infty} p(x) dx - 1 \right) \\
-&+ \lambda_2 \left( \int_{- \infty}^{\infty} x p(x) dx - \mu \right) + \lambda_3 \left( \int_{-\infty}^{\infty} (x - \mu) ^ 2 p(x) dx - \sigma ^ 2 \right).
+L(p(x)) 
+=&
+- 
+\int_{- \infty}^{\infty} 
+p(x) 
+\ln p(x) 
+dx 
++ 
+\lambda_1 
+\left( 
+	\int_{- \infty}^{\infty} 
+	p(x) 
+	dx 
+	- 
+	1 
+\right) \\
+&+ 
+\lambda_2 
+\left( 
+	\int_{- \infty}^{\infty} 
+	x 
+	p(x) 
+	dx 
+	- 
+	\mu 
+\right) 
++ 
+\lambda_3 
+\left( 
+	\int_{-\infty}^{\infty} 
+	(x - \mu) ^ 2 
+	p(x) 
+	dx 
+	- 
+	\sigma ^ 2 
+\right).
 \end{aligned}
 \end{equation}
 %
-Then
+Setting the derivtive with respect to $p(x)$ to zero gives
 %
 \begin{equation}
-\frac{\delta L(p(x))}{\delta p(x)} = - \ln p(x) - 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu) ^ 2.
-\end{equation}
-%
-Setting the left hand side to zero gives
-%
-\begin{equation}
-p(x) = \exp \left( - 1 + \lambda_1 + \lambda_2 x + \lambda_3 (x - \mu) ^ 2 \right).
+0 
+= 
+- 
+\ln p(x) 
+- 
+1 
++ 
+\lambda_1 
++ 
+\lambda_2 
+x 
++ 
+\lambda_3 
+(x - \mu) ^ 2.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-p(x) = \exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} + \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right).
+p(x) 
+= 
+\exp 
+\left( 
+	- 1 
+	+ 
+	\lambda_1 
+	+ 
+	\lambda_2 
+	x 
+	+ 
+	\lambda_3 
+	(x - \mu) ^ 2 
+\right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(x) 
+= 
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+	+ 
+	\lambda_3 
+	\left( 
+		x 
+		- 
+		\left( 
+			\mu 
+			- 
+			\frac{\lambda_2}{2 \lambda_3} 
+		\right) 
+	\right) ^ 2 
+\right).
 \end{equation}
 %
 Substituting it to 
 %
 \begin{equation}
 \begin{aligned}
-\int_{- \infty}^{\infty} p(x) dx &= 1, \\
-\int_{- \infty}^{\infty} x p(x) dx &= \mu, \\
-\int_{- \infty}^{\infty} (x - \mu) ^ 2 p(x) dx &= \sigma ^ 2,
+\int_{- \infty}^{\infty} 
+p(x) 
+dx 
+&= 
+1, \\
+\int_{- \infty}^{\infty} 
+x 
+p(x) 
+dx 
+&= 
+\mu, \\
+\int_{- \infty}^{\infty} 
+(x - \mu) ^ 2 
+p(x) 
+dx 
+&= 
+\sigma ^ 2,
 \end{aligned}
 \end{equation}
 %
@@ -3829,25 +3924,180 @@ gives
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \exp \left( \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right) dx &= 1, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} x \exp \left( \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right) dx &= \mu, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} (x - \mu) ^ 2 \exp \left( \lambda_3 \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right) ^ 2 \right) dx &= \sigma ^ 2.
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\int_{- \infty}^{\infty} 
+\exp 
+\left( 
+	\lambda_3 
+	\left( 
+		x 
+		- 
+		\left( 
+			\mu 
+			- 
+			\frac{\lambda_2}{2 \lambda_3} 
+		\right) 
+	\right) ^ 2 
+\right) dx 
+&= 
+1, \\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\int_{- \infty}^{\infty} 
+x 
+\exp 
+\left( 
+	\lambda_3 
+	\left( 
+		x 
+		- 
+		\left( 
+			\mu 
+			- 
+			\frac{\lambda_2}{2 \lambda_3} 
+		\right) 
+	\right) ^ 2 
+\right) 
+dx 
+&= 
+\mu, \\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\int_{- \infty}^{\infty} 
+(x - \mu) ^ 2 
+\exp 
+\left( 
+	\lambda_3 
+	\left( 
+		x 
+		- 
+		\left( 
+			\mu 
+			-
+			 \frac{\lambda_2}{2 \lambda_3} 
+		\right) 
+	\right) ^ 2 
+\right) 
+dx 
+&= 
+\sigma ^ 2.
 \end{aligned}
 \end{equation}
 %
 By the transformation
 %
 \begin{equation}
-y = \sqrt{- \lambda_3} \left( x - \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) \right),
+y 
+= 
+\sqrt{- \lambda_3} 
+\left( 
+	x 
+	- 
+	\left( 
+		\mu 
+		- 
+		\frac{\lambda_2}{2 \lambda_3} 
+	\right) 
+\right),
 \end{equation}
 %
 they can be written as
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= 1,\\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \left( (- \lambda_3) ^ {- \frac{1}{2}} y + \mu - \frac{\lambda_2}{2 \lambda_3} \right) \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= \mu,\\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \int_{- \infty}^{\infty} \left( (- \lambda_3) ^ {- \frac{1}{2}} y - \frac{\lambda_2}{2 \lambda_3} \right) ^ 2 \exp \left( - y ^ 2 \right) (- \lambda_3) ^ {- \frac{1}{2}} dy &= \sigma ^ 2.\\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\int_{- \infty}^{\infty} 
+\exp 
+\left( 
+	- 
+	y ^ 2 
+\right) 
+(- \lambda_3) ^ {- \frac{1}{2}} 
+dy 
+&= 
+1,\\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\int_{- \infty}^{\infty} 
+\left( 
+	(- \lambda_3) ^ {- \frac{1}{2}} 
+	y 
+	+ 
+	\mu 
+	- 
+	\frac{\lambda_2}{2 \lambda_3} 
+\right) 
+\exp 
+\left( 
+	- 
+	y ^ 2 
+\right) 
+(- \lambda_3) ^ {- \frac{1}{2}} 
+dy 
+&= 
+\mu,\\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\int_{- \infty}^{\infty} 
+\left( 
+	(- \lambda_3) ^ {- \frac{1}{2}} 
+	y 
+	- 
+	\frac{\lambda_2}{2 \lambda_3} 
+\right) ^ 2 
+\exp 
+\left( 
+	- 
+	y ^ 2 
+\right) 
+(- \lambda_3) ^ {- \frac{1}{2}} 
+dy 
+&= 
+\sigma ^ 2.
 \end{aligned}
 \end{equation}
 %
@@ -3855,9 +4105,41 @@ Since
 %
 \begin{equation}
 \begin{aligned}
-\int_{- \infty}^{\infty} \exp \left( - y ^ 2 \right) dy &= \Gamma \left( \frac{1}{2} \right), \\
-\int_{- \infty}^{\infty} y \exp \left( - y ^ 2 \right) dy &= 0, \\
-\int_{- \infty}^{\infty} y ^ 2 \exp \left( - y ^ 2 \right) dy &= \Gamma \left( \frac{3}{2} \right),
+\int_{- \infty}^{\infty} 
+\exp 
+\left( 
+	- 
+	y ^ 2 
+\right) 
+dy 
+&= 
+\Gamma 
+\left( 
+	\frac{1}{2} 
+\right), \\
+\int_{- \infty}^{\infty} 
+y 
+\exp 
+\left( 
+	- 
+	y ^ 2 
+\right) 
+dy 
+&= 
+0, \\
+\int_{- \infty}^{\infty} 
+y ^ 2 
+\exp 
+\left( 
+	- 
+	y ^ 2 
+\right) 
+dy 
+&= 
+\Gamma 
+\left( 
+	\frac{3}{2} 
+\right),
 \end{aligned}
 \end{equation}
 %
@@ -3865,9 +4147,67 @@ they can be written as
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= 1, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( \mu - \frac{\lambda_2}{2 \lambda_3} \right) (- \lambda_3) ^ {- \frac{1}{2}} \Gamma \left( \frac{1}{2} \right) &= \mu, \\
-\exp \left( - 1 + \lambda_1 - \frac{\lambda_2 ^ 2}{4 \lambda_3} \right) \left( (- \lambda_3) ^ {- \frac{3}{2}} \Gamma \left( \frac{3}{2} \right) + (- \lambda_3) ^ {- \frac{1}{2}} \frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} \Gamma \left( \frac{1}{2} \right) \right) &= \sigma ^ 2.
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+(- \lambda_3) ^ {- \frac{1}{2}} 
+\Gamma 
+\left( 
+	\frac{1}{2} 
+\right) 
+&= 
+1, \\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\left( 
+	\mu 
+	- 
+	\frac{\lambda_2}{2 \lambda_3} 
+\right) 
+(- \lambda_3) ^ {- \frac{1}{2}} 
+\Gamma 
+\left( 
+	\frac{1}{2} 
+\right) &= 
+\mu, \\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda_1 
+	- 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3} 
+\right) 
+\left( 
+	(- \lambda_3) ^ {- \frac{3}{2}} 
+	\Gamma 
+	\left( 
+		\frac{3}{2} 
+	\right) 
+	+ 
+	(- \lambda_3) ^ {- \frac{1}{2}} 
+	\frac{\lambda_2 ^ 2}{4 \lambda_3 ^ 2} 
+	\Gamma 	
+	\left( 
+		\frac{1}{2} 
+	\right) 
+\right) 
+&= 
+\sigma ^ 2.
 \end{aligned}
 \end{equation}
 %
@@ -3875,16 +4215,38 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-\lambda_1 &= 1 - \frac{1}{2} \ln \left( 2 \pi \sigma ^ 2 \right), \\
-\lambda_2 &= 0, \\
-\lambda_3 &= - \frac{1}{2 \sigma ^ 2}.
+\lambda_1 
+&=
+1 
+- 
+\frac{1}{2} 
+\ln 
+\left( 
+	2 \pi \sigma ^ 2 
+\right), \\
+\lambda_2 
+&= 
+0, \\
+\lambda_3 
+&= 
+- \frac{1}{2 \sigma ^ 2}.
 \end{aligned}
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-p(x) = \left( 2 \pi \sigma ^ 2 \right) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2 \sigma ^ 2} (x - \mu) ^ 2 \right).
+p(x) 
+= 
+\left( 
+	2 \pi \sigma ^ 2 
+\right) ^ {- \frac{1}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2 \sigma ^ 2} 
+	(x - \mu) ^ 2 
+\right).
 \end{equation}
 %
 
