@@ -3724,48 +3724,66 @@ Therefore,
 
 \subsection{}
 \label{1.33}
-Let $x$ and $y$ be two discrete random variables.
+Let $x$ and $y$ be two discrete variables.
 By the definition,
 %
 \begin{equation}
-{\rm H} (y | x) = - \sum_i \sum_j p(x_i, y_j) \ln p(y_j | x_i).
+{\rm H} (y | x) 
+= 
+- 
+\sum_{i} 
+\sum_{j} 
+p(x_i, y_j) 
+\ln p(y_j | x_i).
 \end{equation}
 %
 If ${\rm H}(y | x)$ is zero, then
 %
 \begin{equation}
-0 = - \sum_i p(x_i)\sum_j p(y_j | x_i) \ln p(y_j | x_i).
+0 
+= 
+- 
+\sum_{i} 
+p(x_i)
+\sum_{j} 
+p(y_j | x_i) 
+\ln p(y_j | x_i).
 \end{equation}
 %
 Since
 %
 \begin{equation}
 \begin{aligned}
-p(x_i) &\geq 0, \\
-p(y_j | x_i) \ln p(y_j | x_i) &\leq 0.
+p(x_i) 
+&\geq 
+0, 
+\\
+p(y_j | x_i) 
+\ln p(y_j | x_i) 
+&\leq 
+0.
 \end{aligned}
 \end{equation}
 %
 for all $i$ and $j$, the equation reduces to
 %
 \begin{equation}
-p(y_j | x_i) \ln p(y_j | x_i) = 0.
+p(y_j | x_i) 
+\ln p(y_j | x_i) 
+= 
+0.
 \end{equation}
 %
 Therefore, $p(y_j | x_i)$ is zero or one.
 Thus, since
 %
 \begin{equation}
-\sum_j p(y_j | x_i) = 1,
+\sum_j p(y_j | x_i) 
+= 
+1,
 \end{equation}
 %
-it can be written that
-%
-\begin{equation}
-p(y_j | x_i) = \delta_{j j'(i)},
-\end{equation}
-%
-where $j'(i)$ is unique for each $i$.
+$p(y_j | x_i)$ is one for a unique $x_i$ and zero for others.
 
 
 \subsection{}
