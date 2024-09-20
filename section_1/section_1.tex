@@ -3154,38 +3154,69 @@ Finally,
 Let us assume that
 %
 \begin{equation}
-p(x, y) = p(x) p(y) \Rightarrow h(x, y) = h(x) + h(y).
+p(x, y) 
+= 
+p(x) 
+p(y) 
+\Rightarrow 
+h(x, y) 
+= 
+h(x) 
++ 
+h(y).
 \end{equation}
 %
 Let $h(p)$ be a function to relate $h$ and $p$.
 Then
 %
 \begin{equation}
-h \left( p ^ 2 \right) = h(p) + h(p).
-\end{equation}
-%
-Therefore,
-%
-\begin{equation}
-h \left( p ^ 2 \right) = 2 h(p).
+h 
+\left( 
+	p ^ 2 
+\right)
+= 
+2
+h(p).
 \end{equation}
 %
 Let us assume that, for a positive integer $n$,
 %
 \begin{equation}
-h \left( p ^ n \right) = n h(p).
+h 
+\left( 
+	p ^ n 
+\right) 
+= 
+n 
+h(p).
 \end{equation}
 %
 Then, by the first assumption,
 %
 \begin{equation}
-h \left( p ^ {n + 1} \right) = h \left( p ^ n \right) + h(p).
+h 
+\left( 
+	p ^ {n + 1} 
+\right) 
+= 
+h 
+\left( 
+	p ^ n 
+\right) 
++ 
+h(p).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-h \left( p ^ {n + 1} \right) = (n + 1) h(p).
+h 
+\left( 
+	p ^ {n + 1} 
+\right) 
+= 
+(n + 1) 
+h(p).
 \end{equation}
 %
 Thus, the second assumption is proved by induction on $n$.
@@ -3193,7 +3224,15 @@ Thus, the second assumption is proved by induction on $n$.
 Additionally, for positive integers $m$ and $n$, 
 %
 \begin{equation}
-h \left( p ^ n \right) = h \left( p ^ {\frac{n}{m} m} \right).
+h 
+\left( 
+	p ^ n 
+\right) 
+= 
+h 
+\left(
+	 p ^ {\frac{n}{m} m} 
+\right).
 \end{equation}
 %
 By the second assumption, the left hand side can be written as $n h(p)$.
@@ -3201,34 +3240,58 @@ By the first assumption, the right hand side can be written as $m h \left( p ^ \
 Therefore,
 %
 \begin{equation}
-h \left( p ^ \frac{n}{m} \right) = \frac{n}{m} h(p).
+h 
+\left(
+	p ^ \frac{n}{m} 
+\right) 
+= 
+\frac{n}{m} 
+h(p).
 \end{equation}
 %
 
 Finally, by the continuity, for a positive real number $a$,
 %
 \begin{equation}
-h \left( p ^a \right) = a h(p).
+h 
+\left( 
+	p ^a 
+\right) 
+= 
+a 
+h(p).
 \end{equation}
 %
 Taking the derivative with respect to $a$ and substituting $a = 1$ gives
 %
 \begin{equation}
-(p \ln p) h' (p) = h(p).
+(p \ln p) 
+h' (p) 
+= 
+h(p).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\int \frac{h'(p)}{h(p)} dp = \int \frac{1}{p \ln p} dp + C,
+\int 
+\frac{h'(p)}{h(p)} 
+dp 
+= 
+\int 
+\frac{1}{p \ln p} 
+dp 
++ 
+\const.
 \end{equation}
 %
-where $C$ is a constant.
 Ignorting the constants, the left hand side can be written as $\ln h(p)$ and the right hand side can be written as $\ln (\ln p)$.
 Thus,
 %
 \begin{equation}
-h(p) \propto \ln p.
+h(p) 
+\propto 
+\ln p.
 \end{equation}
 %
 
