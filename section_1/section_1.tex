@@ -4543,50 +4543,124 @@ Let $f$ be a strictly convex function.
 Then, by the definition,
 %
 \begin{equation}
-f \left( \lambda x_1 + (1 - \lambda) x_2 \right) \leq \lambda f(x_1) + (1 - \lambda) f(x_2),
+f 
+\left( 
+	\lambda 
+	x_1 
+	+ 
+	(1 - \lambda) 
+	x_2 
+\right) 
+\leq 
+\lambda 
+f(x_1) 
++ 
+(1 - \lambda) 
+f(x_2),
 \end{equation}
 %
 where $0 \leq \lambda \leq 1$.
 Let us assume that 
 %
 \begin{equation}
-f \left( \sum_{i = 1}^{M} \lambda_i x_i \right) \leq \sum_{i = 1}^{M} \lambda_i f(x_i),
+f 
+\left( 
+	\sum_{i = 1}^{M} 
+	\lambda_i 
+	x_i 
+\right) 
+\leq 
+\sum_{i = 1}^{M} 
+\lambda_i 
+f(x_i),
 \end{equation}
 %
 where $\lambda_i \geq 0$ and
 %
 \begin{equation}
-\sum_{i = 1}^{M} \lambda_i = 1.
+\sum_{i = 1}^{M} 
+\lambda_i 
+= 
+1.
 \end{equation}
 %
 Here, let $\lambda_i \geq 0$ and
 %
 \begin{equation}
-\sum_{i = 1}^{M + 1} \lambda_i = 1.
+\sum_{i = 1}^{M + 1} 
+\lambda_i 
+= 
+1.
 \end{equation}
 %
 Then, by the definition,
 %
 \begin{equation}
-f \left( \sum_{i = 1}^{M + 1} \lambda_i x_i \right) \leq \lambda_{M + 1} f ( x_{M + 1} ) + (1 - \lambda_{M + 1}) f \left( \sum_{i = 1}^{M} \frac{\lambda_i}{1 - \lambda_{M + 1}} x_i \right).
+f 
+\left( 
+	\sum_{i = 1}^{M + 1} 
+	\lambda_i x_i 
+\right) 
+\leq 
+\lambda_{M + 1} 
+f ( x_{M + 1} ) 
++ 
+(1 - \lambda_{M + 1}) 
+f 
+\left( 
+	\sum_{i = 1}^{M} 
+	\frac{\lambda_i}{1 - \lambda_{M + 1}} 
+	x_i 
+\right).
 \end{equation}
 %
 By the assumption,
 %
 \begin{equation}
-f \left( \sum_{i = 1}^{M} \frac{\lambda_i}{1 - \lambda_{M + 1}} x_i \right) \leq \sum_{i = 1}^{M} \frac{\lambda_i}{1 - \lambda_{M + 1}} f(x_i).
+f 
+\left( 
+	\sum_{i = 1}^{M} 
+	\frac{\lambda_i}{1 - \lambda_{M + 1}} 
+	x_i 
+\right) 
+\leq 
+\sum_{i = 1}^{M} 
+\frac{\lambda_i}{1 - \lambda_{M + 1}} 
+f(x_i).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-f \left( \sum_{i = 1}^{M + 1} \lambda_i x_i \right) \leq \lambda_{M + 1} f ( x_{M + 1} ) + (1 - \lambda_{M + 1}) \sum_{i = 1}^{M} \frac{\lambda_i}{1 - \lambda_{M + 1}} f(x_i).
+f 
+\left( 
+	\sum_{i = 1}^{M + 1} 
+	\lambda_i 
+	x_i 
+\right) 
+\leq 
+\lambda_{M + 1} 
+f ( x_{M + 1} ) 
++ 
+(1 - \lambda_{M + 1}) 
+\sum_{i = 1}^{M} 
+\frac{\lambda_i}{1 - \lambda_{M + 1}} 
+f(x_i).
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-f \left( \sum_{i = 1}^{M + 1} \lambda_i x_i \right) \leq \sum_{i = 1}^{M + 1} \lambda_i f(x_i).
+f 
+\left( 
+	\sum_{i = 1}^{M + 1} 
+	\lambda_i 
+	x_i 
+\right) 
+\leq 
+\sum_{i = 1}^{M + 1} 
+\lambda_i 
+f(x_i).
 \end{equation}
 %
 Hence, the assumption is proved by induction on $M$.
