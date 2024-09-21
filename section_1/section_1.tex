@@ -5021,15 +5021,50 @@ Let $\mathbf{x}$ and $\mathbf{y}$ be continuous variables.
 Then, by the definitnion,
 %
 \begin{equation}
-{\rm I}(\mathbf{x}, \mathbf{y}) = - \int \int p(\mathbf{x}, \mathbf{y}) \ln \frac{p(\mathbf{x}) p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} d\mathbf{x} d\mathbf{y}.
+{\rm I}(\mathbf{x}, \mathbf{y}) 
+= 
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\ln 
+\frac{p(\mathbf{x}) p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} 
+d\mathbf{x} d\mathbf{y}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&- \int \int p(\mathbf{x}, \mathbf{y}) \left( \ln p(\mathbf{x}) + \ln \frac{p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} \right) d\mathbf{x} d\mathbf{y} \\
-&= - \int \left( \int p(\mathbf{x}, \mathbf{y}) d\mathbf{y} \right) \ln p(\mathbf{x}) d\mathbf{x} + \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{x} | \mathbf{y}) d\mathbf{x} d\mathbf{y}.
+&
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\left( 
+	\ln p(\mathbf{x}) 
+	+ 
+	\ln \frac{p(\mathbf{y})}{p(\mathbf{x}, \mathbf{y})} 
+\right) 
+d\mathbf{x} 
+d\mathbf{y} \\
+&= 
+- 
+\int 
+\left( 
+	\int 
+	p(\mathbf{x}, \mathbf{y}) 
+	d\mathbf{y} 
+\right) 
+\ln p(\mathbf{x}) 
+d\mathbf{x} 
++ 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\ln p(\mathbf{x} | \mathbf{y}) 
+d\mathbf{x} 
+d\mathbf{y}.
 \end{aligned}
 \end{equation}
 %
@@ -5037,19 +5072,29 @@ By the definition, the first term of the right hand side can be written as ${\rm
 Therefore,
 %
 \begin{equation}
-{\rm I}(\mathbf{x}, \mathbf{y}) = {\rm H}(\mathbf{x}) - {\rm H(\mathbf{x} | \mathbf{y})}.
+{\rm I}(\mathbf{x}, \mathbf{y}) 
+= 
+{\rm H}(\mathbf{x}) 
+- 
+{\rm H(\mathbf{x} | \mathbf{y})}.
 \end{equation}
 %
 By the definition,
 %
 \begin{equation}
-{\rm I}(\mathbf{x}, \mathbf{y}) = {\rm I}(\mathbf{y}, \mathbf{x}).
+{\rm I}(\mathbf{x}, \mathbf{y}) 
+= 
+{\rm I}(\mathbf{y}, \mathbf{x}).
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-{\rm I}(\mathbf{x}, \mathbf{y}) = {\rm H}(\mathbf{y}) - {\rm H(\mathbf{y} | \mathbf{x})}.
+{\rm I}(\mathbf{x}, \mathbf{y}) 
+= 
+{\rm H}(\mathbf{y}) 
+- 
+{\rm H(\mathbf{y} | \mathbf{x})}.
 \end{equation}
 %
 
