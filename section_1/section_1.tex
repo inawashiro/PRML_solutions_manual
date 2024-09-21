@@ -4478,15 +4478,49 @@ Let $\mathbf{x}$ and $\mathbf{y}$ be two variables.
 Then, by the definition, 
 %
 \begin{equation}
-{\rm H}(\mathbf{x}, \mathbf{y}) = - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}.
+{\rm H}(\mathbf{x}, \mathbf{y}) 
+= 
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\ln p(\mathbf{x}, \mathbf{y}) 
+d\mathbf{x} 
+d\mathbf{y}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&- \int \int p(\mathbf{x}, \mathbf{y}) \left( \ln p(\mathbf{y} | \mathbf{x}) + \ln p(\mathbf{x}) \right) d\mathbf{x} d\mathbf{y} \\
-&= - \int \int p(\mathbf{x}, \mathbf{y}) \ln p(\mathbf{y} | \mathbf{x}) d\mathbf{x} d\mathbf{y} - \int \left( \int p(\mathbf{x}, \mathbf{y}) d\mathbf{y} \right) \ln p(\mathbf{x}) d\mathbf{x}.
+&
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\left( 
+	\ln p(\mathbf{y} | \mathbf{x}) 
+	+ 
+	\ln p(\mathbf{x}) 
+\right) 
+d\mathbf{x} 
+d\mathbf{y} \\
+&= 
+- 
+\int 
+\int 
+p(\mathbf{x}, \mathbf{y}) 
+\ln p(\mathbf{y} | \mathbf{x})
+d\mathbf{x} 
+d\mathbf{y} 
+- 
+\int 
+\left( 
+	\int p(\mathbf{x}, \mathbf{y}) 
+	d\mathbf{y} 
+\right) 
+\ln p(\mathbf{x}) 
+d\mathbf{x}.
 \end{aligned}
 \end{equation}
 %
@@ -4494,7 +4528,11 @@ By the definition, the first term of the right hand side can be written as ${\rm
 Therefore,
 %
 \begin{equation}
-{\rm H}(\mathbf{x}, \mathbf{y}) = {\rm H}(\mathbf{y} | \mathbf{x}) + {\rm H}(\mathbf{x}).
+{\rm H}(\mathbf{x}, \mathbf{y}) 
+= 
+{\rm H}(\mathbf{y} | \mathbf{x}) 
++ 
+{\rm H}(\mathbf{x}).
 \end{equation}
 %
 
