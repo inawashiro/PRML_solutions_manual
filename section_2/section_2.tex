@@ -835,7 +835,7 @@ where
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.8}
 Let $x$ and $y$ be variables.
 Then, by the definition,
@@ -884,7 +884,7 @@ Therefore,
 \end{equation}
 %
 
-By the definition,
+Additionally, by the definition,
 %
 \begin{equation}
 \Var x 
@@ -901,7 +901,8 @@ By the result above, the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\E_y 
+&
+\E_y 
 \left( 
 	\E_x 
 	\left( 
@@ -918,7 +919,7 @@ By the result above, the right hand side can be written as
 		y 
 	\right) 
 \right) \\
-&= 
+=& 
 \E_y 
 \left( 
 	\E_x 
@@ -938,35 +939,34 @@ By the result above, the right hand side can be written as
 2 
 \E_y 
 \left( 
-	\E_x 
-	\left( 
-		\left(
-			x 
-			- 
-			\E_x (x | y) 
-		\right) 
+	\left(
 	\left( 
 		\E_x (x | y) 
 		- 
-		\E x \right) 
-		| 
-		y 
+		\E x 
 	\right) 
-\right) \\
+	\E_x 
+	\left(
+		x 
+		- 
+		\E_x (x | y) 
+	\right)
+	|
+	y
+	\right)  
+\right) 
+\\
 &+ 
 \E_y 
 \left( 
-	\E_x 
 	\left( 
-		\left( 
-			\E_x (x | y) 
-			- 
-			\E x 
-		\right) ^ 2 
-		| 
-		y 
-	\right) 
-\right)
+		\E_x (x | y) 
+		- 
+		\E x 
+	\right) ^ 2 
+	| 
+	y 
+\right).
 \end{aligned}
 \end{equation}
 %
@@ -983,17 +983,14 @@ The second term can be written as
 		- 
 		\E x 
 	\right) 
-	\E_x 
-	\left( 
-		\left( 
-			x 
-			- 
-			\E_x (x | y) 
-		\right) 
-		| 
-		y 
-	\right) 
+	\left(
+		\E_x (x | y) 
+		- 
+		\E_x (x | y) 
+	\right)
 \right)
+=
+0.
 \end{equation}
 %
 By the result above, the third term can be written as
