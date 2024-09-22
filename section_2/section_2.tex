@@ -88,47 +88,84 @@ Therefore,
 Let $x$ be a variable such that
 %
 \begin{equation}
-p(x | \mu) = \left( \frac{1 - \mu}{2} \right) ^ \frac{1 - x}{2} \left( \frac{1 + \mu}{2} \right) ^ \frac{1 + x}{2},
+p(x | \mu) 
+= 
+\left( 
+	\frac{1 - \mu}{2} 
+\right) ^ \frac{1 - x}{2} 
+\left( 
+	\frac{1 + \mu}{2} 
+\right) ^ \frac{1 + x}{2},
 \end{equation}
 %
 where $x \in \{ -1, 1 \}$.
 Then,
 %
 \begin{equation}
-\sum_{x} p(x | \mu) = 1.
+\sum_{x} 
+p(x | \mu) 
+= 
+1.
 \end{equation}
 %
 By the definition,
 %
 \begin{equation}
 \begin{aligned}
-\E x &= \mu, \\
-\E x ^ 2 &= 1,
+\E x 
+&= 
+\mu, 
+\\
+\E x ^ 2 
+&= 
+1,
 \end{aligned}
 \end{equation}
 %
 Since
 %
 \begin{equation}
-\Var x = \E x ^ 2 - \left( \E x \right) ^ 2,
+\Var x 
+= 
+\E x ^ 2 
+- 
+\left( 
+	\E x 
+\right) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-\Var x = 1 - \mu ^ 2.
+\Var x 
+= 
+1 
+- 
+\mu ^ 2.
 \end{equation}
 %
 By the definition,
 %
 \begin{equation}
-{\rm H} (x) = - \sum_{x} p(x | \mu) \ln p(x | \mu).
+{\rm H}(x) 
+= 
+- 
+\sum_{x} 
+p(x | \mu) 
+\ln p(x | \mu).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm H} (x) = - \frac{1 - \mu}{2} \ln \frac{1 - \mu}{2} - \frac{1 + \mu}{2} \ln \frac{1 + \mu}{2}.
+{\rm H} (x) 
+= 
+- 
+\frac{1 - \mu}{2} 
+\ln \frac{1 - \mu}{2} 
+- 
+\frac{1 + \mu}{2} 
+\ln \frac{1 + \mu}{2}.
 \end{equation}
 %
 
