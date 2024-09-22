@@ -841,36 +841,132 @@ Let $x$ and $y$ be variables.
 Then, by the definition,
 %
 \begin{equation}
-\E x = \int x p(x) dx.
+\E x 
+= 
+\int 
+x 
+p(x) 
+dx.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\int x \left( \int p(x, y) dy \right) dx = \int \left( \int x p(x | y) dx \right) p(y) dy.
+\int 
+x 
+\left( 
+	\int 
+	p(x, y) 
+	dy 
+\right) 
+dx 
+= 
+\int 
+\left( 
+	\int 
+	x 
+	p(x | y) 
+	dx 
+\right) 
+p(y) 
+dy.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E x = \E_y \left( \E_x (x | y) \right).
+\E x 
+= 
+\E_y 
+\left( 
+	\E_x (x | y)
+\right).
 \end{equation}
 %
 
 By the definition,
 %
 \begin{equation}
-\Var x = \E \left( x - \E x \right) ^ 2.
+\Var x 
+= 
+\E 
+\left( 
+	x 
+	- 
+	\E x 
+\right) ^ 2.
 \end{equation}
 %
 By the result above, the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\E_y \left( \E_x \left( \left( x - \E_x (x | y) + \E_x (x | y) - \E x \right) ^ 2 | y \right) \right) \\
-&= \E_y \left( \E_x \left( \left( x - \E_x (x | y) \right) ^ 2 | y \right) \right) \\
-&+ 2 \E_y \left( \E_x \left( \left( x - \E_x (x | y) \right) \left( \E_x (x | y) - \E x \right) | y \right) \right) \\
-&+ \E_y \left( \E_x \left( \left( \E_x (x | y) - \E x \right) ^ 2 | y \right) \right)
+&\E_y 
+\left( 
+	\E_x 
+	\left( 
+		\left( 
+			x 
+			- 
+			\E_x (x | y) 
+			+ 
+			\E_x (x | y) 
+			- 
+			\E x 
+		\right) ^ 2 
+		| 
+		y 
+	\right) 
+\right) \\
+&= 
+\E_y 
+\left( 
+	\E_x 
+	\left( 
+		\left( 
+			x 
+			- 
+			\E_x (x | y) 
+		\right) ^ 2 
+		| 
+		y 
+	\right) 
+\right) 
+\\
+&
++ 
+2 
+\E_y 
+\left( 
+	\E_x 
+	\left( 
+		\left(
+			x 
+			- 
+			\E_x (x | y) 
+		\right) 
+	\left( 
+		\E_x (x | y) 
+		- 
+		\E x \right) 
+		| 
+		y 
+	\right) 
+\right) \\
+&+ 
+\E_y 
+\left( 
+	\E_x 
+	\left( 
+		\left( 
+			\E_x (x | y) 
+			- 
+			\E x 
+		\right) ^ 2 
+		| 
+		y 
+	\right) 
+\right)
 \end{aligned}
 \end{equation}
 %
@@ -879,19 +975,60 @@ By the definition, the first term can be written as $\E_y \left( \Var_x (x | y) 
 The second term can be written as
 %
 \begin{equation}
-2 \E_y \left( \left( \E_x (x | y) - \E x \right) \E_x \left( \left( x - \E_x (x | y) \right) | y \right) \right)
+2 
+\E_y 
+\left( 
+	\left( 
+		\E_x (x | y) 
+		- 
+		\E x 
+	\right) 
+	\E_x 
+	\left( 
+		\left( 
+			x 
+			- 
+			\E_x (x | y) 
+		\right) 
+		| 
+		y 
+	\right) 
+\right)
 \end{equation}
 %
 By the result above, the third term can be written as
 %
 \begin{equation}
-\E_y \left( \E_x (x | y) - \E_y \left( \E_x (x | y) \right) \right) ^ 2 = \Var_y \left( \E_x (x | y) \right).
+\E_y 
+\left( 
+	\E_x (x | y) 
+	- 
+	\E_y 
+	\left( 
+		\E_x (x | y) 
+	\right) 
+\right) ^ 2 
+= 
+\Var_y 
+\left( 
+	\E_x (x | y) 
+\right).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\Var x = \E_y \left( \Var_x (x | y) \right) + \Var_y \left( \E_x (x | y) \right).
+\Var x 
+= 
+\E_y 
+\left( 
+	\Var_x (x | y) 
+\right) 
++ 
+\Var_y 
+\left( 
+	\E_x (x | y) 
+\right).
 \end{equation}
 %
 
