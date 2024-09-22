@@ -6,47 +6,79 @@
 Let $x$ be a variable such that
 %
 \begin{equation}
-p(x | \mu) = \mu ^ x (1 - \mu) ^ {1 - x},
+p(x | \mu) 
+= 
+\mu ^ x 
+(1 - \mu) ^ {1 - x},
 \end{equation}
 %
 where $x \in \{ 0, 1 \}$.
 Then,
 %
 \begin{equation}
-\sum_{x} p(x | \mu) = 1.
+\sum_{x} 
+p(x | \mu) 
+= 
+1.
 \end{equation}
 %
 By the definition,
 %
 \begin{equation}
 \begin{aligned}
-\E x &= \mu, \\
-\E x ^ 2 &= \mu,
+\E x 
+&= 
+\mu, 
+\\
+\E x ^ 2 
+&= 
+\mu,
 \end{aligned}
 \end{equation}
 %
 Since
 %
 \begin{equation}
-\Var x = \E x ^ 2 - \left( \E x \right) ^ 2,
+\Var x 
+= 
+\E x ^ 2 
+- 
+\left( 
+	\E x 
+\right) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-\Var x = \mu (1 - \mu).
+\Var x 
+= 
+\mu 
+(1 - \mu).
 \end{equation}
 %
 By the definition,
 %
 \begin{equation}
-{\rm H} (x) = - \sum_{x} p(x | \mu) \ln p(x | \mu).
+{\rm H}(x) 
+= 
+- 
+\sum_{x} 
+p(x | \mu) 
+\ln p(x | \mu).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{\rm H} (x) = - \mu \ln \mu - (1 - \mu) \ln (1 - \mu).
+{\rm H}(x) 
+= 
+- 
+\mu 
+\ln \mu 
+- 
+(1 - \mu) 
+\ln (1 - \mu).
 \end{equation}
 %
 
