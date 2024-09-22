@@ -1080,16 +1080,8 @@ For a vector $\bm{\mu}$ in $M$ dimensions, let us assume that
 d\bm{\mu} 
 = 
 \frac
-{
-\prod_{k = 1}^{M} 
-\Gamma(\alpha_k)
-}
-{
-\Gamma(
-\sum_{k = 1}^{M} 
-\alpha_k
-)
-}.
+{\prod_{k = 1}^{M} \Gamma(\alpha_k)}
+{\Gamma(\sum_{k = 1}^{M} \alpha_k)}.
 \]
 %
 Then, for a vector $\bm{\mu}$ in $M + 1$ dimensions, 
@@ -1206,65 +1198,40 @@ By the assumption, it can be written as
 {\prod_{k = 1}^{M} \Gamma(\alpha_k)}
 {\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)} 
 \frac
-{
-\Gamma(\alpha_{M + 1}) 
-\Gamma 
-( 
-\sum_{k = 1}^{M} 
-\alpha_k + 1 
-)
-}
-{
-\Gamma 
-(
-\sum_{k = 1}^{M + 1} 
-\alpha_k + 1
-)
-}
+{\Gamma(\alpha_{M + 1}) \Gamma (\sum_{k = 1}^{M} \alpha_k + 1 )}
+{\Gamma (\sum_{k = 1}^{M + 1} \alpha_k + 1)}
 = 
 \frac
-{
-\sum_{k = 1}^{M} 
-\alpha_k
-}
-{
-\sum_{k = 1}^{M + 1} 
-\alpha_k
-} 
-\frac{
-\prod_{k = 1}^{M + 1} 
-\Gamma(\alpha_k)
-}
-{
-\Gamma 
-(
-\sum_{k = 1}^{M + 1} 
-\alpha_k 
-)
-}.
+{\sum_{k = 1}^{M} \alpha_k}
+{\sum_{k = 1}^{M + 1} \alpha_k} 
+\frac{\prod_{k = 1}^{M + 1} \Gamma(\alpha_k)}
+{\Gamma(\sum_{k = 1}^{M + 1} \alpha_k )}.
 \end{equation}
 %
 Therefore,
 %
-\begin{equation}
-\int 
+\[ 
+\int_{
+\begin{subarray}{l}
+\sum_{k = 1}^{M + 1} 
+\mu_k 
+= 
+1 
+\\
+\\
+\mu_k 
+\geq 
+0
+\end{subarray}
+} 
 \prod_{k = 1}^{M + 1} 
 \mu_k ^ {\alpha_k - 1} 
 d\bm{\mu} 
 = 
 \frac
-{
-\prod_{k = 1}^{M + 1} 
-\Gamma(\alpha_k)
-}
-{
-\Gamma 
-( 
-\sum_{k = 1}^{M + 1} 
-\alpha_k 
-)
-} ?
-\end{equation}
+{\prod_{k = 1}^{M + 1} \Gamma(\alpha_k)}
+{\Gamma(\sum_{k = 1}^{M + 1} \alpha_k)}
+\]
 %
 Thus, the assumption is proved by induction on $M$.
 
