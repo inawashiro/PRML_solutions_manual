@@ -176,58 +176,107 @@ By the definition,
 %
 \begin{equation}
 \begin{aligned}
-{N \choose m} &= \frac{N!}{m! (N - m)!}, \\
-{N \choose m - 1} &= \frac{N!}{(m - 1)! (N - m + 1)!}
+{N \choose m} 
+&= 
+\frac{N!}{m! (N - m)!}, 
+\\
+{N \choose m - 1} 
+&= 
+\frac{N!}{(m - 1)! (N - m + 1)!}
 \end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-{N \choose m} + {N \choose m - 1} = \frac{(N - m + 1) N! + m N!}{m! (N - m + 1)!}.
+{N \choose m} 
++ 
+{N \choose m - 1} 
+= 
+\frac{(N - m + 1) N! + m N!}{m! (N - m + 1)!}.
 \end{equation}
 %
 By the definition, the right hand side can be written as
 %
 \begin{equation}
-\frac{(N + 1)!}{m! (N + 1 - m)!} = {N + 1 \choose m}.
+\frac{(N + 1)!}{m! (N + 1 - m)!} 
+= 
+{N + 1 \choose m}.
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-{N \choose m} + {N \choose m - 1} = {N + 1 \choose m}.
+{N \choose m} 
++ 
+{N \choose m - 1} 
+= 
+{N + 1 \choose m}.
 \end{equation}
 %
 
 Note that 
 %
 \begin{equation}
-1 + x = \sum_{m = 0}^{1} {1 \choose m} x ^ m.
+1 + x 
+= 
+\sum_{m = 0}^{1} 
+{1 \choose m} 
+x ^ m.
 \end{equation}
 %
 Let us assume that 
 %
 \begin{equation}
-(1 + x) ^ N = \sum_{m = 0}^{N} {N \choose m} x ^ m.
+(1 + x) ^ N 
+= 
+\sum_{m = 0}^{N} 
+{N \choose m} 
+x ^ m.
 \end{equation}
 %
 Then,
 %
 \begin{equation}
-(1 + x) ^ {N + 1} = \sum_{m = 0}^{N} {N \choose m} x ^ m + \sum_{m = 0}^{N} {N \choose m} x ^ {m + 1}.
+(1 + x) ^ {N + 1} 
+= 
+\sum_{m = 0}^{N} 
+{N \choose m} 
+x ^ m 
++ 
+\sum_{m = 0}^{N} 
+{N \choose m} 
+x ^ {m + 1}.
 \end{equation}
 %
 By the result above, the right hand side can be written as
 %
 \begin{equation}
-\sum_{m = 0}^{N} {N \choose m} x ^ m + \sum_{m = 1}^{N + 1} {N \choose m - 1} x ^ m = 1 + x ^ {N + 1} + \sum_{m = 1}^{N} {N + 1 \choose m} x ^ m.
+\sum_{m = 0}^{N} 
+{N \choose m} 
+x ^ m 
++ 
+\sum_{m = 1}^{N + 1} 
+{N \choose m - 1} 
+x ^ m 
+= 
+1 
++ 
+x ^ {N + 1} 
++ 
+\sum_{m = 1}^{N} 
+{N + 1 \choose m} 
+x ^ m.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-(1 + x) ^ {N + 1} = \sum_{m = 0}^{N + 1} {N + 1 \choose m} x ^ m.
+(1 + x) ^ {N + 1} 
+= 
+\sum_{m = 0}^{N + 1} 
+{N + 1 \choose m} 
+x ^ m.
 \end{equation}
 %
 Thus, the assumption is proved by induction on $N$.
@@ -235,25 +284,50 @@ Thus, the assumption is proved by induction on $N$.
 Finally, let $m$ be a variable such that
 %
 \begin{equation}
-p(m | \mu) = {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
+p(m | \mu) 
+= 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m}.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\sum_{m = 0}^{N} p(m | \mu) = \sum_{m = 0}^{N} {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
+\sum_{m = 0}^{N} 
+p(m | \mu) 
+= 
+\sum_{m = 0}^{N} 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m}.
 \end{equation}
 %
 By the result above, the right hand side can be written as
 %
 \begin{equation}
-(1 - \mu) ^ N \sum_{m = 0}^{N} {N \choose m} \left( \frac{\mu}{1 - \mu} \right) ^ m = (1 - \mu) ^ N \left( 1 + \frac{\mu}{1 - \mu} \right) ^ N.
+(1 - \mu) ^ N 
+\sum_{m = 0}^{N} 
+{N \choose m} 
+\left( 
+	\frac{\mu}{1 - \mu} 
+\right) ^ m 
+= 
+(1 - \mu) ^ N 
+\left( 
+	1 
+	+ 
+	\frac{\mu}{1 - \mu} 
+\right) ^ N.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\sum_{m = 0}^{N} p(m | \mu) = 1.
+\sum_{m = 0}^{N} 
+p(m | \mu) 
+= 
+1.
 \end{equation}
 %
 
