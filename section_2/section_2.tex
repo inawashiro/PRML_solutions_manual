@@ -337,60 +337,132 @@ p(m | \mu)
 Let $m$ be a variable such that
 %
 \begin{equation}
-p(m | \mu) = {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
+p(m | \mu) 
+= 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m}.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\E m = \sum_{m = 0}^{N} m {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}.
+\E m 
+= 
+\sum_{m = 0}^{N} 
+m 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m}.
 \end{equation}
 %
 Taking  the derivative of 
 %
 \begin{equation}
-\sum_{m = 0}^{N} {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}  = 1
+\sum_{m = 0}^{N} 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m}  
+= 
+1
 \end{equation}
 %
 with respect to $\mu$ gives
 %
 \begin{equation}
-\sum_{m = 0}^{N} m {N \choose m} \mu ^ {m - 1} (1 - \mu) ^ {N - m} - \sum_{m = 0}^{N} (N - m) {N \choose m} \mu ^ m (1 - \mu) ^ {N - m - 1} = 0.
+\sum_{m = 0}^{N} 
+m 
+{N \choose m} 
+\mu ^ {m - 1} 
+(1 - \mu) ^ {N - m} 
+- 
+\sum_{m = 0}^{N} 
+(N - m) 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m - 1} 
+= 
+0.
 \end{equation}
 %
 The first term of the left hand side can be written as $\frac{1}{\mu} \E m$.
 Since
 %
 \begin{equation}
-(N - m) {N \choose m} = N {N - 1 \choose m},
+(N - m) 
+{N \choose m} 
+= 
+N 
+{N - 1 \choose m},
 \end{equation}
 %
 the second term of the left hand side can be written as
 %
 \begin{equation}
-- N \sum_{m = 0}^{N - 1} {N - 1 \choose m} \mu ^ m (1 - \mu) ^ {N - m - 1} = - N.
+- 
+N 
+\sum_{m = 0}^{N - 1} 
+{N - 1 \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m - 1} 
+= 
+- 
+N.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E m = N \mu. 
+\E m 
+= 
+N 
+\mu. 
 \end{equation}
 %
 
 Taking  the second derivative of 
 %
 \begin{equation}
-\sum_{m = 0}^{N} {N \choose m} \mu ^ m (1 - \mu) ^ {N - m}  = 1
+\sum_{m = 0}^{N} 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m} 
+= 
+1
 \end{equation}
 %
 with respect to $\mu$ gives
 %
 \begin{equation}
 \begin{aligned}
-&\sum_{m = 0}^{N} m (m - 1) {N \choose m} \mu ^ {m - 2} (1 - \mu) ^ {N - m} \\
-&- 2 \sum_{m = 0}^{N} m (N - m) {N \choose m} \mu ^ {m - 1} (1 - \mu) ^ {N - m - 1} \\
-&+ \sum_{m = 0}^{N} (N - m) (N - m - 1) {N \choose m} \mu ^ m (1 - \mu) ^ {N - m - 2} = 0.
+&
+\sum_{m = 0}^{N} 
+m 
+(m - 1) 
+{N \choose m} 
+\mu ^ {m - 2} 
+(1 - \mu) ^ {N - m} 
+\\
+&
+- 
+2 
+\sum_{m = 0}^{N} 
+m 
+(N - m) 
+{N \choose m} 
+\mu ^ {m - 1} 
+(1 - \mu) ^ {N - m - 1} 
+\\
+&
++ 
+\sum_{m = 0}^{N} 
+(N - m) 
+(N - m - 1) 
+{N \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m - 2} 
+= 
+0.
 \end{aligned}
 \end{equation}
 %
@@ -399,8 +471,21 @@ Since
 %
 \begin{equation}
 \begin{aligned}
-m (N - m) {N \choose m} &= N (N - 1) {N - 2 \choose m - 1}, \\
-(N - m) (N - m - 1) {N \choose m} &= N (N - 1) {N - 2 \choose m},
+m 
+(N - m) 
+{N \choose m} 
+&= 
+N 
+(N - 1) 
+{N - 2 \choose m - 1}, 
+\\
+(N - m) 
+(N - m - 1) 
+{N \choose m} 
+&= 
+N 
+(N - 1) 
+{N - 2 \choose m},
 \end{aligned}
 \end{equation}
 %
@@ -408,27 +493,61 @@ the second and third term of the left hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-- 2 N (N - 1) \sum_{m = 1}^{N - 1} {N - 2 \choose m - 1} \mu ^ {m - 1} (1 - \mu) ^ {N - m - 1} &= - 2 N (N - 1), \\
-N (N - 1) \sum_{m = 0}^{N} {N - 2 \choose m} \mu ^ m (1 - \mu) ^ {N - m - 2} &= N (N - 1).
+- 
+2 
+N 
+(N - 1) 
+\sum_{m = 1}^{N - 1} 
+{N - 2 \choose m - 1} 
+\mu ^ {m - 1} 
+(1 - \mu) ^ {N - m - 1} 
+&= 
+- 
+2 
+N 
+(N - 1), \\
+N 
+(N - 1) 
+\sum_{m = 0}^{N} 
+{N - 2 \choose m} 
+\mu ^ m 
+(1 - \mu) ^ {N - m - 2} 
+&= 
+N 
+(N - 1).
 \end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E m (m - 1) = N (N - 1) \mu ^ 2.
+\E m (m - 1) 
+= 
+N 
+(N - 1) 
+\mu ^ 2.
 \end{equation}
 %
 Thus, since 
 %
 \begin{equation}
-\Var m = \E m (m - 1) + \E m - ( \E m ) ^ 2,
+\Var m 
+= 
+\E m (m - 1) 
++ 
+\E m 
+- 
+( \E m ) ^ 2,
 \end{equation}
 %
 we have
 %
 \begin{equation}
-\Var m = N \mu ( 1 - \mu).
+\Var m 
+= 
+N 
+\mu 
+( 1 - \mu).
 \end{equation}
 %
 
