@@ -1037,12 +1037,26 @@ For a vector $\bm{\mu}$ in 2 dimensions, \ref{2.5} gives
 \[
 \int_{
 \begin{subarray}{l}
-\mu_1 + \mu_2 = 1 \\\\
-\mu_1 \geq 0, \mu_2 \geq 0
+\mu_1 
++ 
+\mu_2 
+= 
+1 
+\\
+\\
+\mu_1 
+\geq 
+0, 
+\mu_2 
+\geq 
+0
 \end{subarray}
 } 
-\mu_1 ^ {\alpha_1 - 1} \mu_2 ^ {\alpha_2 - 1} d\bm{\mu}
-= \frac{\Gamma(\alpha_1) \Gamma(\alpha_2)}{\Gamma(\alpha_1 + \alpha_2)}.
+\mu_1 ^ {\alpha_1 - 1} 
+\mu_2 ^ {\alpha_2 - 1} 
+d\bm{\mu}
+= 
+\frac{\Gamma(\alpha_1) \Gamma(\alpha_2)}{\Gamma(\alpha_1 + \alpha_2)}.
 \]
 %
 For a vector $\bm{\mu}$ in $M$ dimensions, let us assume that
@@ -1050,12 +1064,32 @@ For a vector $\bm{\mu}$ in $M$ dimensions, let us assume that
 \[ 
 \int_{
 \begin{subarray}{l}
-\sum_{k = 1}^{M} \mu_k = 1 \\\\
-\mu_k \geq 0
+\sum_{k = 1}^{M} 
+\mu_k 
+= 
+1 
+\\
+\\
+\mu_k 
+\geq 
+0
 \end{subarray}
 } 
-\prod_{k = 1}^{M} \mu_k ^ {\alpha_k - 1} d\bm{\mu} 
-= \frac{\prod_{k = 1}^{M} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)}.
+\prod_{k = 1}^{M} 
+\mu_k ^ {\alpha_k - 1} 
+d\bm{\mu} 
+= 
+\frac
+{
+\prod_{k = 1}^{M} 
+\Gamma(\alpha_k)
+}
+{
+\Gamma(
+\sum_{k = 1}^{M} 
+\alpha_k
+)
+}.
 \]
 %
 Then, for a vector $\bm{\mu}$ in $M + 1$ dimensions, 
@@ -1063,62 +1097,173 @@ Then, for a vector $\bm{\mu}$ in $M + 1$ dimensions,
 \[
 \int_{
 \begin{subarray}{l}
-\sum_{k = 1}^{M + 1} \mu_k = 1 \\\\
-\mu_k \geq 0
+\sum_{k = 1}^{M + 1} 
+\mu_k 
+= 
+1 \\
+\\
+\mu_k 
+\geq 
+0
 \end{subarray}
 }
-\prod_{k = 1}^{M + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} 
-= \int_{0}^{1} \mu_{M + 1} ^ {\alpha_{M + 1} - 1} 
-\left( \int_{
-\begin{subarray}{l}
-\sum_{k = 1}^{M} \mu'_k = 1 - \mu_{M + 1} \\\\
-\mu'_k \geq 0
-\end{subarray}
-}
-\prod_{k = 1}^{M} {\mu'_k} ^ {\alpha_k - 1} d\bm{\mu}' 
-\right) d\mu_{M + 1}.
+\prod_{k = 1}^{M + 1} 
+\mu_k ^ {\alpha_k - 1} 
+d\bm{\mu} 
+= 
+\int_{0}^{1} 
+\mu_{M + 1} ^ {\alpha_{M + 1} - 1} 
+\left( 
+	\int_{
+	\begin{subarray}{l}
+	\sum_{k = 1}^{M} 
+	\mu'_k 
+	= 
+	1 
+	- 
+	\mu_{M + 1} 
+	\\
+	\\
+	\mu'_k 
+	\geq 
+	0
+	\end{subarray}
+	}
+	\prod_{k = 1}^{M} 
+	{\mu'_k} ^ {\alpha_k - 1} 
+	d\bm{\mu}' 
+\right) 
+d\mu_{M + 1}.
 \]
 %
 where $\bm{\mu}'$ is the vector of the first $M$ elements of $\bm{\mu}$.
 By the transformation 
 %
 \begin{equation}
-\bm{\mu}'' = \frac{1}{1 - \mu_{M + 1}} \bm{\mu}',
+\bm{\mu}'' 
+= 
+\frac{1}{1 - \mu_{M + 1}} 
+\bm{\mu}',
 \end{equation}
 %
 the right hand side can be written as
 %
 \[
-\int_{0}^{1} \mu_{M + 1} ^ {\alpha_{M + 1} - 1} 
-\left( \int_{
-\begin{subarray}{l}
-\sum_{k = 1}^{M} \mu''_k = 1 \\\\
-\mu''_k \geq 0
-\end{subarray}
-} \left( \prod_{k = 1}^{M} \left( (1 - \mu_{M + 1}){\mu''_k} \right) ^ {\alpha_k - 1} \right) (1 - \mu_{M + 1}) ^ M d\bm{\mu}'' \right) d\mu_{M + 1},
+\int_{0}^{1} 
+\mu_{M + 1} ^ {\alpha_{M + 1} - 1} 
+\left( 
+	\int_{
+	\begin{subarray}{l}
+	\sum_{k = 1}^{M} \mu''_k = 1 
+	\\
+	\\
+	\mu''_k 
+	\geq 
+	0
+	\end{subarray}
+	} 
+	\left( 
+		\prod_{k = 1}^{M} 
+		\left( 
+			(1 - \mu_{M + 1})
+			{\mu''_k} 
+	\right) ^ {\alpha_k - 1} 
+\right) 
+(1 - \mu_{M + 1}) ^ M 
+d\bm{\mu}'' \right) 
+d\mu_{M + 1},
 \]
 %
 so that
 \[
-\int_{0}^{1} \mu_{M + 1} ^ {\alpha_{M + 1} - 1} (1 - \mu_{M + 1}) ^ {\Sigma_{k = 1}^{M} \alpha_k} 
-\left( \int_{
-\begin{subarray}{l}
-\sum_{k = 1}^{M} \mu''_k = 1 \\\\
-\mu''_k \geq 0
-\end{subarray}
-} \prod_{k = 1}^{M} {\mu''_k} ^ {\alpha_k - 1} d\bm{\mu}'' \right) d\mu_{M + 1}.
+\int_{0}^{1} 
+\mu_{M + 1} ^ {\alpha_{M + 1} - 1} 
+(1 - \mu_{M + 1}) ^ {\Sigma_{k = 1}^{M} \alpha_k} 
+\left( 
+	\int_{
+	\begin{subarray}{l}
+	\sum_{k = 1}^{M} 
+	\mu''_k 
+	= 
+	1 
+	\\
+	\\
+	\mu''_k 
+	\geq 
+	0
+	\end{subarray}
+	} 
+	\prod_{k = 1}^{M} 
+	{\mu''_k} ^ {\alpha_k - 1} 
+	d\bm{\mu}'' 
+\right) 
+d\mu_{M + 1}.
 \]
 By the assumption, it can be written as
 %
 \begin{equation}
-\frac{\prod_{k = 1}^{M} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)} \frac{\Gamma(\alpha_{M + 1}) \Gamma \left( \sum_{k = 1}^{M} \alpha_k + 1 \right)}{\Gamma \left( \sum_{k = 1}^{M + 1} \alpha_k + 1 \right)}
-= \frac{\sum_{k = 1}^{M} \alpha_k}{\sum_{k = 1}^{M + 1} \alpha_k} \frac{\prod_{k = 1}^{M + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M + 1} \alpha_k \right)}.
+\frac
+{\prod_{k = 1}^{M} \Gamma(\alpha_k)}
+{\Gamma \left( \sum_{k = 1}^{M} \alpha_k \right)} 
+\frac
+{
+\Gamma(\alpha_{M + 1}) 
+\Gamma 
+( 
+\sum_{k = 1}^{M} 
+\alpha_k + 1 
+)
+}
+{
+\Gamma 
+(
+\sum_{k = 1}^{M + 1} 
+\alpha_k + 1
+)
+}
+= 
+\frac
+{
+\sum_{k = 1}^{M} 
+\alpha_k
+}
+{
+\sum_{k = 1}^{M + 1} 
+\alpha_k
+} 
+\frac{
+\prod_{k = 1}^{M + 1} 
+\Gamma(\alpha_k)
+}
+{
+\Gamma 
+(
+\sum_{k = 1}^{M + 1} 
+\alpha_k 
+)
+}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\int \prod_{k = 1}^{M + 1} \mu_k ^ {\alpha_k - 1} d\bm{\mu} = \frac{\prod_{k = 1}^{M + 1} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{M + 1} \alpha_k \right)} ?
+\int 
+\prod_{k = 1}^{M + 1} 
+\mu_k ^ {\alpha_k - 1} 
+d\bm{\mu} 
+= 
+\frac
+{
+\prod_{k = 1}^{M + 1} 
+\Gamma(\alpha_k)
+}
+{
+\Gamma 
+( 
+\sum_{k = 1}^{M + 1} 
+\alpha_k 
+)
+} ?
 \end{equation}
 %
 Thus, the assumption is proved by induction on $M$.
