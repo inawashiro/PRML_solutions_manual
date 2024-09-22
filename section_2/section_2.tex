@@ -557,15 +557,43 @@ N
 By the definition,
 %
 \begin{equation}
-\Gamma (a) \Gamma (b) = \int_{0}^{\infty} x ^ {a - 1} \exp (- x) dx \int_{0}^{\infty} y ^ {b - 1} \exp (- y) dy.
+\Gamma (a) 
+\Gamma (b) 
+= 
+\int_{0}^{\infty} 
+x ^ {a - 1} 
+\exp (- x) 
+dx 
+\int_{0}^{\infty} 
+y ^ {b - 1} 
+\exp (- y) 
+dy.
 \end{equation}
 %
 By the transformation $t = x + y$, the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int_{0}^{\infty} x ^ {a - 1} \left( \int_{x}^{\infty} (t - x) ^ {b - 1} \exp (- t) dt \right) dx \\
-&=  \int_{0}^{\infty} \left( \int_{0}^{t} x ^ {a - 1} (t - x) ^ {b - 1} dx \right) \exp (- t) dt.
+&
+\int_{0}^{\infty} 
+x ^ {a - 1} 
+\left( 
+	\int_{x}^{\infty} 
+	(t - x) ^ {b - 1} 
+	\exp (- t) 
+	dt 
+\right) 
+dx \\
+&= 
+\int_{0}^{\infty} 
+\left( 
+	\int_{0}^{t} 
+	x ^ {a - 1}
+	(t - x) ^ {b - 1} 
+	dx 
+\right) 
+\exp (- t) 
+dt.
 \end{aligned}
 \end{equation}
 %
@@ -573,8 +601,27 @@ By the transformation $x = t \mu$, the right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int_{0}^{\infty} \left( \int_{0}^{1} (t \mu) ^ {a - 1} t ^ {b - 1} (1 - \mu) ^ {b - 1} t d\mu \right) \exp (- t) dt \\
-&= \int_{0}^{1} \mu ^ {a - 1} (1 - \mu) ^ {b - 1} d\mu \int_{0}^{\infty} t ^ {a + b - 1} \exp ( - t ) dt.
+&
+\int_{0}^{\infty} 
+\left( 
+	\int_{0}^{1} 
+	(t \mu) ^ {a - 1} 
+	t ^ {b - 1} 
+	(1 - \mu) ^ {b - 1} 
+	t 
+	d\mu 
+\right) 
+\exp (- t) 
+dt \\
+&= 
+\int_{0}^{1} 
+\mu ^ {a - 1} 
+(1 - \mu) ^ {b - 1} 
+d\mu 
+\int_{0}^{\infty} 
+t ^ {a + b - 1} 
+\exp ( - t ) 
+dt.
 \end{aligned}
 \end{equation}
 %
@@ -583,7 +630,12 @@ By the definition, the second integral of the right hand side  can be written as
 Therefore,
 %
 \begin{equation}
-\int_{0}^{1} \mu ^ {a - 1} (1 - \mu) ^ {b - 1} d\mu = \frac{\Gamma (a) \Gamma (b)}{\Gamma (a + b)}.
+\int_{0}^{1} 
+\mu ^ {a - 1} 
+(1 - \mu) ^ {b - 1} 
+d\mu 
+= 
+\frac{\Gamma (a) \Gamma (b)}{\Gamma (a + b)}.
 \end{equation}
 %
 
