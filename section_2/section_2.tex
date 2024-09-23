@@ -1086,46 +1086,124 @@ d\bm{\mu}
 %
 Then, for a vector $\bm{\mu}$ in $M + 1$ dimensions, 
 %
-\[
-\int_{
-\begin{subarray}{l}
-\sum_{k = 1}^{M + 1} 
-\mu_k 
-= 
-1 \\
-\\
-\mu_k 
-\geq 
-0
-\end{subarray}
-}
+\begin{equation}
+\begin{aligned}
+&
+\int_{0}^{1 - \sum_{k = 1}^{M - 1} \mu_k}
 \prod_{k = 1}^{M + 1} 
 \mu_k ^ {\alpha_k - 1} 
-d\bm{\mu} 
-= 
-\int_{
-\begin{subarray}{l}
-\sum_{k = 1}^{M + 1} 
-\mu_k 
-= 
-1 \\
+d\mu_M 
 \\
-\mu_k 
-\geq 
-0
-\end{subarray}
-} 
+&= 
 \left( 
-	\prod_{k = 1}^{M} 
-	{\mu'_k} ^ {\alpha_k - 1} 
+	\prod_{k = 1}^{M - 1} 
+	{\mu_k} ^ {\alpha_k - 1} 
+\right)
+\int_{0}^{1 - \sum_{k = 1}^{M - 1} \mu_k} 
+{\mu_M} ^ {\alpha_M - 1} 
+\left(
+	1
+	-
+	\sum_{k = 1}^{M - 1} \mu_k
+	-
+	\mu_M
+\right) ^ {\alpha_{M + 1} - 1}  
+d\mu_M.
+\end{aligned}
+\end{equation}
+%
+By the transformation
+%
+\begin{equation}
+\mu'_{M}
+=
+\frac
+{\mu_M}
+{1
+-
+\sum_{k = 1}^{M - 1} \mu_k},
+\end{equation}
+%
+the integral of the right hand side can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\int_{0}^{1}
+\left(
+	\left(
+		1
+		-
+		\sum_{k = 1}^{M - 1} 
+		\mu_k
+	\right)
+	\mu'_{M + 1}
+\right) ^ {\alpha_M - 1}
+\left(
+	\left(
+		1
+		-
+		\sum_{k = 1}^{M - 1} 
+		\mu_k
+	\right)
+	\left(
+		1
+		-
+		\mu'_M		
+	\right)
+\right) ^ {\alpha_{M + 1} - 1}
+\left(
+	1
+	-
+	\sum_{k = 1}^{M - 1} 
+	\mu_k
+\right)
+d\mu'_{M}
+\\
+=&
+\left(
+	1
+	-
+	\sum_{k = 1}^{M - 1} 
+	\mu_k
+\right) ^ {\alpha_M + \alpha_{M + 1} - 1}
+\int_{0}^{1}
+{\mu'_{M + 1}} ^ {\alpha_M - 1}
+(1 - \mu'_{M + 1}) ^ {\alpha_{M + 1} - 1}
+d\mu'_{M}.
+\end{aligned}
+\end{equation}
+%
+By \ref{2.5}, the integral of the right hand side can be written as
+%
+\begin{equation}
+\frac
+{\Gamma(\alpha_M) \Gamma(\alpha_{M + 1})}
+{\Gamma(\alpha_M + \alpha_{M + 1})}.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\int_{0}^{1 - \sum_{k = 1}^{M - 1} \mu_k}
+\prod_{k = 1}^{M + 1} 
+\mu_k ^ {\alpha_k - 1} 
+d\mu_M
+=
+\left( 
+	\prod_{k = 1}^{M - 1} 
+	{\mu_k} ^ {\alpha_k - 1} 
 \right)
 \left(
 	1
 	-
-	\sum_{k = 1}^{M} \mu_k
-\right) ^ {\alpha_{M + 1} - 1}  
-d\bm{\mu}.
-\]
+	\sum_{k = 1}^{M - 1} 
+	\mu_k
+\right) ^ {\alpha_M + \alpha_{M + 1} - 1}
+\frac
+{\Gamma(\alpha_M) \Gamma(\alpha_{M + 1})}
+{\Gamma(\alpha_M + \alpha_{M + 1})}.
+\end{equation}
 %
 
 
