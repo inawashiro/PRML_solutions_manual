@@ -1431,37 +1431,88 @@ we have
 Let $\bm{\mu}$ be a variable such that
 %
 \begin{equation}
-p(\bm{\mu} | \bm{\alpha}) = \frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1}.
+p(\bm{\mu} | \bm{\alpha}) 
+= 
+\frac
+{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}
+{\prod_{k = 1}^{K} \Gamma(\alpha_k)} 
+\prod_{k = 1}^{K} 
+\mu_k ^ {\alpha_k - 1}.
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\E \ln \mu_j = \int \left( \ln \mu_j \right) p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}.
+\E \ln \mu_j 
+= 
+\int 
+\left( 
+	\ln \mu_j 
+\right) 
+p(\bm{\mu} | \bm{\alpha}) 
+d\bm{\mu}.
 \end{equation}
 %
 Since
 %
 \begin{equation}
-\frac{\partial}{\partial \alpha_j} p(\bm{\mu} | \bm{\alpha}) = \left( \frac{\Gamma' \left( \sum_{k = 1}^{K} \alpha_k \right)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)} - \frac{\Gamma'(\alpha_j)}{\Gamma(\alpha_j)} + \ln \mu_j \right) p(\bm{\mu} | \bm{\alpha}),
+\frac{\partial}{\partial \alpha_j} 
+p(\bm{\mu} | \bm{\alpha}) 
+= 
+\left( 
+	\frac
+	{\Gamma' \left( \sum_{k = 1}^{K} \alpha_k \right)}
+	{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)} 
+	- 
+	\frac
+	{\Gamma'(\alpha_j)}
+	{\Gamma(\alpha_j)} + \ln \mu_j 
+\right) 
+p(\bm{\mu} | \bm{\alpha}),
 \end{equation}
 %
 we have
 %
 \begin{equation}
-\E \ln \mu_j = \frac{\partial}{\partial \alpha_j} \int p(\bm{\mu} | \bm{\alpha}) d\bm{\mu} + \left( \psi (\alpha_j) - \psi \left( \sum_{k = 1}^{K} \alpha_k \right) \right) \int p(\bm{\mu} | \bm{\alpha}) d\bm{\mu},
+\E \ln \mu_j 
+= 
+\frac{\partial}{\partial \alpha_j} 
+\int 
+p(\bm{\mu} | \bm{\alpha}) 
+d\bm{\mu} 
++ 
+\left( 
+	\psi (\alpha_j) 
+	- 
+	\psi 
+	\left( 
+		\sum_{k = 1}^{K} \alpha_k 
+	\right) 
+\right) 
+\int 
+p(\bm{\mu} | \bm{\alpha}) 
+d\bm{\mu},
 \end{equation}
 %
 where
 %
 \begin{equation}
-\psi(a) = \frac{d}{da} \ln \Gamma(a).
+\psi(a) 
+= 
+\frac{d}{da} \ln \Gamma(a).
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\E \ln \mu_j = \psi(\alpha_j) - \psi \left( \sum_{k = 1}^{K} \alpha_k \right).
+\E \ln \mu_j 
+= 
+\psi(\alpha_j) 
+- 
+\psi 
+\left( 
+	\sum_{k = 1}^{K} \alpha_k 
+\right).
 \end{equation}
 %
 
