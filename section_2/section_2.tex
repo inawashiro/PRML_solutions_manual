@@ -1030,7 +1030,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.9}
 For a vector $\bm{\mu}$ in 2 dimensions, \ref{2.5} gives
 %
@@ -1101,7 +1101,7 @@ we have
 \int_{0}^{1 - \sum_{k = 1}^{M - 1} \mu_k}
 \prod_{k = 1}^{M + 1} 
 \mu_k ^ {\alpha_k - 1} 
-d\mu_M 
+d\mu_{M + 1} 
 \\
 =& 
 \left( 
@@ -1109,25 +1109,25 @@ d\mu_M
 	{\mu_k} ^ {\alpha_k - 1} 
 \right)
 \int_{0}^{1 - \sum_{k = 1}^{M - 1} \mu_k} 
-{\mu_M} ^ {\alpha_M - 1} 
+{\mu_{M + 1}} ^ {\alpha_{M + 1} - 1} 
 \left(
 	1
 	-
 	\sum_{k = 1}^{M - 1} \mu_k
 	-
-	\mu_M
-\right) ^ {\alpha_{M + 1} - 1}  
-d\mu_M.
+	\mu_{M + 1}
+\right) ^ {\alpha_M - 1}  
+d\mu_{M + 1}.
 \end{aligned}
 \end{equation}
 %
 By the transformation
 %
 \begin{equation}
-\mu'_M
+\mu'_{M + 1}
 =
 \frac
-{\mu_M}
+{\mu_{M + 1}}
 {1
 -
 \sum_{k = 1}^{M - 1} \mu_k},
@@ -1147,7 +1147,7 @@ the integral of the right hand side can be written as
 		\mu_k
 	\right)
 	\mu'_{M + 1}
-\right) ^ {\alpha_M - 1}
+\right) ^ {\alpha_{M + 1} - 1}
 \left(
 	\left(
 		1
@@ -1158,16 +1158,16 @@ the integral of the right hand side can be written as
 	\left(
 		1
 		-
-		\mu'_M		
+		\mu'_{M + 1}
 	\right)
-\right) ^ {\alpha_{M + 1} - 1}
+\right) ^ {\alpha_M - 1}
 \left(
 	1
 	-
 	\sum_{k = 1}^{M - 1} 
 	\mu_k
 \right)
-d\mu'_{M}
+d\mu'_{M + 1}
 \\
 =&
 \left(
@@ -1177,9 +1177,9 @@ d\mu'_{M}
 	\mu_k
 \right) ^ {\alpha_M + \alpha_{M + 1} - 1}
 \int_{0}^{1}
-{\mu'_{M + 1}} ^ {\alpha_M - 1}
-(1 - \mu'_{M + 1}) ^ {\alpha_{M + 1} - 1}
-d\mu'_{M}.
+{\mu'_{M + 1}} ^ {\alpha_{M + 1} - 1}
+(1 - \mu'_{M + 1}) ^ {\alpha_M - 1}
+d\mu'_{M + 1}.
 \end{aligned}
 \end{equation}
 %
@@ -1197,7 +1197,7 @@ Therefore,
 \int_{0}^{1 - \sum_{k = 1}^{M - 1} \mu_k}
 \prod_{k = 1}^{M + 1} 
 \mu_k ^ {\alpha_k - 1} 
-d\mu_M
+d\mu_{M + 1}
 =
 \left( 
 	\prod_{k = 1}^{M - 1} 
@@ -1220,10 +1220,8 @@ By the assumption,
 \int_
 {
 \begin{subarray}{l}
-\sum_{k = 1}^{M - 1} 
+\sum_{k = 1}^{M} 
 \mu_k 
-+
-\mu_{M + 1}
 = 
 1 
 \\
@@ -1237,20 +1235,13 @@ By the assumption,
 	\prod_{k = 1}^{M - 1} 
 	{\mu_k} ^ {\alpha_k - 1} 
 \right)
-\mu_{M + 1} ^ {\alpha_M + \alpha_{M + 1} - 1}
-d\mu_1
-\cdots
-d\mu_{M - 1}
-d\mu_{M + 1}
-\]
-%
-can be written as
-%
-\begin{equation}
+\mu_M ^ {\alpha_M + \alpha_{M + 1} - 1}
+d\bm{\mu}
+=
 \frac
 {(\prod_{k = 1}^{M - 1} \Gamma(\alpha_k)) \Gamma(\alpha_M + \alpha_{M + 1})}
 {\Gamma(\sum_{k = 1}^{M + 1} \alpha_k)}.
-\end{equation}
+\]
 %
 Thus, for a vector $\bm{\mu}$ in $M + 1$ dimensions,
 %
