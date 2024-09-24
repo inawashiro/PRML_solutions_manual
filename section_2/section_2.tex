@@ -1287,16 +1287,36 @@ Hence, the assumption is proved by induction on $M$.
 Let $\bm{\mu}$ be a variable such that
 %
 \begin{equation}
-p(\bm{\mu} | \bm{\alpha}) = \frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1}.
+p(\bm{\mu} | \bm{\alpha}) 
+= 
+\frac
+{\Gamma(\sum_{k = 1}^{K} \alpha_k)}
+{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \prod_{k = 1}^{K} \mu_k ^ {\alpha_k - 1}.
 \end{equation}
 %
 Then
 %
 \begin{equation}
 \begin{aligned}
-\E \mu_j &= \int \mu_j p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}, \\
-\E \mu_j ^ 2 &= \int \mu_j ^ 2 p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}, \\
-\E \mu_j \mu_l &= \int \mu_j \mu_l p(\bm{\mu} | \bm{\alpha}) d\bm{\mu}.
+\E \mu_j 
+&= 
+\int 
+\mu_j 
+p(\bm{\mu} | \bm{\alpha}) 
+d\bm{\mu}, 
+\\
+\E \mu_j ^ 2 
+&= 
+\int 
+\mu_j ^ 2 
+p(\bm{\mu} | \bm{\alpha}) 
+d\bm{\mu}, \\
+\E \mu_j \mu_l 
+&= 
+\int 
+\mu_j 
+\mu_l p(\bm{\mu} | \bm{\alpha}) 
+d\bm{\mu}.
 \end{aligned}
 \end{equation}
 %
@@ -1304,9 +1324,36 @@ If $j \neq l$, then the right hand sides can be written as
 %
 \begin{equation}
 \begin{aligned}
-\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 1)}{\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)} &= \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}, \\
-\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 2)}{\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 2 \right)} &= \frac{\alpha_j (\alpha_j + 1)}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)},  \\
-\frac{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}{\prod_{k = 1}^{K} \Gamma(\alpha_k)} \frac{\frac{\Gamma(\alpha_j + 1) \Gamma(\alpha_l + 1)}{\Gamma(\alpha_j) \Gamma(\alpha_l)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 2 \right)} &= \frac{\alpha_j \alpha_l}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
+\frac
+{\Gamma (\sum_{k = 1}^{K} \alpha_k)}
+{\prod_{k = 1}^{K} \Gamma(\alpha_k)} 
+\frac
+{\frac{\Gamma(\alpha_j + 1)}{\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}
+{\Gamma(\sum_{k = 1}^{K} \alpha_k + 1)} 
+&= 
+\frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}, 
+\\
+\frac
+{\Gamma(\sum_{k = 1}^{K} \alpha_k)}
+{\prod_{k = 1}^{K} \Gamma(\alpha_k)} 
+\frac
+{\frac{\Gamma(\alpha_j + 2)} {\Gamma(\alpha_j)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}
+{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 2 \right)} 
+&= 
+\frac
+{\alpha_j (\alpha_j + 1)}
+{\sum_{k = 1}^{K} \alpha_k (\sum_{k = 1}^{K} \alpha_k + 1)}, 
+\\
+\frac
+{\Gamma \left( \sum_{k = 1}^{K} \alpha_k \right)}
+{\prod_{k = 1}^{K} \Gamma(\alpha_k)} 
+\frac
+{\frac{\Gamma(\alpha_j + 1) \Gamma(\alpha_l + 1)}{\Gamma(\alpha_j) \Gamma(\alpha_l)} \prod_{k = 1}^{K} \Gamma(\alpha_k)}
+{\Gamma \left( \sum_{k = 1}^{K} \alpha_k + 2 \right)} 
+&= 
+\frac
+{\alpha_j \alpha_l}
+{\sum_{k = 1}^{K} \alpha_k (\sum_{k = 1}^{K} \alpha_k + 1)}.
 \end{aligned}
 \end{equation}
 %
@@ -1314,9 +1361,22 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-\E \mu_j &= \frac{\alpha_j}{\sum_{k = 1}^{K} \alpha_k}. \\
-\E \mu_j ^ 2 &= \frac{\alpha_j (\alpha_j + 1)}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}, \\
-\E \mu_j \mu_l &= \frac{\alpha_j \alpha_l}{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
+\E \mu_j 
+&= 
+\frac
+{\alpha_j}
+{\sum_{k = 1}^{K} \alpha_k}. 
+\\
+\E \mu_j ^ 2 
+&= 
+\frac
+{\alpha_j (\alpha_j + 1)}
+{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}, 
+\\
+\E \mu_j \mu_l 
+&= 
+\frac{\alpha_j \alpha_l}
+{\sum_{k = 1}^{K} \alpha_k \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
 \end{aligned}
 \end{equation}
 %
@@ -1324,8 +1384,24 @@ Since
 %
 \begin{equation}
 \begin{aligned}
-\Var \mu_j &= \E \mu_j ^ 2 - \left( \E \mu_j \right) ^ 2, \\
-\cov \left( \mu_j, \mu_l \right) &= \E \mu_j \mu_l - \E \mu_j \E \mu_l,
+\Var \mu_j 
+&= 
+\E \mu_j ^ 2 
+- 
+\left( 
+	\E \mu_j 
+\right) ^ 2, 
+\\
+\cov 
+\left( 
+	\mu_j, 
+	\mu_l 
+\right) 
+&= 
+\E \mu_j \mu_l 
+- 
+\E \mu_j 
+\E \mu_l,
 \end{aligned}
 \end{equation}
 %
@@ -1333,8 +1409,18 @@ we have
 %
 \begin{equation}
 \begin{aligned}
-\Var \mu_j &= \frac{\alpha_j \left( \sum_{k = 1}^{K} \alpha_k - \alpha_j \right)}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}, \\
-\cov \left( \mu_j, \mu_l \right) &= - \frac{\alpha_j \alpha_l}{\left( \sum_{k = 1}^{K} \alpha_k \right) ^ 2 \left( \sum_{k = 1}^{K} \alpha_k + 1 \right)}.
+\Var \mu_j 
+&= 
+\frac
+{\alpha_j (\sum_{k = 1}^{K} \alpha_k - \alpha_j)}
+{\sum_{k = 1}^{K} \alpha_k) ^ 2 (\sum_{k = 1}^{K} \alpha_k + 1)}, 
+\\
+\cov \left( \mu_j, \mu_l \right) 
+&= 
+- 
+\frac
+{\alpha_j \alpha_l}
+{(\sum_{k = 1}^{K} \alpha_k) ^ 2 (\sum_{k = 1}^{K} \alpha_k + 1)}.
 \end{aligned}
 \end{equation}
 %
