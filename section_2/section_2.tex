@@ -1084,64 +1084,16 @@ d\bm{\mu}
 {\Gamma(\sum_{k = 1}^{M} \alpha_k)}.
 \]
 %
-For a vector $\bm{\mu}$ in $M + 1$ dimensions, 
+Under the constraint
 %
-\[ 
-\int_{
-\begin{subarray}{l}
-\sum_{k = 1}^{M + 1} 
-\mu_k 
-= 
-1 
-\\
-\\
-\mu_k 
-\geq 
-0
-\end{subarray}
-} 
-\prod_{k = 1}^{M + 1} 
-\mu_k ^ {\alpha_k - 1} 
-d\bm{\mu} 
-\]
+\begin{equation}
+\sum_{k = 1}^{M + 1}
+\mu_k
+=
+1,
+\end{equation}
 %
-can be written as
-%
-\[
-\int_{
-\begin{subarray}{l}
-\sum_{k = 1}^{M - 1} 
-\mu_k 
-= 
-1 
-\\
-\\
-\mu_k 
-\geq 
-0
-\end{subarray}
-}
-\left( 
-	\prod_{k = 1}^{M - 1} 
-	{\mu_k} ^ {\alpha_k - 1} 
-\right)
-\left(
-	\int_{0}^{1 - \sum_{k = 1}^{M - 1} \mu_k} 
-	{\mu_M} ^ {\alpha_M - 1} 
-	\left(
-		1
-		-
-		\sum_{k = 1}^{M - 1} \mu_k
-		-
-		\mu_M
-	\right) ^ {\alpha_{M + 1} - 1}  
-	d\mu_M
-\right)
-d\mu_1
-\cdots
-d\mu_{M - 1}.
-\]
-%
+we have
 %
 \begin{equation}
 \begin{aligned}
@@ -1151,7 +1103,7 @@ d\mu_{M - 1}.
 \mu_k ^ {\alpha_k - 1} 
 d\mu_M 
 \\
-&= 
+=& 
 \left( 
 	\prod_{k = 1}^{M - 1} 
 	{\mu_k} ^ {\alpha_k - 1} 
@@ -1262,7 +1214,81 @@ d\mu_M
 {\Gamma(\alpha_M + \alpha_{M + 1})}.
 \end{equation}
 %
-
+By the assumption,
+%
+\[
+\int_
+{
+\begin{subarray}{l}
+\sum_{k = 1}^{M - 1} 
+\mu_k 
++
+\mu_{M + 1}
+= 
+1 
+\\
+\\
+\mu_k 
+\geq 
+0
+\end{subarray}
+}
+\left( 
+	\prod_{k = 1}^{M - 1} 
+	{\mu_k} ^ {\alpha_k - 1} 
+\right)
+\mu_{M + 1} ^ {\alpha_M + \alpha_{M + 1} - 1}
+d\mu_1
+\cdots
+d\mu_{M - 1}
+d\mu_{M + 1}
+\]
+%
+can be written as
+%
+\begin{equation}
+\frac
+{(\prod_{k = 1}^{M - 1} \Gamma(\alpha_k)) \Gamma(\alpha_M + \alpha_{M + 1})}
+{\Gamma(\sum_{k = 1}^{M + 1} \alpha_k)}.
+\end{equation}
+%
+Thus, for a vector $\bm{\mu}$ in $M + 1$ dimensions,
+%
+\[ 
+\int_{
+\begin{subarray}{l}
+\sum_{k = 1}^{M + 1} 
+\mu_k 
+= 
+1 
+\\
+\\
+\mu_k 
+\geq 
+0
+\end{subarray}
+}
+\prod_{k = 1}^{M + 1} 
+\mu_k ^ {\alpha_k - 1} 
+d\bm{\mu} 
+= 
+\frac
+{\Gamma(\alpha_M) \Gamma(\alpha_{M + 1})}
+{\Gamma(\alpha_M + \alpha_{M + 1})}
+\frac
+{(\prod_{k = 1}^{M - 1} \Gamma(\alpha_k)) \Gamma(\alpha_M + \alpha_{M + 1})}
+{\Gamma(\sum_{k = 1}^{M + 1} \alpha_k)}.
+\]
+%
+The right hand side can be written as
+%
+\begin{equation}
+\frac
+{\prod_{k = 1}^{M + 1} \Gamma(\alpha_k)}
+{\Gamma(\sum_{k = 1}^{M + 1} \alpha_k)}.
+\end{equation}
+%
+Hence, the assumption is proved by induction on $M$.
 
 
 \subsection{}
