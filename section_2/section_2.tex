@@ -3055,7 +3055,11 @@ Therefore,
 Let $\bm{\Sigma}$ be a $D \times D$ real symmetric matrix such that
 %
 \begin{equation}
-\bm{\Sigma} \mathbf{u}_i = \lambda_i \mathbf{u}_i,
+\bm{\Sigma} 
+\mathbf{u}_i 
+= 
+\lambda_i 
+\mathbf{u}_i,
 \end{equation}
 %
 where $i = 1, \cdots, D$ and $\mathbf{u}_i$ are unit vectors.
@@ -3064,51 +3068,112 @@ Let
 \begin{equation}
 \begin{aligned}
 \bm{\Lambda}'
-&= \diag \left( \lambda_1 ^ {- \frac{1}{2}}, \cdots, \lambda_D ^ {- \frac{1}{2}} \right), \\
+&= 
+\diag 
+\left( 
+	\lambda_1 ^ {- \frac{1}{2}}, 
+	\cdots, 
+	\lambda_D ^ {- \frac{1}{2}} 
+\right), 
+\\
 \mathbf{U} 
-&= [\mathbf{u}_1 \cdots \mathbf{u}_D].
+&= 
+[\mathbf{u}_1 \cdots \mathbf{u}_D].
 \end{aligned}
 \end{equation}
 %
 By \ref{2.19}, 
 %
 \begin{equation}
-\int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x} 
-= \int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{U} \bm{\Lambda}' {\bm{\Lambda}'} ^ \intercal \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x}.
+\int_
+{
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Sigma} ^ {- 1} 
+(\mathbf{x} - \bm{\mu}) 
+= 
+\Delta
+} 
+d\mathbf{x} 
+= 
+\int_
+{
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\mathbf{U} 
+\bm{\Lambda}' 
+{\bm{\Lambda}'} ^ \intercal 
+\mathbf{U} ^ \intercal  
+(\mathbf{x} - \bm{\mu}) 
+= 
+\Delta} 
+d\mathbf{x}.
 \end{equation}
 %
 By the transformation
 %
 \begin{equation}
 \mathbf{y}
-= {\bm{\Lambda}'} ^ \intercal \mathbf{U} ^ \intercal  (\mathbf{x} - \bm{\mu})
+= 
+{\bm{\Lambda}'} ^ \intercal 
+\mathbf{U} ^ \intercal  
+(\mathbf{x} - \bm{\mu})
 \end{equation}
 %
 and the property
 %
 \begin{equation}
-\mathbf{U} ^ \intercal \mathbf{U} = \mathbf{I},
+\mathbf{U} ^ \intercal 
+\mathbf{U} 
+= 
+\mathbf{I},
 \end{equation}
 %
 the right hand side can be written as
 %
 \begin{equation}
-\int_{\norm{\mathbf{y}} ^ 2 = \Delta} \abs{\det \left( \mathbf{U} {\mathbf{\Lambda}'} ^ {- 1} \right)} d\mathbf{y}
-= \abs{\det \mathbf{\Sigma}} ^ \frac{1}{2} \int_{\norm{\mathbf{y}} ^ 2 = \Delta} d\mathbf{y}.
+\int_
+{\norm{\mathbf{y}} ^ 2 = \Delta} 
+\abs
+{
+\det 
+\left( 
+	\mathbf{U} 
+	{\mathbf{\Lambda}'} ^ {- 1} 
+\right)
+} 
+d\mathbf{y}
+= 
+\abs{\det \mathbf{\Sigma}} ^ \frac{1}{2} 
+\int_{\norm{\mathbf{y}} ^ 2 
+= 
+\Delta} 
+d\mathbf{y}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-\int_{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1}  (\mathbf{x} - \bm{\mu}) = \Delta} d\mathbf{x}
-= \abs{\det \mathbf{\Sigma}} ^ \frac{1}{2} \Delta ^ D V_D,
+\int_
+{
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Sigma} ^ {- 1}  
+(\mathbf{x} - \bm{\mu}) 
+= 
+\Delta
+} 
+d\mathbf{x}
+= 
+\abs{\det \mathbf{\Sigma}} ^ \frac{1}{2} 
+\Delta ^ D 
+V_D,
 \end{equation}
 %
 where
 %
 \begin{equation}
 V_D
-= \int_{\norm{\mathbf{x}} = 1} d\mathbf{x}.
+= 
+\int_{\norm{\mathbf{x}} = 1} 
+d\mathbf{x}.
 \end{equation}
 %
 
