@@ -2475,30 +2475,95 @@ Therefore,
 \label{2.16}
 Let $x$ be a variable such that
 \begin{equation}
-x = x_1 + x_2,
+x 
+= 
+x_1 
++ 
+x_2,
 \end{equation}
 %
 where
 %
 \begin{equation}
 \begin{aligned}
-p(x_1) &= \mathcal{N} \left(x_1 | \mu_1, \tau_1 ^ {- 1} \right), \\
-p(x_2) &= \mathcal{N} \left(x_2 | \mu_2, \tau_2 ^ {- 1} \right).
+p(x_1) 
+&= 
+\mathcal{N} 
+\left(
+	x_1 
+	| 
+	\mu_1, 
+	\tau_1 ^ {- 1} 
+\right), 
+\\
+p(x_2) 
+&= 
+\mathcal{N} 
+\left(
+	x_2
+	| 
+	\mu_2, 
+	\tau_2 ^ {- 1} 
+\right).
 \end{aligned} 
 \end{equation}
 %
 Then
 %
 \begin{equation}
-p(x) = \int_{- \infty}^{\infty} p(x | x_2) p(x_2) dx_2.
+p(x) 
+= 
+\int_{- \infty}^{\infty} 
+p(x | x_2) 
+p(x_2) 
+dx_2.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int_{- \infty}^{\infty} \mathcal{N} (x | \mu_1 + x_2, \tau_1 ^ {-1}) \mathcal{N} \left(x_2 | \mu_2, \tau_2 ^ {- 1} \right) dx_2 \\
-&= \int_{- \infty}^{\infty} \left( \frac{\tau_1}{2 \pi} \right) ^ \frac{1}{2} \exp \left( - \frac{\tau_1}{2} (x - \mu_1 - x_2) ^ 2 \right) \left( \frac{\tau_2}{2 \pi} \right) ^ \frac{1}{2} \exp \left( - \frac{\tau_2}{2} (x_2 - \mu_2) ^ 2 \right) dx_2.
+&
+\int_{- \infty}^{\infty} 
+\mathcal{N} 
+\left(
+	x 
+	| 
+	\mu_1 
+	+ 
+	x_2, 
+	\tau_1 ^ {-1}
+\right) 
+\mathcal{N} 
+\left(
+	x_2 
+	| 
+	\mu_2, 
+	\tau_2 ^ {- 1} 
+\right) 
+dx_2 
+\\
+&= 
+\int_{- \infty}^{\infty} 
+\left( 
+	\frac{\tau_1}{2 \pi} 
+\right) ^ \frac{1}{2} 
+\exp 
+\left( 
+	- 
+	\frac{\tau_1}{2} 
+	(x - \mu_1 - x_2) ^ 2 
+\right) 
+\left( 
+	\frac{\tau_2}{2 \pi} 
+\right) ^ \frac{1}{2} 
+\exp 
+\left( 
+	- 
+	\frac{\tau_2}{2} 
+	(x_2 - \mu_2) ^ 2 
+\right) 
+dx_2.
 \end{aligned}
 \end{equation}
 %
@@ -2507,40 +2572,75 @@ The logarithm of the integrand except the terms independent of $x$ and $z$ is gi
 \begin{equation}
 \begin{aligned}
 & 
-- \frac{\tau_1 + \tau_2}{2} 
+- 
+\frac{\tau_1 + \tau_2}{2} 
 \left( 
 	x_2 
-	- \frac{\tau_1 (x - \mu_1) + \tau_2 \mu_2}{\tau_1 + \tau_2} 
+	- 
+	\frac{\tau_1 (x - \mu_1) + \tau_2 \mu_2}{\tau_1 + \tau_2} 
 \right) ^ 2
-- \frac{\tau_1}{2} (x - \mu_1) ^ 2 
-- \frac{\tau_2}{2} \mu_2 ^ 2 
-+ \frac{\tau_1 + \tau_2}{2} 
+- 
+\frac{\tau_1}{2} 
+(x - \mu_1) ^ 2 
+- 
+\frac{\tau_2}{2} 
+\mu_2 ^ 2 
+\\
+&+ 
+\frac{\tau_1 + \tau_2}{2} 
 \left( 
 	\frac{\tau_1 (x - \mu_1) + \tau_2 \mu_2}{\tau_1 + \tau_2} 
 \right) ^ 2
 \\
-&=
-- \frac{\tau_1 + \tau_2}{2} 
+=&
+- 
+\frac{\tau_1 + \tau_2}{2} 
 \left( 
 	x_2 
-	- \frac{\tau_1 (x - \mu_1) + \tau_2 \mu_2}{\tau_1 + \tau_2} 
+	- 
+	\frac{\tau_1 (x - \mu_1) + \tau_2 \mu_2}{\tau_1 + \tau_2} 
 \right) ^ 2
-- \frac{\tau_1 \tau_2}{2 (\tau_1 + \tau_2)} 
-( x - \mu_1 - \mu_2 ) ^ 2
-.
+- 
+\frac{\tau_1 \tau_2}{2 (\tau_1 + \tau_2)} 
+( x - \mu_1 - \mu_2 ) ^ 2.
 \end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-p(x) = \mathcal{N} \left( x \left| \mu_1 + \mu_2, \tau_1 ^ {- 1} + \tau_2 ^ {-1} \right. \right).
+p(x) 
+= 
+\mathcal{N} 
+\left( 
+	x 
+	\left| 
+		\mu_1 + \mu_2, 
+		\tau_1 ^ {- 1} 
+		+ 
+		\tau_2 ^ {-1} 
+	\right. 
+\right).
 \end{equation}
 %
 Thus, by \ref{1.35},
 %
 \begin{equation}
-{\rm H}(x) = \frac{1}{2} \left( 1 + \ln (2 \pi) + \ln \left( \tau_1 ^ {- 1} + \tau_2 ^ {-1} \right) \right).
+{\rm H}(x) 
+= 
+\frac{1}{2} 
+\left( 
+	1 
+	+ 
+	\ln (2 \pi)
+	+ 
+	\ln 
+	\left( 
+		\tau_1 ^ {- 1} 
+		+ 
+		\tau_2 ^ {-1} 
+	\right) 
+\right).
 \end{equation}
 %
 
