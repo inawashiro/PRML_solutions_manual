@@ -2651,50 +2651,110 @@ Let $\bm{\Sigma}$ be a matrix and
 %
 \begin{equation}
 \begin{aligned}
-\mathbf{S} &= \frac{1}{2} \left( \bm{\Sigma} ^ {- 1} + \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal \right), \\
-\mathbf{A} &= \frac{1}{2} \left( \bm{\Sigma} ^ {- 1} - \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal \right).
+\mathbf{S} 
+&=
+\frac{1}{2} 
+\left( 
+	\bm{\Sigma} ^ {- 1} 
+	+ 
+	\left( 
+		\bm{\Sigma} ^ {- 1} 
+	\right) ^ \intercal 
+\right), 
+\\
+\mathbf{A} 
+&= 
+\frac{1}{2} 
+\left( 
+	\bm{\Sigma} ^ {- 1} 
+	- 
+	\left( 
+		\bm{\Sigma} ^ {- 1} 
+	\right) ^ \intercal 
+\right).
 \end{aligned}
 \end{equation}
 %
 Then
 %
 \begin{equation}
-\bm{\Sigma} ^ {- 1} = \mathbf{S} + \mathbf{A}.
+\bm{\Sigma} ^ {- 1} 
+= 
+\mathbf{S} 
++ 
+\mathbf{A}.
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
-(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {-1} (\mathbf{x} - \bm{\mu})
-= (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{S} (\mathbf{x} - \bm{\mu}) 
-+ (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{A} (\mathbf{x} - \bm{\mu}) .
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Sigma} ^ {-1} 
+(\mathbf{x} - \bm{\mu})
+= 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\mathbf{S} 
+(\mathbf{x} - \bm{\mu}) 
++ 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\mathbf{A} 
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 The second term of the right hand side can be written as
 %
 \begin{equation}
-\frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \left( \bm{\Sigma} ^ {- 1} \right) ^ \intercal (\mathbf{x} - \bm{\mu}).
+\frac{1}{2} 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Sigma} ^ {- 1} 
+(\mathbf{x} - \bm{\mu}) 
+- 
+\frac{1}{2} 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\left( 
+	\bm{\Sigma} ^ {- 1} 
+\right) ^ \intercal 
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 The second term of the right hand side can be written as
 %
 \begin{equation}
-- \frac{1}{2} \left( \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right) ^ \intercal (\mathbf{x} - \bm{\mu})
-= - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}).
+- 
+\frac{1}{2} 
+\left( 
+	\bm{\Sigma} ^ {- 1} 
+	(\mathbf{x} - \bm{\mu}) 
+\right) ^ \intercal 
+(\mathbf{x} - \bm{\mu})
+= 
+- 
+\frac{1}{2} 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Sigma} ^ {- 1} 
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-(\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{A} (\mathbf{x} - \bm{\mu}) 
-= 0.
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\mathbf{A} 
+(\mathbf{x} - \bm{\mu}) 
+= 
+0.
 \end{equation}
 %
 Hence
 %
 \begin{equation}
-(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu})
-= (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{S} (\mathbf{x} - \bm{\mu}).
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Sigma} ^ {- 1} 
+(\mathbf{x} - \bm{\mu})
+= 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\mathbf{S} 
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 
