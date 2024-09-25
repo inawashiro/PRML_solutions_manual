@@ -1889,10 +1889,45 @@ Let $\mathbf{x}$ be a variable in $D$ dimensions and
 \begin{equation}
 \begin{aligned}
 L(p(\mathbf{x})) = 
-&- \int p(\mathbf{x}) \ln p(\mathbf{x}) d\mathbf{x}
-+ \lambda \left( \int p(\mathbf{x}) d\mathbf{x} - 1 \right) \\
-&+ \mathbf{l} ^ \intercal \left( \int \mathbf{x} p(\mathbf{x}) d\mathbf{x} - \bm{\mu} \right)
-+ \mathbf{m} ^ \intercal \left( \int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal p(\mathbf{x}) d\mathbf{x} - \bm{\Sigma} \right) \mathbf{m}.
+&
+- 
+\int 
+p(\mathbf{x}) 
+\ln p(\mathbf{x}) 
+d\mathbf{x}
++ 
+\lambda 
+\left( 
+	\int
+	 p(\mathbf{x}) 
+	 d\mathbf{x} 
+	 - 
+	 1 
+\right) 
+\\
+&
++ 
+\mathbf{l} ^ \intercal 
+\left( 
+	\int 
+	\mathbf{x} 
+	p(\mathbf{x}) 
+	d\mathbf{x} 
+	- 
+	\bm{\mu} 
+\right)
++ 
+\mathbf{m} ^ \intercal 
+\left( 
+	\int 
+	(\mathbf{x} - \bm{\mu}) 
+	(\mathbf{x} - \bm{\mu}) ^ \intercal 
+	p(\mathbf{x}) 
+	d\mathbf{x} 
+	- 
+	\bm{\Sigma} 
+\right) 
+\mathbf{m}.
 \end{aligned}
 \end{equation}
 %
@@ -1900,21 +1935,42 @@ Then
 %
 \begin{equation}
 \frac{\delta L(p(\mathbf{x}))}{\delta p(\mathbf{x})} 
-= - \ln p(\mathbf{x}) - 1 
-+ \lambda
-+ \mathbf{l} ^ \intercal \mathbf{x} 
-+ \mathbf{m} ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{m}.
+= 
+- 
+\ln p(\mathbf{x}) 
+- 
+1 
++ 
+\lambda
++ 
+\mathbf{l} ^ \intercal 
+\mathbf{x} 
++ 
+\mathbf{m} ^ \intercal 
+(\mathbf{x} - \bm{\mu}) 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\mathbf{m}.
 \end{equation}
 %
 Setting the left hand side to zero gives
 %
 \begin{equation}
 p(\mathbf{x}) 
-= \exp \left( 
-- 1 
-+ \lambda
-+ \mathbf{l} ^ \intercal \mathbf{x} 
-+ \mathbf{m} ^ \intercal (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal \mathbf{m} 
+= 
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	+ 
+	\mathbf{l} ^ \intercal 
+	\mathbf{x} 
+	+ 
+	\mathbf{m} ^ \intercal 
+	(\mathbf{x} - \bm{\mu}) 
+	(\mathbf{x} - \bm{\mu}) ^ \intercal 
+	\mathbf{m} 
 \right),
 \end{equation}
 %
@@ -1922,78 +1978,180 @@ so that
 %
 \begin{equation}
 p(\mathbf{x}) 
-= \exp \left( 
-- 1 
-+ \lambda
-- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l}
-+ \left( \mathbf{x} - \bm{\mu} - \mathbf{M} \mathbf{l} \right) ^ \intercal \mathbf{M} ^ {- 1} \left( \mathbf{x} - \bm{\mu} - \mathbf{M} \mathbf{l} \right)
+= 
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	- 
+	\mathbf{l} ^ \intercal 
+	\mathbf{M} \mathbf{l}
+	+ 
+	\left( 
+		\mathbf{x} 
+		- 
+		\bm{\mu} 
+		- 
+		\mathbf{M} 
+		\mathbf{l} 
+	\right) ^ \intercal 
+	\mathbf{M} ^ {- 1} 
+	\left( 
+		\mathbf{x} 
+		- 
+		\bm{\mu} 
+		- 
+		\mathbf{M} 
+		\mathbf{l}
+	\right)
 \right),
 \end{equation}
 %
 where
 %
 \begin{equation}
-\mathbf{M} = \left( \mathbf{m} \mathbf{m} ^ \intercal \right) ^ {- 1}.
+\mathbf{M} 
+= 
+\left( 
+	\mathbf{m} 
+	\mathbf{m} ^ \intercal 
+\right) ^ {- 1}.
 \end{equation}
 %
 Substituting it to 
 %
 \begin{equation}
 \begin{aligned}
-\int p(\mathbf{x}) d\mathbf{x} &= 1, \\
-\int \mathbf{x} p(\mathbf{x}) d\mathbf{x} &= \bm{\mu}, \\
-\int (\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal p(\mathbf{x}) d\mathbf{x} &= \bm{\Sigma},
+\int 
+p(\mathbf{x}) 
+d\mathbf{x} 
+&= 
+1, 
+\\
+\int 
+\mathbf{x} 
+p(\mathbf{x}) 
+d\mathbf{x} 
+&= 
+\bm{\mu}, 
+\\
+\int 
+(\mathbf{x} - \bm{\mu}) 
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+p(\mathbf{x}) 
+d\mathbf{x} 
+&= 
+\bm{\Sigma},
 \end{aligned}
 \end{equation}
 %
 and the transformation 
 %
 \begin{equation}
-\mathbf{y} = \mathbf{x} - \bm{\mu} - \mathbf{M} \mathbf{l}
+\mathbf{y} 
+= 
+\mathbf{x} 
+- 
+\bm{\mu} 
+- 
+\mathbf{M} 
+\mathbf{l}
 \end{equation}
 %
 gives
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( 
-- 1 
-+ \lambda
-- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	- 
+	\mathbf{l} ^ \intercal 
+	\mathbf{M} 
+	\mathbf{l} 
 \right) 
 \int 
-\exp \left( 
-- \mathbf{y} ^ \intercal \mathbf{M} ^ {- 1} \mathbf{y} 
+\exp 
+\left( 
+	- 
+	\mathbf{y} ^ \intercal 
+	\mathbf{M} ^ {- 1} 
+	\mathbf{y} 
 \right) 
 d\mathbf{y} 
-&= 1, \\
-\exp \left( 
-- 1 
-+ \lambda
-- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+&= 
+1, 
+\\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	- 
+	\mathbf{l} ^ \intercal 
+	\mathbf{M} 
+	\mathbf{l} 
 \right) 
 \int 
 \left( 
-\mathbf{y} 
-+ \bm{\mu} 
-+ \mathbf{M} \mathbf{l} \right) 
-\exp \left( - \mathbf{y} ^ \intercal \mathbf{M} ^ {- 1} \mathbf{y} \right) 
+	\mathbf{y} 
+	+ 
+	\bm{\mu} 
+	+ 
+	\mathbf{M} 
+	\mathbf{l} 
+\right) 
+\exp 
+\left( 
+	- 
+	\mathbf{y} ^ \intercal 
+	\mathbf{M} ^ {- 1} 
+	\mathbf{y} 
+\right) 
 d\mathbf{y} 
-&= \bm{\mu}, \\
-\exp \left( 
-- 1 
-+ \lambda
-- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+&= 
+\bm{\mu}, 
+\\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	- 
+	\mathbf{l} ^ \intercal 
+	\mathbf{M} 
+	\mathbf{l} 
 \right) 
 \int 
-\left( \mathbf{y} 
-+ \mathbf{M} \mathbf{l} 
+\left( 
+	\mathbf{y} 
+	+ 
+	\mathbf{M} 
+	\mathbf{l} 
 \right) 
-\left( \mathbf{y} 
-+ \mathbf{M} \mathbf{l} \right) ^ \intercal
-\exp \left( - \mathbf{y} ^ \intercal \mathbf{M} ^ {- 1}\mathbf{y} \right) 
+\left( 
+	\mathbf{y} 
+	+ 
+	\mathbf{M} 
+	\mathbf{l} 
+\right) ^ \intercal
+\exp 
+\left( 
+	- 
+	\mathbf{y} ^ \intercal 
+	\mathbf{M} ^ {- 1}
+	\mathbf{y} 
+\right) 
 d\mathbf{y} 
-&= \bm{\Sigma}.
+&= 
+\bm{\Sigma}.
 \end{aligned}
 \end{equation}
 %
@@ -2001,12 +2159,55 @@ Since
 %
 \begin{equation}
 \begin{aligned}
-\int \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
-&= \left( \Gamma \left( \frac{1}{2} \right) \right) ^ D, \\
-\int \mathbf{y} \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y} 
-&= \mathbf{0}, \\
-\int \mathbf{y} \mathbf{y} ^ \intercal \exp \left( - \mathbf{y} ^ \intercal \mathbf{y} \right) d\mathbf{y}
-&= \Gamma \left( \frac{3}{2} \right) \left( \Gamma \left( \frac{1}{2} \right) \right) ^ {D - 1} \mathbf{I}, \\
+\int 
+\exp 
+\left( 
+	- 
+	\mathbf{y} ^ \intercal 
+	\mathbf{y} 
+\right) 
+d\mathbf{y} 
+&= 
+\left( 
+	\Gamma 
+	\left( 
+		\frac{1}{2} 
+	\right) 
+\right) ^ D, \\
+\int 
+\mathbf{y} 
+\exp 
+\left( 
+	- 
+	\mathbf{y} ^ \intercal 
+	\mathbf{y} 
+\right) 
+d\mathbf{y} 
+&= 
+\mathbf{0}, 
+\\
+\int 
+\mathbf{y} 
+\mathbf{y} ^ \intercal 
+\exp 
+\left( 
+	- 
+	\mathbf{y} ^ \intercal 
+	\mathbf{y} 
+\right) 
+d\mathbf{y}
+&= 
+\Gamma 
+\left( 
+	\frac{3}{2} 
+\right) 
+\left( 
+	\Gamma 
+	\left( 
+		\frac{1}{2}
+	\right) 
+\right) ^ {D - 1} 
+\mathbf{I},
 \end{aligned}
 \end{equation}
 %
@@ -2014,34 +2215,86 @@ they can  be written as
 %
 \begin{equation}
 \begin{aligned}
-\exp \left( 
-- 1 
-+ \lambda
-- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	- 
+	\mathbf{l} ^ \intercal 
+	\mathbf{M} 
+	\mathbf{l} 
 \right) 
-\left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
+\left( 
+	\Gamma 
+	\left( 
+		\frac{1}{2} 
+	\right) 
+\right) ^ D 
 (\det \mathbf{M}) ^ \frac{1}{2}
-&= 1, \\
-\exp \left( 
-- 1 
-+ \lambda
-- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+&= 
+1, 
+\\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	- 
+	\mathbf{l} ^ \intercal 
+	\mathbf{M} 
+	\mathbf{l} 
 \right)
 (\bm{\mu} + \mathbf{M} \mathbf{l}) 
-\left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
+\left( 
+	\Gamma 
+	\left( 
+		\frac{1}{2} 
+	\right) 
+\right) ^ D 
 (\det \mathbf{M}) ^ \frac{1}{2}
-&= \bm{\mu}, \\
-\exp \left( 
-- 1 
-+ \lambda
-- \mathbf{l} ^ \intercal \mathbf{M} \mathbf{l} 
+&= 
+\bm{\mu}, 
+\\
+\exp 
+\left( 
+	- 
+	1 
+	+ 
+	\lambda
+	- 
+	\mathbf{l} ^ \intercal 
+	\mathbf{M} 
+	\mathbf{l} 
 \right)
-\left( \Gamma \left( \frac{3}{2} \right) \left( \Gamma \left( \frac{1}{2} \right) \right) ^ {D - 1} \mathbf{M} 
-+ \mathbf{M} \mathbf{l} (\mathbf{M} \mathbf{l}) ^ \intercal 
-\left( \Gamma \left( \frac{1}{2} \right) \right) ^ D 
+\left( 
+	\Gamma 
+	\left( 
+		\frac{3}{2} 
+	\right) 
+	\left( 
+		\Gamma 
+		\left( 
+			\frac{1}{2} 
+		\right) 
+	\right) ^ {D - 1} 
+	\mathbf{M} 
+	+ 	
+	\mathbf{M} 
+	\mathbf{l} 
+	(\mathbf{M} \mathbf{l}) ^ \intercal 
+	\left( 
+		\Gamma 
+		\left( 
+			\frac{1}{2} 
+		\right) 
+	\right) ^ D 
 \right) 
 (\det \mathbf{M}) ^ \frac{1}{2}
-&= \bm{\Sigma}. 
+&= 
+\bm{\Sigma}. 
 \end{aligned}
 \end{equation}
 %
@@ -2049,16 +2302,42 @@ Therefore,
 %
 \begin{equation}
 \begin{aligned}
-\lambda &= 1 - \frac{D}{2} \ln \pi - \frac{1}{2} \ln (\det \mathbf{M}), \\
-\mathbf{l} &= \mathbf{0}, \\
-\mathbf{M} &= 2 \bm{\Sigma}.
+\lambda 
+&= 
+1 
+- 
+\frac{D}{2} 
+\ln \pi 
+- 
+\frac{1}{2} 
+\ln (\det \mathbf{M}), 
+\\
+\mathbf{l} 
+&= 
+\mathbf{0}, 
+\\
+\mathbf{M} 
+&= 
+2 
+\bm{\Sigma}.
 \end{aligned}
 \end{equation}
 %
 Thus,
 %
 \begin{equation}
-p(\mathbf{x}) = (2 \pi) ^ {- \frac{D}{2}} (\det \bm{\Sigma}) ^ {- \frac{1}{2}} \exp \left( - \frac{1}{2} (\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Sigma} ^ {- 1} (\mathbf{x} - \bm{\mu}) \right).
+p(\mathbf{x}) 
+= 
+(2 \pi) ^ {- \frac{D}{2}} 
+(\det \bm{\Sigma}) ^ {- \frac{1}{2}} 
+\exp 
+\left( 
+	- 
+	\frac{1}{2}
+	(\mathbf{x} - \bm{\mu}) ^ \intercal 
+	\bm{\Sigma} ^ {- 1} 
+	(\mathbf{x} - \bm{\mu}) 
+\right).
 \end{equation}
 %
 
