@@ -3199,14 +3199,29 @@ Then
 %
 \begin{equation}
 \begin{aligned}
-\mathbf{X} \mathbf{A} + \mathbf{Y} \mathbf{C} 
-&= \mathbf{I}, \\
-\mathbf{X} \mathbf{B} + \mathbf{Y} \mathbf{D} 
-&= \mathbf{O}, \\
-\mathbf{Z} \mathbf{A} + \mathbf{W} \mathbf{C} 
-&= \mathbf{O}, \\
-\mathbf{Z} \mathbf{B} + \mathbf{W} \mathbf{D} 
-&= \mathbf{I}.
+\mathbf{X} \mathbf{A} 
++ 
+\mathbf{Y} \mathbf{C} 
+&= 
+\mathbf{I}, 
+\\
+\mathbf{X} \mathbf{B} 
++ 
+\mathbf{Y} \mathbf{D} 
+&= 
+\mathbf{O}, 
+\\
+\mathbf{Z} \mathbf{A} 
++ 
+\mathbf{W} \mathbf{C} 
+&= 
+\mathbf{O}, 
+\\
+\mathbf{Z} \mathbf{B} 
++ 
+\mathbf{W} \mathbf{D} 
+&= 
+\mathbf{I}.
 \end{aligned}
 \end{equation}
 %
@@ -3215,9 +3230,13 @@ By the second and third equations,
 \begin{equation}
 \begin{aligned}
 \mathbf{Y} 
-&= - \mathbf{X} \mathbf{B} \mathbf{D} ^ {- 1}, \\
+&= 
+- 
+\mathbf{X} \mathbf{B} \mathbf{D} ^ {- 1}, \\
 \mathbf{W} 
-&= - \mathbf{Z} \mathbf{A} \mathbf{C} ^ {- 1}.
+&= 
+- 
+\mathbf{Z} \mathbf{A} \mathbf{C} ^ {- 1}.
 \end{aligned}
 \end{equation}
 %
@@ -3225,10 +3244,23 @@ Substituting them to the first and fourth equation gives
 %
 \begin{equation}
 \begin{aligned}
-\mathbf{X} \left( \mathbf{A} - \mathbf{B} \mathbf{D} ^ {- 1} \mathbf{C} \right)
-&= \mathbf{I}, \\
-\mathbf{Z} \left( \mathbf{B} - \mathbf{A} \mathbf{C} ^ {- 1} \mathbf{D} \right)
-&= \mathbf{I}.
+\mathbf{X} 
+\left( 
+	\mathbf{A} 
+	- 
+	\mathbf{B} \mathbf{D} ^ {- 1} \mathbf{C} 
+\right)
+&= 
+\mathbf{I}, 
+\\
+\mathbf{Z} 
+\left( 
+	\mathbf{B} 
+	- 
+	\mathbf{A} \mathbf{C} ^ {- 1} \mathbf{D} 
+\right)
+&= 
+\mathbf{I}.
 \end{aligned}
 \end{equation}
 %
@@ -3241,10 +3273,34 @@ Therefore,
 \end{bmatrix}
 =
 \begin{bmatrix}
-\left( \mathbf{A} - \mathbf{B} \mathbf{D} ^ {- 1} \mathbf{C} \right) ^ {- 1} 
-& - \left( \mathbf{A} - \mathbf{B} \mathbf{D} ^ {- 1} \mathbf{C} \right) ^ {- 1} \mathbf{B} \mathbf{D} ^ {- 1} \\
-\left( \mathbf{B} - \mathbf{A} \mathbf{C} ^ {- 1} \mathbf{D} \right) ^ {- 1} 
-& - \left( \mathbf{B} - \mathbf{A} \mathbf{C} ^ {- 1} \mathbf{D} \right) ^ {- 1} \mathbf{A} \mathbf{C} ^ {- 1}
+\left( 
+	\mathbf{A} 
+	- 
+	\mathbf{B} \mathbf{D} ^ {- 1} \mathbf{C} 
+\right) ^ {- 1} 
+& 
+- 
+\left( 
+	\mathbf{A} 
+	- 
+	\mathbf{B} \mathbf{D} ^ {- 1} \mathbf{C} 
+\right) ^ {- 1} 
+\mathbf{B} \mathbf{D} ^ {- 1} 
+\\
+\left( 
+	\mathbf{B} 
+	- 
+	\mathbf{A} \mathbf{C} ^ {- 1} \mathbf{D} 
+\right) ^ {- 1} 
+& 
+- 
+\left( 
+	\mathbf{B} 
+	- 
+	\mathbf{A} \mathbf{C} ^ {- 1} \mathbf{D} 
+\right) ^ {- 1} 
+\mathbf{A} 
+\mathbf{C} ^ {- 1}
 \end{bmatrix}
 .
 \]
