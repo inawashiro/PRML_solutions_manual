@@ -3524,23 +3524,121 @@ where
 
 \subsection{(Incomplete)}
 \label{2.26}
-Since
 %
 \begin{equation}
+\begin{aligned}
+&
+\left(
+	\mathbf{A} ^ {- 1}
+	-
+	\mathbf{A} ^ {- 1}
+	\mathbf{B}
+	\left(
+		\mathbf{C} ^ {- 1}
+		+
+		\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
+	\right) ^ {- 1}
+	\mathbf{D} 
+	\mathbf{A} ^ {- 1}
+\right)
+(\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D})
+\\
+=&
 \mathbf{I}
-= (\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D}) 
-\left( 
-	\mathbf{A} ^ {- 1} 
-	- 
-	\mathbf{A} ^ {- 1} \mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} 
-\right) 
-+ 
-\left( 
-	\mathbf{B} \mathbf{C} \mathbf{D} \mathbf{A} ^ {- 1} 
-\right) ^ 2,
+-
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\left(
+	\mathbf{C} ^ {- 1}
+	+
+	\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
+\right) ^ {- 1}
+\mathbf{D}
++
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\mathbf{C}
+\mathbf{D}
+-
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\left(
+	\mathbf{C} ^ {- 1}
+	+
+	\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
+\right) ^ {- 1}
+\mathbf{D}
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\mathbf{C}
+\mathbf{D}
+\\
+=&
+\mathbf{I}
++
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\left(
+	\mathbf{C}
+	-
+	\left(
+		\mathbf{C} ^ {- 1}
+		+
+		\mathbf{D} 
+		\mathbf{A} ^ {- 1} 
+		\mathbf{B}
+	\right) ^ {- 1}
+	\left(
+		\mathbf{I}
+		+
+		\mathbf{D}
+		\mathbf{A} ^ {- 1}
+		\mathbf{B}
+		\mathbf{C}
+	\right)
+\right)
+\mathbf{D}
+\\
+=&
+\mathbf{I}
++
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\left(
+	\mathbf{C}
+	-
+	\left(
+		\mathbf{C} ^ {- 1}
+		+
+		\mathbf{D} 
+		\mathbf{A} ^ {- 1} 
+		\mathbf{B}
+	\right) ^ {- 1}
+	\left(
+		\mathbf{C} ^ {- 1}
+		+
+		\mathbf{D}
+		\mathbf{A} ^ {- 1}
+		\mathbf{B}
+	\right)
+	\mathbf{C}
+\right)
+\mathbf{D}
+\\
+=&
+\mathbf{I}
++
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+(\mathbf{C} - \mathbf{C})
+\mathbf{D}
+\\
+=&
+\mathbf{I}.
+\end{aligned}
 \end{equation}
 %
-we have
+Therefore,
 %
 \begin{equation}
 (\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D}) ^ {- 1}
@@ -3552,9 +3650,11 @@ we have
 \left(
 	\mathbf{C} ^ {- 1}
 	+
-	\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
-\right)
-\mathbf{D} \mathbf{A} ^ {- 1}.
+	\mathbf{D} \mathbf{A} ^ {- 1} 
+	\mathbf{B}
+\right) ^ {- 1}
+\mathbf{D} 
+\mathbf{A} ^ {- 1}.
 \end{equation}
 %
 
