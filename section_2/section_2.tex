@@ -3522,8 +3522,9 @@ where
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.26}
+We have
 %
 \begin{equation}
 \begin{aligned}
@@ -3536,7 +3537,9 @@ where
 	\left(
 		\mathbf{C} ^ {- 1}
 		+
-		\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
+		\mathbf{D} 
+		\mathbf{A} ^ {- 1} 
+		\mathbf{B}
 	\right) ^ {- 1}
 	\mathbf{D} 
 	\mathbf{A} ^ {- 1}
@@ -3551,7 +3554,9 @@ where
 \left(
 	\mathbf{C} ^ {- 1}
 	+
-	\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
+	\mathbf{D} 
+	\mathbf{A} ^ {- 1} 
+	\mathbf{B}
 \right) ^ {- 1}
 \mathbf{D}
 +
@@ -3565,17 +3570,23 @@ where
 \left(
 	\mathbf{C} ^ {- 1}
 	+
-	\mathbf{D} \mathbf{A} ^ {- 1} \mathbf{B}
+	\mathbf{D} 
+	\mathbf{A} ^ {- 1} 
+	\mathbf{B}
 \right) ^ {- 1}
 \mathbf{D}
 \mathbf{A} ^ {- 1}
 \mathbf{B}
 \mathbf{C}
-\mathbf{D}
-\\
-=&
-\mathbf{I}
-+
+\mathbf{D}.
+\end{aligned}
+\end{equation}
+%
+The right hand side except the first term can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
 \mathbf{A} ^ {- 1}
 \mathbf{B}
 \left(
@@ -3600,8 +3611,6 @@ where
 \mathbf{D}
 \\
 =&
-\mathbf{I}
-+
 \mathbf{A} ^ {- 1}
 \mathbf{B}
 \left(
@@ -3623,22 +3632,49 @@ where
 	\right)
 	\mathbf{C}
 \right)
-\mathbf{D}
-\\
-=&
-\mathbf{I}
-+
-\mathbf{A} ^ {- 1}
-\mathbf{B}
-(\mathbf{C} - \mathbf{C})
-\mathbf{D}
-\\
-=&
-\mathbf{I}.
+\mathbf{D}.
 \end{aligned}
 \end{equation}
 %
+The right hand sidde can be written as
+%
+\begin{equation}
+\mathbf{A} ^ {- 1}
+\mathbf{B}
+\left(
+	\mathbf{C}
+	-
+	\mathbf{C}
+\right)
+\mathbf{D}
+=
+\mathbf{O}.
+\end{equation}
+%
 Therefore,
+%
+\begin{equation}
+\left(
+	\mathbf{A} ^ {- 1}
+	-
+	\mathbf{A} ^ {- 1}
+	\mathbf{B}
+	\left(
+		\mathbf{C} ^ {- 1}
+		+
+		\mathbf{D} 
+		\mathbf{A} ^ {- 1} 
+		\mathbf{B}
+	\right) ^ {- 1}
+	\mathbf{D} 
+	\mathbf{A} ^ {- 1}
+\right)
+(\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D})
+=
+\mathbf{I}.
+\end{equation}
+%
+Thus,
 %
 \begin{equation}
 (\mathbf{A} + \mathbf{B} \mathbf{C} \mathbf{D}) ^ {- 1}
@@ -3650,7 +3686,8 @@ Therefore,
 \left(
 	\mathbf{C} ^ {- 1}
 	+
-	\mathbf{D} \mathbf{A} ^ {- 1} 
+	\mathbf{D} 
+	\mathbf{A} ^ {- 1} 
 	\mathbf{B}
 \right) ^ {- 1}
 \mathbf{D} 
