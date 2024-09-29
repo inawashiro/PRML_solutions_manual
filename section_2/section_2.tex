@@ -3704,16 +3704,46 @@ Then
 %
 \begin{equation}
 \E (\mathbf{x} + \mathbf{z})
-= \int \int (\mathbf{x} + \mathbf{z}) p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}.
+= 
+\int 
+\int 
+(\mathbf{x} + \mathbf{z}) 
+p(\mathbf{x}, \mathbf{z}) 
+d\mathbf{x} 
+d\mathbf{z}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\int \mathbf{x} \left( \int p(\mathbf{x}, \mathbf{z}) d\mathbf{z} \right) d\mathbf{x}
-+ \int \mathbf{z} \left( \int p(\mathbf{x}, \mathbf{z}) d\mathbf{x} \right) d\mathbf{z} \\
-= \int \mathbf{x} p(\mathbf{x}) d\mathbf{x}
-+ \int \mathbf{z} p(\mathbf{z}) d\mathbf{z}.
+\int 
+\mathbf{x} 
+\left( 
+	\int 
+	p(\mathbf{x}, \mathbf{z}) 
+	d\mathbf{z} 
+\right) 
+d\mathbf{x}
++ 
+\int 
+\mathbf{z} 
+\left( 
+	\int 
+	p(\mathbf{x}, \mathbf{z}) 
+	d\mathbf{x} 
+\right) 
+d\mathbf{z} 
+\\
+= 
+\int 
+\mathbf{x} 
+p(\mathbf{x}) 
+d\mathbf{x}
++ 
+\int 
+\mathbf{z} 
+p(\mathbf{z}) 
+d\mathbf{z}.
 \end{equation}
 %
 The right hand side can be written as $\E \mathbf{x} + \E \mathbf{z}$.
@@ -3721,7 +3751,10 @@ Therefore,
 %
 \begin{equation}
 \E (\mathbf{x} + \mathbf{z})
-= \E \mathbf{x} + \E \mathbf{z}.
+= 
+\E \mathbf{x} 
++ 
+\E \mathbf{z}.
 \end{equation}
 %
 
@@ -3729,17 +3762,97 @@ Additionally,
 %
 \begin{equation}
 \cov (\mathbf{x} + \mathbf{z})
-= \int \int \left( \mathbf{x} + \mathbf{z} - \E (\mathbf{x} + \mathbf{z}) \right) \left( \mathbf{x} + \mathbf{z} - \E (\mathbf{x} + \mathbf{z}) \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}.
+= 
+\int 
+\int 
+\left( 
+	\mathbf{x} 
+	+ 
+	\mathbf{z} 
+	- 
+	\E (\mathbf{x} + \mathbf{z}) 
+\right) 
+\left( 
+	\mathbf{x} 
+	+ 
+	\mathbf{z} 
+	- 
+	\E (\mathbf{x} + \mathbf{z}) 
+\right) ^ \intercal 
+p(\mathbf{x}, \mathbf{z}) 
+d\mathbf{x} 
+d\mathbf{z}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
 \begin{aligned}
-&\int \int \left( \mathbf{x} - \E \mathbf{x} \right) \left( \mathbf{x} - \E \mathbf{x} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}
-+ \int \int \left( \mathbf{x} - \E \mathbf{x} \right) \left( \mathbf{z} - \E \mathbf{z} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z} \\
-&+ \int \int \left( \mathbf{z} - \E \mathbf{z} \right) \left( \mathbf{x} - \E \mathbf{x} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}
-+ \int \int \left( \mathbf{z} - \E \mathbf{z} \right) \left( \mathbf{z} - \E \mathbf{z} \right) ^ \intercal p(\mathbf{x}, \mathbf{z}) d\mathbf{x} d\mathbf{z}.
+&
+\int 
+\int 
+\left( 
+	\mathbf{x} 
+	- 
+	\E \mathbf{x} 
+\right) 
+\left( 
+	\mathbf{x} 
+	- 
+	\E \mathbf{x} 
+\right) ^ \intercal 
+p(\mathbf{x}, \mathbf{z}) 
+d\mathbf{x} 
+d\mathbf{z}
++ 
+\int 
+\int 
+\left( 
+	\mathbf{x}
+	- 
+	\E \mathbf{x} 
+\right) 
+\left( 
+	\mathbf{z} 
+	- 
+	\E \mathbf{z} 
+\right) ^ \intercal 
+p(\mathbf{x}, \mathbf{z}) 
+d\mathbf{x} 
+d\mathbf{z} 
+\\
+&+ 
+\int 
+\int 
+\left( 
+	\mathbf{z}
+	- 
+	\E \mathbf{z} 
+\right) 
+\left( 
+	\mathbf{x} 
+	- 
+	\E \mathbf{x} 
+\right) ^ \intercal 
+p(\mathbf{x}, \mathbf{z}) 
+d\mathbf{x} 
+d\mathbf{z}
++ 
+\int 
+\int 
+\left( 
+	\mathbf{z} 
+	- 
+	\E \mathbf{z} 
+\right) 
+\left( 
+	\mathbf{z} 
+	- 
+	\E \mathbf{z} 
+\right) ^ \intercal 
+p(\mathbf{x}, \mathbf{z}) 
+d\mathbf{x} 
+d\mathbf{z}.
 \end{aligned}
 \end{equation}
 %
@@ -3749,12 +3862,43 @@ If $\mathbf{x}$ and $\mathbf{z}$ are independent, the second and third terms can
 %
 \begin{equation}
 \begin{aligned}
-\int \left( \mathbf{x} - \E \mathbf{x} \right) p(\mathbf{x}) d\mathbf{x}
-\int \left( \mathbf{z} - \E \mathbf{z} \right) ^ \intercal p(\mathbf{z})  d\mathbf{z}
-&= \mathbf{O}, \\
-\int \left( \mathbf{z} - \E \mathbf{z} \right) p(\mathbf{z}) d\mathbf{z}
-\int \left( \mathbf{x} - \E \mathbf{x} \right) ^ \intercal p(\mathbf{x})  d\mathbf{x}
-&= \mathbf{O}.
+\int 
+\left( 
+	\mathbf{x} 
+	- 
+	\E \mathbf{x} 
+\right) 
+p(\mathbf{x}) 
+d\mathbf{x}
+\int 
+\left( 
+	\mathbf{z} 
+	- 
+	\E \mathbf{z} 
+\right) ^ \intercal 
+p(\mathbf{z})  
+d\mathbf{z}
+&= 
+\mathbf{O}, 
+\\
+\int 
+\left( 
+	\mathbf{z} 
+	- 
+	\E \mathbf{z} 
+\right) 
+p(\mathbf{z}) 
+d\mathbf{z}
+\int 
+\left( 
+	\mathbf{x} 
+	- 
+	\E \mathbf{x} 
+\right) ^ \intercal 
+p(\mathbf{x})  
+d\mathbf{x}
+&= 
+\mathbf{O}.
 \end{aligned}
 \end{equation}
 %
@@ -3762,7 +3906,10 @@ Therefore,
 %
 \begin{equation}
 \cov (\mathbf{x} + \mathbf{z})
-= \cov \mathbf{x} + \cov \mathbf{z}.
+= 
+\cov \mathbf{x} 
++ 
+\cov \mathbf{z}.
 \end{equation}
 %
 
