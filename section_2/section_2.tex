@@ -3935,7 +3935,10 @@ where
 = 
 \begin{bmatrix}
 \bm{\mu} \\
-\mathbf{A} \bm{\mu} + \mathbf{b}
+\mathbf{A} 
+\bm{\mu} 
++ 
+\mathbf{b}
 \end{bmatrix}
 \]
 %
@@ -3945,8 +3948,19 @@ and
 \cov \mathbf{z}
 = 
 \begin{bmatrix}
-\bm{\Lambda} ^ {- 1} & \bm{\Lambda} ^ {- 1} \mathbf{A} ^ \intercal \\
-\mathbf{A} \bm{\Lambda} ^ {- 1} & \mathbf{L} ^ {- 1} + \mathbf{A} \bm{\Lambda} ^ {- 1} \mathbf{A} ^ \intercal
+\bm{\Lambda} ^ {- 1} 
+& 
+\bm{\Lambda} ^ {- 1} 
+\mathbf{A} ^ \intercal 
+\\
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1} 
+& 
+\mathbf{L} ^ {- 1} 
++ 
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1} 
+\mathbf{A} ^ \intercal
 \end{bmatrix}
 .
 \]
@@ -3955,15 +3969,121 @@ Then
 %
 \begin{equation}
 \begin{aligned}
-\int \left( \mathbf{x} - \bm{\mu} \right) \left( \mathbf{x} - \bm{\mu} \right) ^ \intercal p(\mathbf{x}) d\mathbf{x}
-&= \bm{\Lambda} ^ {- 1}, \\
-\int \int \left( \mathbf{x} - \bm{\mu} \right) \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) ^ \intercal p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}
-&= \bm{\Lambda} ^ {- 1} \mathbf{A} ^ \intercal, \\
-\int \int \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) \left( \mathbf{x} - \bm{\mu} \right) ^ \intercal p(\mathbf{x}, \mathbf{y}) d\mathbf{x} d\mathbf{y}
-&= \mathbf{A} \bm{\Lambda} ^ {- 1}, \\
-\int \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) \left( \mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} \right) ^ \intercal p(\mathbf{y}) d\mathbf{y}
-&= \mathbf{L} ^ {- 1} + \mathbf{A} \bm{\Lambda} ^ {- 1} \mathbf{A} ^ \intercal.
+\int 
+\left( 
+	\mathbf{x} 
+	- 
+	\bm{\mu} 
+\right) 
+\left( 
+	\mathbf{x} 
+	- 
+	\bm{\mu} 
+\right) ^ \intercal 
+p(\mathbf{x}) 
+d\mathbf{x}
+&= 
+\bm{\Lambda} ^ {- 1}, 
+\\
+\int 
+\int 
+\left( 
+	\mathbf{x} 
+	- 
+	\bm{\mu} 
+\right) 
+\left( 
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\bm{\mu} 
+	- 
+	\mathbf{b} 
+\right) ^ \intercal 
+p(\mathbf{x}, \mathbf{y}) 
+d\mathbf{x} 
+d\mathbf{y}
+&= 
+\bm{\Lambda} ^ {- 1} 
+\mathbf{A} ^ \intercal, 
+\\
+\int 
+\int 
+\left( 
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\bm{\mu} 
+	- 
+	\mathbf{b} 
+\right) 
+\left( 
+	\mathbf{x} 
+	- 
+	\bm{\mu} 
+\right) ^ \intercal 
+p(\mathbf{x}, \mathbf{y}) 
+d\mathbf{x} 
+d\mathbf{y}
+&= 
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1}, 
+\\
+\int
+\left( 
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\bm{\mu} 
+	- 
+	\mathbf{b} 
+\right) 
+\left( 
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\bm{\mu} 
+	- 
+	\mathbf{b} 
+\right) ^ \intercal 
+p(\mathbf{y}) 
+d\mathbf{y}
+&= 
+\mathbf{L} ^ {- 1} 
++ 
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1} 
+\mathbf{A} ^ \intercal.
 \end{aligned}
+\end{equation}
+%
+The second and third equations are equivlent and can be written as
+%
+\begin{equation}
+\int 
+\left(
+	\int 
+	\left( 
+		\mathbf{y} 
+		- 
+		\mathbf{A} 
+		\bm{\mu} 
+		- 
+		\mathbf{b} 
+	\right) 
+	p(\mathbf{y} | \mathbf{x})
+	d\mathbf{y}
+\right)
+\left( 
+		\mathbf{x} 
+		- 
+		\bm{\mu} 
+	\right) ^ \intercal 
+p(\mathbf{x}) 
+d\mathbf{x} 
+= 
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1}.
 \end{equation}
 %
 
