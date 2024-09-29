@@ -4158,6 +4158,122 @@ Thus,
 \mathbf{A} \mathbf{x} + \mathbf{b}.
 \end{equation}
 %
+Hence,
+%
+\begin{equation}
+\mathbf{y} 
+- 
+\mathbf{A} 
+\bm{\mu} 
+- 
+\mathbf{b} 
+=
+\mathbf{y} 
+- 
+\E (\mathbf{y} | \mathbf{x}) 
++
+\mathbf{A}
+(\mathbf{x} - \bm{\mu}),
+\end{equation}
+%
+The left hand side of the fourth equation above can be written as
+%
+\begin{equation}
+\begin{aligned}
+&
+\int
+\left(
+	\int
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+		+
+		\mathbf{A}
+		(\mathbf{x} - \bm{\mu})
+	\right)
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+		+
+		\mathbf{A}
+		(\mathbf{x} - \bm{\mu})
+	\right) ^ \intercal
+	p(\mathbf{y} | \mathbf{x})
+	d\mathbf{y}
+\right)
+p(\mathbf{x})
+d\mathbf{x}
+\\
+=&
+\int
+\left(
+	\int
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+	\right)
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+	\right) ^ \intercal
+	p(\mathbf{y} | \mathbf{x})
+	d\mathbf{y}
+\right)
+p(\mathbf{x})
+d\mathbf{x} 
+\\
+&+
+\int
+\left(
+	\int
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+	\right)
+	p(\mathbf{y} | \mathbf{x})
+	d\mathbf{y}
+\right)
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\mathbf{A} ^ \intercal
+p(\mathbf{x})
+d\mathbf{x}
+\\
+&+
+\int
+\mathbf{A}
+(\mathbf{x} - \bm{\mu})
+\left(
+	\int
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+	\right)
+	p(\mathbf{y} | \mathbf{x})
+	d\mathbf{y}
+\right) ^ \intercal
+p(\mathbf{x})
+d\mathbf{x}
+\\
+&+
+\mathbf{A}
+\left(
+	\int
+	(\mathbf{x} - \bm{\mu})
+	(\mathbf{x} - \bm{\mu}) ^ \intercal
+	p(\mathbf{x})
+d\mathbf{x}
+\right)
+\mathbf{A} ^ \intercal.
+\end{aligned}
+\end{equation}
+%
+
 
 
 \subsection{}
