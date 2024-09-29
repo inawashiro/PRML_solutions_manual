@@ -4114,6 +4114,50 @@ d\mathbf{x}
 \mathbf{O}.
 \end{equation}
 %
+Therefore,
+%
+\begin{equation}
+\int
+\left( 
+		\mathbf{y} 
+		- 
+		\mathbf{A} 
+		\mathbf{x} 
+		- 
+		\mathbf{b} 
+	\right) 
+p(\mathbf{y} | \mathbf{x})
+d\mathbf{y}
+=
+\mathbf{0}.	
+\end{equation}
+%
+The left hand side can be written as
+%
+\begin{equation}
+\int
+\mathbf{y}
+p(\mathbf{y} | \mathbf{x})
+d\mathbf{y}
+-
+(\mathbf{A} \mathbf{x} + \mathbf{b})
+\int
+p(\mathbf{y} | \mathbf{x})
+d\mathbf{y}
+=
+\E (\mathbf{y} | \mathbf{x})
+-
+(\mathbf{A} \mathbf{x} + \mathbf{b}).
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\E (\mathbf{y} | \mathbf{x})
+=
+\mathbf{A} \mathbf{x} + \mathbf{b}.
+\end{equation}
+%
 
 
 \subsection{}
