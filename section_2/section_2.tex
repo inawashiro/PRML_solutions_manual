@@ -4147,7 +4147,9 @@ d\mathbf{y}
 =
 \E (\mathbf{y} | \mathbf{x})
 -
-(\mathbf{A} \mathbf{x} + \mathbf{b}).
+\mathbf{A} \mathbf{x} 
+-
+\mathbf{b}.
 \end{equation}
 %
 Thus,
@@ -4173,10 +4175,10 @@ Hence,
 \E (\mathbf{y} | \mathbf{x}) 
 +
 \mathbf{A}
-(\mathbf{x} - \bm{\mu}),
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
-The left hand side of the fourth equation above can be written as
+Accordingly, the left hand side of the fourth equation above can be written as
 %
 \begin{equation}
 \begin{aligned}
@@ -4227,25 +4229,27 @@ p(\mathbf{x})
 d\mathbf{x} 
 \\
 &+
-\int
 \left(
 	\int
 	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
+		\int
+		\left(
+			\mathbf{y} 
+			- 
+			\E (\mathbf{y} | \mathbf{x}) 
+		\right)
+		p(\mathbf{y} | \mathbf{x})
+		d\mathbf{y}
 	\right)
-	p(\mathbf{y} | \mathbf{x})
-	d\mathbf{y}
+	(\mathbf{x} - \bm{\mu}) ^ \intercal
+	p(\mathbf{x})
+	d\mathbf{x}
 \right)
-(\mathbf{x} - \bm{\mu}) ^ \intercal
 \mathbf{A} ^ \intercal
-p(\mathbf{x})
-d\mathbf{x}
 \\
 &+
-\int
 \mathbf{A}
+\int
 (\mathbf{x} - \bm{\mu})
 \left(
 	\int
@@ -4271,6 +4275,120 @@ d\mathbf{x}
 \right)
 \mathbf{A} ^ \intercal.
 \end{aligned}
+\end{equation}
+%
+Let us look at each term of the right hand side.
+The first term can be written as
+%
+\begin{equation}
+\int
+\cov (\mathbf{y} | \mathbf{x})
+p(\mathbf{x})
+d\mathbf{x}.
+\end{equation}
+%
+We have
+%
+\begin{equation}
+\int
+\left(
+	\mathbf{y} 
+	- 
+	\E (\mathbf{y} | \mathbf{x}) 
+\right)
+p(\mathbf{y} | \mathbf{x})
+d\mathbf{y}
+=
+\int
+\mathbf{y} 
+p(\mathbf{y} | \mathbf{x})
+d\mathbf{y}
+-
+\E (\mathbf{y} | \mathbf{x})
+\int 
+p(\mathbf{y} | \mathbf{x})
+d\mathbf{y},
+\end{equation}
+%
+where both terms of the right hand side can be written as $\E (\mathbf{y} | \mathbf{x})$.
+Therefore,
+%
+\begin{equation}
+\int
+\left(
+	\mathbf{y} 
+	- 
+	\E (\mathbf{y} | \mathbf{x}) 
+\right)
+p(\mathbf{y} | \mathbf{x})
+d\mathbf{y}
+=
+\mathbf{0}.
+\end{equation}
+%
+Thus, the second and third terms can be written as zero.
+The fourth term can be written as
+%
+\begin{equation}
+\mathbf{A} 
+(\cov \mathbf{x})
+\mathbf{A} ^ \intercal
+=
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1}
+\mathbf{A} ^ \intercal.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\begin{aligned}
+&
+\int
+\left(
+	\int
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+		+
+		\mathbf{A}
+		(\mathbf{x} - \bm{\mu})
+	\right)
+	\left(
+		\mathbf{y} 
+		- 
+		\E (\mathbf{y} | \mathbf{x}) 
+		+
+		\mathbf{A}
+		(\mathbf{x} - \bm{\mu})
+	\right) ^ \intercal
+	p(\mathbf{y} | \mathbf{x})
+	d\mathbf{y}
+\right)
+p(\mathbf{x})
+d\mathbf{x}
+\\
+=&
+\int
+\cov (\mathbf{y} | \mathbf{x})
+d\mathbf{x}
++
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1}
+\mathbf{A} ^ \intercal.
+\end{aligned}
+\end{equation}
+%
+Thus,
+%
+\begin{equation}
+\int
+\cov (\mathbf{y} | \mathbf{x})
+p(\mathbf{x})
+d\mathbf{x}
+=
+\mathbf{L} ^ {- 1}.
 \end{equation}
 %
 

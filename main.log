@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  30 SEP 2024 08:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  1 OCT 2024 08:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -221,23 +221,28 @@ Overfull \hbox (19.06729pt too wide) detected at line 3857
  []
 
 [63] [64]
-Overfull \hbox (19.59259pt too wide) detected at line 4274
+Overfull \hbox (19.59259pt too wide) detected at line 4278
 [][][]
  []
 
-[65] [66]
-Overfull \hbox (25.60951pt too wide) detected at line 4719
+
+Overfull \hbox (19.59259pt too wide) detected at line 4381
 [][][]
  []
 
-[67] [68] [69] [70] [71] [72] [73] [74]
-Overfull \hbox (15.49089pt too wide) detected at line 5922
+[65] [66] [67]
+Overfull \hbox (25.60951pt too wide) detected at line 4837
+[][][]
+ []
+
+[68] [69] [70] [71] [72] [73] [74] [75]
+Overfull \hbox (15.49089pt too wide) detected at line 6040
 []\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 ^^V\OMS/cmsy/m/n/12 j\OT1
 /cmr/bx/n/12 X\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 N [] \OML/cmm/m/it/12 :
  []
 
-[75] [76] [77] [78]
-Overfull \hbox (4.88232pt too wide) detected at line 6495
+[76] [77] [78] [79]
+Overfull \hbox (4.88232pt too wide) detected at line 6613
 []\OMS/cmsy/m/n/12 ^^@[]\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/
 12 ^^V\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it
 /12 ^^V \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 )[] = \OMS/c
@@ -245,31 +250,31 @@ msy/m/n/12 ^^@[] [][] ^^@ []\OML/cmm/m/it/12 ;
  []
 
 
-Overfull \hbox (70.44658pt too wide) detected at line 6521
+Overfull \hbox (70.44658pt too wide) detected at line 6639
 []\OML/cmm/m/it/12 ^^\[] [] [] :
  []
 
-[79]
-Overfull \hbox (5.60765pt too wide) detected at line 6736
+[80]
+Overfull \hbox (5.60765pt too wide) detected at line 6854
 [][][] [][] [][][][] \OT1/cmr/m/n/12 = ^^@ [] [][] \OML/cmm/m/it/12 :
  []
 
-[80]
-Overfull \hbox (11.58386pt too wide) detected at line 6926
+[81]
+Overfull \hbox (11.58386pt too wide) detected at line 7044
 [][][]
  []
 
-[81] [82] [83] [84] [85] [86] [87] [88]
-Overfull \hbox (17.34496pt too wide) detected at line 8064
+[82] [83] [84] [85] [86] [87] [88] [89]
+Overfull \hbox (17.34496pt too wide) detected at line 8182
 [][][]
  []
 
-[89]
-Overfull \hbox (0.72604pt too wide) detected at line 8100
+[90]
+Overfull \hbox (0.72604pt too wide) detected at line 8218
 [][][]
  []
 
-[90] [91]) [92] (./section_3/section_3.tex [93]) [94] (./main.aux)
+[91] [92]) [93] (./section_3/section_3.tex [94]) [95] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
@@ -301,10 +306,10 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (96 pages, 407338 bytes).
+Output written on main.pdf (97 pages, 408685 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
+ 418 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
