@@ -3964,450 +3964,89 @@ and
 \end{bmatrix}
 .
 \]
-%
-Then
-%
-\begin{equation}
-p(\mathbf{x})
-=
-\mathcal{N}
-(\mathbf{x} | \bm{\mu}, \bm{\Lambda} ^ {- 1}).
-\end{equation}
-%
-
-Additionally, each component of $\cov \mathbf{z}$ can be written as
-%
-\begin{equation}
-\begin{aligned}
-\int 
-\left( 
-	\mathbf{x} 
-	- 
-	\bm{\mu} 
-\right) 
-\left( 
-	\mathbf{x} 
-	- 
-	\bm{\mu} 
-\right) ^ \intercal 
-p(\mathbf{x}) 
-d\mathbf{x}
-&= 
-\bm{\Lambda} ^ {- 1}, 
-\\
-\int 
-\int 
-\left( 
-	\mathbf{x} 
-	- 
-	\bm{\mu} 
-\right) 
-\left( 
-	\mathbf{y} 
-	- 
-	\mathbf{A} 
-	\bm{\mu} 
-	- 
-	\mathbf{b} 
-\right) ^ \intercal 
-p(\mathbf{x}, \mathbf{y}) 
-d\mathbf{x} 
-d\mathbf{y}
-&= 
-\bm{\Lambda} ^ {- 1} 
-\mathbf{A} ^ \intercal, 
-\\
-\int 
-\int 
-\left( 
-	\mathbf{y} 
-	- 
-	\mathbf{A} 
-	\bm{\mu} 
-	- 
-	\mathbf{b} 
-\right) 
-\left( 
-	\mathbf{x} 
-	- 
-	\bm{\mu} 
-\right) ^ \intercal 
-p(\mathbf{x}, \mathbf{y}) 
-d\mathbf{x} 
-d\mathbf{y}
-&= 
-\mathbf{A} 
-\bm{\Lambda} ^ {- 1}, 
-\\
-\int
-\left( 
-	\mathbf{y} 
-	- 
-	\mathbf{A} 
-	\bm{\mu} 
-	- 
-	\mathbf{b} 
-\right) 
-\left( 
-	\mathbf{y} 
-	- 
-	\mathbf{A} 
-	\bm{\mu} 
-	- 
-	\mathbf{b} 
-\right) ^ \intercal 
-p(\mathbf{y}) 
-d\mathbf{y}
-&= 
-\mathbf{L} ^ {- 1} 
-+ 
-\mathbf{A} 
-\bm{\Lambda} ^ {- 1} 
-\mathbf{A} ^ \intercal.
-\end{aligned}
-\end{equation}
-%
-The second and third equations are equivlent and can be written as
-%
-\begin{equation}
-\int 
-\left(
-	\int 
-	\left( 
-		\mathbf{y} 
-		- 
-		\mathbf{A} 
-		\bm{\mu} 
-		- 
-		\mathbf{b} 
-	\right) 
-	p(\mathbf{y} | \mathbf{x})
-	d\mathbf{y}
-\right)
-\left( 
-		\mathbf{x} 
-		- 
-		\bm{\mu} 
-	\right) ^ \intercal 
-p(\mathbf{x}) 
-d\mathbf{x} 
-= 
-\mathbf{A} 
-\bm{\Lambda} ^ {- 1}.
-\end{equation}
-%
-Multiplying $\mathbf{A}$ by the firtst equation from left and subtracting it from the equation above gives
-%
-\begin{equation}
-\int 
-\left(
-	\int 
-	\left( 
-		\mathbf{y} 
-		- 
-		\mathbf{A} 
-		\mathbf{x} 
-		- 
-		\mathbf{b} 
-	\right) 
-	p(\mathbf{y} | \mathbf{x})
-	d\mathbf{y}
-\right)
-\left( 
-		\mathbf{x} 
-		- 
-		\bm{\mu} 
-	\right) ^ \intercal 
-p(\mathbf{x}) 
-d\mathbf{x} 
-= 
-\mathbf{O}.
-\end{equation}
-%
-Therefore,
-%
-\begin{equation}
-\int
-\left( 
-		\mathbf{y} 
-		- 
-		\mathbf{A} 
-		\mathbf{x} 
-		- 
-		\mathbf{b} 
-	\right) 
-p(\mathbf{y} | \mathbf{x})
-d\mathbf{y}
-=
-\mathbf{0}.	
-\end{equation}
-%
-The left hand side can be written as
-%
-\begin{equation}
-\int
-\mathbf{y}
-p(\mathbf{y} | \mathbf{x})
-d\mathbf{y}
--
-(\mathbf{A} \mathbf{x} + \mathbf{b})
-\int
-p(\mathbf{y} | \mathbf{x})
-d\mathbf{y}
-=
-\E (\mathbf{y} | \mathbf{x})
--
-\mathbf{A} \mathbf{x} 
--
-\mathbf{b}.
-\end{equation}
-%
-Thus,
-%
-\begin{equation}
-\E (\mathbf{y} | \mathbf{x})
-=
-\mathbf{A} \mathbf{x} + \mathbf{b}.
-\end{equation}
-%
-Hence,
-%
-\begin{equation}
-\mathbf{y} 
-- 
-\mathbf{A} 
-\bm{\mu} 
-- 
-\mathbf{b} 
-=
-\mathbf{y} 
-- 
-\E (\mathbf{y} | \mathbf{x}) 
-+
-\mathbf{A}
-(\mathbf{x} - \bm{\mu}).
-\end{equation}
-%
-Accordingly, the left hand side of the fourth equation above can be written as
+Then, $\ln p(\mathbf{z})$ except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ is given by
 %
 \begin{equation}
 \begin{aligned}
 &
-\int
-\left(
-	\int
-	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
-		+
-		\mathbf{A}
-		(\mathbf{x} - \bm{\mu})
-	\right)
-	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
-		+
-		\mathbf{A}
-		(\mathbf{x} - \bm{\mu})
-	\right) ^ \intercal
-	p(\mathbf{y} | \mathbf{x})
-	d\mathbf{y}
-\right)
-p(\mathbf{x})
-d\mathbf{x}
-\\
-=&
-\int
-\left(
-	\int
-	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
-	\right)
-	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
-	\right) ^ \intercal
-	p(\mathbf{y} | \mathbf{x})
-	d\mathbf{y}
-\right)
-p(\mathbf{x})
-d\mathbf{x} 
-\\
-&+
-\left(
-	\int
-	\left(
-		\int
-		\left(
-			\mathbf{y} 
-			- 
-			\E (\mathbf{y} | \mathbf{x}) 
-		\right)
-		p(\mathbf{y} | \mathbf{x})
-		d\mathbf{y}
-	\right)
-	(\mathbf{x} - \bm{\mu}) ^ \intercal
-	p(\mathbf{x})
-	d\mathbf{x}
-\right)
-\mathbf{A} ^ \intercal
-\\
-&+
-\mathbf{A}
-\int
+-
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\bm{\Lambda} ^ {- 1}
 (\mathbf{x} - \bm{\mu})
-\left(
-	\int
-	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
-	\right)
-	p(\mathbf{y} | \mathbf{x})
-	d\mathbf{y}
-\right) ^ \intercal
-p(\mathbf{x})
-d\mathbf{x}
-\\
-&+
-\mathbf{A}
-\left(
-	\int
-	(\mathbf{x} - \bm{\mu})
-	(\mathbf{x} - \bm{\mu}) ^ \intercal
-	p(\mathbf{x})
-d\mathbf{x}
-\right)
-\mathbf{A} ^ \intercal.
-\end{aligned}
-\end{equation}
-%
-Let us look at each term of the right hand side.
-The first term can be written as
-%
-\begin{equation}
-\int
-\cov (\mathbf{y} | \mathbf{x})
-p(\mathbf{x})
-d\mathbf{x}.
-\end{equation}
-%
-We have
-%
-\begin{equation}
-\int
-\left(
-	\mathbf{y} 
-	- 
-	\E (\mathbf{y} | \mathbf{x}) 
-\right)
-p(\mathbf{y} | \mathbf{x})
-d\mathbf{y}
-=
-\int
-\mathbf{y} 
-p(\mathbf{y} | \mathbf{x})
-d\mathbf{y}
 -
-\E (\mathbf{y} | \mathbf{x})
-\int 
-p(\mathbf{y} | \mathbf{x})
-d\mathbf{y},
-\end{equation}
-%
-where both terms of the right hand side can be written as $\E (\mathbf{y} | \mathbf{x})$.
-Therefore,
-%
-\begin{equation}
-\int
-\left(
-	\mathbf{y} 
-	- 
-	\E (\mathbf{y} | \mathbf{x}) 
-\right)
-p(\mathbf{y} | \mathbf{x})
-d\mathbf{y}
-=
-\mathbf{0}.
-\end{equation}
-%
-Thus, the second and third terms can be written as zero.
-The fourth term can be written as
-%
-\begin{equation}
-\mathbf{A} 
-(\cov \mathbf{x})
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\bm{\Lambda} ^ {- 1} 
 \mathbf{A} ^ \intercal
-=
-\mathbf{A} 
-\bm{\Lambda} ^ {- 1}
-\mathbf{A} ^ \intercal.
-\end{equation}
-%
-Therefore,
-%
-\begin{equation}
-\begin{aligned}
-&
-\int
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
+\\
+&-
+\frac{1}{2}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
+\mathbf{A}
+\bm{\Lambda} ^ {- 1} 
+(\mathbf{x} - \bm{\mu})
+\\
+&-
+\frac{1}{2}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
 \left(
-	\int
-	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
-		+
-		\mathbf{A}
-		(\mathbf{x} - \bm{\mu})
-	\right)
-	\left(
-		\mathbf{y} 
-		- 
-		\E (\mathbf{y} | \mathbf{x}) 
-		+
-		\mathbf{A}
-		(\mathbf{x} - \bm{\mu})
-	\right) ^ \intercal
-	p(\mathbf{y} | \mathbf{x})
-	d\mathbf{y}
+	\mathbf{L} ^ {- 1} 
+	+ 
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
 \right)
-p(\mathbf{x})
-d\mathbf{x}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
 \\
 =&
-\int
-\cov (\mathbf{y} | \mathbf{x})
-d\mathbf{x}
-+
-\mathbf{A} 
+-
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
 \bm{\Lambda} ^ {- 1}
-\mathbf{A} ^ \intercal.
+(\mathbf{x} - \bm{\mu})
+\\
+&-
+\frac{1}{2}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} + \mathbf{w}) ^ \intercal
+\left(
+	\mathbf{L} ^ {- 1} 
+	+ 
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
+\right)
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} + \mathbf{w}) \\
+&+
+\frac{1}{2}
+\mathbf{w} ^ \intercal
+\left(
+	\mathbf{L} ^ {- 1} 
+	+ 
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
+\right)
+\mathbf{w},
 \end{aligned}
 \end{equation}
 %
-Thus,
+where
 %
 \begin{equation}
-\int
-\cov (\mathbf{y} | \mathbf{x})
-p(\mathbf{x})
-d\mathbf{x}
+\mathbf{w}
 =
-\mathbf{L} ^ {- 1}.
-\end{equation}
-%
-Hence,
-%
-\begin{equation}
-p(\mathbf{y} | \mathbf{x})
-=
-\mathcal{N}
-(\mathbf{y} | \mathbf{A} \mathbf{x} + \mathbf{b}, \mathbf{L} ^ {- 1})?
+\left(
+	\mathbf{L} ^ {- 1} 
+	+ 
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
+\right) ^ {- 1}
+\mathbf{A}
+\bm{\Lambda} ^ {- 1}
+(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 
