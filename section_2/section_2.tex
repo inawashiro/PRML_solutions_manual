@@ -3964,6 +3964,184 @@ and
 \end{bmatrix}
 .
 \]
+Then, by \ref{2.24},
+%
+\[
+(\cov \mathbf{z}) ^ {- 1}
+= 
+\begin{bmatrix}
+\bm{\Lambda} ^ {- 1} 
+& 
+\bm{\Lambda} ^ {- 1} 
+\mathbf{A} ^ \intercal 
+\\
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1} 
+& 
+\mathbf{L} ^ {- 1} 
++ 
+\mathbf{A} 
+\bm{\Lambda} ^ {- 1} 
+\mathbf{A} ^ \intercal
+\end{bmatrix}
+.
+\]
+By \ref{2.26}, 
+%
+\begin{equation}
+\left(
+	\mathbf{L} ^ {- 1} 
+	+ 
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
+\right) ^ {- 1}
+=
+\mathbf{L}
+-
+\mathbf{L}
+\mathbf{A}
+\left(
+	\bm{\Lambda}
+	+
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+\right) ^ {- 1}
+\mathbf{A} ^ \intercal
+\mathbf{L}.
+\end{equation}
+%
+%
+\begin{equation}
+\begin{aligned}
+&
+\left(
+	\bm{\Lambda} ^ {- 1} 
+	- 
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
+	\left(
+		\mathbf{L}
+		-
+		\mathbf{L}
+		\mathbf{A}
+		\left(
+			\bm{\Lambda}
+			+
+			\mathbf{A} ^ \intercal
+			\mathbf{L}
+			\mathbf{A}
+		\right) ^ {- 1}
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+	\right)
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1}
+\right) ^ {- 1}
+\\
+=&
+\left(
+	\bm{\Lambda} ^ {- 1} 
+	- 
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1}
+	+
+	\bm{\Lambda} ^ {- 1} 
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A}
+	\left(
+		\bm{\Lambda}
+		+
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		\mathbf{A}
+	\right) ^ {- 1}
+	\mathbf{A} ^ \intercal
+	\mathbf{L}
+	\mathbf{A} 
+	\bm{\Lambda} ^ {- 1}
+\right) ^ {- 1}
+\\
+=&
+\left(
+	\bm{\Lambda} ^ {- 1} 
+	\left(
+		\bm{\Lambda}
+		-
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		\mathbf{A}	
+		+
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		\mathbf{A}
+		\left(
+			\bm{\Lambda}
+			+
+			\mathbf{A} ^ \intercal
+			\mathbf{L}
+			\mathbf{A}
+		\right) ^ {- 1}
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		\mathbf{A}
+	\right)
+	\bm{\Lambda} ^ {- 1} 
+\right) ^ {- 1}
+\\
+=&
+\left(
+	\bm{\Lambda} ^ {- 1} 
+	\left(
+		\bm{\Lambda}
+		-
+		\mathbf{A} ^ \intercal
+		\mathbf{L}
+		\mathbf{A}	
+		\left(
+			\bm{\Lambda}
+			+
+			\mathbf{A} ^ \intercal
+			\mathbf{L}
+			\mathbf{A}
+		\right) ^ {- 1}
+		\bm{\Lambda}
+	\right)
+	\bm{\Lambda} ^ {- 1} 
+\right) ^ {- 1}
+\\
+=&
+\left(
+	\bm{\Lambda} ^ {- 1} 
+	\left(
+		\bm{\Lambda}
+		-
+		\left(
+			\mathbf{I}
+			-
+			\bm{\Lambda}
+			\left(
+				\bm{\Lambda}
+				+
+				\mathbf{A} ^ \intercal
+				\mathbf{L}
+				\mathbf{A}
+			\right) ^ {- 1}
+			\bm{\Lambda}	
+		\right)	
+	\right)
+	\bm{\Lambda} ^ {- 1} 
+\right) ^ {- 1}
+\end{aligned}
+\end{equation}
+%
+
+
 Then, $\ln p(\mathbf{z})$ except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ is given by
 %
 \begin{equation}
@@ -4047,32 +4225,6 @@ where
 \mathbf{A}
 \bm{\Lambda} ^ {- 1}
 (\mathbf{x} - \bm{\mu}).
-\end{equation}
-%
-By \ref{2.26}, 
-%
-\begin{equation}
-\left(
-	\mathbf{L} ^ {- 1} 
-	+ 
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-\right) ^ {- 1}
-=
-\mathbf{L}
--
-\mathbf{L}
-\mathbf{A}
-\left(
-	\bm{\Lambda}
-	+
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-\right) ^ {- 1}
-\mathbf{A} ^ \intercal
-\mathbf{L}.
 \end{equation}
 %
 
