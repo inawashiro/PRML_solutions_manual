@@ -3914,7 +3914,7 @@ Therefore,
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.28}
 Let $\mathbf{x}$ and $\mathbf{y}$ be Gaussian variables and
 %
@@ -4019,9 +4019,112 @@ Then, $\ln p(\mathbf{z})$ except the terms independent of $\mathbf{x}$ and $\mat
 (\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
 \\
 =&
+-
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\left(
+	\bm{\Lambda} 
+	+ 
+	\mathbf{A} ^ \intercal 
+	\mathbf{L} 
+	\mathbf{A}
+\right)
+(\mathbf{x} - \bm{\mu})
++
+\\
+&-
+\frac{1}{2}
+\left(
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\bm{\mu} 
+	- 
+	\mathbf{b} 
+	-
+	\mathbf{A} (\mathbf{x} -\bm{\mu})
+\right) ^ \intercal
+\mathbf{L}
+\left(
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\bm{\mu} 
+	- 
+	\mathbf{b} 
+	-
+	\mathbf{A} (\mathbf{x} -\bm{\mu})
+\right)
+\\
+&-
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\mathbf{A} ^ \intercal 
+\mathbf{L} 
+\mathbf{A}
+(\mathbf{x} - \bm{\mu}).
 \end{aligned}
 \end{equation}
 %
+The right hand side can be written as
+%
+\begin{equation}
+-
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\bm{\Lambda} 
+(\mathbf{x} - \bm{\mu})
+-
+\frac{1}{2}
+\left(
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\mathbf{x} 
+	- 
+	\mathbf{b} 
+\right) ^ \intercal
+\mathbf{L}
+\left(
+	\mathbf{y} 
+	- 
+	\mathbf{A} 
+	\mathbf{x} 
+	- 
+	\mathbf{b}
+\right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+\begin{aligned}
+p(\mathbf{x})
+&=
+\mathcal{N} 
+\left(
+	\mathbf{x}
+	| 
+	\bm{\mu}, 
+	\bm{\Lambda} ^ {- 1}
+\right),
+\\
+p(\mathbf{y} | \mathbf{x})
+&=
+\mathcal{N} 
+\left(
+	\mathbf{y} 
+	| 
+	\mathbf{A} 
+	\mathbf{x} 
+	+ 
+	\mathbf{b}, 
+	\mathbf{L} ^ {- 1}
+\right).
+\end{aligned}
+\end{equation}
+%
+
 
 
 \subsection{}
