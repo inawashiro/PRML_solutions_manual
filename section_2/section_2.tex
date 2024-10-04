@@ -3964,184 +3964,25 @@ and
 \end{bmatrix}
 .
 \]
-Then, by \ref{2.24},
-%
+Then, by \ref{2.29},
 \[
 (\cov \mathbf{z}) ^ {- 1}
-= 
+=
 \begin{bmatrix}
-\bm{\Lambda} ^ {- 1} 
-& 
-\bm{\Lambda} ^ {- 1} 
-\mathbf{A} ^ \intercal 
-\\
-\mathbf{A} 
-\bm{\Lambda} ^ {- 1} 
-& 
-\mathbf{L} ^ {- 1} 
+\bm{\Lambda} 
 + 
+\mathbf{A} ^ \intercal 
+\mathbf{L} 
 \mathbf{A} 
-\bm{\Lambda} ^ {- 1} 
-\mathbf{A} ^ \intercal
+& 
+- \mathbf{A} ^ \intercal \mathbf{L} 
+\\
+- \mathbf{L} \mathbf{A}
+& 
+\mathbf{L}
 \end{bmatrix}
 .
 \]
-By \ref{2.26}, 
-%
-\begin{equation}
-\left(
-	\mathbf{L} ^ {- 1} 
-	+ 
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-\right) ^ {- 1}
-=
-\mathbf{L}
--
-\mathbf{L}
-\mathbf{A}
-\left(
-	\bm{\Lambda}
-	+
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-\right) ^ {- 1}
-\mathbf{A} ^ \intercal
-\mathbf{L}.
-\end{equation}
-%
-%
-\begin{equation}
-\begin{aligned}
-&
-\left(
-	\bm{\Lambda} ^ {- 1} 
-	- 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-	\left(
-		\mathbf{L}
-		-
-		\mathbf{L}
-		\mathbf{A}
-		\left(
-			\bm{\Lambda}
-			+
-			\mathbf{A} ^ \intercal
-			\mathbf{L}
-			\mathbf{A}
-		\right) ^ {- 1}
-		\mathbf{A} ^ \intercal
-		\mathbf{L}
-	\right)
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1}
-\right) ^ {- 1}
-\\
-=&
-\left(
-	\bm{\Lambda} ^ {- 1} 
-	- 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1}
-	+
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A}
-	\left(
-		\bm{\Lambda}
-		+
-		\mathbf{A} ^ \intercal
-		\mathbf{L}
-		\mathbf{A}
-	\right) ^ {- 1}
-	\mathbf{A} ^ \intercal
-	\mathbf{L}
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1}
-\right) ^ {- 1}
-\\
-=&
-\left(
-	\bm{\Lambda} ^ {- 1} 
-	\left(
-		\bm{\Lambda}
-		-
-		\mathbf{A} ^ \intercal
-		\mathbf{L}
-		\mathbf{A}	
-		+
-		\mathbf{A} ^ \intercal
-		\mathbf{L}
-		\mathbf{A}
-		\left(
-			\bm{\Lambda}
-			+
-			\mathbf{A} ^ \intercal
-			\mathbf{L}
-			\mathbf{A}
-		\right) ^ {- 1}
-		\mathbf{A} ^ \intercal
-		\mathbf{L}
-		\mathbf{A}
-	\right)
-	\bm{\Lambda} ^ {- 1} 
-\right) ^ {- 1}
-\\
-=&
-\left(
-	\bm{\Lambda} ^ {- 1} 
-	\left(
-		\bm{\Lambda}
-		-
-		\mathbf{A} ^ \intercal
-		\mathbf{L}
-		\mathbf{A}	
-		\left(
-			\bm{\Lambda}
-			+
-			\mathbf{A} ^ \intercal
-			\mathbf{L}
-			\mathbf{A}
-		\right) ^ {- 1}
-		\bm{\Lambda}
-	\right)
-	\bm{\Lambda} ^ {- 1} 
-\right) ^ {- 1}
-\\
-=&
-\left(
-	\bm{\Lambda} ^ {- 1} 
-	\left(
-		\bm{\Lambda}
-		-
-		\left(
-			\mathbf{I}
-			-
-			\bm{\Lambda}
-			\left(
-				\bm{\Lambda}
-				+
-				\mathbf{A} ^ \intercal
-				\mathbf{L}
-				\mathbf{A}
-			\right) ^ {- 1}
-			\bm{\Lambda}	
-		\right)	
-	\right)
-	\bm{\Lambda} ^ {- 1} 
-\right) ^ {- 1}
-\end{aligned}
-\end{equation}
-%
-
-
 Then, $\ln p(\mathbf{z})$ except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ is given by
 %
 \begin{equation}
@@ -4150,81 +3991,35 @@ Then, $\ln p(\mathbf{z})$ except the terms independent of $\mathbf{x}$ and $\mat
 -
 \frac{1}{2}
 (\mathbf{x} - \bm{\mu}) ^ \intercal
-\bm{\Lambda} ^ {- 1}
+\left(
+	\bm{\Lambda} 
+	+ 
+	\mathbf{A} ^ \intercal 
+	\mathbf{L} 
+	\mathbf{A}
+\right)
+(\mathbf{x} - \bm{\mu})
++
+\frac{1}{2}
+(\mathbf{x} - \bm{\mu}) ^ \intercal
+\mathbf{A} ^ \intercal
+\mathbf{L}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
+\\
+&+
+\frac{1}{2}
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
+\mathbf{L}
+\mathbf{A}
 (\mathbf{x} - \bm{\mu})
 -
 \frac{1}{2}
-(\mathbf{x} - \bm{\mu}) ^ \intercal
-\bm{\Lambda} ^ {- 1} 
-\mathbf{A} ^ \intercal
-(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
-\\
-&-
-\frac{1}{2}
 (\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
-\mathbf{A}
-\bm{\Lambda} ^ {- 1} 
-(\mathbf{x} - \bm{\mu})
-\\
-&-
-\frac{1}{2}
-(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
-\left(
-	\mathbf{L} ^ {- 1} 
-	+ 
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-\right)
+\mathbf{L}
 (\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b})
 \\
 =&
--
-\frac{1}{2}
-(\mathbf{x} - \bm{\mu}) ^ \intercal
-\bm{\Lambda} ^ {- 1}
-(\mathbf{x} - \bm{\mu})
-\\
-&-
-\frac{1}{2}
-(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} + \mathbf{w}) ^ \intercal
-\left(
-	\mathbf{L} ^ {- 1} 
-	+ 
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-\right)
-(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b} + \mathbf{w}) \\
-&+
-\frac{1}{2}
-\mathbf{w} ^ \intercal
-\left(
-	\mathbf{L} ^ {- 1} 
-	+ 
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-\right)
-\mathbf{w},
 \end{aligned}
-\end{equation}
-%
-where
-%
-\begin{equation}
-\mathbf{w}
-=
-\left(
-	\mathbf{L} ^ {- 1} 
-	+ 
-	\mathbf{A} 
-	\bm{\Lambda} ^ {- 1} 
-	\mathbf{A} ^ \intercal
-\right) ^ {- 1}
-\mathbf{A}
-\bm{\Lambda} ^ {- 1}
-(\mathbf{x} - \bm{\mu}).
 \end{equation}
 %
 
