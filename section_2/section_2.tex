@@ -4519,7 +4519,10 @@ p(\mathbf{y} | \mathbf{x})
 \left( 
 	\mathbf{y}
 	|
-	\mathbf{A} \mathbf{x} + \mathbf{b},
+	\mathbf{A} 
+	\mathbf{x} 
+	+ 
+	\mathbf{b},
 	\mathbf{L} ^ {- 1}
 \right).
 \end{aligned}
@@ -4542,14 +4545,20 @@ The logarithm of the left hand side except the terms independent of $\mathbf{x}$
 \frac{1}{2} 
 \left( 
 	\mathbf{y}
-	 - \mathbf{A} \mathbf{x} 
-	 - \mathbf{b} 
+	 - 
+	 \mathbf{A} 
+	 \mathbf{x} 
+	 - 
+	 \mathbf{b} 
 \right) ^ \intercal 
 \mathbf{L} 
 \left( 
 	\mathbf{y} 
-	- \mathbf{A} \mathbf{x} 
-	- \mathbf{b} 
+	- 
+	\mathbf{A} 
+	\mathbf{x} 
+	- 
+	\mathbf{b} 
 \right) 
 - 
 \frac{1}{2} 
@@ -4567,17 +4576,28 @@ Since the first term can be written as
 \frac{1}{2} 
 \left( 
 	\mathbf{y}
-	 - \mathbf{A} (\mathbf{x} - \bm{\mu})
-	 - \mathbf{A} \bm{\mu}
-	 - \mathbf{b} 
+	 - 
+	 \mathbf{A} 
+	 (\mathbf{x} - \bm{\mu})
+	 - 
+	 \mathbf{A} 
+	 \bm{\mu}
+	 - 
+	 \mathbf{b} 
 \right) ^ \intercal 
 \mathbf{L} 
 \left( 
 	\mathbf{y}
-	 - \mathbf{A} (\mathbf{x} - \bm{\mu})
-	 - \mathbf{A} \bm{\mu}
-	 - \mathbf{b} 
-\right) \\
+	 - 
+	 \mathbf{A} 
+	 (\mathbf{x} - \bm{\mu})
+	 - 
+	 \mathbf{A} 
+	 \bm{\mu}
+	 - 
+	 \mathbf{b} 
+\right) 
+\\
 =&
 - 
 \frac{1}{2}
@@ -4590,7 +4610,8 @@ Since the first term can be written as
 (\mathbf{x} - \bm{\mu}) ^ \intercal
 \mathbf{A} ^ \intercal
 \mathbf{L}
-(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) \\
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) 
+\\
 &-
 \frac{1}{2}
 (\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
@@ -4629,7 +4650,8 @@ the logarithm except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ can 
 \frac{1}{2}
 (\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
 \mathbf{L}
-(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) \\
+(\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) 
+\\
 =
 &-
 \frac{1}{2}
@@ -4642,7 +4664,8 @@ the logarithm except the terms independent of $\mathbf{x}$ and $\mathbf{y}$ can 
 	\mathbf{A}
 \right)
 (\mathbf{x} - \bm{\mu} - \mathbf{z})
--
+\\
+&-
 \frac{1}{2}
 (\mathbf{y} - \mathbf{A} \bm{\mu} - \mathbf{b}) ^ \intercal
 \mathbf{M}
