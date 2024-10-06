@@ -4950,7 +4950,8 @@ The right hand side can be written as
 \begin{equation}
 \begin{aligned}
 &\int 
-(\mathbf{x} - \bm{\mu} + \bm{\mu}) (\mathbf{x} - \bm{\mu} + \bm{\mu}) ^ \intercal
+(\mathbf{x} - \bm{\mu} + \bm{\mu}) 
+(\mathbf{x} - \bm{\mu} + \bm{\mu}) ^ \intercal
 \mathcal{N}
 \left(
 	\mathbf{x}
@@ -4961,7 +4962,8 @@ The right hand side can be written as
 d\mathbf{x} \\
 =&
 \int 
-(\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal
+(\mathbf{x} - \bm{\mu}) 
+(\mathbf{x} - \bm{\mu}) ^ \intercal
 \mathcal{N}
 \left(
 	\mathbf{x}
@@ -4981,7 +4983,8 @@ d\mathbf{x}
 	\bm{\mu},
 	\bm{\Sigma}
 \right)
-d\mathbf{x} \\
+d\mathbf{x} 
+\\
 &+
 \left(
 	\int
@@ -4997,7 +5000,8 @@ d\mathbf{x} \\
 \right)
 \bm{\mu} ^ \intercal
 +
-\bm{\mu} \bm{\mu} ^ \intercal
+\bm{\mu} 
+\bm{\mu} ^ \intercal
 \int 
 \mathcal{N}
 \left(
@@ -5024,7 +5028,8 @@ Since
 \right)
 d\mathbf{x}
 &=
-1, \\
+1, 
+\\
 \int 
 \mathbf{x}
 \mathcal{N}
@@ -5039,7 +5044,8 @@ d\mathbf{x}
 \bm{\mu},
 \\
 \int 
-(\mathbf{x} - \bm{\mu}) (\mathbf{x} - \bm{\mu}) ^ \intercal
+(\mathbf{x} - \bm{\mu}) 
+(\mathbf{x} - \bm{\mu}) ^ \intercal
 \mathcal{N}
 \left(
 	\mathbf{x}
@@ -5059,7 +5065,10 @@ Therefore,
 \begin{equation}
 \E \mathbf{x} \mathbf{x} ^ \intercal
 =
-\bm{\Sigma} + \bm{\mu} \bm{\mu} ^ \intercal.
+\bm{\Sigma} 
++ 
+\bm{\mu} 
+\bm{\mu} ^ \intercal.
 \end{equation}
 %
 
@@ -5094,7 +5103,8 @@ If $n \neq m$, then
 \begin{equation}
 \E \mathbf{x}_n \mathbf{x}_m ^ \intercal
 = 
-\E \mathbf{x}_n \E \mathbf{x}_m ^ \intercal.
+\E \mathbf{x}_n 
+\E \mathbf{x}_m ^ \intercal.
 \end{equation}
 %
 The right hand side can be written as $\bm{\mu} \bm{\mu} ^ \intercal$.
@@ -5103,7 +5113,11 @@ Therefore,
 \begin{equation}
 \E \mathbf{x}_n \mathbf{x}_m ^ \intercal
 =
-\delta_{nm} \bm{\Sigma} + \bm{\mu} \bm{\mu} ^ \intercal.
+\delta_{nm} 
+\bm{\Sigma} 
++ 
+\bm{\mu} 
+\bm{\mu} ^ \intercal.
 \end{equation}
 %
 
@@ -5179,7 +5193,8 @@ The right hand side can be written as
 \left(
 	\sum_{n = 1}^{N}
 	\mathbf{x_n}
-\right) ^ \intercal \\
+\right) ^ \intercal 
+\\
 &+
 \frac{1}{N ^ 3}
 \sum_{n = 1}^{N}
@@ -5206,17 +5221,21 @@ The second and third terms can be written as
 	\left(
 		\bm{\Sigma}
 		+
-		\bm{\mu} \bm{\mu} ^ \intercal
+		\bm{\mu} 
+		\bm{\mu} ^ \intercal
 	\right)
 	+
-	(N - 1) \bm{\mu} \bm{\mu} ^ \intercal
+	(N - 1) 
+	\bm{\mu} 
+	\bm{\mu} ^ \intercal
 \right)
 =
 -
 \frac{1}{N}
 \bm{\Sigma}
 -
-\bm{\mu} \bm{\mu} ^ \intercal.
+\bm{\mu} 
+\bm{\mu} ^ \intercal.
 \end{equation}
 %
 The fourth term can be written as
@@ -5228,17 +5247,21 @@ The fourth term can be written as
 	\left(
 		\bm{\Sigma}
 		+
-		\bm{\mu} \bm{\mu} ^ \intercal
+		\bm{\mu} 
+		\bm{\mu} ^ \intercal
 	\right)
 	+
-	N (N - 1)
-	\bm{\mu} \bm{\mu} ^ \intercal
+	N 
+	(N - 1)
+	\bm{\mu} 
+	\bm{\mu} ^ \intercal
 \right)
 =
 \frac{1}{N}
 \bm{\Sigma}
 +
-\bm{\mu} \bm{\mu} ^ \intercal.
+\bm{\mu} 
+\bm{\mu} ^ \intercal.
 \end{equation}
 %
 Therefore,
@@ -5246,7 +5269,8 @@ Therefore,
 \begin{equation}
 \E \bm{\Sigma}_{\rm ML}
 =
-\frac{N - 1}{N} \bm{\Sigma}.
+\frac{N - 1}{N} 
+\bm{\Sigma}.
 \end{equation}
 %
 
