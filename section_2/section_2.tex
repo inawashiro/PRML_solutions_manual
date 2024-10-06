@@ -4239,7 +4239,10 @@ Let $\mathbf{y}$ be a variable such that
 %
 \begin{equation}
 \mathbf{y}
-= \mathbf{x} + \mathbf{z},
+= 
+\mathbf{x} 
++ 
+\mathbf{z},
 \end{equation}
 %
 where
@@ -4254,7 +4257,8 @@ p(\mathbf{x})
 	| 
 	\bm{\mu}_{\mathbf{x}}, 
 	\bm{\Sigma}_{\mathbf{x}} 
-\right), \\
+\right), 
+\\
 p(\mathbf{z}) 
 &= 
 \mathcal{N} 
@@ -4271,7 +4275,11 @@ By the definition,
 %
 \begin{equation}
 p(\mathbf{y})
-= \int p(\mathbf{y} | \mathbf{x}) p(\mathbf{x}) d\mathbf{x}.
+= 
+\int 
+p(\mathbf{y} | \mathbf{x}) 
+p(\mathbf{x}) 
+d\mathbf{x}.
 \end{equation}
 %
 The right hand side can be written as
@@ -4282,7 +4290,9 @@ The right hand side can be written as
 \left( 
 	\mathbf{y} 
 	| 
-	\mathbf{x} + \bm{\mu}_{\mathbf{z}}, 
+	\mathbf{x} 
+	+ 
+	\bm{\mu}_{\mathbf{z}}, 
 	\bm{\Sigma}_{\mathbf{z}} 
 \right) 
 \mathcal{N} 
@@ -4301,11 +4311,18 @@ The logarithm of the integrand except the terms independent of $\mathbf{x}$ and 
 - \frac{1}{2} 
 \left( 
 	\mathbf{y}
-	 - \mathbf{x} 
-	 - \bm{\mu}_{\mathbf{z}} 
+	 - 
+	 \mathbf{x} 
+	 - 
+	 \bm{\mu}_{\mathbf{z}} 
 \right) ^ \intercal 
 	\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
-	\left( \mathbf{y} - \mathbf{x} - \bm{\mu}_{\mathbf{z}} 
+	\left( 
+		\mathbf{y} 
+		- 
+		\mathbf{x} 
+		- 
+		\bm{\mu}_{\mathbf{z}} 
 \right) 
 - 
 \frac{1}{2} 
@@ -4374,7 +4391,8 @@ respectively, where
 \mathbf{u}
 = 
 \begin{bmatrix}
-\mathbf{x} \\
+\mathbf{x} 
+\\
 \mathbf{y}
 \end{bmatrix}
 ,
@@ -4394,8 +4412,15 @@ respectively, where
 \mathbf{R}
 = 
 \begin{bmatrix}
-\bm{\Sigma}_{\mathbf{x}} ^ {- 1} & - \bm{\Sigma}_{\mathbf{z}} ^ {- 1} \\
-- \bm{\Sigma}_{\mathbf{z}} ^ {- 1} & \bm{\Sigma}_{\mathbf{z}} ^ {- 1}
+\bm{\Sigma}_{\mathbf{x}} ^ {- 1} 
+& 
+- 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+\\
+- 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1} 
+& 
+\bm{\Sigma}_{\mathbf{z}} ^ {- 1}
 \end{bmatrix}
 .
 \]
@@ -4403,7 +4428,8 @@ respectively, where
 Therefore, the logarithm of the integrand except the terms independent of $\mathbf{u}$ can be written as
 %
 \begin{equation}
--\frac{1}{2}
+-
+\frac{1}{2}
 \left( 
 	\mathbf{u}
 	- 
@@ -4425,16 +4451,26 @@ where
 \mathbf{R} ^ {- 1}
 =
 \begin{bmatrix}
-\bm{\Sigma}_\mathbf{x} & \bm{\Sigma}_\mathbf{x} \\
-\bm{\Sigma}_\mathbf{x} & \bm{\Sigma}_\mathbf{x} + \bm{\Sigma}_\mathbf{z}
+\bm{\Sigma}_\mathbf{x} 
+& 
+\bm{\Sigma}_\mathbf{x} 
+\\
+\bm{\Sigma}_\mathbf{x} 
+& 
+\bm{\Sigma}_\mathbf{x} 
++ 
+\bm{\Sigma}_\mathbf{z}
 \end{bmatrix}
 ,
 \mathbf{R} ^ {- 1}
 \mathbf{v}
 =
 \begin{bmatrix}
-\bm{\mu}_\mathbf{x} \\
-\bm{\mu}_\mathbf{x} + \bm{\mu}_\mathbf{z}
+\bm{\mu}_\mathbf{x} 
+\\
+\bm{\mu}_\mathbf{x} 
++ 
+\bm{\mu}_\mathbf{z}
 \end{bmatrix}
 .
 \]
@@ -4446,11 +4482,16 @@ Thus,
 p(\mathbf{y})
 = 
 \mathcal{N} 
-(\mathbf{y} 
-| 
-\bm{\mu}_\mathbf{x} + \bm{\mu}_\mathbf{z},
-\bm{\Sigma}_\mathbf{x} + \bm{\Sigma}_\mathbf{z}
-).
+\left(
+	\mathbf{y} 
+	| 
+	\bm{\mu}_\mathbf{x} 
+	+ 
+	\bm{\mu}_\mathbf{z},
+	\bm{\Sigma}_\mathbf{x} 
+	+ 
+	\bm{\Sigma}_\mathbf{z}
+\right).
 \end{equation}
 %
 
