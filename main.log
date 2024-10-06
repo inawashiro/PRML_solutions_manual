@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  6 OCT 2024 19:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  6 OCT 2024 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -221,13 +221,13 @@ Overfull \hbox (19.06729pt too wide) detected at line 3857
  []
 
 [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73]
-Overfull \hbox (15.49089pt too wide) detected at line 5904
+Overfull \hbox (15.49089pt too wide) detected at line 5909
 []\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 ^^V\OMS/cmsy/m/n/12 j\OT1
 /cmr/bx/n/12 X\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 N [] \OML/cmm/m/it/12 :
  []
 
 [74] [75] [76] [77]
-Overfull \hbox (4.88232pt too wide) detected at line 6477
+Overfull \hbox (4.88232pt too wide) detected at line 6482
 []\OMS/cmsy/m/n/12 ^^@[]\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/
 12 ^^V\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it
 /12 ^^V \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 )[] = \OMS/c
@@ -235,27 +235,27 @@ msy/m/n/12 ^^@[] [][] ^^@ []\OML/cmm/m/it/12 ;
  []
 
 
-Overfull \hbox (70.44658pt too wide) detected at line 6503
+Overfull \hbox (70.44658pt too wide) detected at line 6508
 []\OML/cmm/m/it/12 ^^\[] [] [] :
  []
 
 [78] [79]
-Overfull \hbox (5.60765pt too wide) detected at line 6718
+Overfull \hbox (5.60765pt too wide) detected at line 6723
 [][][] [][] [][][][] \OT1/cmr/m/n/12 = ^^@ [] [][] \OML/cmm/m/it/12 :
  []
 
 [80]
-Overfull \hbox (11.58386pt too wide) detected at line 6908
+Overfull \hbox (11.58386pt too wide) detected at line 6913
 [][][]
  []
 
 [81] [82] [83] [84] [85] [86] [87] [88]
-Overfull \hbox (17.34496pt too wide) detected at line 8046
+Overfull \hbox (17.34496pt too wide) detected at line 8051
 [][][]
  []
 
 
-Overfull \hbox (0.72604pt too wide) detected at line 8082
+Overfull \hbox (0.72604pt too wide) detected at line 8087
 [][][]
  []
 
