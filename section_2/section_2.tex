@@ -6523,7 +6523,8 @@ The right hand side except the terms independent of $\mathbf{x}$, $\mu$ and $\ta
 \left(
 	-
 	\frac{\tau}{2}
-	\sum_{n = 1}^{N} (x_n - \mu) ^ 2
+	\sum_{n = 1}^{N} 
+	(x_n - \mu) ^ 2
 \right)
 \tau ^ \frac{1}{2}
 \exp 
@@ -6533,7 +6534,8 @@ The right hand side except the terms independent of $\mathbf{x}$, $\mu$ and $\ta
 	(\mu - \mu_0) ^ 2
 \right)
 \tau ^ {a - 1} 
-\exp(- b \tau) \\
+\exp(- b \tau) 
+\\
 &=
 \tau ^ {a + \frac{N - 1}{2}}
 \exp
@@ -6548,7 +6550,8 @@ The right hand side except the terms independent of $\mathbf{x}$, $\mu$ and $\ta
 	b \tau
 	-
 	\frac{\tau}{2}
-	\sum_{n = 1}^{N} (x_n - \bar{x}) ^ 2
+	\sum_{n = 1}^{N} 
+	(x_n - \bar{x}) ^ 2
 \right).
 \end{aligned}
 \end{equation}
@@ -6604,7 +6607,8 @@ the right hand side can be written as
 		\frac{N \beta (\bar{x} - \mu_0) ^ 2}{2 (N + \beta)}
 		+
 		\frac{1}{2}
-		\sum_{n = 1}^{N} (x_n - \bar{x}) ^ 2
+		\sum_{n = 1}^{N} 
+		(x_n - \bar{x}) ^ 2
 	\right)
 	\tau
 \right).
@@ -6622,7 +6626,10 @@ p(\mu, \tau | \mathbf{x})
 	\left.
 	\right \vert
 	\frac{N \bar{x} + \beta \mu_0}{N + \beta},
-	((N + \beta) \tau) ^ {- 1}
+	\left(
+		(N + \beta) 
+		\tau
+	\right) ^ {- 1}
 \right) 
 \\
 &
