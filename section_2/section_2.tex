@@ -6280,12 +6280,12 @@ p
 	q
 \right)
 =
-\frac{q}{2 \Gamma \left( \frac{1}{q} \right)} 
+\frac{q}{2 \Gamma(\frac{1}{q})} 
 \left( 2 \sigma ^ 2 \right) ^ {- \frac{1}{q}}
 \exp 
 \left( 
--
-\frac{\abs{x} ^ q}{2 \sigma ^ 2}
+	-
+	\frac{\abs{x} ^ q}{2 \sigma ^ 2}
 \right).
 \end{equation}
 %
@@ -6302,13 +6302,15 @@ p
 \right)
 dx
 =
-\frac{q}{\Gamma \left( \frac{1}{q} \right)} 
-\left( 2 \sigma ^ 2 \right) ^ {- \frac{1}{q}}
+\frac{q}{\Gamma(\frac{1}{q})} 
+\left( 
+	2 \sigma ^ 2 
+\right) ^ {- \frac{1}{q}}
 \int_{0}^{\infty}
 \exp 
 \left( 
--
-\frac{x ^ q}{2 \sigma ^ 2}
+	-
+	\frac{x ^ q}{2 \sigma ^ 2}
 \right)
 dx.
 \end{equation}
@@ -6326,7 +6328,7 @@ the right hand side can be written as
 \begin{equation}
 \begin{aligned}
 &
-\frac{q}{\Gamma \left( \frac{1}{q} \right)} 
+\frac{q}{\Gamma(\frac{1}{q})} 
 \left( 2 \sigma ^ 2 \right) ^ {- \frac{1}{q}}
 \int_{0}^{\infty}
 \exp ( - x' )
@@ -6335,9 +6337,10 @@ the right hand side can be written as
 \right) ^ {\frac{1}{q}}
 \frac{1}{q}
 x ^ {\frac{1}{q} - 1}
-dx' \\
+dx' 
+\\
 &=
-\frac{1}{\Gamma \left( \frac{1}{q} \right)}
+\frac{1}{\Gamma(\frac{1}{q})}
 \int_{0}^{\infty}
 x ^ {\frac{1}{q} - 1}
 \exp ( - x' )
@@ -6348,8 +6351,11 @@ dx'.
 The right hand side can be written as
 %
 \begin{equation}
-\frac{1}{\Gamma \left( \frac{1}{q} \right)}
-\Gamma \left( \frac{1}{q} \right)
+\frac{1}{\Gamma(\frac{1}{q})}
+\Gamma 
+\left( 
+	\frac{1}{q} 
+\right)
 =
 1.
 \end{equation}
@@ -6382,7 +6388,7 @@ p
 	2
 \right)
 =
-\frac{1}{\Gamma \left( \frac{1}{2} \right)}
+\frac{1}{\Gamma(\frac{1}{2})}
 \left(
 	2 \sigma ^ 2
 \right) ^ {- \frac{1}{2}}
@@ -6445,7 +6451,10 @@ Therefore, the logarithm of $p(\epsilon_n)$ except the terms independent of $\ma
 \frac{\abs{\epsilon_n} ^ q}{2 \sigma ^ 2}
 -
 \frac{1}{q}
-\ln \left( 2 \sigma ^ 2 \right).
+\ln 
+\left( 
+	2 \sigma ^ 2 
+\right).
 \end{equation}
 %
 Thus, the logarithm of $p\left( \mathbf{t} |\mathbf{X}, \mathbf{w}, \sigma ^ 2 \right)$ except the terms independent of $\mathbf{w}$ and $\sigma ^ 2$ can be written as
