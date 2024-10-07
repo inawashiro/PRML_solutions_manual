@@ -5744,7 +5744,7 @@ p(x_N | \mu)
 \end{aligned}
 \end{equation}
 %
-Then $\ln p(\mu | x_1, \cdots, x_{N - 1}) + \ln p(x_N | \mu)$ except the terms independent of $\mu$ or $x_N$ can be written as
+Then, $\ln p(\mu | x_1, \cdots, x_{N - 1}) + \ln p(x_N | \mu)$ except the terms independent of $\mu$ or $x_N$ can be written as
 %
 \begin{equation}
 \begin{aligned}
@@ -5757,7 +5757,9 @@ Then $\ln p(\mu | x_1, \cdots, x_{N - 1}) + \ln p(x_N | \mu)$ except the terms i
 \\
 =&
 -
-\frac{1}{2 \frac{\sigma_{N - 1} ^ 2 \sigma ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}}
+\frac
+{1}
+{2 \frac{\sigma_{N - 1} ^ 2 \sigma ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}}
 \left(
 	\mu
 	-
@@ -5769,6 +5771,38 @@ Then $\ln p(\mu | x_1, \cdots, x_{N - 1}) + \ln p(x_N | \mu)$ except the terms i
 \right) ^ 2
 \\
 &+
+\frac
+{1}
+{2 \frac{\sigma_{N - 1} ^ 2 \sigma ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}}
+\left(
+	\frac{\sigma ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}
+	\mu_{N - 1}
+	+
+	\frac{\sigma_{N - 1} ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}
+	x_N
+\right)
+-
+\frac{\mu_{N - 1} ^ 2}{2 \sigma_{N - 1} ^ 2}
+-
+\frac{x_N ^ 2}{2 \sigma ^ 2}.
+\end{aligned}
+\end{equation}
+%
+Therefoere,
+%
+\begin{equation}
+\begin{aligned}
+\mu_N
+&=
+\frac{\sigma ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}
+\mu_{N - 1}
++
+\frac{\sigma_{N - 1} ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}
+x_N,
+\\
+\sigma_N ^ 2
+&=
+\frac{\sigma_{N - 1} ^ 2 \sigma ^ 2}{\sigma_{N - 1} ^ 2 + \sigma ^ 2}.
 \end{aligned}
 \end{equation}
 %
