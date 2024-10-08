@@ -6651,7 +6651,7 @@ p(\mu, \tau | \mathbf{x})
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{2.45}
 Let $\mathbf{x}$ be a variable in $D$ dimensions such that
 %
@@ -6705,7 +6705,7 @@ The right hand side exept the terms independent of $\bm{\Lambda}$ can be written
 	\frac{1}{2}
 	\tr
 	\left(
-		\mathbf{W} ^ {- 1}
+		\mathbf{S}
 		\bm{\Lambda}
 	\right)
 \right),
@@ -6715,11 +6715,98 @@ The right hand side exept the terms independent of $\bm{\Lambda}$ can be written
 where
 %
 \begin{equation}
-\mathbf{W} ^ {- 1}
+\mathbf{S}
 =
 \sum_{n = 1}^{N}
 (\mathbf{x}_n - \bm{\mu})
 (\mathbf{x}_n - \bm{\mu}) ^ \intercal.
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(\mathbf{X} | \bm{\Lambda})
+\propto
+(\det \bm{\Lambda}) ^ \frac{N}{2}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	\tr
+	\left(
+		\mathbf{S}
+		\bm{\Lambda}
+	\right)
+\right).
+\end{equation}
+%
+Let us asuume that a conjugate prior of $\bm{\Lambda}$ is given by
+%
+\begin{equation}
+\mathcal{W}(\bm{\Lambda} | \mathbf{W}, \nu)
+=
+B(\mathbf{W}, \nu)
+(\det \bm{\Lambda}) ^ \frac{\nu - D - 1}{2}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	\tr 
+	\left(
+		\mathbf{W} ^ {- 1}
+		\bm{\Lambda}
+	\right)
+\right).
+\end{equation}
+%
+By the definition,
+%
+\begin{equation}
+p(\bm{\Lambda} | \mathbf{X}, \mathbf{W}, \nu)
+\propto
+p(\mathbf{X} | \bm{\Lambda})
+\mathcal{W}(\bm{\Lambda} | \mathbf{W}, \nu).
+\end{equation}
+%
+The right hand side except the terms independent of $\bm{\Lambda}$ can be written as 
+%
+\begin{equation}
+(\det \bm{\Lambda}) ^ \frac{\nu + N - D - 1}{2}
+\exp
+\left(
+	-
+	\frac{1}{2}
+	\tr 
+	\left(
+		\left(
+			\mathbf{W} ^ {- 1}
+			+
+			\mathbf{S}
+		\right)
+		\bm{\Lambda}
+	\right)
+\right).
+\end{equation}
+%
+Therefore,
+%
+\begin{equation}
+p(\bm{\Lambda} | \mathbf{X}, \mathbf{W}, \nu)
+=
+\mathcal{W} 
+\left(
+	\bm{\Lambda} 
+	\left.
+	\right \vert
+	\left(
+		\mathbf{W} ^ {- 1}
+		+
+		\mathbf{S}
+	\right) ^ {- 1},
+	\nu 
+	+ 
+	N
+\right).
 \end{equation}
 %
 
