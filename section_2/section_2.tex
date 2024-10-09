@@ -7529,7 +7529,7 @@ Therefore,
 By the definition,
 %
 \begin{equation}
-{\rm St}(\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
+{\rm St} (\mathbf{x} | \bm{\mu}, \bm{\Lambda}, \nu)
 =
 \frac{\Gamma(\frac{D + \nu}{2})}{\Gamma (\frac{\nu}{2})}
 \frac{(\det \bm{\Lambda}) ^ \frac{1}{2}}{(\pi \nu) ^ \frac{D}{2}}
@@ -7537,7 +7537,11 @@ By the definition,
 	1 
 	+ 
 	\frac
-	{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+	{
+	(\mathbf{x} - \bm{\mu}) ^ \intercal 
+	\bm{\Lambda} 
+	(\mathbf{x} - \bm{\mu})
+	}
 	{\nu}
 \right) ^ {- \frac{D + \nu}{2}}.
 \end{equation}
@@ -7548,14 +7552,30 @@ By the transformation
 y
 =
 \frac
-{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}
+{
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Lambda} 
+(\mathbf{x} - \bm{\mu})
+}
 {\nu},
 \end{equation}
 %
 the right hand side except the terms independent of $\mathbf{x}$ can be written as
 %
 \begin{equation}
-(1 + y) ^ {- \frac{(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})}{2y} - \frac{D}{2}}.
+(1 + y) ^ 
+{
+- 
+\frac
+{
+(\mathbf{x} - \bm{\mu}) ^ \intercal 
+\bm{\Lambda} 
+(\mathbf{x} - \bm{\mu})
+}
+{2y} 
+- 
+\frac{D}{2}
+}.
 \end{equation}
 %
 In the limit $y \to \infty$, it becomes
@@ -7565,7 +7585,9 @@ In the limit $y \to \infty$, it becomes
 \left(
 	-
 	\frac{1}{2}
-	(\mathbf{x} - \bm{\mu}) ^ \intercal \bm{\Lambda} (\mathbf{x} - \bm{\mu})
+	(\mathbf{x} - \bm{\mu}) ^ \intercal 
+	\bm{\Lambda} 
+	(\mathbf{x} - \bm{\mu})
 \right).
 \end{equation}
 %
