@@ -6686,7 +6686,6 @@ The right hand side exept the terms independent of $\bm{\Lambda}$ can be written
 %
 \begin{equation}
 \begin{aligned}
-&
 (\det \bm{\Lambda}) ^ \frac{N}{2}
 \exp
 \left(
@@ -6696,8 +6695,8 @@ The right hand side exept the terms independent of $\bm{\Lambda}$ can be written
 	(\mathbf{x}_n - \bm{\mu}) ^ \intercal
 	\bm{\Lambda}
 	(\mathbf{x}_n - \bm{\mu})
-\right) \\
-&=
+\right) 
+=
 (\det \bm{\Lambda}) ^ \frac{N}{2}
 \exp
 \left(
@@ -6740,7 +6739,7 @@ p(\mathbf{X} | \bm{\Lambda})
 \right).
 \end{equation}
 %
-Let us asuume that a conjugate prior of $\bm{\Lambda}$ is given by
+Let us assume that a prior distribution of $\bm{\Lambda}$ is given by
 %
 \begin{equation}
 \mathcal{W}(\bm{\Lambda} | \mathbf{W}, \nu)
@@ -6759,16 +6758,16 @@ B(\mathbf{W}, \nu)
 \right).
 \end{equation}
 %
-By the definition,
+Then, by the definition,
 %
 \begin{equation}
 p(\bm{\Lambda} | \mathbf{X}, \mathbf{W}, \nu)
 \propto
 p(\mathbf{X} | \bm{\Lambda})
-\mathcal{W}(\bm{\Lambda} | \mathbf{W}, \nu).
+\mathcal{W}(\bm{\Lambda} | \mathbf{W}, \nu),
 \end{equation}
 %
-The right hand side except the terms independent of $\bm{\Lambda}$ can be written as 
+where the right hand side except the terms independent of $\bm{\Lambda}$ can be written as 
 %
 \begin{equation}
 (\det \bm{\Lambda}) ^ \frac{\nu + N - D - 1}{2}
@@ -6809,6 +6808,7 @@ p(\bm{\Lambda} | \mathbf{X}, \mathbf{W}, \nu)
 \right).
 \end{equation}
 %
+Thus, $\mathcal{W}$ is a conjugate prior distribution of $\bm{\Lambda}$.
 
 
 \subsection{}
