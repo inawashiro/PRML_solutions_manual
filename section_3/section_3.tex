@@ -8,21 +8,15 @@ By the definition,
 \begin{equation}
 \tanh a 
 = 
-\frac
-{\exp(a) - \exp(- a)}
-{\exp(a) + \exp(- a)}.
+\frac{\exp(a) - \exp(- a)}{\exp(a) + \exp(- a)}.
 \end{equation}
 %
 The right hand side can be written as
 %
 \begin{equation}
-\frac
-{1 - \exp(- 2 a)}
-{1 + \exp(- 2 a)}
+\frac{1 - \exp(- 2 a)}{1 + \exp(- 2 a)}
 =
-\frac
-{2}
-{1 + \exp(- 2 a)}
+\frac{2}{1 + \exp(- 2 a)}
 -
 1.
 \end{equation}
@@ -32,9 +26,7 @@ By the definition
 \begin{equation}
 \sigma (a)
 =
-\frac
-{1}
-{1 + \exp(- a)},
+\frac{1}{1 + \exp(- a)},
 \end{equation}
 %
 the right hand side can be written as
@@ -58,11 +50,9 @@ w_0
 +
 \sum_{j = 1}^{M}
 w_j
-\sigma 
+\sigma
 \left(
-	\frac
-	{x - \mu_j}
-	{s}
+	\frac{x - \mu_j}{s}
 \right).
 \end{equation}
 %
@@ -73,35 +63,20 @@ w_0
 +
 \sum_{j = 1}^{M}
 w_j
-\frac
-{\tanh
-\left(
-	\frac
-	{x - \mu_j}
-	{2 s}
-\right)
-+
-1}
-{2}
+\frac{\tanh (\frac{x - \mu_j}{2 s}) + 1}{2}
 =
 w_0
 +
-\frac
-{1}
-{2}
+\frac{1}{2}
 \sum_{j = 1}^{M}
 w_j
 +
-\frac
-{1}
-{2}
+\frac{1}{2}
 \sum_{j = 1}^{M}
 w_j
 \tanh
 \left(
-	\frac
-	{x - \mu_j}
-	{2 s}
+	\frac{x - \mu_j}{2 s}
 \right).
 \end{equation}
 %
@@ -116,9 +91,7 @@ u_0
 u_j
 \tanh
 \left(
-	\frac
-	{x - \mu_j}
-	{2 s}
+	\frac{x - \mu_j}{2 s}
 \right),
 \end{equation}
 %
@@ -130,17 +103,13 @@ u_0
 &=
 w_0
 +
-\frac
-{1}
-{2}
+\frac{1}{2}
 \sum_{j = 1}^{M}
 w_j, 
 \\
 u_j
 &=
-\frac
-{w_j}
-{2},
+\frac{w_j}{2},
 \quad
 j
 =
