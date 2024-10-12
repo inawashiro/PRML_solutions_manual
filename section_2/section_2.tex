@@ -7851,7 +7851,8 @@ p(\theta | \theta_0, m)
 \frac{1}{2 \pi I_0 (m)}
 \exp
 \left(
-	m \cos (\theta - \theta_0)
+	m 
+	\cos (\theta - \theta_0)
 \right),
 \end{equation}
 %
@@ -7875,14 +7876,16 @@ Setting the first and seconnd derivatives with respect to $\theta$ to zero gives
 -
 m
 \sin (\theta - \theta_0)
-p(\theta | \theta_0, m), \\
+p(\theta | \theta_0, m), 
+\\
 0
 &=
 \left(
 	m ^ 2
 	\sin ^ 2 (\theta - \theta_0)
 	-
-	m \cos (\theta - \theta_0)
+	m 
+	\cos (\theta - \theta_0)
 \right)
 p(\theta | \theta_0, m).
 \end{aligned}
@@ -7894,10 +7897,14 @@ Therefore,
 \begin{aligned}
 \argmax_\theta p(\theta | \theta_0, m)
 &=
-\theta_0, \\
+\theta_0, 
+\\
 \argmin_\theta p(\theta | \theta_0, m)
 &=
-\theta_0 - \pi \sgn (\theta_0 - \pi).
+\theta_0 
+- 
+\pi 
+\sgn (\theta_0 - \pi).
 \end{aligned}
 \end{equation}
 %
