@@ -243,6 +243,83 @@ where
 \]
 
 
+\subsection{(Incomplete)}
+\label{3.4}
+Let
+%
+\begin{equation}
+E_D(\mathbf{w})
+=
+\frac{1}{2}
+\sum_{n = 1}^{N}
+\left(
+	y(\mathbf{x}_n, \mathbf{w})
+	-
+	t_n
+\right) ^ 2,
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+y(\mathbf{x}_n, \mathbf{w})
+&=
+w_0
++
+\sum_{i = 1}^{D}
+w_i
+(x_i + \epsilon_i),
+\\
+p(\epsilon_i)
+&=
+\mathcal{N}
+\left(
+	\epsilon_i
+	|
+	0,
+	\sigma ^ 2
+\right).
+\end{aligned}
+\end{equation}
+%
+Setting the derivative of $E_D(\mathbf{w})$ to zero gives
+%
+\begin{equation}
+\mathbf{0}
+=
+\sum_{n = 1}^{N}
+\mathbf{v}_n
+\left(
+	y(\mathbf{x}_n, \mathbf{w})
+	-
+	t_n
+\right),
+\end{equation}
+%
+where
+%
+\[
+\mathbf{v}_n
+=
+\begin{bmatrix}
+1
+\\
+x_1
+\\
+\vdots
+\\
+x_D
+\end{bmatrix}
+.
+\]
+%
+
+
+
+
+
+
 
 
 

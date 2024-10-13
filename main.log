@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  13 OCT 2024 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  13 OCT 2024 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,17 +264,17 @@ Overfull \hbox (0.72604pt too wide) detected at line 8378
 [][][]
  []
 
-[90] [91]) [92] [93] (./section_3/section_3.tex [94]) [95] (./main.aux)
+[90] [91]) [92] [93] (./section_3/section_3.tex [94] [95]) [96] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2644 strings out of 474049
- 34344 string characters out of 5746278
+ 2645 strings out of 474049
+ 34349 string characters out of 5746278
  1942754 words of memory out of 5000000
- 25066 multiletter control sequences out of 15000+600000
+ 25067 multiletter control sequences out of 15000+600000
  571748 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,13n,93p,342b,316s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -296,10 +296,10 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (97 pages, 410544 bytes).
+Output written on main.pdf (98 pages, 411692 bytes).
 PDF statistics:
- 418 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
+ 421 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
