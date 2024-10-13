@@ -121,13 +121,24 @@ j
 
 \subsection{(Incomplete)}
 \label{3.2}
-Let $\mathbf{t}$ be a vector of $N$ dimensions and $\bm{\Phi}$ be an $N \times M$ matarix whose $n$th column is given by $\bm{\phi}_n$.
-Then
+Let $\bm{\Phi}$ be an $N \times M$ matarix.
+Then, for any vector $\mathbf{v}$ in $N$ dimensions,
 %
 \begin{equation}
-\mathbf{y}
-=
 \bm{\Phi}
+\left(
+	\bm{\Phi} ^ \intercal
+	\bm{\Phi}
+\right) ^ {- 1}
+\bm{\Phi} ^ \intercal
+\mathbf{v}
+\end{equation}
+%
+is a projection of $\mathbf{v}$ onto the space spanned by the columns of $\mathbf{\Phi}$?
+
+Additionally, for a vector $\mathbf{t}$ in $N$ dimensions,
+%
+\begin{equation}
 \left(
 	\bm{\Phi} ^ \intercal
 	\bm{\Phi}
@@ -136,7 +147,7 @@ Then
 \mathbf{t}
 \end{equation}
 %
-an orthogonal projection of $\mathbf{t}$ onto the space?
+is an orthogonal projection of $\mathbf{t}$ onto the space spanned by the columns of $\mathbf{\Phi}$?
 
 
 \subsection{}
