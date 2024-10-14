@@ -285,46 +285,37 @@ p(\epsilon_i)
 %
 Setting the derivative of $E_D(\mathbf{w})$ to zero gives
 %
-\begin{equation}
+\[
 \mathbf{0}
 =
 \sum_{n = 1}^{N}
-\mathbf{v}_n
+\begin{bmatrix}
+1
+\\
+\mathbf{x}_n
++
+\bm{\epsilon}
+\end{bmatrix}
 \left(
 	y(\mathbf{x}_n, \mathbf{w})
 	-
 	t_n
 \right),
-\end{equation}
+\]
 %
 where
-%
 \[
-\mathbf{v}_n
+\bm{\epsilon}
 =
 \begin{bmatrix}
-1
-\\
-x_{n1}
-+
 \epsilon_1
 \\
 \vdots
 \\
-x_{nD}
-+
 \epsilon_D
 \end{bmatrix}
 .
 \]
-%
-
-
-
-
-
-
-
 
 
 
