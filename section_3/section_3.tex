@@ -294,28 +294,51 @@ Setting the derivative of $E_D(\mathbf{w})$ to zero gives
 \\
 \mathbf{x}_n
 +
-\bm{\epsilon}
+\bm{\epsilon}_n
 \end{bmatrix}
 \left(
 	y(\mathbf{x}_n, \mathbf{w})
 	-
 	t_n
-\right),
+\right).
 \]
 %
-where
+The right hand side can be written as
+%
 \[
-\bm{\epsilon}
-=
+\sum_{n = 1}^{N}
 \begin{bmatrix}
-\epsilon_1
+1
 \\
-\vdots
-\\
-\epsilon_D
+\mathbf{x}_n
 \end{bmatrix}
-.
+\left(
+	y(\mathbf{x}_n, \mathbf{w})
+	-
+	t_n
+\right)
++
+\sum_{n = 1}^{N}
+\begin{bmatrix}
+0
+\\
+\bm{\epsilon}_n
+\end{bmatrix}
+\left(
+	y(\mathbf{x}_n, \mathbf{w})
+	-
+	t_n
+\right).
 \]
+%
+
+
+
+
+
+
+
+
 
 
 
