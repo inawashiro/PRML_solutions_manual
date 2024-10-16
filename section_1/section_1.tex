@@ -3080,7 +3080,7 @@ q
 p(\mathbf{x})
 \int  
 \abs{y(\mathbf{x}) - t} ^ {q - 1} 
-{\rm sign} (y(\mathbf{x}) - t) 
+\sign(y(\mathbf{x}) - t) 
 p(t | \mathbf{x}) 
 dt.
 \end{equation}
@@ -3097,7 +3097,7 @@ Therefore,
 	\right \vert
 	\int  
 	\abs{y(\mathbf{x}) - t} ^ {q - 1} 
-	{\rm sign} (y(\mathbf{x}) - t) 
+	\sign(y(\mathbf{x}) - t) 
 	p(t | \mathbf{x}) 
 	dt
 	=
@@ -3111,7 +3111,7 @@ Additionally, if $q = 1$, the integral can be written as
 \begin{equation}
 p(\mathbf{x})
 \int
-{\rm sign}(y(\mathbf{x}) - t)
+\sign(y(\mathbf{x}) - t)
 p(t | \mathbf{x})
 dt
 =
@@ -3141,8 +3141,10 @@ Finally,
 %
 \begin{equation}
 \lim_{q \to 0}
-\argmin_{y(\mathbf{x})}
-\E L_q
+\left(
+	\argmin_{y(\mathbf{x})}
+	\E L_q
+\right)
 =
 \mode (t | \mathbf{x}) ?
 \end{equation}
