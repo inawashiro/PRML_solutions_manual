@@ -333,10 +333,80 @@ The right hand side can be written as
 %
 
 
-
-
-
-
+\subsection{(Incomplete)}
+\label{3.5}
+Let
+%
+\begin{equation}
+E_D (\mathbf{w})
+=
+\frac{1}{2}
+\sum_{n = 1}^{N}
+\left(
+	t_n
+	-
+	\mathbf{w} ^ \intercal
+	\bm{\phi} (\mathbf{x}_n)
+\right) ^ 2.
+\end{equation}
+%
+Setting the derivatives of 
+%
+\begin{equation}
+E_D (\mathbf{w})
++
+\lambda
+\left(
+	\sum_{j = 1}^{M}
+	\abs{w_j} ^ q
+	-
+	\eta
+\right)
+\end{equation}
+%
+with respect to $\mathbf{w}$ and $\lambda$ to zero gives
+%
+\begin{equation}
+\begin{aligned}
+\sum_{n = 1}^{N}
+\left(
+	t_n
+	-
+	\mathbf{w} ^ \intercal
+	\bm{\phi} (\mathbf{x}_n)
+\right)
+\bm{\phi} (\mathbf{x}_n)
++
+\lambda
+q
+\mathbf{v}
+&=
+\mathbf{0},
+\\
+\sum_{j = 1}^{M}
+\abs{w_j} ^ q
+&=
+\eta,
+\end{aligned}
+\end{equation}
+%
+where
+%
+\[
+\mathbf{v}
+=
+\begin{bmatrix}
+\sign(w_1)
+\abs{w_1} ^ {q - 1}
+\\
+\vdots
+\\
+\sign(w_M)
+\abs{w_M} ^ {q - 1}
+\end{bmatrix}
+.
+\]
+%
 
 
 
