@@ -333,7 +333,7 @@ The right hand side can be written as
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{3.5}
 Let
 %
@@ -350,7 +350,16 @@ E_D (\mathbf{w})
 \right) ^ 2.
 \end{equation}
 %
-Setting the derivatives of 
+Then, the minimisation of $E_D (\mathbf{w})$ under the constraint 
+%
+\begin{equation}
+\sum_{j = 1}^{M}
+\abs{w_j} ^ q
+\leq
+\eta
+\end{equation}
+%
+reduces to the minimisation of 
 %
 \begin{equation}
 E_D (\mathbf{w})
@@ -364,51 +373,35 @@ E_D (\mathbf{w})
 \right)
 \end{equation}
 %
-with respect to $\mathbf{w}$ and $\lambda$ to zero gives
+with respect to $\mathbf{w}$ and $\lambda$.
+Then,
 %
 \begin{equation}
-\begin{aligned}
-\sum_{n = 1}^{N}
-\left(
-	t_n
-	-
-	\mathbf{w} ^ \intercal
-	\bm{\phi} (\mathbf{x}_n)
-\right)
-\bm{\phi} (\mathbf{x}_n)
-+
-\lambda
-q
-\mathbf{v}
-&=
-\mathbf{0},
-\\
+\eta
+=
 \sum_{j = 1}^{M}
-\abs{w_j} ^ q
-&=
-\eta,
-\end{aligned}
+\abs{w^*_j(\lambda)} ^ q,
 \end{equation}
 %
 where
 %
-\[
-\mathbf{v}
+\begin{equation}
+\mathbf{w^*}(\lambda)
 =
-\begin{bmatrix}
-\sign(w_1)
-\abs{w_1} ^ {q - 1}
-\\
-\vdots
-\\
-\sign(w_M)
-\abs{w_M} ^ {q - 1}
-\end{bmatrix}
-.
-\]
+\argmin_{\mathbf{w}}
+\left(
+	E_D (\mathbf{w})
+	+
+	\lambda
+	\left(
+		\sum_{j = 1}^{M}
+		\abs{w_j} ^ q
+		-
+		\eta
+	\right)
+\right).
+\end{equation}
 %
-
-
 
 
 
