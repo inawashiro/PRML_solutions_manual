@@ -406,16 +406,16 @@ where
 
 \subsection{(Incomplete)}
 \label{3.6}
-Let $\mathbf{t}$ be a variable such that 
+Let $\mathbf{t}_1, \cdots, \mathbf{t}_N$ be a variable in $D$ dimensions such that 
 %
 \begin{equation}
-p(\mathbf{t} | \mathbf{W}, \bm{\Sigma})
+p(\mathbf{t}_n | \mathbf{W}, \bm{\Sigma})
 =
 \mathcal{N}
 \left(
-	\mathbf{t}
+	\mathbf{t}_n
 	|
-	\mathbf{y} (\mathbf{x}, \mathbf{W}),
+	\mathbf{y} (\mathbf{x}_n, \mathbf{W}),
 	\bm{\Sigma}
 \right),
 \end{equation}
@@ -423,13 +423,49 @@ p(\mathbf{t} | \mathbf{W}, \bm{\Sigma})
 where
 %
 \begin{equation}
-\mathbf{y} (\mathbf{x}, \mathbf{W})
+\mathbf{y} (\mathbf{x}_n, \mathbf{W})
 =
 \mathbf{W} ^ \intercal
-\bm{\phi}(\mathbf{x}).
+\bm{\phi}(\mathbf{x}_n).
 \end{equation}
 %
-
+Then
+%
+\begin{equation}
+\begin{aligned}
+&
+\ln
+\left(
+	\prod_{n = 1}^{N}
+	p(\mathbf{t}_n | \mathbf{W}, \bm{\Sigma})
+\right)
+\\
+=&
+-
+\frac{N D}{2}
+\ln (2 \pi)
+-
+\frac{N}{2}
+\det \bm{\Sigma}
+-
+\frac{1}{2}
+\sum_{n = 1}^{N}
+\left(
+	\mathbf{t}_n 
+	- 
+	\mathbf{W} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n)
+\right) ^ \intercal
+\bm{\Sigma} ^ {- 1}
+\left(
+	\mathbf{t}_n 
+	- 
+	\mathbf{W} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n)
+\right).
+\end{aligned}
+\end{equation}
+%
 
 
 
