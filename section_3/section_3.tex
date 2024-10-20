@@ -404,7 +404,7 @@ where
 %
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{3.6}
 Let $\mathbf{t}_1, \cdots, \mathbf{t}_N$ be a variable in $D$ dimensions such that 
 %
@@ -466,11 +466,12 @@ Then
 \end{aligned}
 \end{equation}
 %
-Setting the derivative with respect to $\mathbf{W}$ to zero gives
+Setting the derivatives with respect to $\mathbf{W}$ and $\bm{\Sigma}$ to zero gives
 %
 \begin{equation}
+\begin{aligned}
 \mathbf{O}
-=
+&=
 -
 \frac{1}{2}
 \left(
@@ -489,20 +490,63 @@ Setting the derivative with respect to $\mathbf{W}$ to zero gives
 \right)
 \left(
 	\bm{\phi}(\mathbf{x}_n)
+\right) ^ \intercal,
+\\
+\mathbf{O}
+&=
+-
+\frac{N}{2}
+\bm{\Sigma} ^ {- 1}
++
+\frac{1}{2}
+\left(
+	\bm{\Sigma} ^ {- 1}
+\right) ^ 2
+\sum_{n = 1}^{N}
+\left(
+	\mathbf{t}_n 
+	- 
+	\mathbf{W} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n)
+\right)
+\left(
+	\mathbf{t}_n 
+	- 
+	\mathbf{W} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n)
 \right) ^ \intercal.
+\end{aligned}
 \end{equation}
 %
 Therefore,
 %
 \begin{equation}
+\begin{aligned}
 \mathbf{W}_{\rm ML}
-=
+&=
 \left(
 	\bm{\Phi} ^ \intercal
 	\bm{\Phi}
 \right) ^ {- 1}
 \bm{\Phi} ^ \intercal
 \mathbf{t},
+\\
+\bm{\Sigma}_{\rm ML}
+&=
+\sum_{n = 1}^{N}
+\left(
+	\mathbf{t}_n 
+	- 
+	\mathbf{W}_{\rm ML} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n)
+\right)
+\left(
+	\mathbf{t}_n 
+	- 
+	\mathbf{W}_{\rm ML} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n)
+\right) ^ \intercal.
+\end{aligned}
 \end{equation}
 %
 where
@@ -519,10 +563,6 @@ where
 \end{bmatrix}
 .
 \]
-
-
-
-
 
 
 
