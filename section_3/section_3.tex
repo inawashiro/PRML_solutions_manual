@@ -446,7 +446,7 @@ Then
 \ln (2 \pi)
 -
 \frac{N}{2}
-\det \bm{\Sigma}
+\ln (\det \bm{\Sigma})
 -
 \frac{1}{2}
 \sum_{n = 1}^{N}
@@ -496,7 +496,9 @@ Setting the derivatives with respect to $\mathbf{W}$ and $\bm{\Sigma}$ to zero g
 &=
 -
 \frac{N}{2}
-\bm{\Sigma} ^ {- 1}
+\left(
+	\bm{\Sigma} ^ {- 1}
+\right) ^ \intercal
 +
 \frac{1}{2}
 \left(
@@ -533,6 +535,7 @@ Therefore,
 \\
 \bm{\Sigma}_{\rm ML}
 &=
+\frac{1}{N}
 \sum_{n = 1}^{N}
 \left(
 	\mathbf{t}_n 
@@ -563,9 +566,6 @@ where
 \end{bmatrix}
 .
 \]
-
-
-
 
 
 
