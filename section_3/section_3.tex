@@ -568,6 +568,79 @@ where
 \]
 
 
+\subsection{(Incomplete)}
+\label{3.7}
+Let $\mathbf{t}$ be a variable such that
+%
+\begin{equation}
+\begin{aligned}
+p(\mathbf{t} | \mathbf{X}, \mathbf{w}, \beta)
+&=
+\prod_{n = 1}^{N}
+\mathcal{N}
+\left(
+	t_n
+	|
+	\mathbf{w} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n),
+	\beta ^ {- 1}
+\right),
+\\
+p(\mathbf{w})
+&=
+\mathcal{N}
+(\mathbf{w} | \mathbf{m}_0, \mathbf{S}_0).
+\end{aligned}
+\end{equation}
+%
+By the definition,
+%
+\begin{equation}
+p(\mathbf{t} | \mathbf{X}, \mathbf{w}, \beta)
+p(\mathbf{w})
+=
+p(\mathbf{w} | \mathbf{X}, \mathbf{t}, \beta)
+p(\mathbf{t}).
+\end{equation}
+%
+The logarithm of the left hand side except the terms independent of $\mathbf{t}$ and $\mathbf{w}$ can be written as
+%
+\begin{equation}
+\begin{aligned}
+&-
+\frac{\beta}{2}
+\sum_{n = 1}^{N}
+\left(
+	t_n
+	-
+	\mathbf{w} ^ \intercal
+	\bm{\phi}(\mathbf{x}_n)
+\right) ^ 2
+-
+\frac{1}{2}
+(\mathbf{w} - \mathbf{m}_0) ^ \intercal
+\mathbf{S}_0 ^ {- 1}
+(\mathbf{w} - \mathbf{m}_0)
+\\
+=&
+\end{aligned}
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
