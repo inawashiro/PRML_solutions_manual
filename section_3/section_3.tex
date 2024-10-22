@@ -623,11 +623,65 @@ The logarithm of the left hand side except the terms independent of $\mathbf{t}$
 (\mathbf{w} - \mathbf{m}_0)
 \\
 =&
+-
+\frac{\beta}{2}
+(\mathbf{t} - \bm{\Phi} \mathbf{w}) ^ \intercal
+(\mathbf{t} - \bm{\Phi} \mathbf{w})
+-
+\frac{1}{2}
+(\mathbf{w} - \mathbf{m}_0) ^ \intercal
+\mathbf{S}_0 ^ {- 1}
+(\mathbf{w} - \mathbf{m}_0),
 \end{aligned}
 \end{equation}
 %
-
-
+where
+%
+\[
+\bm{\Phi}
+=
+\begin{bmatrix}
+\bm{\phi} (\mathbf{x}_1) ^ \intercal 
+\\
+\vdots 
+\\
+\bm{\phi} (\mathbf{x}_N) ^ \intercal
+\end{bmatrix}
+.
+\]
+%
+The right hand side can be written as
+%
+\begin{equation}
+-
+\frac{1}{2}
+\left(
+	\mathbf{w}
+	-
+	\mathbf{S}_N
+	\left(
+	\right)
+\right) ^ \intercal
+\mathbf{S}_N ^ {- 1}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\mathbf{S}_N ^ {- 1}
+&=
+\mathbf{S}_0 ^ {- 1}
++
+\beta
+\bm{\Phi} ^ \intercal
+\bm{\Phi},
+\\
+\mathbf{m}_N
+&=
+\end{aligned}
+\end{equation}
+%
 
 
 
