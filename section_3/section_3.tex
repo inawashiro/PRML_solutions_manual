@@ -686,14 +686,6 @@ where
 %
 \begin{equation}
 \begin{aligned}
-\mathbf{S}_N ^ {- 1}
-&=
-\mathbf{S}_0 ^ {- 1}
-+
-\beta
-\bm{\Phi} ^ \intercal
-\bm{\Phi},
-\\
 \mathbf{m}_N
 &=
 \mathbf{S}_N
@@ -704,10 +696,28 @@ where
 	\beta
 	\bm{\Phi} ^ \intercal
 	\mathbf{t}
-\right).
+\right),
+\\
+\mathbf{S}_N ^ {- 1}
+&=
+\mathbf{S}_0 ^ {- 1}
++
+\beta
+\bm{\Phi} ^ \intercal
+\bm{\Phi}.
 \end{aligned}
 \end{equation}
 %
+Therefore,
+%
+\begin{equation}
+p(\mathbf{w} | \mathbf{X}, \mathbf{t}, \beta)
+=
+\mathcal{N}
+(\mathbf{w} | \mathbf{m}_N, \mathbf{S}_N).
+\end{equation}
+%
+
 
 
 
