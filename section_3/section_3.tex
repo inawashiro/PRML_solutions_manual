@@ -719,6 +719,66 @@ p(\mathbf{w} | \mathbf{X}, \mathbf{t}, \beta)
 %
 
 
+\subsection{(Inocomplete)}
+\label{3.8}
+Let
+%
+\begin{equation}
+\begin{aligned}
+p(\mathbf{w} | \mathbf{X}_N, \mathbf{t}_N, \beta)
+&=
+\mathcal{N}
+(\mathbf{w} | \mathbf{m}_N, \mathbf{S}_N),
+\\
+p(t_{N + 1} | \mathbf{x}_{N + 1}, \mathbf{w}, \beta)
+&=
+\mathcal{N}
+\left(
+	t_{N + 1}
+	|
+	\mathbf{w} ^ \intercal
+	\bm{\phi}(\mathbf{x}_{N + 1}),
+	\beta ^ {- 1}
+\right),
+\end{aligned}
+\end{equation}
+%
+where
+%
+\begin{equation}
+\begin{aligned}
+\mathbf{m}_N
+&=
+\mathbf{S}_N
+\left(
+	\mathbf{S}_0 ^ {- 1}
+	\mathbf{m}_0
+	+
+	\beta
+	\bm{\Phi} ^ \intercal
+	\mathbf{t}
+\right),
+\\
+\mathbf{S}_N ^ {- 1}
+&=
+\mathbf{S}_0 ^ {- 1}
++
+\beta
+\bm{\Phi} ^ \intercal
+\bm{\Phi}.
+\end{aligned}
+\end{equation}
+%
+By the definition,
+%
+\begin{equation}
+p(\mathbf{w} | \mathbf{X}_N, \mathbf{t}_N, \beta)
+p(t_{N + 1} | \mathbf{x}_{N + 1}, \mathbf{w}, \beta)
+=
+p(\mathbf{w} | \mathbf{X}_{N + 1}, \mathbf{t}_{N + 1}, \beta)
+p().
+\end{equation}
+%
 
 
 
