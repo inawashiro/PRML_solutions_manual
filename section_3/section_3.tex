@@ -568,7 +568,7 @@ where
 \]
 
 
-\subsection{(Incomplete)}
+\subsection{}
 \label{3.7}
 Let $\mathbf{t}$ be a variable such that
 %
@@ -658,11 +658,28 @@ The right hand side can be written as
 \left(
 	\mathbf{w}
 	-
-	\mathbf{S}_N
-	\left(
-	\right)
+	\mathbf{m}_N
 \right) ^ \intercal
 \mathbf{S}_N ^ {- 1}
+\left(
+	\mathbf{w}
+	-
+	\mathbf{m}_N
+\right)
++
+\frac{1}{2}
+\mathbf{m}_N ^ \intercal
+\mathbf{S}_N ^ {- 1}
+\mathbf{m}_N
+-
+\frac{\beta}{2}
+\mathbf{t} ^ \intercal
+\mathbf{t}
+-
+\frac{1}{2}
+\mathbf{m}_0 ^ \intercal
+\mathbf{S}_0 ^ {- 1}
+\mathbf{m}_0
 \end{equation}
 %
 where
@@ -679,12 +696,18 @@ where
 \\
 \mathbf{m}_N
 &=
+\mathbf{S}_N
+\left(
+	\mathbf{S}_0 ^ {- 1}
+	\mathbf{m}_0
+	+
+	\beta
+	\bm{\Phi} ^ \intercal
+	\mathbf{t}
+\right).
 \end{aligned}
 \end{equation}
 %
-
-
-
 
 
 
