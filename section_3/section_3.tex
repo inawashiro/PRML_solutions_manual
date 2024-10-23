@@ -772,14 +772,42 @@ where
 By the definition,
 %
 \begin{equation}
-p(\mathbf{w} | \mathbf{X}_N, \mathbf{t}_N, \beta)
-p(t_{N + 1} | \mathbf{x}_{N + 1}, \mathbf{w}, \beta)
-=
 p(\mathbf{w} | \mathbf{X}_{N + 1}, \mathbf{t}_{N + 1}, \beta)
-p().
+\propto
+p(\mathbf{w} | \mathbf{X}_N, \mathbf{t}_N, \beta)
+p(t_{N + 1} | \mathbf{x}_{N + 1}, \mathbf{w}, \beta).
 \end{equation}
 %
-
+The logarithm of the right hand side except the terms independent of $\mathbf{X}_{N + 1}$ and $\mathbf{w}$ can be written as
+%
+\begin{equation}
+\begin{aligned}
+&-
+\frac{1}{2}
+\left(
+	\mathbf{w}
+	-
+	\mathbf{m}_N
+\right) ^ \intercal
+\mathbf{S}_N ^ {- 1}
+\left(
+	\mathbf{w}
+	-
+	\mathbf{m}_N
+\right)
+-
+\frac{\beta}{2}
+\left(
+	t_{N + 1} 
+	-
+	\mathbf{w} ^ \intercal
+	\bm{\phi}(\mathbf{x}_{N + 1}) 
+\right) ^ 2
+\\
+=&
+\end{aligned}
+\end{equation}
+%
 
 
 
