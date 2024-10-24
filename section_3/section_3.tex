@@ -755,7 +755,7 @@ where
 	\mathbf{m}_0
 	+
 	\beta
-	\bm{\Phi} ^ \intercal
+	\bm{\Phi}_N ^ \intercal
 	\mathbf{t}
 \right),
 \\
@@ -764,8 +764,8 @@ where
 \mathbf{S}_0 ^ {- 1}
 +
 \beta
-\bm{\Phi} ^ \intercal
-\bm{\Phi}.
+\bm{\Phi}_N ^ \intercal
+\bm{\Phi}_N.
 \end{aligned}
 \end{equation}
 %
@@ -805,10 +805,41 @@ The logarithm of the right hand side except the terms independent of $\mathbf{X}
 \right) ^ 2
 \\
 =&
+-
+\frac{1}{2}
+\left(
+	\mathbf{w}
+	-
+	\bm{\mu}_{N + 1}
+\right) ^ \intercal
+\bm{\Lambda}
+\left(
+	\mathbf{w}
+	-
+	\bm{\mu}_{N + 1}
+\right)
+-
+,
 \end{aligned}
 \end{equation}
 %
-
+where
+%
+\begin{equation}
+\begin{aligned}
+\bm{\Lambda}_{N + 1}
+&=
+\mathbf{S}_N ^ {- 1}
++
+\beta
+\bm{\phi}(\mathbf{x}_{N + 1})
+\bm{\phi}(\mathbf{x}_{N + 1}) ^ \intercal,
+\\
+\bm{\mu}_{N + 1}
+&=
+\end{aligned}
+\end{equation}
+%
 
 
 
