@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  24 NOV 2024 10:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  24 NOV 2024 10:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -211,28 +211,28 @@ Overfull \hbox (62.12598pt too wide) detected at line 2299
  []
 
 [53] [54] [55] [56] [57] [58] [59]
-Overfull \hbox (26.87576pt too wide) detected at line 3361
+Overfull \hbox (26.87576pt too wide) detected at line 3360
 [][] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 :
  []
 
 [60]
-Overfull \hbox (51.31068pt too wide) detected at line 3484
+Overfull \hbox (51.31068pt too wide) detected at line 3483
 [][][]
  []
 
 [61] [62]
-Overfull \hbox (19.06729pt too wide) detected at line 3912
+Overfull \hbox (19.06729pt too wide) detected at line 3911
 [][][]
  []
 
 [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
-Overfull \hbox (15.49089pt too wide) detected at line 6057
+Overfull \hbox (15.49089pt too wide) detected at line 6056
 []\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 ^^V\OMS/cmsy/m/n/12 j\OT1
 /cmr/bx/n/12 X\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 N [] \OML/cmm/m/it/12 :
  []
 
 [75] [76] [77] [78]
-Overfull \hbox (4.88232pt too wide) detected at line 6643
+Overfull \hbox (4.88232pt too wide) detected at line 6642
 []\OMS/cmsy/m/n/12 ^^@[]\OT1/cmr/m/n/12 ([] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/
 12 ^^V\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 (\OML/cmm/m/it
 /12 ^^V \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 )[] = \OMS/c
@@ -240,32 +240,32 @@ msy/m/n/12 ^^@[] [][] ^^@ []\OML/cmm/m/it/12 ;
  []
 
 
-Overfull \hbox (70.44658pt too wide) detected at line 6670
+Overfull \hbox (70.44658pt too wide) detected at line 6669
 []\OML/cmm/m/it/12 ^^\[] [] [] :
  []
 
 
-Overfull \hbox (2.46857pt too wide) detected at line 6767
+Overfull \hbox (2.46857pt too wide) detected at line 6766
 [][][]
  []
 
 [79] [80]
-Overfull \hbox (5.60765pt too wide) detected at line 6976
+Overfull \hbox (5.60765pt too wide) detected at line 6975
 [][][] [][] [][][][] \OT1/cmr/m/n/12 = ^^@ [] [][] \OML/cmm/m/it/12 :
  []
 
 [81]
-Overfull \hbox (20.72266pt too wide) detected at line 7169
+Overfull \hbox (20.72266pt too wide) detected at line 7168
 [][][]
  []
 
 [82] [83] [84] [85] [86] [87] [88] [89]
-Overfull \hbox (17.34496pt too wide) detected at line 8397
+Overfull \hbox (17.34496pt too wide) detected at line 8396
 [][][]
  []
 
 
-Overfull \hbox (0.72604pt too wide) detected at line 8433
+Overfull \hbox (0.72604pt too wide) detected at line 8432
 [][][]
  []
 
@@ -318,7 +318,7 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (103 pages, 425743 bytes).
+Output written on main.pdf (103 pages, 425723 bytes).
 PDF statistics:
  437 PDF objects out of 1000 (max. 8388607)
  289 compressed objects within 3 object streams
