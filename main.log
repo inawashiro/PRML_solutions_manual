@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  24 NOV 2024 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  24 NOV 2024 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,12 +292,16 @@ Overfull \hbox (11.07214pt too wide) detected at line 1132
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-04-11>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2655 strings out of 474049
- 34401 string characters out of 5746278
+ 2656 strings out of 474049
+ 34407 string characters out of 5746278
  1942754 words of memory out of 5000000
- 25077 multiletter control sequences out of 15000+600000
+ 25078 multiletter control sequences out of 15000+600000
  571748 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,13n,93p,342b,316s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -319,7 +323,7 @@ sfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 ><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (103 pages, 425605 bytes).
+Output written on main.pdf (103 pages, 425625 bytes).
 PDF statistics:
  437 PDF objects out of 1000 (max. 8388607)
  289 compressed objects within 3 object streams
