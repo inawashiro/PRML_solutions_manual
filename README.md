@@ -7,4 +7,4 @@ The current progress is as below:
 2. Probability Distributions (59/61)
 3. Linear Models for Regression (20/24)
 4. Linear Models for Classification (22/26)
-5. Neural Networks (28/41)
+5. Neural Networks (29/41)
