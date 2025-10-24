@@ -7,6 +7,6 @@ The current progress is as below:
 2. Probability Distributions (59/61)
 3. Linear Models for Regression (21/24)
 4. Linear Models for Classification (22/26)
-5. Neural Networks (35/41)
+5. Neural Networks (36/41)
 6. Kernel Methods (23/27)
 7. Sparse Kernel Machines (5/19)
