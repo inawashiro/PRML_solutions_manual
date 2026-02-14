@@ -14,4 +14,4 @@ The current progress is as below:
 4. Linear Models for Classification (24/26)
 5. Neural Networks (38/41)
 6. Kernel Methods (24/27)
-7. Sparse Kernel Machines (5/19)
+7. Sparse Kernel Machines (6/19)
