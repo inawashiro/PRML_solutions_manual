@@ -9,7 +9,7 @@ The current progress is as below:
 
 
 1. Introduction (38/41)
-2. Probability Distributions (59/61)
+2. Probability Distributions (60/61)
 3. Linear Models for Regression (21/24)
 4. Linear Models for Classification (24/26)
 5. Neural Networks (38/41)
