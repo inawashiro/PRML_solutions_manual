@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inawashiro.github.io/PRML_solutions_manual/sitemap.xml
