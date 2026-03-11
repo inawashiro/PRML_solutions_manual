@@ -4,7 +4,9 @@ My self-sufficient solutions manual to the [Bishop, Christopher M., and Nasser M
 
 
 
-The current progress is as below:
+
+
+\## Progress
 
 
 
@@ -15,3 +17,18 @@ The current progress is as below:
 5. Neural Networks (38/41)
 6. Kernel Methods (24/27)
 7. Sparse Kernel Machines (8/19)
+
+
+
+
+
+\## Online Version
+
+
+
+A browsable version is available below:
+
+
+
+👉 https://inawashiro.github.io/PRML\_solutions\_manual/
+
