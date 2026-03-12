@@ -6,7 +6,7 @@ My self-sufficient solutions manual to the [Bishop, Christopher M., and Nasser M
 
 
 
-\# Progress
+\* Progress
 
 
 
@@ -22,7 +22,7 @@ My self-sufficient solutions manual to the [Bishop, Christopher M., and Nasser M
 
 
 
-\# Online Version
+\* Online Version
 
 
 
