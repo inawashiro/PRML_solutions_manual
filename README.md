@@ -8,27 +8,37 @@ My self-sufficient solutions manual to the [Bishop, Christopher M., and Nasser M
 
 
 
-\* Progress
+1\. Progress
 
 
 
-1. Introduction (38/41)
-2. Probability Distributions (60/61)
-3. Linear Models for Regression (21/24)
-4. Linear Models for Classification (24/26)
-5. Neural Networks (38/41)
-6. Kernel Methods (24/27)
-7. Sparse Kernel Machines (8/19)
+* The progress is as below:
+
+
+
+&nbsp;	1. Introduction (38/41)
+
+&nbsp;	2. Probability Distributions (60/61)
+
+&nbsp;	3. Linear Models for Regression (21/24)
+
+&nbsp;	4. Linear Models for Classification (24/26)
+
+&nbsp;	5. Neural Networks (38/41)
+
+&nbsp;	6. Kernel Methods (24/27)
+
+&nbsp;	7. Sparse Kernel Machines (8/19)
 
 
 
 
 
-\* Online Version
+1\. Online Version
 
 
 
-A browsable version is available below:
+* A browsable version is available below:
 
 
 
