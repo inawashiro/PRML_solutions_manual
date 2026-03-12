@@ -5,8 +5,6 @@ My self-sufficient solutions manual to the [Bishop, Christopher M., and Nasser M
 
 ## Progress
 
-- The progress is as below:
-	
 1. Introduction (38/41)
 2. Probability Distributions (60/61)
 3. Linear Models for Regression (21/24)
@@ -17,8 +15,6 @@ My self-sufficient solutions manual to the [Bishop, Christopher M., and Nasser M
 
 
 ## Online Version
-
-- A browsable version is available below:
 
 👉 https://inawashiro.github.io/PRML\_solutions\_manual/
 
