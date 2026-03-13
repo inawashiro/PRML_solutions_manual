@@ -16,5 +16,5 @@ My self-sufficient solutions manual to the [Bishop, Christopher M., and Nasser M
 
 ## Online Version
 
-👉 https://inawashiro.github.io/PRML\_solutions\_manual/
+👉 https://inawashiro.github.io/PRML_solutions_manual/
 
