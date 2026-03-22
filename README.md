@@ -83,4 +83,6 @@ It is not affiliated with or endorsed by the original author or publisher.
 
 ## ✍️ Author
 
+The author's biography can be found here:
+
 https://www.linkedin.com/in/hiromichi-inawashiro-301a04225/
