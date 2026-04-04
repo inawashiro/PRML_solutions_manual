@@ -48,20 +48,11 @@ This is an independent educational resource created for learning and research.
 
 ---
 
-%## 🌐 Online Version
-%
-%A web‑friendly version of the solutions manual is available here:
-%
-%**https://inawashiro.github.io/PRML_solutions_manual/**
-%
-%---
-
 ## 🧠 Who Is This For?
 
-- Machine learning students  
-- Researchers and academics  
+- Students, researchers and academics  
 - Engineers preparing for ML interviews  
-- Anyone studying PRML independently  
+- Anyone independently studying PRML
 
 If you’re working through Bishop’s book, this repository is designed to help you understand the material more deeply.
 
