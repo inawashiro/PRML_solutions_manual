@@ -48,13 +48,13 @@ This is an independent educational resource created for learning and research.
 
 ---
 
-## 🌐 Online Version
-
-A web‑friendly version of the solutions manual is available here:
-
-**https://inawashiro.github.io/PRML_solutions_manual/**
-
----
+%## 🌐 Online Version
+%
+%A web‑friendly version of the solutions manual is available here:
+%
+%**https://inawashiro.github.io/PRML_solutions_manual/**
+%
+%---
 
 ## 🧠 Who Is This For?
 
