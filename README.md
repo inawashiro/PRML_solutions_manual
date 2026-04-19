@@ -22,7 +22,7 @@ The solutions are organized by chapter, following the structure of the book:
 4. **Linear Models for Classification**  (24/26)
 5. **Neural Networks**  (38/41)
 6. **Kernel Methods**  (24/27)
-7. **Sparse Kernel Machines**  (11/19)
+7. **Sparse Kernel Machines**  (12/19)
 8. **Graphical Models**  
 9. **Mixture Models and EM**  
 10. **Approximate Inference**  
