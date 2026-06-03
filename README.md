@@ -29,6 +29,7 @@ The solutions are organized by chapter, following the structure of the book:
 11. **Sampling Methods**  
 12. **Continuous Latent Variables**  
 13. **Sequential Data**
+14. **Combining Models**
 
 Each chapter includes step‑by‑step reasoning and clear explanations aimed at building intuition.
 
