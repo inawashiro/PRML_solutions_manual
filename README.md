@@ -16,14 +16,14 @@ The goal is to make PRML more accessible to students, researchers, and engineers
 
 The solutions are organized by chapter, following the structure of the book:
 
-1. **Introduction** (38/41)  
+1. **Introduction** (38/41)
 2. **Probability Distributions**  (60/61)
 3. **Linear Models for Regression**  (22/24)
 4. **Linear Models for Classification**  (24/26)
 5. **Neural Networks**  (38/41)
 6. **Kernel Methods**  (25/27)
 7. **Sparse Kernel Machines**  (17/19)
-8. **Graphical Models**  (1/29)  
+8. **Graphical Models**  (2/29)
 9. **Mixture Models and EM**  
 10. **Approximate Inference**  
 11. **Sampling Methods**  
