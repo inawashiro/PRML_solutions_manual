@@ -23,7 +23,7 @@ The solutions are organized by chapter, following the structure of the book:
 5. **Neural Networks**  (38/41)
 6. **Kernel Methods**  (25/27)
 7. **Sparse Kernel Machines**  (17/19)
-8. **Graphical Models**  (6/29)
+8. **Graphical Models**  (7/29)
 9. **Mixture Models and EM**  
 10. **Approximate Inference**  
 11. **Sampling Methods**  
