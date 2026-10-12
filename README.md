@@ -24,7 +24,7 @@ The solutions are organized by chapter, following the structure of the book:
 6. **Kernel Methods** (25/27)
 7. **Sparse Kernel Machines** (17/19)
 8. **Graphical Models** (16/29)
-9. **Mixture Models and EM**  
+9. **Mixture Models and EM** (1/27)
 10. **Approximate Inference**  
 11. **Sampling Methods**  
 12. **Continuous Latent Variables**  
